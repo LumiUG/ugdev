@@ -71,4 +71,4 @@ function sendMessage(messages) {
 };
 
 // Sends the messages in the "m1" list.
-var intervalTimer = setInterval(function () { sendMessage(m1) }, 250); //4250
+var intervalTimer = setInterval(function () { sendMessage(m1) }, 4250);
