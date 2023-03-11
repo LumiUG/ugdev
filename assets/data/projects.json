@@ -185,14 +185,14 @@
         "wysTranslator": {
             "name": "WYS catalan translator",
             "desc": "I'm one of the volunteer Catalan translators for Will You Snail! (Unfinished as of now)",
-            "image": "/assets/images/WYS.png",
+            "image": "./assets/images/WYS.png",
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"
         },
         "bootlegWordle": {
             "name": "Bootleg Wordle",
             "desc": "A bootleg version of wordle that was made in the C# console for fun.",
-            "image": "/assets/images/wordle.png",
+            "image": "./assets/images/wordle.png",
             "source": "https://github.com/xUnderGame/BootlegWordle",
             "website": null
         }
