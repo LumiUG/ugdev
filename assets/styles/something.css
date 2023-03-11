@@ -1,0 +1,30 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    background-color: #313131;
+    color: white;
+    font-family: Chakra Petch;
+    font-size: 25px;
+	font-weight: bold;
+    height: inherit;
+}
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    
+}
+#centerHeart {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#heart {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+}

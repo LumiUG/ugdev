@@ -1,0 +1,50 @@
+{
+    "linkedin": {
+        "hyperlink": "https://ugdev.xyz",
+        "username": "LinkedIn",
+        "logo": "./assets/images/socials/linkedin.svg",
+        "desc": "My LinkedIn profile. It's not publicly avaliable as of right now! (Shoo, no doxxing)"
+    },
+    "fiverr": {
+        "hyperlink": "https://www.fiverr.com/undergame",
+        "username": "Fiverr",
+        "logo": "./assets/images/socials/fiverr.svg",
+        "desc": "I do Origin commissions here! Right now it's paused as I don't have the need to do comms again."
+    },
+    "github": {
+        "hyperlink": "https://github.com/xUnderGame",
+        "username": "Github",
+        "logo": "./assets/images/socials/github.svg",
+        "desc": "My Github profile, where (almost) all projects are stored. I use it like a 'secondary' portfolio."
+    },
+    "discord": {
+        "hyperlink": "https://discord.com/invite/Az7skvA2mf",
+        "username": "Dev Discord",
+        "logo": "./assets/images/socials/discord.svg",
+        "desc": "Would you like to check out my newest projects, have a chat or be a tester? Come right in!"
+    },
+    "twitter": {
+        "hyperlink": "https://twitter.com/xUnderGame",
+        "username": "Twitter",
+        "logo": "./assets/images/socials/twitter.svg",
+        "desc": "Mainly used for consuming content and talking about some stuff that I find interesting. (You should follow me *wink*)"
+    },
+    "youtube": {
+        "hyperlink": "https://www.youtube.com/c/UnderGame",
+        "username": "Youtube",
+        "logo": "./assets/images/socials/youtube.svg",
+        "desc": "I used to make videos in the past. Right now this is only for archival purposes until I decide to come back."
+    },
+    "steam": {
+        "hyperlink": "https://steamcommunity.com/id/undergame",
+        "username": "Steam",
+        "logo": "./assets/images/socials/steam.svg",
+        "desc": "Obsessed with rythm, puzzles and platformer games. 'Have you heard of that new Indie Game?' Yep, already completed it."
+    },
+    "soundcloud": {
+        "hyperlink": "https://soundcloud.com/undergame",
+        "username": "Soundcloud",
+        "logo": "./assets/images/socials/soundcloud.svg",
+        "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
+    }
+}
