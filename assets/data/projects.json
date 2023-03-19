@@ -189,6 +189,13 @@
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"
         },
+        "rwOrigins": {
+            "name": "Rain World Origins",
+            "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
+            "image": "./assets/images/origins/RWOrigins.png",
+            "source": null,
+            "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
+        },
         "bootlegWordle": {
             "name": "Bootleg Wordle",
             "desc": "A bootleg version of wordle that was made in the C# console for fun.",
