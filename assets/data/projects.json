@@ -204,11 +204,11 @@
             "website": null
         },
         "vscode-origins-snippets": {
-            "name": "Vscode Origins Snippets",
-            "desc": "Upcoming project. A collection of snippets from the Origins Minecraft mod, made for Vscode!",
-            "image": "./assets/images/origins/DefaultOrigin.webp",
+            "name": "VS Code Origins Snippets",
+            "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
+            "image": "./assets/images/VSCodeSnippets.webp",
             "source": "https://github.com/xUnderGame/vscode-origins-snippets",
-            "website": null
+            "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
         "aoc2022": {
             "name": "Advent Of Code 2022 Solutions",
