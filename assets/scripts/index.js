@@ -57,7 +57,9 @@ function GenProjects(id) {
         projContainer.style.display = "none"
 
         let noProjects = document.createElement("p")
-        noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\n(I hope...)"
+        if (id == "music") noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\nYou can check some cool artists in the meantime:\n\nhttps://soundcloud.com/frums\nhttps://www.youtube.com/@Cametek.CamelliaOfficial\nhttps://soundcloud.com/jazzemu" 
+        else if (id == "games") noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\nYou can check some cool indies in the meantime:\n\nhttps://store.steampowered.com/app/312520/Rain_World/\nhttps://store.steampowered.com/app/1400910/Soundodger_2/\nhttps://store.steampowered.com/app/977950/A_Dance_of_Fire_and_Ice/\nhttps://store.steampowered.com/app/420530/OneShot/\nhttps://store.steampowered.com/app/460950/Katana_ZERO/" 
+        else noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\n(I hope...)"
         projContainer.appendChild(noProjects)
         toAppend.appendChild(projContainer)
     }
