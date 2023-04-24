@@ -179,6 +179,20 @@
             "timestamp": "04-03-2023",
             "program": "ClipStudio",
             "tooltip": "A pole plant holding a fruit. One of Rain World greatest bugs imo."
+        },
+        "blenderPan": {
+            "name": "Rendered Pan",
+            "image": "./assets/images/artwork/blender/Rendered Pan.png",
+            "timestamp": "12-04-2023",
+            "program": "Blender",
+            "tooltip": "Well, that's a pan I'd say."
+        },
+        "blenderCyanLiz": {
+            "name": "Cyan Lizard - Rain World",
+            "image": "./assets/images/artwork/blender/Cyan Lizard - Rain World.png",
+            "timestamp": "27-03-2023",
+            "program": "Blender",
+            "tooltip": "A cyan lizard from Rain World! (Rain world brain-rot is real)"
         }
     },
     "misc": {
