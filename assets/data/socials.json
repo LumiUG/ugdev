@@ -18,10 +18,10 @@
         "desc": "My Github profile, where (almost) all projects are stored. I use it like a 'secondary' portfolio."
     },
     "discord": {
-        "hyperlink": "https://discord.com/invite/Az7skvA2mf",
-        "username": "Dev Discord",
+        "hyperlink": "https://discord.com",
+        "username": "Discord",
         "logo": "./assets/images/socials/discord.svg",
-        "desc": "Would you like to check out my newest projects, have a chat or be a tester? Come right in!"
+        "desc": "My discord is \"@UnderGame#4540\" add me if you'd like to have a chat! (I will try to respond when possible)"
     },
     "twitter": {
         "hyperlink": "https://twitter.com/xUnderGame",
