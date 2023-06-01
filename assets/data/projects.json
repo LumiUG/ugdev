@@ -74,6 +74,13 @@
             "source": "https://github.com/xUnderGame/ugdev",
             "website": "https://ugdev.xyz"
         },
+        "etv": {
+            "name": "ETV",
+            "desc": "Online tierlist maker and visualizer. Share your tierlist with friends and have fun!",
+            "image": "./assets/images/etv-logo.png",
+            "source": "https://github.com/xUnderGame/etv",
+            "website": "https://ugdev.xyz/etv"
+        },
         "ostguessr": {
             "name": "OSTguessr",
             "desc": "An upcoming project that i've been thinking about. Guess the game ost that's playing!",

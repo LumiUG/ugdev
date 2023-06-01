@@ -1,0 +1,145 @@
+:root {
+    --primary: #5464b6;
+    --secondary: #f9dcec;
+    --border: #1b1a1a;
+    --text: #ede6ef;
+    --bg: #231e24;
+    --gui-bg: #0a0a0a50;
+    --tier-bg: #2a252b;
+    --accent: #dd318d;
+    --accent-darker: #bb2977;
+}
+::placeholder {
+    text-align: center; 
+ }
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    height: 100%;
+}
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    height: 100%;
+}
+button {
+    height: 60px;
+    background-color: var(--accent);
+    color: var(--text);
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    padding: 10px;
+}
+input {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    margin: 10px 10px 0px 10px;
+}
+
+/* Classes and ID's */
+#holding,
+#tl {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#buttons {
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+}
+#importing {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#blank {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gui-bg);
+}
+#modal {
+    width: 45%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--secondary);
+    color: black;
+}
+#controls {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tier {
+    height: 125px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-basis: content;
+    border: 1px solid var(--border);
+}
+.field {
+    height: 125px;
+    width: 125px;
+}
+.container {
+    min-height: 125px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--tier-bg);
+    border: 1px solid var(--border);
+}
+
+/* CSS Selectors */
+#holding section {
+    min-height: 175px;
+}
+#holding section img {
+    width: 175px;
+    height: 175px;
+}
+#modal h3 {
+    font-size: xx-large;
+    padding: 10px 0px 20px 0px;
+}
+#controls div {
+    display: flex;
+    flex-direction: column;
+}
+.tier h2 {
+    width: 8%;
+    text-align: center;
+}
+
+/* Effects */
+button:hover,
+.tier h2,
+.field:hover {
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--accent-darker);
+}
