@@ -4,5 +4,11 @@
         "post": "This has like... so many limitations right now, but I will make it better in the future.\nI'll be sending some updates in here from time to time, don't expect much, though! (I'm very busy, haha...)\nLike, seriously, what is this? (This is Renoise){renoiseWhat}How am I supposed to understand this? (Honestly this is very fun)",
         "images": ["renoiseWhat.png"],
         "date": "09/05/2023"
+    },
+    "2": {
+        "title": "ETV and others",
+        "post": "Hey again, been doing some stuff these days. I just experimented with Unity 3d and tried to re-remeber some of Unity's C#.\nI've also made an online tierlist builder, made from pure js. (why didnt I use jQuery...){frumsTierlistExample}I've had some troubles getting the drag&drop to work, but I think it ended up pretty well.\n...Will probably keep updating it with some very much needed QoL features, so stay tuned for more!\nOh yeah, I'm getting better at art :>",
+        "images": ["frumsTierlistExample.png"],
+        "date": "02/06/2023"
     }
 }

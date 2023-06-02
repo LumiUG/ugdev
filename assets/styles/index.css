@@ -61,9 +61,9 @@ header img {
 }
 
 /* Intro */
-#blog div h1,
-#socials div h1,
-#intro div h1 {
+#blog div h2,
+#socials div h2,
+#intro div h2 {
     margin: 90px 0px 20px 0px;
     font-size: 50px;
 }
@@ -88,7 +88,7 @@ header img {
 }
 
 /* Projects */
-main div h1 {
+main div h2 {
     margin: 20px 0px 20px 0px;
     font-size: 50px;
 }

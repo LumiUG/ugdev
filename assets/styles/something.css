@@ -10,6 +10,10 @@ body {
 	font-weight: bold;
     height: inherit;
 }
+img {
+    width: 200px;
+    height: 200px;
+}
 #box {
     display: flex;
     align-items: center;
