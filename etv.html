@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/assets/images/etv-logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/images/etv-logo.png">
-    <link rel="stylesheet" href="/assets/styles/etv.css">
+    <link rel="stylesheet" href="/assets/styles/etv/index.css">
     <title>ETV - Easy Tierlist Viewer</title>
 </head>
 <body>
@@ -20,7 +20,14 @@
             <input id="importField" type="text" placeholder="Paste json here!">
         </section>
         <button id="export" class="button">Export Tierlist</button>
+        <section>
+            <h3>Presets</h3>
+            <select name="presets" id="presets">
+                <option value="none" selected>None</option>
+                <option value="frums">Frums</option>
+            </select>
+        </section>
     </article>
-    <script type="module" src="/assets/scripts/etv-index.js"></script>
+    <script type="module" src="/assets/scripts/etv/index.js"></script>
 </body>
 </html>

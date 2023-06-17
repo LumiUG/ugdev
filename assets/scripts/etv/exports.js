@@ -1,4 +1,4 @@
-import { dragDrop, dragOver, openGUI } from "./etv-index.js"; // Probably not the best way to do it!
+import { dragDrop, dragOver, openGUI } from "./index.js"; // Probably not the best way to do it!
 
 // Tierlist class.
 export class Tierlist {
