@@ -1,10 +1,4 @@
 {
-    "linkedin": {
-        "hyperlink": "https://ugdev.xyz",
-        "username": "LinkedIn",
-        "logo": "./assets/images/socials/linkedin.svg",
-        "desc": "My LinkedIn profile. It's not publicly avaliable as of right now! (Shoo, no doxxing)"
-    },
     "fiverr": {
         "hyperlink": "https://www.fiverr.com/undergame",
         "username": "Fiverr",
