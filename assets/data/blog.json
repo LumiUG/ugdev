@@ -10,5 +10,11 @@
         "post": "Hey again, been doing some stuff these days. I just experimented with Unity 3d and tried to re-remeber some of Unity's C#.\nI've also made an online tierlist builder, made from pure js. (why didnt I use jQuery...){frumsTierlistExample}I've had some troubles getting the drag&drop to work, but I think it ended up pretty well.\n...Will probably keep updating it with some very much needed QoL features, so stay tuned for more!\nOh yeah, I'm getting better at art :>",
         "images": ["frumsTierlistExample.png"],
         "date": "02/06/2023"
+    },
+    "3": {
+        "title": "I uhh um...",
+        "post": "Yep, that's right! I've done nothing for the past month!\n...\nI mainly blame the Steam Summer Sale.\nOkay! Okay! I DID join a studio for internships and updated the Origins Snippets extension, so that's that.\nHappy now? Good.",
+        "images": [],
+        "date": "10/07/2023"
     }
 }

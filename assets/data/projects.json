@@ -117,26 +117,12 @@
             "program": "Krita",
             "tooltip": "Nobody."
         },
-        "saintScugsEvent": {
-            "name": "Saint the creature - Draw the scugs event 2022 gaming amazing drawing",
-            "image": "./assets/images/artwork/Saint - Draw The Slugcats.png",
-            "timestamp": "22-08-2022",
-            "program": "Krita",
-            "tooltip": "A recreation of 'la creatura' as Rain World Saint. (This is a joke if you didnt get it)"
-        },
         "staringContest": {
             "name": "Staring contest",
             "image": "./assets/images/artwork/Staring Contest.png",
             "timestamp": "07-10-2022",
             "program": "ClipStudio",
             "tooltip": "A Rain World (tamed) lizard having a staring contest with a sluggo!"
-        },
-        "coloredFlygon": {
-            "name": "Colored Flygon",
-            "image": "./assets/images/artwork/Flygon.png",
-            "timestamp": "10-10-2022",
-            "program": "Krita",
-            "tooltip": "Coloring practice. Finished product is great!"
         },
         "construxion": {
             "name": "Construxion the armadillo",

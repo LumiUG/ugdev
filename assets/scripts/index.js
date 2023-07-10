@@ -168,13 +168,17 @@ function loadBlog() {
             else {
                 let textList = posts[key][keys[i]].split(/{.*}/);
                 let imageName = /{.*}/.exec(posts[key][keys[i]]);
+                console.log(imageName)
 
-                // Yoo image
-                let clickMe = document.createElement("a");
-                let image = document.createElement("img");
-                image.src = `/assets/images/blog/${imageName[0].replace("{", "").replace("}", "")}.png`;
-                clickMe.href = image.src;
-                clickMe.appendChild(image);
+                // Yoo images!!!
+                let clickMe;
+                if (imageName) {
+                    clickMe = document.createElement("a");
+                    let image = document.createElement("img");
+                    image.src = `/assets/images/blog/${imageName[0].replace("{", "").replace("}", "")}.png`;
+                    clickMe.href = image.src;
+                    clickMe.appendChild(image);
+                }
                 
                 // Text one.
                 let textOne = document.createElement("p");
@@ -186,8 +190,10 @@ function loadBlog() {
 
                 // Adds everything.
                 toAdd.append(textOne);
-                toAdd.append(clickMe);
-                toAdd.append(textTwo);
+                if (imageName) {
+                    toAdd.append(clickMe);
+                    toAdd.append(textTwo);
+                }
             }
             blogPost.append(toAdd);
         }
