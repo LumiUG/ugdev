@@ -35,10 +35,10 @@
         "logo": "./assets/images/socials/steam.svg",
         "desc": "Obsessed with rhythm, puzzles and platformer games. 'Have you heard of that new Indie Game?' Yep, already played it."
     },
-    "soundcloud": {
-        "hyperlink": "https://soundcloud.com/undergame",
-        "username": "Soundcloud",
-        "logo": "./assets/images/socials/soundcloud.svg",
+    "bandcamp": {
+        "hyperlink": "https://bandcamp.com/undergame",
+        "username": "Bandcamp",
+        "logo": "./assets/images/socials/bandcamp.svg",
         "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
     }
 }
