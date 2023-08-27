@@ -40,5 +40,11 @@
         "username": "Bandcamp",
         "logo": "./assets/images/socials/bandcamp.svg",
         "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
+    },
+    "backloggd": {
+        "hyperlink": "https://www.backloggd.com/u/UnderGame",
+        "username": "Backloggd",
+        "logo": "./assets/images/socials/backloggd.ico",
+        "desc": "In here I keep a backlog of the games that I've played: AAA games, indies... Comes with reviews aswell!"
     }
 }
