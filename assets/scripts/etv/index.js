@@ -1,5 +1,7 @@
 import { Tierlist, Tier } from "./exports.js";
-import frumsPreset from "/assets/data/etv/frums.json" assert { type: "json" };
+var frumsPreset = await fetch('/assets/data/etv/frums.json')
+    .then((response) => response.json())
+    .then((data) => {return data});
 
 // ----------- Tierlist && initial stuff. -----------
 if (/Android|iPhone/i.test(navigator.userAgent)) openGUI("create", "mobile");

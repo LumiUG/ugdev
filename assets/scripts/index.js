@@ -1,10 +1,18 @@
 // JSON Imports.
-import socials from '../data/socials.json' assert { type: 'json' };
-import projects from '../data/projects.json' assert { type: 'json' };
-import posts from '../data/blog.json' assert { type: 'json' };
+var socials = await fetch('/assets/data/socials.json')
+    .then((response) => response.json())
+    .then((data) => { return data });
+
+var projects = await fetch('/assets/data/projects.json')
+    .then((response) => response.json())
+    .then((data) => { return data });
+
+var posts = await fetch('/assets/data/blog.json')
+    .then((response) => response.json())
+    .then((data) => {return data});
 
 // Update the random message.
-const randMessages = ["Hello world.", "Why hello there- Welcome!", "Sure, I am '!positive' about it.", "How are you doing lil fella?", "Why is JS so weird?", "Motivation? What? What's that?", "Bring it on.", "Let's dance till' we're done.", "Am I dead or alive?", "\"So what do you do for a living?\"", "I believe in VSCode supremacy.", "\"Hey, this doesn't look as bad!\"", "404, page not fo- Oh, wait.", "You... Should buy Rain World.", "*slugcat falls cutely into the void*", "Please verify that you are not a robot.", "*BSOD appears*", "\"ug speak in vc\"", "\"I love digging graves\"", "\"Furries!\"", "STEEVOOOOOOOOOOOO-", "My brothee, ooh my brotheee.", "'Every pit is a chance for glory.' -DGR Dave", "What the cat?", "\"I must be one of the good ones™\"", "More random messages", "Oooh, I want to fall apart again...", "Do not hang up.", "It was... Perfect.", "From my Tower of Dreams, the things I see.", "Concentrate your energy in your heart.", "What awaits you below the bottom of the world?", "I am / Not what / I am", "That is incorrect, try again.", "Gender, and a Metal Bat.", "Ccompu-- uuu- computer is now-- computer is- machine.", "Fu-fu-funding for this program was made possible by by by by", "Fun-di-di-di-di-ding fo-o-o-o for the program program pro-o-o-gram", "Funding for the the wa possib-li viewers like you", "like you like you like you like you like you like you", "AT THE ENDDDDDD OF THE UNIVERSEEEEEEEE", "2, 1, 3, 4, 7, 11, 18...", "1, 1, 2, 3, 5, 8, 13...", "level by Bean", "Original message was deleted", "I was asleep", "stop it I hate it when you do that", "BALKAN GAMBIT", "\"that, word for wrod\"", "\"i have found the most bizarre bug ever\"", "\"Blueberry ice cream Saint\"", "Goldfish", "sina e wawa! <3", "you lost the game.", "...asking for a friend", "\"Hopefully this does not end like crimson\"", "\"i just got so many balls\"", "uh", "Jinxcat, you will be missed.", "\"vcf ydrxgedsr\"", "Hi, it's me, Ditko, just passing through", "meow meow meow mrrow mew", "\"Tried to save myself, but myself keeps slipping away\"", "SPACE BIRDS", "\"A copy of a copy of a\"", "LOOOOOOOOOOOOP", "\"Always breaking, always healing\"", "\"Oyasumi ooooooyasumi...\"", "\"Is this it, is it?\""];
+const randMessages = ["Hello world.", "Why hello there- Welcome!", "Sure, I am '!positive' about it.", "How are you doing lil fella?", "Why is JS so weird?", "Motivation? What? What's that?", "Bring it on.", "Let's dance till' we're done.", "Am I dead or alive?", "\"So what do you do for a living?\"", "I believe in VSCode supremacy.", "\"Hey, this doesn't look as bad!\"", "404, page not fo- Oh, wait.", "You... Should buy Rain World.", "*slugcat falls cutely into the void*", "Please verify that you are not a robot.", "*BSOD appears*", "\"ug speak in vc\"", "\"I love digging graves\"", "\"Furries!\"", "STEEVOOOOOOOOOOOO-", "My brothee, ooh my brotheee.", "'Every pit is a chance for glory.' -DGR Dave", "What the cat?", "\"I must be one of the good ones™\"", "More random messages", "Oooh, I want to fall apart again...", "Do not hang up.", "It was... Perfect.", "From my Tower of Dreams, the things I see.", "Concentrate your energy in your heart.", "What awaits you below the bottom of the world?", "I am / Not what / I am", "That is incorrect, try again.", "Gender, and a Metal Bat.", "Ccompu-- uuu- computer is now-- computer is- machine.", "Fu-fu-funding for this program was made possible by by by by", "Fun-di-di-di-di-ding fo-o-o-o for the program program pro-o-o-gram", "Funding for the the wa possib-li viewers like you", "like you like you like you like you like you like you", "AT THE ENDDDDDD OF THE UNIVERSEEEEEEEE", "2, 1, 3, 4, 7, 11, 18...", "1, 1, 2, 3, 5, 8, 13...", "level by Bean", "Original message was deleted", "I was asleep", "stop it I hate it when you do that", "BALKAN GAMBIT", "\"that, word for wrod\"", "\"i have found the most bizarre bug ever\"", "\"Blueberry ice cream Saint\"", "Goldfish", "sina e wawa! <3", "you lost the game.", "...asking for a friend", "\"Hopefully this does not end like crimson\"", "\"i just got so many balls\"", "uh", "Jinxcat, you will be missed.", "\"vcf ydrxgedsr\"", "Hi, it's me, Ditko, just passing through", "meow meow meow mrrow mew", "\"Tried to save myself, but myself keeps slipping away\"", "SPACE BIRDS", "\"A copy of a copy of a\"", "LOOOOOOOOOOOOP", "\"Always breaking, always healing\"", "\"Oyasumi ooooooyasumi...\"", "\"Is this it, is it?\"", "His name is Meem.", "Oh, and the cat, it's Ploof."];
 function updateRandom(ele) {
     ele.firstElementChild.textContent = randMessages[Math.floor(Math.random() * randMessages.length)];
 }
@@ -59,7 +67,6 @@ function GenProjects(id) {
 
         let noProjects = document.createElement("p");
         if (id == "music") noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\nYou can check some cool artists in the meantime:\n\nhttps://soundcloud.com/frums\nhttps://www.youtube.com/@Cametek.CamelliaOfficial\nhttps://soundcloud.com/jazzemu";
-        else if (id == "games") noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\nYou can check some cool indies in the meantime:\n\nhttps://store.steampowered.com/app/312520/Rain_World/\nhttps://store.steampowered.com/app/1400910/Soundodger_2/\nhttps://store.steampowered.com/app/977950/A_Dance_of_Fire_and_Ice/\nhttps://store.steampowered.com/app/420530/OneShot/\nhttps://store.steampowered.com/app/460950/Katana_ZERO/";
         else noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\n(I hope...)";
         projContainer.appendChild(noProjects);
         toAppend.appendChild(projContainer);
@@ -168,7 +175,6 @@ function loadBlog() {
             else {
                 let textList = posts[key][keys[i]].split(/{.*}/);
                 let imageName = /{.*}/.exec(posts[key][keys[i]]);
-                console.log(imageName)
 
                 // Yoo images!!!
                 let clickMe;

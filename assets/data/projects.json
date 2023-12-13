@@ -83,14 +83,20 @@
         },
         "ostguessr": {
             "name": "OSTguessr",
-            "desc": "An upcoming project that i've been thinking about. Guess the game ost that's playing!",
+            "desc": "An upcoming project that I've been thinking about. Guess the game ost that's playing!",
             "image": "./assets/images/UGProfile.jpg",
             "source": "https://github.com/xUnderGame/ostguessr",
             "website": null
         }
     },
     "games": {
-
+        "gravix": {
+            "name": "Gravix",
+            "desc": "A 2D platformer with ~35 single screen levels, an interconnected map and collectibles to find!",
+            "image": "./assets/images/Meem.png",
+            "source": "https://github.com/xUnderGame/Gravix",
+            "website": "https://undergame.itch.io/gravix"
+        }
     },
     "music": {
 
