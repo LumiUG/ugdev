@@ -280,6 +280,17 @@ footer {
     height: auto;
     text-align: center;
 }
+footer marquee {
+    padding: 15px;
+}
+footer img {
+    width: 88px;
+    height: 31px;
+}
+footer img:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0px 0px 4px var(--primary));
+}
 footer div a {
     margin-top: 40px;
     padding-bottom: 10px;

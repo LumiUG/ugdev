@@ -20,12 +20,8 @@ body {
     background-color: var(--secondary);
     font-family: var(--primaryFont);
     color: white;
-    /* backdrop-filter: blur(2px); */
-    background-image: linear-gradient( rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60) ), url("../images/MainBG.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.90)), url("../images/MainBG.jpg");
+    background-repeat: repeat;
     overflow-x: hidden;
 }
 /* Scrollbar */

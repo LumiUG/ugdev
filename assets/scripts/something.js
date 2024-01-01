@@ -1,10 +1,6 @@
 const m1 = [
 	"",
-	"Been a while, crocodile-",
-	"Okay, I'm just playing with you.",
-	"Whatever was supposed to happen",
-	"has already happened >:3",
-	"So um... just enjoy yourself!",
+	"Hiiii helloo",
 	"Here, take another heart!",
 	"Now leave, and have an amazing day,",
 	"because you are valid and deserve it <3",

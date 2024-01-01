@@ -8,11 +8,11 @@
             "website": "https://discord.com/oauth2/authorize?client_id=979298958461521930&permissions=1634628660950&scope=bot"
         },
         "PSoP": {
-            "name": "(Waiting for Discord verification) Pokemon Smash Or Pass",
-            "desc": "Pokémon Smash or Pass, a simple, fun game about Smashing or Passing. What could go wrong?",
+            "name": "PSoP",
+            "desc": "PSoP, a simple, fun game about Smashing or Passing. What could go wrong?",
             "image": "./assets/images/bots/PSoP.webp",
             "source": "https://github.com/xUnderGame/PSoP",
-            "website": "https://discord.com/api/oauth2/authorize?client_id=942443498915909683&permissions=429497117760&scope=bot"
+            "website": null
         },
         "SR": {
             "name": "SwordRush",
@@ -83,7 +83,7 @@
         },
         "ostguessr": {
             "name": "OSTguessr",
-            "desc": "An upcoming project that I've been thinking about. Guess the game ost that's playing!",
+            "desc": "An upcoming project (probably) that I've been thinking about. Guess the game ost that's playing!",
             "image": "./assets/images/UGProfile.jpg",
             "source": "https://github.com/xUnderGame/ostguessr",
             "website": null
@@ -216,13 +216,6 @@
             "source": null,
             "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
         },
-        "bootlegWordle": {
-            "name": "Bootleg Wordle",
-            "desc": "A bootleg version of wordle that was made in the C# console for fun.",
-            "image": "./assets/images/wordle.png",
-            "source": "https://github.com/xUnderGame/BootlegWordle",
-            "website": null
-        },
         "vscode-origins-snippets": {
             "name": "VS Code Origins Snippets",
             "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
@@ -230,12 +223,12 @@
             "source": "https://github.com/xUnderGame/vscode-origins-snippets",
             "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
-        "aoc2022": {
-            "name": "Advent Of Code 2022 Solutions",
-            "desc": "My solutions for AOC2022, most of the solutions are missing. Oop.",
-            "image": "./assets/images/AOC.png",
-            "source": "https://github.com/xUnderGame/AOC2022",
-            "website": "https://adventofcode.com"
+        "bootlegWordle": {
+            "name": "Bootleg Wordle",
+            "desc": "A bootleg version of wordle that was made in the C# console for fun.",
+            "image": "./assets/images/wordle.png",
+            "source": "https://github.com/xUnderGame/BootlegWordle",
+            "website": null
         }
     }
 }
