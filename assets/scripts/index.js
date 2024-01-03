@@ -284,10 +284,10 @@ function loadBlog() {
     }
 }
 
+// Checks for browser mobile useragent
 function isMobile() {
     return /Android|iPhone/i.test(navigator.userAgent)
 }
-
 
 // Run some code a single time when the website loads. To be honest, I should make this into an onload()!
 genSocials();

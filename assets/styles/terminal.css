@@ -1,0 +1,12 @@
+body {
+    background-image: none !important;
+    font-family: 'Ubuntu Mono';
+}
+
+.inputbox * {
+    display: inline;
+}
+
+#output {
+    white-space: pre-line;
+}

@@ -23,6 +23,9 @@ body {
     background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.90)), url("../images/MainBG.jpg");
     background-repeat: repeat;
     overflow-x: hidden;
+    /* animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-name: bgcolor; */
 }
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -38,4 +41,12 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--tertiary); 
+}
+@keyframes bgcolor {
+    0% {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.90)), url("../images/MainBG.jpg");
+    }
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.90), rgba(255, 255, 255, 0.05)), url("../images/MainBG.jpg");
+    }
 }
