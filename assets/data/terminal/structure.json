@@ -1,0 +1,13 @@
+{
+    "/": {
+        "home": {
+            "guest": {
+                "documents": {
+                    "readme.txt": "Hello World!\nProgrammed to work and not to feel.",
+                    "ifolder": {},
+                    "!hahaimhidden.txt": "nooo..."
+                }
+            }
+        }
+    }
+}

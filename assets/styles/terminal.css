@@ -1,12 +1,52 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
 body {
-    background-image: none !important;
-    font-family: 'Ubuntu Mono';
+	font-family: "Ubuntu Mono";
+	background-image:
+		radial-gradient(rgba(52, 52, 52, 0.70), rgb(13, 13, 13, 0.90) 140%),
+		linear-gradient(rgba(255, 255, 255, 0.3) 6px, transparent 1px) !important;
+		background-repeat: repeat;
+	text-shadow: 0px 0px 6px #9d9999;
+	overflow-x: hidden;
+}
+h1 {
+	font-size: 80px;
+}
+p {
+	font-size: 40px;
 }
 
-.inputbox * {
-    display: inline;
+#terminal {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	word-wrap: break-word;
+	padding: 10% 0px 0px 20%;
 }
-
+#inputbox {
+	padding: 10px 0px 10px 0px;
+}
+#terminfo *,
+#inputbox * {
+	display: inline;
+}
+#selector {
+	margin-right: 10px;
+}
 #output {
-    white-space: pre-line;
+	white-space: pre-line;
+}
+#blink {
+    margin-left: -10px;
+    animation: blinkanim 1s step-start 0s infinite;
+}
+
+@keyframes blinkanim {
+	50% {
+		opacity: 0;
+	}
 }

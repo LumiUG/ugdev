@@ -16,15 +16,18 @@
 </head>
 
 <body>
-    <h1>UG's Terminal</h1><br>
     <main id="terminal">
-        <p id="user">guest@ugdev.xyz</p>
-        <div class="inputbox">
-            <p id="selector">> </p>
+        <div id="terminfo">
+            <p id="user">guest@ugdev.xyz</p>
+            <p id="path">/home/guest</p>
+        </div>
+        <div id="inputbox">
+            <p id="selector">$</p>
             <p id="input"></p>
+            <p id="blink">|</p>
         </div>
         <p id="output"></p>
     </main>
-    <script src="/assets/scripts/terminal.js"></script>
+    <script type="module" src="/assets/scripts/terminal.js"></script>
 </body>
 </html>
