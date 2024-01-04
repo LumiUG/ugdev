@@ -1,13 +1,37 @@
 {
     "/": {
+        "permissions": null,
         "home": {
+            "permissions": null,
             "guest": {
+                "permissions": null,
                 "documents": {
                     "readme.txt": "Hello World!\nProgrammed to work and not to feel.",
-                    "ifolder": {},
-                    "!hahaimhidden.txt": "nooo..."
+                    "private": {
+                        "permissions": {"allowedUsers": ["lumi"]},
+                        "nothing.txt": "yah"
+                    },
+                    "!hiddenfile.txt": "nooo..."
+                }
+            },
+            "root": {
+                "permissions": {"allowedUsers": ["root"]},
+                "documents": {
+                    "default.txt": "password1234"
+                }
+            },
+            "lumi": {
+                "permissions": {"allowedUsers": ["lumi"]},
+                "documents": {
+                    "default.txt": ":>\n-Lumi"
                 }
             }
+        },
+        "etc": {
+            "permissions": {"allowedUsers": ["root"]}
+        },
+        "tmp": {
+            "permissions": null
         }
     }
 }

@@ -15,14 +15,66 @@ var commandHistory = [];
 var historyIndex = 0;
 var os = null;
 var commands = [
-    { "name": "help", "description": "Display information about builtin commands.", "run": CommandHelp },
-    { "name": "echo", "description": "Display a line of text.", "run": CommandEcho },
-    { "name": "history", "description": "Display the history list.", "run": CommandHistory },
-    { "name": "exit", "description": "Go back to ugdev.", "run": CommandExit },
-    { "name": "whoami", "description": "Print effective user name.", "run": CommandWhoAmI },
-    { "name": "clear", "description": "Clear the terminal screen.", "run": null },
-    { "name": "ls", "description": "Placeholder.", "run": CommandLS },
-    { "name": "cd", "description": "Placeholder.", "run": CommandCD }
+    {
+        "name": "help",
+        "description": "Display information about builtin commands.",
+        "hidden": false,
+        "run": CommandHelp
+    },
+    {
+        "name": "echo",
+        "description": "Display a line of text.",
+        "hidden": false,
+        "run": CommandEcho
+    },
+    {
+        "name": "history",
+        "description": "Display the history list.",
+        "hidden": false,
+        "run": CommandHistory
+    },
+    {
+        "name": "whoami",
+        "description": "Print effective user name.",
+        "hidden": false,
+        "run": CommandWhoAmI
+    },
+    {
+        "name": "clear",
+        "description": "Clear the terminal screen.",
+        "hidden": false,
+        "run": null
+    },
+    {
+        "name": "ls",
+        "description": "List directory contents.",
+        "hidden": false,
+        "run": CommandLS
+    },
+    {
+        "name": "uname",
+        "description": "Placeholder.",
+        "hidden": true,
+        "run": CommandUname
+    },
+    {
+        "name": "su",
+        "description": "Placeholder.",
+        "hidden": false,
+        "run": CommandSU
+    },
+    {
+        "name": "cd",
+        "description": "Change the working directory.",
+        "hidden": false,
+        "run": CommandCD
+    },
+    {
+        "name": "exit",
+        "description": "Go back to ugdev.",
+        "hidden": false,
+        "run": CommandExit
+    }
 ];
 
 // Run on start
@@ -68,7 +120,7 @@ document.addEventListener("keydown",
             
             // Loads command history from index
             case "ArrowDown":
-                if (historyIndex >= commandHistory.length - 1) break;
+                if (historyIndex > commandHistory.length - 1) break;
                 historyIndex++;
                 userInput.textContent = commandHistory[historyIndex];
                 break;
@@ -101,7 +153,7 @@ function CheckForCommand() {
     )
 
     // Command not found?
-    if (!validCommand) TypeOutput(`bash: ${userInput.textContent} command not found`);
+    if (!validCommand) TypeOutput(`EOS: ${userInput.textContent} command not found.`);
 }
 
 
@@ -124,7 +176,7 @@ function UpdateCurrentPath(newPath) {
 
 function NoSuchFileOrDirectory(path, currPath) {
     CommandCD(currPath);
-    TypeOutput(`bash: cd: ${path}: No such file or directory.`)
+    TypeOutput(`EOS: ${path}: No such file or directory.`)
 }
 
 // --------------------- COMMANDS ---------------------
@@ -135,13 +187,16 @@ function CommandHelp() {
     
     // In depth help
     if (extensiveHelp != undefined) {
-        TypeOutput(`bash: help: no help topics match '${extensiveHelp}'.`)
+        TypeOutput(`EOS: No help topics match '${extensiveHelp}'.`)
         return;
     }
 
     // Regular help command
     commands.forEach(
-        command => { TypeOutput(`${command.name} - ${command.description}\r\n`, false); }
+        command => {
+            if (!command.hidden)
+                TypeOutput(`${command.name} - ${command.description}\r\n`, false);
+        }
     );
 }
 
@@ -162,7 +217,7 @@ function CommandHistory() {
 
 // Goes back to main website
 function CommandExit() {
-    TypeOutput("Have a nice day!");
+    TypeOutput("EOS: Have a nice day!");
     window.location.replace("https://ugdev.xyz");
 }
 
@@ -176,6 +231,8 @@ function CommandLS() {
     let lsObjects = Object.keys(os);
     lsObjects.forEach(
         match => {
+            if (match == "permissions") return;
+
             // File or folder?
             match = (/(\..+)/.test(match)) ?
                 match : `${match}/`;
@@ -195,27 +252,59 @@ function CommandCD(forcePath = null) {
     let path = (forcePath) ? forcePath : (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
     if (!path) return;
     let pathAsArray;
-    
-    
+
     // Absolute path
     if (path.startsWith("/")) {
+        // Return if ".." on absolute
         if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath); return; }
+        
+        // Do the thing
         pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
         ResetOS();
     }
 
     // Relative path
     else {
+        // Do the thing
         pathAsArray = path.toLowerCase().split("/").filter(i => i);
         path = `${currentPath}/${path}`
     }
 
     // Find if the path is valid and navigate there
-    pathAsArray.forEach(folder => os = os[folder]);
+    pathAsArray.some(
+        folder => {
+            // Does the folder exist?
+            if (folder == "permissions" || !os.hasOwnProperty(folder))
+                { os = undefined; return; }
+
+            // No folder permissions? Go right in!
+            if (os[folder]["permissions"] == null) os = os[folder];
+            
+            // Folder permissions? Let's check them.
+            else {
+                // Allowed users list
+                if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
+                {
+                    os = undefined;
+                    return;
+                }
+            }
+        }
+    );
     
-    // Check if path was valid
+    // Check if path *was* valid
     if (os == undefined) { NoSuchFileOrDirectory(path, currentPath); return; }
     
     // Update current path
     UpdateCurrentPath(path);
+}
+
+// Uname?
+function CommandUname() {
+    TypeOutput("EOS 4 bit system");
+}
+
+// Change users
+function CommandSU() {
+    TypeOutput("EOS: To be implemented.");
 }
