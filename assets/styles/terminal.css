@@ -56,6 +56,10 @@ p {
 	color: rgb(55, 55, 255) !important;
 	text-shadow: 0px 0px 6px #36369d !important;
 }
+.y {
+	color: rgb(225, 255, 55) !important;
+	text-shadow: 0px 0px 6px #9d9836 !important;
+}
 
 @keyframes blinkanim {
 	50% {

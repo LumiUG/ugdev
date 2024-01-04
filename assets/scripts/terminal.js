@@ -202,11 +202,8 @@ function CheckForCommand() {
     )
 
     // Command not found?
-    if (!validCommand) TypeOutput(`EOS: ${userInput.textContent} command not found.`);
+    if (!validCommand) TypeOutput(`[r]EOS: ${userInput.textContent} command not found.[/]`);
 }
-
-// testing (REMOVE LATER)
-TypeOutput("[r]Hello[/] [g]world[/][b]!![/]\nYea..");
 
 // Type something in the output field
 function TypeOutput(content = "", override = true) {
@@ -220,7 +217,7 @@ function TypeOutput(content = "", override = true) {
 
 // Color codes!
 function StyleText(content = "") {
-    let validColors = ["\\[r\\]", "\\[g\\]", "\\[b\\]"];
+    let validColors = ["\\[r\\]", "\\[g\\]", "\\[b\\]", "\\[y\\]"];
 
     // Apply color codes to the text.
     validColors.forEach(
@@ -249,7 +246,7 @@ function UpdateCurrentPath(newPath) {
 
 function NoSuchFileOrDirectory(path, currPath, doPermissions = false) {
     CommandCD(currPath);
-    (doPermissions) ? TypeOutput(`EOS: ${path}: Permission denied.`) : TypeOutput(`EOS: ${path}: No such file or directory.`)
+    (doPermissions) ? TypeOutput(`[r]EOS: ${path}: Permission denied.[/]`) : TypeOutput(`[r]EOS: ${path}: No such file or directory.[/]`)
 }
 
 // Nothing!! (this is badly named just to make it harder, sorry!)
@@ -265,6 +262,9 @@ function ClearPassword(p) {
 // Pathing
 function Pathing(path) {
     let pathAsArray;
+
+    // Sanitize path
+    path = path.replace(/\/{2,}/, "/");
     
     // Absolute path
     if (path.startsWith("/")) {
@@ -333,7 +333,7 @@ function CommandHelp() {
         // No help topic was found.
         let topic = commands.find(command => { return command.name == extensiveHelp; });
         if (!topic) {
-            TypeOutput(`EOS: No help topics match '${extensiveHelp}'.`)
+            TypeOutput(`[r]EOS: No help topics match[/] '${extensiveHelp}'[r].[/]`)
             return;
         }
 
@@ -353,8 +353,8 @@ function CommandHelp() {
 
 // Repeats something with user input
 function CommandEcho() {
-    output.textContent = userInput.textContent.substring(
-        userInput.textContent.indexOf(' ') + 1);
+    TypeOutput(userInput.textContent.substring(
+        userInput.textContent.indexOf(' ') + 1));
 }
 
 // Shows a complete history of user commands
@@ -409,7 +409,7 @@ function CommandCD(forcePath = null) {
     
     // Wtf stop dont do that
     if (/(\..+)/.test(path)) {
-        TypeOutput("EOS: Cannot CD into a file!");
+        TypeOutput("[r]EOS: Cannot CD into a file![/]");
         return;
     }
     
@@ -426,30 +426,30 @@ function CommandUname() {
 function CommandSU() {
     let changeUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
     let passwordUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[2];
-    let userToLoginAs = users.find(user => { if (user.username == changeUser.toLowerCase()) return user });
+    let userToLoginAs = users.find(user => { if (changeUser) if (user.username == changeUser.toLowerCase()) return user });
     
     // Invalid user?
     if (!changeUser || !userToLoginAs) {
-        TypeOutput(`EOS: User ${(!changeUser)? "" : changeUser} does not exist.`);
+        TypeOutput(`[r]EOS: User[/] ${(!changeUser)? "" : changeUser} [r]does not exist.[/]`);
         return;
     }
 
     // Already logged in!
     if (userToLoginAs.username == currentUser) {
-        TypeOutput(`EOS: You are already logged in as ${currentUser}!`);
+        TypeOutput(`[r]EOS: You are already logged in as[/] ${currentUser}[r]![/]`);
         return;
     }
 
     // Wrong password?
     if ((!passwordUser || ClearPassword(userToLoginAs.password) != window.btoa(passwordUser)) && userToLoginAs.password != null) {
-        TypeOutput(`EOS: Incorrect password.`);
+        TypeOutput(`[r]EOS: Incorrect password.[/]`);
         return;
     }
     
     // Changes the user!
     currentUser = userToLoginAs.username;
     userHTML.textContent = `${userToLoginAs.username}@ugdev.xyz`;
-    TypeOutput(`EOS: You are now logged in as ${userToLoginAs.username}!`);
+    TypeOutput(`[g]EOS: You are now logged in as[/] ${userToLoginAs.username}[g]![/]`);
     
     // Changes the current path to the user's home.
     UpdateCurrentPath(`/home/${userToLoginAs.username}`);
