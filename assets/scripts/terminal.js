@@ -4,6 +4,7 @@ var structure = await fetch('/assets/data/terminal/structure.json')
     .then((data) => { return data });
 
 // Global variables
+var userHTML = document.getElementById("user");
 var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
@@ -76,6 +77,20 @@ var commands = [
         "run": CommandExit
     }
 ];
+var users = [
+    {
+        "username": "guest",
+        "password": null
+    },
+    {
+        "username": "lumi",
+        "password": "password1234"
+    },
+    {
+        "username": "root",
+        "password": "root"
+    }
+]
 
 // Run on start
 CommandCD("/home/guest");
@@ -252,7 +267,7 @@ function CommandCD(forcePath = null) {
     let path = (forcePath) ? forcePath : (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
     if (!path) return;
     let pathAsArray;
-
+    
     // Absolute path
     if (path.startsWith("/")) {
         // Return if ".." on absolute
@@ -262,38 +277,43 @@ function CommandCD(forcePath = null) {
         pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
         ResetOS();
     }
-
+    
     // Relative path
     else {
         // Do the thing
         pathAsArray = path.toLowerCase().split("/").filter(i => i);
-        path = `${currentPath}/${path}`
+        path = (currentPath == "/") ? `${currentPath}${path}` : `${currentPath}/${path}`;
     }
 
     // Find if the path is valid and navigate there
     pathAsArray.some(
         folder => {
+            if (os == undefined) return;
+            
             // Does the folder exist?
             if (folder == "permissions" || !os.hasOwnProperty(folder))
-                { os = undefined; return; }
+            {
+                os = undefined;
+                return;
+            }
 
-            // No folder permissions? Go right in!
-            if (os[folder]["permissions"] == null) os = os[folder];
-            
             // Folder permissions? Let's check them.
-            else {
-                // Allowed users list
+            if (os[folder]["permissions"] != null) {
+                // Is the current user inside the allowed users list?
                 if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
                 {
                     os = undefined;
                     return;
                 }
             }
+
+            // No folder permissions? All good? Go right in!
+            os = os[folder];
         }
     );
     
     // Check if path *was* valid
-    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath); return; }
+    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath); return; } // duplicate!
     
     // Update current path
     UpdateCurrentPath(path);
@@ -306,5 +326,30 @@ function CommandUname() {
 
 // Change users
 function CommandSU() {
-    TypeOutput("EOS: To be implemented.");
+    let changeUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1]
+    let passwordUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[2]
+    let userToLoginAs = users.find(user => { if (user.username == changeUser) return user });
+    
+    // Invalid user
+    if (!changeUser || !userToLoginAs) {
+        TypeOutput(`EOS: User ${(!changeUser)? "" : changeUser} does not exist.`);
+        return;
+    }
+
+    // Already logged in!
+    if (userToLoginAs.username == currentUser) {
+        TypeOutput(`EOS: You are already logged in as ${currentUser}!`);
+        return;
+    }
+
+    // Wrong password
+    if ((!passwordUser || userToLoginAs.password != passwordUser) && userToLoginAs.password != null) {
+        TypeOutput(`EOS: Incorrect password.`);
+        return;
+    }
+    
+    // Changes the user!
+    currentUser = userToLoginAs.username;
+    userHTML.textContent = `${userToLoginAs.username}@ugdev.xyz`;
+    TypeOutput(`EOS: You are now logged in as ${userToLoginAs.username}!`);
 }
