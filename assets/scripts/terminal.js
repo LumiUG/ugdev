@@ -53,6 +53,24 @@ var commands = [
         "run": CommandLS
     },
     {
+        "name": "pwd",
+        "description": "Prints working directory.",
+        "hidden": false,
+        "run": CommandPWD
+    },
+    {
+        "name": "cd",
+        "description": "Change the working directory.",
+        "hidden": false,
+        "run": CommandCD
+    },
+    {
+        "name": "cat",
+        "description": "Prints file contents",
+        "hidden": false,
+        "run": CommandCat
+    },
+    {
         "name": "uname",
         "description": "Placeholder.",
         "hidden": true,
@@ -60,15 +78,9 @@ var commands = [
     },
     {
         "name": "su",
-        "description": "Placeholder.",
+        "description": "Change user ID or become superuser.",
         "hidden": false,
         "run": CommandSU
-    },
-    {
-        "name": "cd",
-        "description": "Change the working directory.",
-        "hidden": false,
-        "run": CommandCD
     },
     {
         "name": "exit",
@@ -84,11 +96,11 @@ var users = [
     },
     {
         "username": "lumi",
-        "password": "password1234"
+        "password": "&b**X&lw^YX&d!z^Y&X!Jl^YmlnY*&W5k*^c2!9m^dHB*he&X&Bhb!!G1*lMj!Bid*!W&Nr*c&zoz^"
     },
     {
         "username": "root",
-        "password": "root"
+        "password": "*cm&9^v^dG&F*kbW!!&lu^"
     }
 ]
 
@@ -189,9 +201,77 @@ function UpdateCurrentPath(newPath) {
     currentPath = newPath;
 }
 
-function NoSuchFileOrDirectory(path, currPath) {
+function NoSuchFileOrDirectory(path, currPath, doPermissions = false) {
     CommandCD(currPath);
-    TypeOutput(`EOS: ${path}: No such file or directory.`)
+    (doPermissions) ? TypeOutput(`EOS: ${path}: Permission denied.`) : TypeOutput(`EOS: ${path}: No such file or directory.`)
+}
+
+// Nothing!! (this is badly named just to make it harder, sorry!)
+function ClearPassword(p) {
+    if (!p) return p;
+    ["SVE9PQ==", "WGc9PQ==", "S2c9PQ==", "Smc9PQ=="].forEach(e => {
+        let r = new RegExp(`\\${window.atob(window.atob(e))}*`, "g");
+        p = p.replace(r, "");
+    });
+    return p;
+}
+
+// Pathing
+function Pathing(path) {
+    let pathAsArray;
+    
+    // Absolute path
+    if (path.startsWith("/")) {
+        // Return if ".." on absolute
+        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath); return false; }
+        
+        // Do the thing
+        pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
+        ResetOS();
+    }
+    
+    // Relative path
+    else {
+        // Do the thing
+        pathAsArray = path.toLowerCase().split("/").filter(i => i);
+        path = (currentPath == "/") ? `${currentPath}${path}` : `${currentPath}/${path}`;
+    }
+
+    // Find if the path is valid and navigate there
+    let noPermission = false;
+    pathAsArray.some(
+        folder => {
+            if (os == undefined) return;
+            
+            // Does the folder exist?
+            if (folder == "permissions" || !os.hasOwnProperty(folder))
+            {
+                os = undefined;
+                return;
+            }
+
+            // Is it a file?
+            if (/(\..+)/.test(folder)) return;
+
+            // Folder permissions? Let's check them.
+            if (os[folder]["permissions"] != null) {
+                // Is the current user inside the allowed users list?
+                if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
+                {
+                    noPermission = true;
+                    os = undefined;
+                    return;
+                }
+            }
+
+            // No folder permissions? All good? Go right in!
+            os = os[folder];
+        }
+    );
+    
+    // Check if path *was* valid
+    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath, noPermission); return false; } // duplicate!
+    return path;
 }
 
 // --------------------- COMMANDS ---------------------
@@ -202,6 +282,7 @@ function CommandHelp() {
     
     // In depth help
     if (extensiveHelp != undefined) {
+        extensiveHelp = extensiveHelp.toLowerCase();
         TypeOutput(`EOS: No help topics match '${extensiveHelp}'.`)
         return;
     }
@@ -253,8 +334,8 @@ function CommandLS() {
                 match : `${match}/`;
             
             // Is it a hidden file?
-            match = (match.startsWith("!")) ?
-                `${match.slice(1)}*` : match;
+            if (currentUser != "root" && match.startsWith("!")) return;
+            else match = (match.startsWith("!")) ? `${match.slice(1)}*` : match;
 
             // Sends the output
             TypeOutput(`${match}\r\n`, false)
@@ -264,56 +345,18 @@ function CommandLS() {
 
 // Changes directory to desired path
 function CommandCD(forcePath = null) {
-    let path = (forcePath) ? forcePath : (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
+    let path = (forcePath) ? forcePath : (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1].toLowerCase();
     if (!path) return;
-    let pathAsArray;
+
+    // Navigate there
+    path = Pathing(path);
+    if (!path) return;
     
-    // Absolute path
-    if (path.startsWith("/")) {
-        // Return if ".." on absolute
-        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath); return; }
-        
-        // Do the thing
-        pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
-        ResetOS();
+    // Wtf stop dont do that
+    if (/(\..+)/.test(path)) {
+        TypeOutput("EOS: Cannot CD into a file!");
+        return;
     }
-    
-    // Relative path
-    else {
-        // Do the thing
-        pathAsArray = path.toLowerCase().split("/").filter(i => i);
-        path = (currentPath == "/") ? `${currentPath}${path}` : `${currentPath}/${path}`;
-    }
-
-    // Find if the path is valid and navigate there
-    pathAsArray.some(
-        folder => {
-            if (os == undefined) return;
-            
-            // Does the folder exist?
-            if (folder == "permissions" || !os.hasOwnProperty(folder))
-            {
-                os = undefined;
-                return;
-            }
-
-            // Folder permissions? Let's check them.
-            if (os[folder]["permissions"] != null) {
-                // Is the current user inside the allowed users list?
-                if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
-                {
-                    os = undefined;
-                    return;
-                }
-            }
-
-            // No folder permissions? All good? Go right in!
-            os = os[folder];
-        }
-    );
-    
-    // Check if path *was* valid
-    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath); return; } // duplicate!
     
     // Update current path
     UpdateCurrentPath(path);
@@ -326,11 +369,11 @@ function CommandUname() {
 
 // Change users
 function CommandSU() {
-    let changeUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1]
-    let passwordUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[2]
-    let userToLoginAs = users.find(user => { if (user.username == changeUser) return user });
+    let changeUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
+    let passwordUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[2];
+    let userToLoginAs = users.find(user => { if (user.username == changeUser.toLowerCase()) return user });
     
-    // Invalid user
+    // Invalid user?
     if (!changeUser || !userToLoginAs) {
         TypeOutput(`EOS: User ${(!changeUser)? "" : changeUser} does not exist.`);
         return;
@@ -342,14 +385,40 @@ function CommandSU() {
         return;
     }
 
-    // Wrong password
-    if ((!passwordUser || userToLoginAs.password != passwordUser) && userToLoginAs.password != null) {
+    // Wrong password?
+    if ((!passwordUser || ClearPassword(userToLoginAs.password) != window.btoa(passwordUser)) && userToLoginAs.password != null) {
         TypeOutput(`EOS: Incorrect password.`);
         return;
     }
     
+    // Changes the current path to the user's home.
+    UpdateCurrentPath(`/home/${userToLoginAs.username}`);
+
     // Changes the user!
     currentUser = userToLoginAs.username;
     userHTML.textContent = `${userToLoginAs.username}@ugdev.xyz`;
     TypeOutput(`EOS: You are now logged in as ${userToLoginAs.username}!`);
+}
+
+// Show the contents of a file.
+function CommandCat() {
+    let path = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
+    if (!path) return;
+
+    // Navigate there
+    path = Pathing(path);
+    if (!path) return;
+    
+    // Get the file to cat later
+    let catFile = path.split("/");
+    catFile = catFile.splice(catFile.length - 1, 1).toString();
+
+    // CAT THE FILE!!! MEOWW MRROW MRRPT MEOWWWWWWW
+    let contents = os[catFile];
+    TypeOutput(contents);
+}
+
+// Prints current path
+function CommandPWD() {
+    TypeOutput(currentPath);
 }
