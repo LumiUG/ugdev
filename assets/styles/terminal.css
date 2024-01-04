@@ -44,6 +44,18 @@ p {
     margin-left: -10px;
     animation: blinkanim 1s step-start 0s infinite;
 }
+.r {
+	color: rgb(255, 55, 55) !important;
+	text-shadow: 0px 0px 6px #9d3636 !important;
+}
+.g {
+	color: rgb(55, 255, 55) !important;
+	text-shadow: 0px 0px 6px #369d36 !important;
+}
+.b {
+	color: rgb(55, 55, 255) !important;
+	text-shadow: 0px 0px 6px #36369d !important;
+}
 
 @keyframes blinkanim {
 	50% {

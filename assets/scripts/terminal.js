@@ -19,74 +19,86 @@ var commands = [
     {
         "name": "help",
         "description": "Display information about builtin commands.",
+        "helptopic": "Command usages:\nhelp - Shows a list of all visible commands.\nhelp <command> - Shows in-depth command help.",
         "hidden": false,
         "run": CommandHelp
     },
     {
         "name": "echo",
         "description": "Display a line of text.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandEcho
     },
     {
         "name": "history",
         "description": "Display the history list.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandHistory
     },
     {
         "name": "whoami",
         "description": "Print effective user name.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandWhoAmI
     },
     {
         "name": "clear",
         "description": "Clear the terminal screen.",
+        "helptopic": "",
         "hidden": false,
         "run": null
     },
     {
         "name": "ls",
         "description": "List directory contents.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandLS
     },
     {
         "name": "pwd",
         "description": "Prints working directory.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandPWD
     },
     {
         "name": "cd",
         "description": "Change the working directory.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandCD
     },
     {
         "name": "cat",
         "description": "Prints file contents",
+        "helptopic": "",
         "hidden": false,
         "run": CommandCat
     },
     {
-        "name": "uname",
-        "description": "Placeholder.",
-        "hidden": true,
-        "run": CommandUname
-    },
-    {
         "name": "su",
         "description": "Change user ID or become superuser.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandSU
     },
     {
         "name": "exit",
         "description": "Go back to ugdev.",
+        "helptopic": "",
         "hidden": false,
         "run": CommandExit
+    },
+    {
+        "name": "uname",
+        "description": "Hidden...",
+        "helptopic": "",
+        "hidden": true,
+        "run": CommandUname
     }
 ];
 var users = [
@@ -110,6 +122,8 @@ CommandCD("/home/guest");
 // Anywhere typing
 document.addEventListener("keypress",
     function (event) {
+        event.preventDefault();
+        
         // Keypress blacklist!
         if (keypressBlacklist.includes(event.key)) return;
 
@@ -134,12 +148,19 @@ document.addEventListener("keydown",
                 break;
         
             // Removes a letter
+            case "Delete":
             case "Backspace":
                 userInput.textContent = userInput.textContent.slice(0, -1)
                 break;
             
+            case "Tab":
+                event.preventDefault();
+                console.log("hii")
+                break;
+            
             // Loads command history from index
             case "ArrowUp":
+                event.preventDefault();
                 if (historyIndex <= 0) break;
                 historyIndex--;
                 userInput.textContent = commandHistory[historyIndex];
@@ -147,6 +168,7 @@ document.addEventListener("keydown",
             
             // Loads command history from index
             case "ArrowDown":
+                event.preventDefault();
                 if (historyIndex > commandHistory.length - 1) break;
                 historyIndex++;
                 userInput.textContent = commandHistory[historyIndex];
@@ -183,11 +205,35 @@ function CheckForCommand() {
     if (!validCommand) TypeOutput(`EOS: ${userInput.textContent} command not found.`);
 }
 
+// testing (REMOVE LATER)
+TypeOutput("[r]Hello[/] [g]world[/][b]!![/]\nYea..");
 
 // Type something in the output field
 function TypeOutput(content = "", override = true) {
-    if (override) output.textContent = content
-    else output.textContent += content
+    // Sanitize text (no html tags)
+    // TODO.
+
+    // Apply color codes and send the text.
+    if (override) output.innerHTML = StyleText(content);
+    else output.innerHTML += StyleText(content);
+}
+
+// Color codes!
+function StyleText(content = "") {
+    let validColors = ["\\[r\\]", "\\[g\\]", "\\[b\\]"];
+
+    // Apply color codes to the text.
+    validColors.forEach(
+        color => {
+            let match = `${color}*`;
+            content = content.replaceAll(RegExp(match, "g"), `<span class="${color[2]}">`);
+        }
+    );
+
+    // Close span tags and return!
+    let match = "\\[/\\]*";
+    content = content.replace(RegExp(match, "g"), "</span>");
+    return content;
 }
 
 // Resets the OS structure to its default state
@@ -280,10 +326,19 @@ function Pathing(path) {
 function CommandHelp() {
     let extensiveHelp = userInput.textContent.split(" ")[1];
     
-    // In depth help
+    // In depth command help
     if (extensiveHelp != undefined) {
         extensiveHelp = extensiveHelp.toLowerCase();
-        TypeOutput(`EOS: No help topics match '${extensiveHelp}'.`)
+
+        // No help topic was found.
+        let topic = commands.find(command => { return command.name == extensiveHelp; });
+        if (!topic) {
+            TypeOutput(`EOS: No help topics match '${extensiveHelp}'.`)
+            return;
+        }
+
+        // Show help topic!
+        TypeOutput(`---- ${topic.name} : Command help ----\n\n${topic.helptopic}`);
         return;
     }
 
@@ -291,7 +346,7 @@ function CommandHelp() {
     commands.forEach(
         command => {
             if (!command.hidden)
-                TypeOutput(`${command.name} - ${command.description}\r\n`, false);
+                TypeOutput(`${command.name} - ${command.description}\n`, false);
         }
     );
 }
@@ -306,7 +361,7 @@ function CommandEcho() {
 function CommandHistory() {
     commandHistory.forEach(
         function (used, i) {
-            TypeOutput(`${i}) ${used}\r\n`, false);
+            TypeOutput(`${i}) ${used}\n`, false);
         }
     )
 }
@@ -331,14 +386,14 @@ function CommandLS() {
 
             // File or folder?
             match = (/(\..+)/.test(match)) ?
-                match : `${match}/`;
+                match : `[b]${match}/[/]`;
             
             // Is it a hidden file?
             if (currentUser != "root" && match.startsWith("!")) return;
             else match = (match.startsWith("!")) ? `${match.slice(1)}*` : match;
 
             // Sends the output
-            TypeOutput(`${match}\r\n`, false)
+            TypeOutput(`${match}\n`, false)
         }
     );
 }
@@ -391,13 +446,15 @@ function CommandSU() {
         return;
     }
     
-    // Changes the current path to the user's home.
-    UpdateCurrentPath(`/home/${userToLoginAs.username}`);
-
     // Changes the user!
     currentUser = userToLoginAs.username;
     userHTML.textContent = `${userToLoginAs.username}@ugdev.xyz`;
     TypeOutput(`EOS: You are now logged in as ${userToLoginAs.username}!`);
+    
+    // Changes the current path to the user's home.
+    UpdateCurrentPath(`/home/${userToLoginAs.username}`);
+    CommandCD(`/home/${userToLoginAs.username}`)
+
 }
 
 // Show the contents of a file.
