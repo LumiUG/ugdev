@@ -23,11 +23,11 @@ var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
-var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]"];
+var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
 var currentUser = "guest";
-var currentPath = "/home/guest"
+var currentPath = "/home/guest";
 var commandHistory = [];
 var historyIndex = 0;
 var os = null;
@@ -42,7 +42,7 @@ var commands = [
     {
         "name": "echo",
         "description": "Display a line of text.",
-        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
+        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
         "hidden": false,
         "run": CommandEcho
     },
@@ -72,12 +72,12 @@ var commands = [
         "description": "Clear the terminal screen.",
         "helptopic": "Command usage:\nclear - Clears your terminal! ...You can also just press enter.",
         "hidden": false,
-        "run": null
+        "run": CommandClear
     },
     {
         "name": "ls",
         "description": "List directory contents.",
-        "helptopic": "Command usage:\nls - Lists all the [re]visible[/] files on your terminal.\n\nDisplay rules:\n- [bl]Folder[/]: \"/\"\n- [ye]Hidden file[/] (root only): \"*\"",
+        "helptopic": "Command usage:\nls - Lists all the [re]visible[/] files on your terminal.\n\nDisplay rules:\n- [bl]Folder[/]: \"/\"\n- [ye]Hidden file[/] (root only): \"!\"",
         "hidden": false,
         "run": CommandLS
     },
@@ -124,6 +124,13 @@ var commands = [
         "run": CommandExit
     },
     {
+        "name": "rainbow",
+        "description": null,
+        "helptopic": "Command usage:\n[re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] - Toggles on/off the terminal's [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] effect.\nView everything like a [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/]!\n\n<h4>[re]I am not responsible for damaging your eyes.[/]</h4>",
+        "hidden": true,
+        "run": CommandRainbow
+    },
+    {
         "name": "uname",
         "description": null,
         "helptopic": "Wait... You shouldn't be seeing this!\n[re]<h3>You.</h3> <h2>Sneaky.</h2> <h1>Aren't you?</h1>[/]",
@@ -153,6 +160,11 @@ var users = [
         "username": "lumi",
         "color": "lb",
         "password": "&b**X&lw^YX&d!z^Y&X!Jl^YmlnY*&W5k*^c2!9m^dHB*he&X&Bhb!!G1*lMj!Bid*!W&Nr*c&zoz^"
+    },
+    {
+        "username": "neoma",
+        "color": "pi",
+        "password": "*&U&El*O^^Sw*=!!^="
     }
 ]
 
@@ -210,7 +222,9 @@ document.addEventListener("keydown",
 
                 // Check for matching files in CURRENT FOLDER and store them
                 let matching = Object.keys(os).filter(
-                    entry => { return entry.startsWith(auto[auto.length - 1]); }
+                    entry => {
+                        return entry.startsWith(auto[auto.length - 1]) && !(currentUser != "root" && entry.startsWith("!"));
+                    }
                 );
                     
                 // Print all matches
@@ -241,7 +255,13 @@ document.addEventListener("keydown",
                 userInput.textContent = commandHistory[historyIndex];
                 break;
             
+            // Special keys
             default:
+                // Clear terminal
+                if ((event.ctrlKey || event.metaKey) && event.key == "l") {
+                    event.preventDefault();
+                    CommandClear();
+                }
                 break;
         }
     }
@@ -321,8 +341,8 @@ function UpdateCurrentPath(newPath) {
     currentPath = newPath;
 }
 
-function NoSuchFileOrDirectory(path, currPath, doPermissions = false, printErrors = true) {
-    if (printErrors) (doPermissions) ? TypeOutput(`[re]EOS: ${path}: Permission denied.[/] ${doPermissions}`) : TypeOutput(`[re]EOS: ${path}: No such file or directory.[/]`)
+function NoSuchFileOrDirectory(path, currPath, doPermissions = false) {
+    (doPermissions) ? TypeOutput(`[re]EOS: ${path}: Permission denied.[/] ${doPermissions}`) : TypeOutput(`[re]EOS: ${path}: No such file or directory.[/]`)
     CommandCD(currPath);
 }
 
@@ -337,8 +357,7 @@ function ClearPassword(p) {
 }
 
 // Pathing
-function Pathing(path, printErrors = true) {
-    let errorType = null;
+function Pathing(path) {
     let pathAsArray;
 
     // Sanitize path
@@ -347,7 +366,7 @@ function Pathing(path, printErrors = true) {
     // Absolute path
     if (path.startsWith("/")) {
         // Return if ".." on absolute
-        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath, false, printErrors); return false, "doubleDot"; }
+        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath, false); return false; }
         
         // Do the thing
         pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
@@ -370,7 +389,6 @@ function Pathing(path, printErrors = true) {
             // Does the folder exist?
             if (folder == "permissions" || !os.hasOwnProperty(folder))
             {
-                errorType = "doesNotExist";
                 os = undefined;
                 return;
             }
@@ -384,7 +402,6 @@ function Pathing(path, printErrors = true) {
                 if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
                 {
                     noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
-                    errorType = "disallowed";
                     os = undefined;
                     return;
                 }
@@ -396,21 +413,21 @@ function Pathing(path, printErrors = true) {
     );
     
     // Check if path *was* valid
-    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath, noPermission, printErrors); return false, errorType; }
-    return path, errorType;
+    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath, noPermission); return false; }
+    return path;
 }
 
 // Returns a file string with its correct syntax
 function SetFileSyntax(file) {
     if (file == "permissions") return;
 
+    // Is it a hidden file/folder?
+    if (currentUser != "root" && file.startsWith("!")) return null;
+
     // File or folder?
     file = (/(\..+)/.test(file)) ?
     file : `[bl]${file}/[/]`;
     
-    // Is it a hidden file?
-    if (currentUser != "root" && file.startsWith("!")) return null;
-    else file = (file.startsWith("!")) ? `${file.slice(1)}*` : file;
 
     return file;
 }
@@ -518,11 +535,6 @@ function CommandCD(forcePath = null) {
     UpdateCurrentPath(path);
 }
 
-// Uname?
-function CommandUname() {
-    TypeOutput("EOS 4 bit system");
-}
-
 // Change users
 function CommandSU() {
     let changeUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
@@ -537,7 +549,7 @@ function CommandSU() {
 
     // Already logged in!
     if (userToLoginAs.username == currentUser) {
-        TypeOutput(`[re]EOS: You are already logged in as[/] ${currentUser}[re]![/]`);
+        TypeOutput(`[re]EOS: You are already logged in as ${currentUser}![/]`);
         return;
     }
 
@@ -585,32 +597,61 @@ function CommandPWD() {
 
 // Removes a file (not a folder!)
 function CommandRM() {
-
+    TypeOutput("[re]EOS: Out of service![/]");
+    return;
 }
 
 // Touch a file (creates a text file)
 function CommandTouch() {
-    let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
-    if (!path) return;
+    TypeOutput("[re]EOS: Out of service![/]");
+    return;
 
-    // Navigate there
-    path = path.toLowerCase();
-    let check, errorType = Pathing(path, false);
-    if (!check && errorType != "doesNotExist") return;
-    
-    // Get the file to create
-    let touchFile = path.split("/");
-    touchFile = touchFile.splice(touchFile.length - 1, 1).toString();
+    let file = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    if (!file) return;
+
+    // Naming rules
+    if (file.includes("!") || file.includes("/") || file.includes("*"))
+        { TypeOutput("[re]EOS: Invalid filename, cannot use '!', '/' or '*'.[/]"); return; }
+
 
     // Extension check (we dont want to create a folder...)
-    if (!/(\..+)/.test(touchFile)) { TypeOutput("[re]EOS: Missing file extension.[/]"); return; }
-
+    if (!/(\..+)/.test(file))
+        { TypeOutput("[re]EOS: Missing file extension.[/]"); return; }
+        
     // Create the file
-    structure = (GetUserInput().split(" ")[2] == undefined) ? "" : GetUserInput().split(" ")[2];
+    structure[file] = (GetUserInput().split(" ")[2] == undefined) ? "" : GetUserInput().split(" ")[2];
+
+    // // Navigate there
+    // path = path.toLowerCase();
+    // let check, errorType = Pathing(path, false);
+    // if (!check && errorType != "doesNotExist") return;
+    
+    // // Get the file to create
+    // let touchFile = path.split("/");
+    // touchFile = touchFile.splice(touchFile.length - 1, 1).toString();
+
+    // // Create the file
+    // structure = (GetUserInput().split(" ")[2] == undefined) ? "" : GetUserInput().split(" ")[2];
     console.log(structure);
+}
+
+// Clears the terminal screen
+function CommandClear() {
+    output.textContent = "";
+}
+
+// Uname?
+function CommandUname() {
+    TypeOutput("EOS 4 bit system");
 }
 
 // EOS
 function CommandEOS() {
     TypeOutput("Not yet.");
+}
+
+// Rainbow!!!!
+function CommandRainbow() {
+    if (document.body.style.animation != "") { TypeOutput("EOS: No more partying? :("); document.body.style.animation = ""; }
+    else { TypeOutput("EOS: Let the party begin."); document.body.style.animation = "rainbow 2.5s linear infinite"; }
 }

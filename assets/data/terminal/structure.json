@@ -4,11 +4,10 @@
             "guest": {
                 "documents": {
                     "readme.txt": "[bl]Hello World![/]\nProgrammed to work and not to feel.",
-                    "private": {
-                        "permissions": {"allowedUsers": ["lumi"]},
-                        "nothing.txt": "yah"
-                    },
                     "!hiddenfile.txt": "nooo..."
+                },
+                "!data": {
+
                 }
             },
             "root": {
@@ -20,8 +19,14 @@
             "lumi": {
                 "permissions": {"allowedUsers": ["lumi"]},
                 "documents": {
-                    "default.txt": ":>"
+                    "default.txt": ":>",
+                    "private": {
+                        "diary.md": "<h2>[lg]Entry - 11/07/2012:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
+                    }
                 }
+            },
+            "neoma": {
+                "permissions": {"allowedUsers": ["neoma"]}
             }
         },
         "etc": {

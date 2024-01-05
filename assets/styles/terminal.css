@@ -1,4 +1,16 @@
-html, body {
+:root {
+	--red: rgb(255, 55, 55);
+	--green: rgb(55, 255, 55);
+	--blue: rgb(55, 55, 255);
+	--yellow: rgb(225, 255, 55);
+	--orange: rgb(255, 172, 55);
+	--pink: rgb(255, 55, 255);
+	--lightblue: rgb(55, 255, 255);
+	--lightgrey: rgb(110, 110, 110);
+}
+
+html,
+body {
 	height: 100%;
 	width: 100%;
 	margin: 0px;
@@ -6,7 +18,10 @@ html, body {
 }
 body {
 	font-family: "Ubuntu Mono";
-	background-image: radial-gradient(rgba(52, 52, 52, 0.70), rgb(13, 13, 13, 0.90) 140%);
+	background-image: radial-gradient(
+		rgba(52, 52, 52, 0.7),
+		rgb(13, 13, 13, 0.9) 140%
+	);
 	/* linear-gradient(rgba(255, 255, 255, 0.3) 6px, transparent 1px) !important; */
 	background-repeat: repeat;
 	text-shadow: 0px 0px 6px #9d9999;
@@ -44,40 +59,43 @@ a:visited {
 	white-space: pre-line;
 }
 #blink {
-    margin-left: -10px;
-    animation: blinkanim 1s step-start 0s infinite;
+	margin-left: -10px;
+	animation: blinkanim 1s step-start 0s infinite;
 }
 
 /* Terminal colors */
 .re {
-	color: rgb(255, 55, 55) !important;
-	text-shadow: 0px 0px 6px #9d3636 !important;
+	color: var(--red);
+	text-shadow: 0px 0px 6px #9d3636;
 }
 .gr {
-	color: rgb(55, 255, 55) !important;
-	text-shadow: 0px 0px 6px #369d36 !important;
+	color: var(--green);
+	text-shadow: 0px 0px 6px #369d36;
 }
 .bl {
-	color: rgb(55, 55, 255) !important;
-	text-shadow: 0px 0px 6px #36369d !important;
+	color: var(--blue);
+	text-shadow: 0px 0px 6px #36369d;
 }
 .ye {
-	color: rgb(225, 255, 55) !important;
-	text-shadow: 0px 0px 6px #9d9836 !important;
-}
-.pi {
-	color: rgb(255, 55, 255) !important;
-	text-shadow: 0px 0px 6px #9d3698 !important;
-}
-.lb {
-	color: rgb(55, 255, 255) !important;
-	text-shadow: 0px 0px 6px #369d9d !important;
+	color: var(--yellow);
+	text-shadow: 0px 0px 6px #9d9836;
 }
 .or {
-	color: rgb(255, 172, 55) !important;
-	text-shadow: 0px 0px 6px #9d7036 !important;
+	color: var(--orange);
+	text-shadow: 0px 0px 6px #9d7036;
 }
-
+.pi {
+	color: var(--pink);
+	text-shadow: 0px 0px 6px #9d3698;
+}
+.lb {
+	color: var(--lightblue);
+	text-shadow: 0px 0px 6px #369d9d;
+}
+.lg {
+	color: var(--lightgrey);
+	text-shadow: 0px 0px 6px #484848;
+}
 
 /* Animations */
 @keyframes blinkanim {
@@ -109,5 +127,67 @@ a:visited {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes rainbow {
+	0%, 100% {
+		color: rgb(255, 0, 0);
+		text-shadow: 0px 0px 6px #9d3636;
+	}
+
+	8% {
+		color: rgb(255, 127, 0);
+		text-shadow: 0px 0px 6px #9d7036;
+	}
+
+	16% {
+		color: rgb(255, 255, 0);
+		text-shadow: 0px 0px 6px #9d9836;
+	}
+
+	25% {
+		color: rgb(127, 255, 0);
+		text-shadow: 0px 0px 6px #5f9d36;
+	}
+
+	33% {
+		color: rgb(0, 255, 0);
+		text-shadow: 0px 0px 6px #369d36;
+	}
+
+	41% {
+		color: rgb(0, 255, 127);
+		text-shadow: 0px 0px 6px #369d6a;
+	}
+
+	50% {
+		color: rgb(0, 255, 255);
+		text-shadow: 0px 0px 6px #369d9d;
+	}
+
+	58% {
+		color: rgb(0, 127, 255);
+		text-shadow: 0px 0px 6px #36639d;
+	}
+
+	66% {
+		color: rgb(0, 0, 255);
+		text-shadow: 0px 0px 6px #38369d;
+	}
+
+	75% {
+		color: rgb(127, 0, 255);
+		text-shadow: 0px 0px 6px #64369d;
+	}
+
+	83% {
+		color: rgb(255, 0, 255);
+		text-shadow: 0px 0px 6px #9d3698;
+	}
+
+	91% {
+		color: rgb(255, 0, 127);
+		text-shadow: 0px 0px 6px #9d3676;
 	}
 }
