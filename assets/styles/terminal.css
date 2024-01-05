@@ -47,23 +47,39 @@ a:visited {
     margin-left: -10px;
     animation: blinkanim 1s step-start 0s infinite;
 }
-.r {
+
+/* Terminal colors */
+.re {
 	color: rgb(255, 55, 55) !important;
 	text-shadow: 0px 0px 6px #9d3636 !important;
 }
-.g {
+.gr {
 	color: rgb(55, 255, 55) !important;
 	text-shadow: 0px 0px 6px #369d36 !important;
 }
-.b {
+.bl {
 	color: rgb(55, 55, 255) !important;
 	text-shadow: 0px 0px 6px #36369d !important;
 }
-.y {
+.ye {
 	color: rgb(225, 255, 55) !important;
 	text-shadow: 0px 0px 6px #9d9836 !important;
 }
+.pi {
+	color: rgb(255, 55, 255) !important;
+	text-shadow: 0px 0px 6px #9d3698 !important;
+}
+.lb {
+	color: rgb(55, 255, 255) !important;
+	text-shadow: 0px 0px 6px #369d9d !important;
+}
+.or {
+	color: rgb(255, 172, 55) !important;
+	text-shadow: 0px 0px 6px #9d7036 !important;
+}
 
+
+/* Animations */
 @keyframes blinkanim {
 	50% {
 		opacity: 0;

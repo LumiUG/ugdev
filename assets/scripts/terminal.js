@@ -23,8 +23,8 @@ var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
+var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
-var validColors = ["\\[r\\]", "\\[g\\]", "\\[b\\]", "\\[y\\]"];
 var closestAutocomplete = [];
 var currentUser = "guest";
 var currentPath = "/home/guest"
@@ -35,14 +35,14 @@ var commands = [
     {
         "name": "help",
         "description": "Display information about builtin commands.",
-        "helptopic": "Command usages:\nhelp - Shows a list of all [r]visible[/] commands.\nhelp <command> - Shows in-depth command help.",
+        "helptopic": "Command usages:\nhelp - Shows a list of all [re]visible[/] commands.\nhelp {command} - Shows in-depth command help.",
         "hidden": false,
         "run": CommandHelp
     },
     {
         "name": "echo",
         "description": "Display a line of text.",
-        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[r]Color[/] [y]codes[/] [g]usage[/]:\nUse [b][>r<][/] with a valid letter to apply the color.\nAnd use [b][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[b]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [r]r[/]\n- Green: [g]g[/]\n- Blue: [b]b[/]\n- Yellow: [y]y[/]\n\nExample (Removing \"><\"):\n- [>g<]Hey[>/<] [>y<]there![>/<]\n- [g]Hey[/] [y]there![/]",
+        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
         "hidden": false,
         "run": CommandEcho
     },
@@ -77,28 +77,42 @@ var commands = [
     {
         "name": "ls",
         "description": "List directory contents.",
-        "helptopic": "Command usage:\nls - Lists all the [r]visible[/] files on your terminal.\n\nDisplay rules:\n- [b]Folder[/]: \"/\"\n- [y]Hidden file[/] (root only): \"*\"",
+        "helptopic": "Command usage:\nls - Lists all the [re]visible[/] files on your terminal.\n\nDisplay rules:\n- [bl]Folder[/]: \"/\"\n- [ye]Hidden file[/] (root only): \"*\"",
         "hidden": false,
         "run": CommandLS
     },
     {
         "name": "cd",
         "description": "Change the working directory.",
-        "helptopic": "Command usage:\ncd <path/folder> - Changes the working directory to the specified directory.\n[b]Absolute[/] and [b]relative[/] paths are allowed!\nSorry, [r]no \"cd ..\" yet[/].\n\nFolder permissions:\n- [g]User-based[/]: The current logged user is only allowed into its own [g]/home[/] folder.\nAnd, of course, everyone can use the [g]/home/guest[/] folder.\n\nAn example would be:\nUser \"lumi\" can access [g]/home/lumi[/] and [g]/home/guest[/], but would [r]NOT[/] be able to access [r]/home/root[/].",
+        "helptopic": "Command usage:\ncd {path/folder} - Changes the working directory to the specified directory.\n[bl]Absolute[/] and [bl]relative[/] paths are allowed!\nSorry, [re]no \"cd ..\" yet[/].\n\nFolder permissions:\n- [gr]User-based[/]: The current logged user is only allowed into its own [gr]/home[/] folder.\nAnd, of course, everyone can use the [gr]/home/guest[/] folder.\n\nAn example would be:\nUser \"lumi\" can access [gr]/home/lumi[/] and [gr]/home/guest[/], but would [re]NOT[/] be able to access [re]/home/root[/].",
         "hidden": false,
         "run": CommandCD
     },
     {
+        "name": "rm",
+        "description": "Removes files. (TODO)",
+        "helptopic": "Command usage:\nrm {file} - Removes a file from the filesystem.",
+        "hidden": false,
+        "run": CommandRM
+    },
+    {
+        "name": "touch",
+        "description": "Creates files. (TODO)",
+        "helptopic": "Command usage:\ntouch {file} {content?} - Creates a file with (optionally) content inside of it.",
+        "hidden": false,
+        "run": CommandTouch
+    },
+    {
         "name": "cat",
-        "description": "Prints file contents",
-        "helptopic": "Command usage:\ncat <path/file> - Prints the contents of a file.\n\nRoot user info:\nTo open a [r]hidden[/] file (marked with \"[r]*[/]\"), you must use \"[r]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.\n\n\n[y]MEOWOW- MEOWWW, MEW. MRRROWW :3 purrr...[/]\n...sorry, cat command.",
+        "description": "Prints file contents.",
+        "helptopic": "Command usage:\ncat {path/file} - Prints the contents of a file.\n\nRoot user info:\nTo open a [re]hidden[/] file (marked with \"[re]*[/]\"), you must use \"[re]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.\n\n\n[ye]MEOWOW- MEOWWW, MEW. MRRROWW :3 purrr...[/]\n...sorry, cat command.",
         "hidden": false,
         "run": CommandCat
     },
     {
         "name": "su",
         "description": "Change active user.",
-        "helptopic": "Command usage:\nsu <user> <password?> - Changes the active user. Guest user has no password.\n\n<h4>P.S: Please [r]don't ruin the fun[/] by checking the terminal's source code for the passwords.\n\nIf you do that then um... no [y]cookies[/] for you!\n\n...And, and you stink. Yeah. Yeah! ([g]please[/])</h4>",
+        "helptopic": "Command usage:\nsu {user} {password?} - Changes the active user. Guest user has no password.\n\n<h4>P.S: Please [re]don't ruin the fun[/] by checking the terminal's source code for the passwords.\n\nIf you do that then um... no [ye]cookies[/] for you!\n\n...And, and you stink. Yeah. Yeah! ([gr]please[/])</h4>",
         "hidden": false,
         "run": CommandSU
     },
@@ -111,24 +125,34 @@ var commands = [
     },
     {
         "name": "uname",
-        "description": "Hidden...",
-        "helptopic": "Wait... You shouldn't be seeing this!\n[r]<h3>You.</h3> <h2>Sneaky.</h2> <h1>Aren't you?</h1>[/]",
+        "description": null,
+        "helptopic": "Wait... You shouldn't be seeing this!\n[re]<h3>You.</h3> <h2>Sneaky.</h2> <h1>Aren't you?</h1>[/]",
         "hidden": true,
         "run": CommandUname
+    },
+    {
+        "name": "eos",
+        "description": null,
+        "helptopic": ":3",
+        "hidden": true,
+        "run": CommandEOS
     }
 ];
 var users = [
     {
         "username": "guest",
+        "color": null,
         "password": null
     },
     {
-        "username": "lumi",
-        "password": "&b**X&lw^YX&d!z^Y&X!Jl^YmlnY*&W5k*^c2!9m^dHB*he&X&Bhb!!G1*lMj!Bid*!W&Nr*c&zoz^"
+        "username": "root",
+        "color": "or",
+        "password": "*cm&9^v^dG&F*kbW!!&lu^"
     },
     {
-        "username": "root",
-        "password": "*cm&9^v^dG&F*kbW!!&lu^"
+        "username": "lumi",
+        "color": "lb",
+        "password": "&b**X&lw^YX&d!z^Y&X!Jl^YmlnY*&W5k*^c2!9m^dHB*he&X&Bhb!!G1*lMj!Bid*!W&Nr*c&zoz^"
     }
 ]
 
@@ -223,6 +247,18 @@ document.addEventListener("keydown",
     }
 );
 
+// Paste to terminal
+document.addEventListener("paste", function (event) {
+        userInput.textContent += event.clipboardData.getData('text/plain');
+    }
+)
+
+// Copy terminal input
+document.addEventListener("copy", function () {
+        navigator.clipboard.writeText(userInput.textContent);
+    }
+)
+
 // Clears user input
 function ClearUserInput() { userInput.textContent = ""; }
 
@@ -245,7 +281,7 @@ function CheckForCommand() {
     )
 
     // Command not found?
-    if (!validCommand) TypeOutput(`[r]EOS: ${GetUserInput()} command not found.[/]`);
+    if (!validCommand) TypeOutput(`[re]EOS: ${GetUserInput()} command not found.[/]`);
 }
 
 // Type something in the output field
@@ -263,8 +299,8 @@ function StyleText(content = "") {
     // Apply color codes to the text.
     validColors.forEach(
         color => {
-            let match = `${color}*`;
-            content = content.replaceAll(RegExp(match, "g"), `<span class="${color[2]}">`);
+            let match = `${color}`; // /\[\w+\]/ regex
+            content = content.replaceAll(RegExp(match, "g"), `<span class="${color.match(/\w+/)}">`);
         }
     );
 
@@ -285,8 +321,8 @@ function UpdateCurrentPath(newPath) {
     currentPath = newPath;
 }
 
-function NoSuchFileOrDirectory(path, currPath, doPermissions = false) {
-    (doPermissions) ? TypeOutput(`[r]EOS: ${path}: Permission denied.[/] ${doPermissions}`) : TypeOutput(`[r]EOS: ${path}: No such file or directory.[/]`)
+function NoSuchFileOrDirectory(path, currPath, doPermissions = false, printErrors = true) {
+    if (printErrors) (doPermissions) ? TypeOutput(`[re]EOS: ${path}: Permission denied.[/] ${doPermissions}`) : TypeOutput(`[re]EOS: ${path}: No such file or directory.[/]`)
     CommandCD(currPath);
 }
 
@@ -301,7 +337,8 @@ function ClearPassword(p) {
 }
 
 // Pathing
-function Pathing(path) {
+function Pathing(path, printErrors = true) {
+    let errorType = null;
     let pathAsArray;
 
     // Sanitize path
@@ -310,7 +347,7 @@ function Pathing(path) {
     // Absolute path
     if (path.startsWith("/")) {
         // Return if ".." on absolute
-        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath); return false; } // duplicate!
+        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath, false, printErrors); return false, "doubleDot"; }
         
         // Do the thing
         pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
@@ -333,6 +370,7 @@ function Pathing(path) {
             // Does the folder exist?
             if (folder == "permissions" || !os.hasOwnProperty(folder))
             {
+                errorType = "doesNotExist";
                 os = undefined;
                 return;
             }
@@ -346,6 +384,7 @@ function Pathing(path) {
                 if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
                 {
                     noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
+                    errorType = "disallowed";
                     os = undefined;
                     return;
                 }
@@ -357,8 +396,8 @@ function Pathing(path) {
     );
     
     // Check if path *was* valid
-    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath, noPermission); return false; } // duplicate!
-    return path;
+    if (os == undefined) { NoSuchFileOrDirectory(path, currentPath, noPermission, printErrors); return false, errorType; }
+    return path, errorType;
 }
 
 // Returns a file string with its correct syntax
@@ -367,7 +406,7 @@ function SetFileSyntax(file) {
 
     // File or folder?
     file = (/(\..+)/.test(file)) ?
-    file : `[b]${file}/[/]`;
+    file : `[bl]${file}/[/]`;
     
     // Is it a hidden file?
     if (currentUser != "root" && file.startsWith("!")) return null;
@@ -379,6 +418,12 @@ function SetFileSyntax(file) {
 // Return the user's input as trimmed to avoid undefined errors.
 function GetUserInput() {
     return userInput.textContent.trim();
+}
+
+// Apply the user's color and return it
+function AddUsernameColor(user) {
+    if (!user.color) return user.username;
+    return StyleText(`[${user.color}]${user.username}[/]`);
 }
 
 // --------------------- COMMANDS ---------------------
@@ -394,7 +439,7 @@ function CommandHelp() {
         // No help topic was found.
         let topic = commands.find(command => { return command.name == extensiveHelp; });
         if (!topic) {
-            TypeOutput(`[r]EOS: No help topics match[/] '${extensiveHelp}'[r].[/]`)
+            TypeOutput(`[re]EOS: No help topics match[/] '${extensiveHelp}'[re].[/]`)
             return;
         }
 
@@ -435,7 +480,7 @@ function CommandExit() {
 
 // Returns the user
 function CommandWhoAmI() {
-    TypeOutput(currentUser);
+    TypeOutput(AddUsernameColor(users.find(user => user.username == currentUser)));
 }
 
 // LS command, returns all files/folders in current directory.
@@ -465,7 +510,7 @@ function CommandCD(forcePath = null) {
     
     // Wtf stop dont do that
     if (/(\..+)/.test(path)) {
-        TypeOutput("[r]EOS: Cannot CD into a file![/]");
+        TypeOutput("[re]EOS: Cannot CD into a file![/]");
         return;
     }
     
@@ -486,30 +531,31 @@ function CommandSU() {
     
     // Invalid user?
     if (!changeUser || !userToLoginAs) {
-        TypeOutput(`[r]EOS: User[/] ${(!changeUser)? "" : changeUser} [r]does not exist.[/]`);
+        TypeOutput(`[re]EOS: User[/] ${(!changeUser)? "" : changeUser} [re]does not exist.[/]`);
         return;
     }
 
     // Already logged in!
     if (userToLoginAs.username == currentUser) {
-        TypeOutput(`[r]EOS: You are already logged in as[/] ${currentUser}[r]![/]`);
+        TypeOutput(`[re]EOS: You are already logged in as[/] ${currentUser}[re]![/]`);
         return;
     }
 
     // Wrong password?
     if ((!passwordUser || ClearPassword(userToLoginAs.password) != window.btoa(passwordUser)) && userToLoginAs.password != null) {
-        TypeOutput(`[r]EOS: Incorrect password.[/]`);
+        TypeOutput(`[re]EOS: Incorrect password.[/]`);
         return;
     }
     
     // Changes the user!
     currentUser = userToLoginAs.username;
-    userHTML.textContent = `${userToLoginAs.username}@ugdev.xyz`;
-    TypeOutput(`[g]EOS: You are now logged in as[/] ${userToLoginAs.username}[g]![/]`);
+    let stylizedUsername = AddUsernameColor(userToLoginAs);
+    userHTML.innerHTML = `${stylizedUsername}@ugdev.xyz`;
+    TypeOutput(`[gr]EOS: You are now logged in as[/] ${stylizedUsername}[gr]![/]`);
     
     // Changes the current path to the user's home.
-    UpdateCurrentPath(`/home/${userToLoginAs.username}`);
-    CommandCD(`/home/${userToLoginAs.username}`)
+    UpdateCurrentPath(`/home/${currentUser}`);
+    CommandCD(`/home/${currentUser}`)
 
 }
 
@@ -535,4 +581,36 @@ function CommandCat() {
 // Prints current path
 function CommandPWD() {
     TypeOutput(currentPath);
+}
+
+// Removes a file (not a folder!)
+function CommandRM() {
+
+}
+
+// Touch a file (creates a text file)
+function CommandTouch() {
+    let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    if (!path) return;
+
+    // Navigate there
+    path = path.toLowerCase();
+    let check, errorType = Pathing(path, false);
+    if (!check && errorType != "doesNotExist") return;
+    
+    // Get the file to create
+    let touchFile = path.split("/");
+    touchFile = touchFile.splice(touchFile.length - 1, 1).toString();
+
+    // Extension check (we dont want to create a folder...)
+    if (!/(\..+)/.test(touchFile)) { TypeOutput("[re]EOS: Missing file extension.[/]"); return; }
+
+    // Create the file
+    structure = (GetUserInput().split(" ")[2] == undefined) ? "" : GetUserInput().split(" ")[2];
+    console.log(structure);
+}
+
+// EOS
+function CommandEOS() {
+    TypeOutput("Not yet.");
 }

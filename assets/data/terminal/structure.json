@@ -3,7 +3,7 @@
         "home": {
             "guest": {
                 "documents": {
-                    "readme.txt": "[b]Hello World![/]\nProgrammed to work and not to feel.",
+                    "readme.txt": "[bl]Hello World![/]\nProgrammed to work and not to feel.",
                     "private": {
                         "permissions": {"allowedUsers": ["lumi"]},
                         "nothing.txt": "yah"
@@ -20,7 +20,7 @@
             "lumi": {
                 "permissions": {"allowedUsers": ["lumi"]},
                 "documents": {
-                    "default.txt": ":>\n-Lumi"
+                    "default.txt": ":>"
                 }
             }
         },
