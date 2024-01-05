@@ -3,7 +3,7 @@
         "home": {
             "guest": {
                 "documents": {
-                    "readme.txt": "Hello World!\nProgrammed to work and not to feel.",
+                    "readme.txt": "[b]Hello World![/]\nProgrammed to work and not to feel.",
                     "private": {
                         "permissions": {"allowedUsers": ["lumi"]},
                         "nothing.txt": "yah"

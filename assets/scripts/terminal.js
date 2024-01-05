@@ -1,3 +1,17 @@
+/*
+    Hey, I've worked really hard on this.
+
+    I'd appreciate if you could check the source code AFTER
+    having experienced a bit of the terminal beforehand.
+
+    There are tons of secrets and little quirks everywhere,
+    and I feel like you'd be missing out if you checked for user passwords,
+    hidden commands or just the entire .json folder structure.
+
+    That being said... Have fun! Enjoy viewing my spaghetti code <3
+    (omg i love spaghetti code)
+*/
+
 // JSON Imports.
 var structure = await fetch('/assets/data/terminal/structure.json')
     .then((response) => response.json())
@@ -9,7 +23,9 @@ var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
-var keypressBlacklist = ["Enter", "Delete"]
+var keypressBlacklist = ["Enter", "Delete"];
+var validColors = ["\\[r\\]", "\\[g\\]", "\\[b\\]", "\\[y\\]"];
+var closestAutocomplete = [];
 var currentUser = "guest";
 var currentPath = "/home/guest"
 var commandHistory = [];
@@ -19,84 +35,84 @@ var commands = [
     {
         "name": "help",
         "description": "Display information about builtin commands.",
-        "helptopic": "Command usages:\nhelp - Shows a list of all visible commands.\nhelp <command> - Shows in-depth command help.",
+        "helptopic": "Command usages:\nhelp - Shows a list of all [r]visible[/] commands.\nhelp <command> - Shows in-depth command help.",
         "hidden": false,
         "run": CommandHelp
     },
     {
         "name": "echo",
         "description": "Display a line of text.",
-        "helptopic": "",
+        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[r]Color[/] [y]codes[/] [g]usage[/]:\nUse [b][>r<][/] with a valid letter to apply the color.\nAnd use [b][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[b]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [r]r[/]\n- Green: [g]g[/]\n- Blue: [b]b[/]\n- Yellow: [y]y[/]\n\nExample (Removing \"><\"):\n- [>g<]Hey[>/<] [>y<]there![>/<]\n- [g]Hey[/] [y]there![/]",
         "hidden": false,
         "run": CommandEcho
     },
     {
         "name": "history",
         "description": "Display the history list.",
-        "helptopic": "",
+        "helptopic": "Command usage:\nhistory - Displays your past commands.",
         "hidden": false,
         "run": CommandHistory
     },
     {
         "name": "whoami",
         "description": "Print effective user name.",
-        "helptopic": "",
+        "helptopic": "Command usage:\nwhoami - Shows on-screen the current working user.",
         "hidden": false,
         "run": CommandWhoAmI
     },
     {
+        "name": "pwd",
+        "description": "Prints working directory.",
+        "helptopic": "Command usage:\npwd - Shows your current path. That's it!",
+        "hidden": false,
+        "run": CommandPWD
+    },
+    {
         "name": "clear",
         "description": "Clear the terminal screen.",
-        "helptopic": "",
+        "helptopic": "Command usage:\nclear - Clears your terminal! ...You can also just press enter.",
         "hidden": false,
         "run": null
     },
     {
         "name": "ls",
         "description": "List directory contents.",
-        "helptopic": "",
+        "helptopic": "Command usage:\nls - Lists all the [r]visible[/] files on your terminal.\n\nDisplay rules:\n- [b]Folder[/]: \"/\"\n- [y]Hidden file[/] (root only): \"*\"",
         "hidden": false,
         "run": CommandLS
     },
     {
-        "name": "pwd",
-        "description": "Prints working directory.",
-        "helptopic": "",
-        "hidden": false,
-        "run": CommandPWD
-    },
-    {
         "name": "cd",
         "description": "Change the working directory.",
-        "helptopic": "",
+        "helptopic": "Command usage:\ncd <path/folder> - Changes the working directory to the specified directory.\n[b]Absolute[/] and [b]relative[/] paths are allowed!\nSorry, [r]no \"cd ..\" yet[/].\n\nFolder permissions:\n- [g]User-based[/]: The current logged user is only allowed into its own [g]/home[/] folder.\nAnd, of course, everyone can use the [g]/home/guest[/] folder.\n\nAn example would be:\nUser \"lumi\" can access [g]/home/lumi[/] and [g]/home/guest[/], but would [r]NOT[/] be able to access [r]/home/root[/].",
         "hidden": false,
         "run": CommandCD
     },
     {
         "name": "cat",
         "description": "Prints file contents",
-        "helptopic": "",
+        "helptopic": "Command usage:\ncat <path/file> - Prints the contents of a file.\n\nRoot user info:\nTo open a [r]hidden[/] file (marked with \"[r]*[/]\"), you must use \"[r]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.\n\n\n[y]MEOWOW- MEOWWW, MEW. MRRROWW :3 purrr...[/]\n...sorry, cat command.",
         "hidden": false,
         "run": CommandCat
     },
     {
         "name": "su",
-        "description": "Change user ID or become superuser.",
-        "helptopic": "",
+        "description": "Change active user.",
+        "helptopic": "Command usage:\nsu <user> <password?> - Changes the active user. Guest user has no password.\n\n<h4>P.S: Please [r]don't ruin the fun[/] by checking the terminal's source code for the passwords.\n\nIf you do that then um... no [y]cookies[/] for you!\n\n...And, and you stink. Yeah. Yeah! ([g]please[/])</h4>",
         "hidden": false,
         "run": CommandSU
     },
     {
         "name": "exit",
         "description": "Go back to ugdev.",
-        "helptopic": "",
+        "helptopic": "Command usage:\nexit - Goes back to <a href='https://ugdev.xyz'>ugdev.xyz</a>",
         "hidden": false,
         "run": CommandExit
     },
     {
         "name": "uname",
         "description": "Hidden...",
-        "helptopic": "",
+        "helptopic": "Wait... You shouldn't be seeing this!\n[r]<h3>You.</h3> <h2>Sneaky.</h2> <h1>Aren't you?</h1>[/]",
         "hidden": true,
         "run": CommandUname
     }
@@ -139,8 +155,8 @@ document.addEventListener("keydown",
             // Submits the current user input and resets stuff
             case "Enter":
                 ClearOutput();
-                if (userInput.textContent.trim()) {
-                    commandHistory.push(userInput.textContent)
+                if (GetUserInput()) {
+                    commandHistory.push(GetUserInput())
                     historyIndex = commandHistory.length;
                     CheckForCommand();
                 }
@@ -150,12 +166,39 @@ document.addEventListener("keydown",
             // Removes a letter
             case "Delete":
             case "Backspace":
-                userInput.textContent = userInput.textContent.slice(0, -1)
+                userInput.textContent = GetUserInput().slice(0, -1)
                 break;
             
+            // Autocomplete
             case "Tab":
                 event.preventDefault();
-                console.log("hii")
+                
+                // User typed anything yet?
+                let auto = GetUserInput().split(" ");
+                if (!auto[auto.length - 1]) { closestAutocomplete = []; return; }
+                ClearOutput();
+                
+                // Autocomplete?!
+                if (auto[auto.length - 1] == closestAutocomplete[0]) {
+                    userInput.textContent = GetUserInput().replace(new RegExp(closestAutocomplete[0] + '$'), closestAutocomplete[1]);
+                    closestAutocomplete = [];
+                }
+
+                // Check for matching files in CURRENT FOLDER and store them
+                let matching = Object.keys(os).filter(
+                    entry => { return entry.startsWith(auto[auto.length - 1]); }
+                );
+                    
+                // Print all matches
+                if (matching.length <= 0) return;
+                closestAutocomplete = [auto[auto.length - 1], matching[0]];
+                matching.forEach(
+                    match => {
+                        match = SetFileSyntax(match);
+                        if (!match) return;
+                        TypeOutput(`${match}\n`, false);
+                    }
+                );
                 break;
             
             // Loads command history from index
@@ -193,7 +236,7 @@ function CheckForCommand() {
     commands.forEach(
         command => {
             // Runs command if one of them passes the check, then breaks out
-            if (userInput.textContent.toLowerCase().startsWith(command.name)) {
+            if (GetUserInput().toLowerCase().startsWith(command.name)) {
                 if (command.run) command.run();
                 validCommand = true;
                 return;
@@ -202,7 +245,7 @@ function CheckForCommand() {
     )
 
     // Command not found?
-    if (!validCommand) TypeOutput(`[r]EOS: ${userInput.textContent} command not found.[/]`);
+    if (!validCommand) TypeOutput(`[r]EOS: ${GetUserInput()} command not found.[/]`);
 }
 
 // Type something in the output field
@@ -217,8 +260,6 @@ function TypeOutput(content = "", override = true) {
 
 // Color codes!
 function StyleText(content = "") {
-    let validColors = ["\\[r\\]", "\\[g\\]", "\\[b\\]", "\\[y\\]"];
-
     // Apply color codes to the text.
     validColors.forEach(
         color => {
@@ -245,8 +286,8 @@ function UpdateCurrentPath(newPath) {
 }
 
 function NoSuchFileOrDirectory(path, currPath, doPermissions = false) {
+    (doPermissions) ? TypeOutput(`[r]EOS: ${path}: Permission denied.[/] ${doPermissions}`) : TypeOutput(`[r]EOS: ${path}: No such file or directory.[/]`)
     CommandCD(currPath);
-    (doPermissions) ? TypeOutput(`[r]EOS: ${path}: Permission denied.[/]`) : TypeOutput(`[r]EOS: ${path}: No such file or directory.[/]`)
 }
 
 // Nothing!! (this is badly named just to make it harder, sorry!)
@@ -269,7 +310,7 @@ function Pathing(path) {
     // Absolute path
     if (path.startsWith("/")) {
         // Return if ".." on absolute
-        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath); return false; }
+        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath); return false; } // duplicate!
         
         // Do the thing
         pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
@@ -284,7 +325,7 @@ function Pathing(path) {
     }
 
     // Find if the path is valid and navigate there
-    let noPermission = false;
+    let noPermission = null;
     pathAsArray.some(
         folder => {
             if (os == undefined) return;
@@ -304,7 +345,7 @@ function Pathing(path) {
                 // Is the current user inside the allowed users list?
                 if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
                 {
-                    noPermission = true;
+                    noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
                     os = undefined;
                     return;
                 }
@@ -320,11 +361,31 @@ function Pathing(path) {
     return path;
 }
 
+// Returns a file string with its correct syntax
+function SetFileSyntax(file) {
+    if (file == "permissions") return;
+
+    // File or folder?
+    file = (/(\..+)/.test(file)) ?
+    file : `[b]${file}/[/]`;
+    
+    // Is it a hidden file?
+    if (currentUser != "root" && file.startsWith("!")) return null;
+    else file = (file.startsWith("!")) ? `${file.slice(1)}*` : file;
+
+    return file;
+}
+
+// Return the user's input as trimmed to avoid undefined errors.
+function GetUserInput() {
+    return userInput.textContent.trim();
+}
+
 // --------------------- COMMANDS ---------------------
 
 // Help command
 function CommandHelp() {
-    let extensiveHelp = userInput.textContent.split(" ")[1];
+    let extensiveHelp = GetUserInput().split(" ")[1];
     
     // In depth command help
     if (extensiveHelp != undefined) {
@@ -353,8 +414,8 @@ function CommandHelp() {
 
 // Repeats something with user input
 function CommandEcho() {
-    TypeOutput(userInput.textContent.substring(
-        userInput.textContent.indexOf(' ') + 1));
+    TypeOutput(GetUserInput().substring(
+        GetUserInput().indexOf(' ') + 1));
 }
 
 // Shows a complete history of user commands
@@ -382,15 +443,9 @@ function CommandLS() {
     let lsObjects = Object.keys(os);
     lsObjects.forEach(
         match => {
-            if (match == "permissions") return;
-
-            // File or folder?
-            match = (/(\..+)/.test(match)) ?
-                match : `[b]${match}/[/]`;
-            
-            // Is it a hidden file?
-            if (currentUser != "root" && match.startsWith("!")) return;
-            else match = (match.startsWith("!")) ? `${match.slice(1)}*` : match;
+            // Prepare the file string
+            match = SetFileSyntax(match);
+            if (!match) return;
 
             // Sends the output
             TypeOutput(`${match}\n`, false)
@@ -400,10 +455,11 @@ function CommandLS() {
 
 // Changes directory to desired path
 function CommandCD(forcePath = null) {
-    let path = (forcePath) ? forcePath : (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1].toLowerCase();
+    let path = (forcePath) ? forcePath : (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) return;
 
     // Navigate there
+    path = path.toLowerCase();
     path = Pathing(path);
     if (!path) return;
     
@@ -424,8 +480,8 @@ function CommandUname() {
 
 // Change users
 function CommandSU() {
-    let changeUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
-    let passwordUser = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[2];
+    let changeUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    let passwordUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[2];
     let userToLoginAs = users.find(user => { if (changeUser) if (user.username == changeUser.toLowerCase()) return user });
     
     // Invalid user?
@@ -459,10 +515,11 @@ function CommandSU() {
 
 // Show the contents of a file.
 function CommandCat() {
-    let path = (userInput.textContent == "") ? null : userInput.textContent.split(" ")[1];
+    let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) return;
 
     // Navigate there
+    path = path.toLowerCase();
     path = Pathing(path);
     if (!path) return;
     
