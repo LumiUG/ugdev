@@ -27,6 +27,12 @@
             },
             "neoma": {
                 "permissions": {"allowedUsers": ["neoma"]}
+            },
+            "ying": {
+                "permissions": {"allowedUsers": ["ying"]},
+                "notdocuments": {
+                    "wawa.wawa": "Wawacat.\nWawacat lived on a hill.\nWawacat was wawaing around one day\nand found a friend!\n\nThey lived happily ever after :)"
+                }
             }
         },
         "etc": {
