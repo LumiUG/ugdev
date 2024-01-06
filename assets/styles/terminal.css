@@ -35,6 +35,9 @@ h1 {
 p {
 	font-size: 40px;
 }
+img {
+	width: 40%;
+}
 a:visited {
 	color: white !important;
 }

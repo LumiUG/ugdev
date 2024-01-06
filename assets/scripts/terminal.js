@@ -49,7 +49,7 @@ var commands = [
     {
         "name": "history",
         "description": "Display the history list.",
-        "helptopic": "Command usage:\nhistory - Displays your past commands.",
+        "helptopic": "Command usage:\nhistory - Displays your past commands.\n\nTerminal tip:\nYou can use the [gr]UP[/]/[re]DOWN[/] arrow keys to navigate through your recently used commands.",
         "hidden": false,
         "run": CommandHistory
     },
@@ -70,21 +70,21 @@ var commands = [
     {
         "name": "clear",
         "description": "Clear the terminal screen.",
-        "helptopic": "Command usage:\nclear - Clears your terminal! ...You can also just press enter.",
+        "helptopic": "Command usage:\nclear - Clears your terminal screen.\n\nUseful tips:\nDid you know that you can press [gr]CTRL[/]+[gr]L[/] to clear your terminal screen?\nPressing enter also clears your terminal. Oh, the wonders of technology.",
         "hidden": false,
         "run": CommandClear
     },
     {
         "name": "ls",
         "description": "List directory contents.",
-        "helptopic": "Command usage:\nls - Lists all the [re]visible[/] files on your terminal.\n\nDisplay rules:\n- [bl]Folder[/]: \"/\"\n- [ye]Hidden file[/] (root only): \"!\"",
+        "helptopic": "Command usage:\nls - Lists all the [re]visible[/] files on your terminal.\n\nDisplay rules:\n- [bl]Folder[/]: \"/\"\n- [gr]Image[/]: \".png/webp/gif/ico\"\n- [ye]Hidden file[/] (root only): \"!\"",
         "hidden": false,
         "run": CommandLS
     },
     {
         "name": "cd",
         "description": "Change the working directory.",
-        "helptopic": "Command usage:\ncd {path/folder} - Changes the working directory to the specified directory.\n[bl]Absolute[/] and [bl]relative[/] paths are allowed!\nSorry, [re]no \"cd ..\" yet[/].\n\nFolder permissions:\n- [gr]User-based[/]: The current logged user is only allowed into its own [gr]/home[/] folder.\nAnd, of course, everyone can use the [gr]/home/guest[/] folder.\n\nAn example would be:\nUser \"lumi\" can access [gr]/home/lumi[/] and [gr]/home/guest[/], but would [re]NOT[/] be able to access [re]/home/root[/].",
+        "helptopic": "Command usage:\ncd {path/folder} - Changes the working directory to the specified directory.\n[bl]Absolute[/] and [bl]relative[/] paths are allowed!\nSorry, [re]no \"cd ..\" yet[/].\n\nAutocomplete:\nYou can press [gr]TAB[/] to show the nearest files on your CURRENT directory, press it again, and it'll autocomplete to the first result. Neat!\n\nFolder permissions:\n- [bl]User-based[/]: The current logged user is only allowed into its own [gr]/home[/] folder.\nAnd, of course, everyone can use the [gr]/home/guest[/] folder.\n\nAn example would be:\nUser \"[lb]lumi[/]\" can access [gr]/home/lumi[/] and [gr]/home/guest[/], but would [re]NOT[/] be able to access [re]/home/root[/].",
         "hidden": false,
         "run": CommandCD
     },
@@ -105,9 +105,16 @@ var commands = [
     {
         "name": "cat",
         "description": "Prints file contents.",
-        "helptopic": "Command usage:\ncat {path/file} - Prints the contents of a file.\n\nRoot user info:\nTo open a [re]hidden[/] file (marked with \"[re]*[/]\"), you must use \"[re]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.\n\n\n[ye]MEOWOW- MEOWWW, MEW. MRRROWW :3 purrr...[/]\n...sorry, cat command.",
+        "helptopic": "Command usage:\ncat {path/file} - Prints the contents of a file.\n\nRoot user info:\nTo open a [re]hidden[/] file (marked with \"[re]*[/]\"), you must use \"[re]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.[ye]\n\n\nMEOWOW- MEOWWW, MEW. MRRROWW :3 purrr...[/]\n...sorry, cat command.",
         "hidden": false,
         "run": CommandCat
+    },
+    {
+        "name": "imcat",
+        "description": "Shows image on screen.",
+        "helptopic": "Command usage:\nimcat {path/file} - Shows image on the terminal screen.\n\nRoot user info:\nTo open a [re]hidden[/] file (marked with \"[re]*[/]\"), you must use \"[re]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.[ye]",
+        "hidden": false,
+        "run": CommandIMCat
     },
     {
         "name": "su",
@@ -365,7 +372,7 @@ function ClearPassword(p) {
 function Pathing(path) {
     let pathAsArray;
 
-    // Sanitize path
+    // Clear multiple "/" in path 
     path = path.replace(/\/{2,}/, "/");
     
     // Absolute path
@@ -391,9 +398,11 @@ function Pathing(path) {
         folder => {
             if (os == undefined) return;
             
-            // Does the folder exist?
+            // Does the folder exist
+            console.log(folder)
             if (folder == "permissions" || !os.hasOwnProperty(folder))
             {
+                console.log("cannot access slugcat corner, doesnt work even if root (huh??) (fix later)")
                 os = undefined;
                 return;
             }
@@ -431,8 +440,9 @@ function SetFileSyntax(file) {
 
     // File or folder?
     file = (/(\..+)/.test(file)) ?
-    file : `[bl]${file}/[/]`;
-    
+        (!FileIsImage(file)) ?
+            `[gr]${file}[/]` : file
+        : `[bl]${file}/[/]`;
 
     return file;
 }
@@ -446,6 +456,11 @@ function GetUserInput() {
 function AddUsernameColor(user) {
     if (!user.color) return user.username;
     return StyleText(`[${user.color}]${user.username}[/]`);
+}
+
+// Checks if a file ends with an image extension
+function FileIsImage(file) {
+    return !file.endsWith("png") && !file.endsWith("webp") && !file.endsWith("gif") && !file.endsWith("ico");
 }
 
 // --------------------- COMMANDS ---------------------
@@ -592,6 +607,31 @@ function CommandCat() {
 
     // CAT THE FILE!!! MEOWW MRROW MRRPT MEOWWWWWWW
     let contents = os[catFile];
+    TypeOutput(contents);
+}
+
+// Shows an image
+function CommandIMCat() {
+    let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    if (!path) return;
+
+    // Navigate there
+    path = path.toLowerCase();
+    path = Pathing(path);
+    if (!path) return;
+    
+    // Get the file to cat later
+    let catFile = path.split("/");
+    catFile = catFile.splice(catFile.length - 1, 1).toString();
+    
+    // Check for a valid file extension
+    if (FileIsImage(catFile)) {
+        TypeOutput("[re]EOS: Invalid file extension, please select a valid image.[/]");
+        return;
+    }
+
+    // IMCAT THE FILE!!! 
+    let contents = `<img src="${os[catFile]}">`;
     TypeOutput(contents);
 }
 

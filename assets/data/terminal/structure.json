@@ -3,17 +3,28 @@
         "home": {
             "guest": {
                 "documents": {
-                    "readme.txt": "[bl]Hello World![/]\nProgrammed to work and not to feel.",
-                    "!hiddenfile.txt": "nooo..."
+                    "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[or]3)[/] Password protected folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-Guest\n\nFuck.\n-[or]root[/]",
+                    "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
+                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-Guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nWHY DID I FIND THIS FUNNY WHY I HATE YOU WHOEVER WROTE THIS\n-[lb]lumi[/]"
                 },
-                "!data": {
-
+                "images": {
+                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]your local admin[/]",
+                    "ugdev.png" : "/assets/images/UGDevLogo.png",
+                    "slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
+                    "slug.gif": "/assets/images/terminal/scugcheese.gif",
+                    "slug(1).gif": "/assets/images/terminal/scugcheese.gif",
+                    "slug(2).gif": "/assets/images/terminal/scugcheese.gif",
+                    "slug(3).gif": "/assets/images/terminal/scugcheese.gif",
+                    "okie.txt": "okiee sorry ill stop posting slugs i was feeling silly :3c *wink*\n-[mg]ying[/]\n\nKilljoy.\n-[lb]lumi[/]"
+                },
+                "!slugcatcorner": {
+                    "welcome.slugcat": "They'll never find us here.\n-[mg]ying[/]"
                 }
             },
             "root": {
                 "permissions": {"allowedUsers": ["root"]},
                 "documents": {
-                    "default.txt": "password1234"
+                    "default.txt": "-----"
                 }
             },
             "lumi": {
