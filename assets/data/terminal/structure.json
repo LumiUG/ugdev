@@ -47,23 +47,36 @@
                 "notdocuments": {
                     "wawa.wawa": "Wawacat.\nWawacat lived on a hill.\nWawacat was wawaing around one day\nand found a friend!\n\nThey lived happily ever after :)"
                 }
+            },
+            "gummi": {
+                "permissions": {"allowedUsers": ["gummi"]},
+                "documents": {
+
+                }
             }
         },
         "etc": {
             "permissions": {"allowedUsers": ["root"]}
         },
         "tmp": {
-            "scan.log": "Scan ongoing...",
+            "scan.log": "Scan ongoing..."
+        },
+        "games": {
+            "maze.png": "/assets/images/terminal/supercoolmaze.png",
             "!coda": {
                 "permissions": {"allowedUsers": ["coda"]},
                 "leap.txt": "<img src=\"/assets/images/terminal/TBG-Lampost.webp\">\n[lg]Take my hand, let's jump together.[/]"
             }
         },
         "groups": {
-            "rules.MD": "rules tbd",
+            "rules.MD": "",
+            "notacult": {
+                "welcome.group": ""
+            },
             "!slugcatcorner": {
                 "permissions": {"allowedUsers": ["lumi", "neoma", "ying"]},
-                "welcome.scug": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]ying[/]"
+                "welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]ying[/]",
+                "question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[lb]lumi[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]"
             }
         }
     }

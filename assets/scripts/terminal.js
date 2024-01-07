@@ -42,7 +42,7 @@ var commands = [
     {
         "name": "echo",
         "description": "Display a line of text.",
-        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n- Muted green: [mg]mg[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
+        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n- Light grey: [lg]lg[/]\n- Muted green: [mg]mg[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
         "hidden": false,
         "run": CommandEcho
     },
@@ -184,10 +184,16 @@ var users = [
         "home": "/home/ying"
     },
     {
+        "username": "gummi",
+        "color": "bl",
+        "password": "^&c!m*!*9^sb&G!!V&yN!z&&M^^y*",
+        "home": "/home/gummi"
+    },
+    {
         "username": "coda",
         "color": "lg",
         "password": "b!^G**F*tc^^G!9!z!!dH&!M=^^&*",
-        "home": "/tmp/!coda"
+        "home": "/games/!coda"
     }
 ]
 
@@ -613,6 +619,7 @@ function CommandCat() {
     // Get the file to cat later
     let catFile = path.split("/");
     catFile = catFile.splice(catFile.length - 1, 1).toString();
+    if (!/(\..+)/.test(catFile)) { TypeOutput("[re]EOS: That isn't a file.[/]"); return; };
 
     // CAT THE FILE!!! MEOWW MRROW MRRPT MEOWWWWWWW
     let contents = os[catFile];
