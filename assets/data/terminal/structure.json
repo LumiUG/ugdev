@@ -16,9 +16,6 @@
                     "slug(2).gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(3).gif": "/assets/images/terminal/scugcheese.gif",
                     "okie.txt": "okiee sorry ill stop posting slugs i was feeling silly :3c *wink*\n-[mg]ying[/]\n\nKilljoy.\n-[lb]lumi[/]"
-                },
-                "!slugcatcorner": {
-                    "welcome.slugcat": "They'll never find us here.\n-[mg]ying[/]"
                 }
             },
             "root": {
@@ -29,15 +26,21 @@
             },
             "lumi": {
                 "permissions": {"allowedUsers": ["lumi"]},
+                "public": {
+                    "testfile.txt": "hii"
+                },
                 "documents": {
-                    "default.txt": ":>",
                     "private": {
+                        "permissions": {"allowedUsers": ["lumi"]},
                         "diary.md": "<h2>[lg]Entry - 11/07/2012:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
                     }
                 }
             },
             "neoma": {
-                "permissions": {"allowedUsers": ["neoma"]}
+                "permissions": {"allowedUsers": ["neoma"]},
+                "documents": {
+
+                }
             },
             "ying": {
                 "permissions": {"allowedUsers": ["ying"]},
@@ -50,7 +53,18 @@
             "permissions": {"allowedUsers": ["root"]}
         },
         "tmp": {
-            "scan.log": "Scan ongoing..."
+            "scan.log": "Scan ongoing...",
+            "!coda": {
+                "permissions": {"allowedUsers": ["coda"]},
+                "leap.txt": "<img src=\"/assets/images/terminal/TBG-Lampost.webp\">\n[lg]Take my hand, let's jump together.[/]"
+            }
+        },
+        "groups": {
+            "rules.MD": "rules tbd",
+            "!slugcatcorner": {
+                "permissions": {"allowedUsers": ["lumi", "neoma", "ying"]},
+                "welcome.scug": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]ying[/]"
+            }
         }
     }
 }

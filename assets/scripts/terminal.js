@@ -156,27 +156,38 @@ var users = [
     {
         "username": "guest",
         "color": null,
-        "password": null
+        "password": null,
+        "home": "/home/guest"
     },
     {
         "username": "root",
         "color": "or",
-        "password": "*cm&9^v^dG&F*kbW!!&lu^"
+        "password": "*cm&9^v^dG&F*kbW!!&lu^",
+        "home": "/home/root"
     },
     {
         "username": "lumi",
         "color": "lb",
-        "password": "&b**X&lw^YX&d!z^Y&X!Jl^YmlnY*&W5k*^c2!9m^dHB*he&X&Bhb!!G1*lMj!Bid*!W&Nr*c&zoz^"
+        "password": "&b**X&lw^YX&d!z^Y&X!Jl^YmlnY*&W5k*^c2!9m^dHB*he&X&Bhb!!G1*lMj!Bid*!W&Nr*c&zoz^",
+        "home": "/home/lumi"
     },
     {
         "username": "neoma",
         "color": "pi",
-        "password": "*&U&El*O^^Sw*=!!^="
+        "password": "*&U&El*O^^Sw*=!!^=",
+        "home": "/home/neoma"
     },
     {
         "username": "ying",
         "color": "mg",
-        "password": "*d!!2*^F&&!3^Y!Q^&=**="
+        "password": "*d!!2*^F&&!3^Y!Q^&=**=",
+        "home": "/home/ying"
+    },
+    {
+        "username": "coda",
+        "color": "lg",
+        "password": "b!^G**F*tc^^G!9!z!!dH&!M=^^&*",
+        "home": "/tmp/!coda"
     }
 ]
 
@@ -368,12 +379,12 @@ function ClearPassword(p) {
     return p;
 }
 
-// Pathing
+// Navigate and check that a path is valid.
 function Pathing(path) {
     let pathAsArray;
 
     // Clear multiple "/" in path 
-    path = path.replace(/\/{2,}/, "/");
+    path = path.replace(/\/{2,}/, "/").toLowerCase();
     
     // Absolute path
     if (path.startsWith("/")) {
@@ -381,14 +392,14 @@ function Pathing(path) {
         if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath, false); return false; }
         
         // Do the thing
-        pathAsArray = ["/"].concat(path.toLowerCase().split("/").filter(i => i));
+        pathAsArray = ["/"].concat(path.split("/").filter(i => i));
         ResetOS();
     }
     
     // Relative path
     else {
         // Do the thing
-        pathAsArray = path.toLowerCase().split("/").filter(i => i);
+        pathAsArray = path.split("/").filter(i => i);
         path = (currentPath == "/") ? `${currentPath}${path}` : `${currentPath}/${path}`;
     }
 
@@ -399,10 +410,8 @@ function Pathing(path) {
             if (os == undefined) return;
             
             // Does the folder exist
-            console.log(folder)
             if (folder == "permissions" || !os.hasOwnProperty(folder))
             {
-                console.log("cannot access slugcat corner, doesnt work even if root (huh??) (fix later)")
                 os = undefined;
                 return;
             }
@@ -413,7 +422,7 @@ function Pathing(path) {
             // Folder permissions? Let's check them.
             if (os[folder]["permissions"] != null) {
                 // Is the current user inside the allowed users list?
-                if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser))
+                if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser) && !path.includes("/public"))
                 {
                     noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
                     os = undefined;
@@ -586,8 +595,8 @@ function CommandSU() {
     TypeOutput(`[gr]EOS: You are now logged in as[/] ${stylizedUsername}[gr]![/]`);
     
     // Changes the current path to the user's home.
-    UpdateCurrentPath(`/home/${currentUser}`);
-    CommandCD(`/home/${currentUser}`)
+    UpdateCurrentPath(userToLoginAs.home);
+    CommandCD(userToLoginAs.home);
 
 }
 
