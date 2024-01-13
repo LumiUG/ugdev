@@ -425,18 +425,29 @@ function Pathing(path) {
             // Is it a file?
             if (/(\..+)/.test(folder)) return;
 
-            // Folder permissions? Let's check them.
-            if (os[folder]["permissions"] != null) {
+            // Folder permissions? (Doing a guard case here doesnt work ?????)
+            if (os[folder].hasOwnProperty("permissions")) {
                 // Is the current user inside the allowed users list?
-                if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser) && !path.includes("/public"))
-                {
-                    noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
-                    os = undefined;
-                    return;
+                if (os[folder]["permissions"].hasOwnProperty("allowedUsers")) {
+                    if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser) && !path.includes("/public"))
+                    {
+                        noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
+                        os = undefined;
+                        return;
+                    }
+                }
+    
+                // Password protected? (BUGGED IF YOU LEAVE FOLDER TO /home/root (as an example))
+                if (os[folder]["permissions"].hasOwnProperty("password")) {
+                    if (os[folder]["permissions"]["password"] != GetUserInput().split(" ")[2]) {
+                        noPermission = "Wrong password.";
+                        os = undefined;
+                        return;
+                    }
                 }
             }
 
-            // No folder permissions? All good? Go right in!
+            // Updates path.
             os = os[folder];
         }
     );
@@ -603,7 +614,6 @@ function CommandSU() {
     // Changes the current path to the user's home.
     UpdateCurrentPath(userToLoginAs.home);
     CommandCD(userToLoginAs.home);
-
 }
 
 // Show the contents of a file.

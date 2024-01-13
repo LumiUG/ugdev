@@ -2,10 +2,17 @@
     "/": {
         "home": {
             "guest": {
+                "folder": {
+                    "test.t": "a"
+                },
                 "documents": {
                     "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[or]3)[/] Password protected folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-Guest\n\nFuck.\n-[or]root[/]",
                     "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
-                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-Guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nWHY DID I FIND THIS FUNNY WHY I HATE YOU WHOEVER WROTE THIS\n-[lb]lumi[/]"
+                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-Guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nWHY DID I FIND THIS FUNNY WHY I HATE YOU WHOEVER WROTE THIS\n-[lb]lumi[/]",
+                    "secret": {
+                        "permissions": {"password": "stupid"},
+                        "test.txt": "hi :3"
+                    }
                 },
                 "images": {
                     "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]your local admin[/]",
@@ -33,6 +40,9 @@
                     "private": {
                         "permissions": {"allowedUsers": ["lumi"]},
                         "diary.md": "<h2>[lg]Entry - 11/07/2012:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
+                    },
+                    "studies": {
+                        "run.png": "<img src=\"/assets/images/terminal/scugcheese.gif\" onload=\"alert('test');\">"
                     }
                 }
             },
@@ -69,7 +79,7 @@
             }
         },
         "groups": {
-            "rules.MD": "",
+            "rules.md": "",
             "notacult": {
                 "welcome.group": ""
             },
