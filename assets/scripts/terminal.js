@@ -84,7 +84,7 @@ var commands = [
     {
         "name": "cd",
         "description": "Change the working directory.",
-        "helptopic": "Command usage:\ncd {path/folder} - Changes the working directory to the specified directory.\n[bl]Absolute[/] and [bl]relative[/] paths are allowed!\nSorry, [re]no \"cd ..\" yet[/].\n\nAutocomplete:\nYou can press [gr]TAB[/] to show the nearest files on your CURRENT directory, press it again, and it'll autocomplete to the first result. Neat!\n\nFolder permissions:\n- [bl]User-based[/]: The current logged user is only allowed into its own [gr]/home[/] folder.\nAnd, of course, everyone can use the [gr]/home/guest[/] folder.\n\nAn example would be:\nUser \"[lb]lumi[/]\" can access [gr]/home/lumi[/] and [gr]/home/guest[/], but would [re]NOT[/] be able to access [re]/home/root[/].",
+        "helptopic": "Command usage:\ncd {path/folder} - Changes the working directory to the specified directory.\n[bl]Absolute[/] and [bl]relative[/] paths are allowed!\nYou can also \"[gr]cd ..[/]\"!\n\nAutocomplete:\nYou can press [gr]TAB[/] to show the nearest files on your CURRENT directory, press it again, and it'll autocomplete to the first result. Neat!\n\nFolder permissions:\n- [bl]User-based[/]: The current logged user is only allowed into its own [gr]/home[/] folder.\nAnd, of course, everyone can use the [gr]/home/guest[/] folder.\n\nAn example would be:\nUser \"[lb]lumi[/]\" can access [gr]/home/lumi[/] and [gr]/home/guest[/], but would [re]NOT[/] be able to access [re]/home/root[/].",
         "hidden": false,
         "run": CommandCD
     },
@@ -392,11 +392,17 @@ function Pathing(path) {
     // Clear multiple "/" in path 
     path = path.replace(/\/{2,}/, "/").toLowerCase();
     
+    // Go back a directory
+    if (path == "..") {
+        if (currentPath == "/") { NoSuchFileOrDirectory(path, currentPath); return false; }
+        let backOneDir = currentPath.split("/").slice(0, -1).join("/");
+        if (backOneDir == "") backOneDir = "/";
+        Pathing(backOneDir);
+        return backOneDir;
+    }
+
     // Absolute path
-    if (path.startsWith("/")) {
-        // Return if ".." on absolute
-        if (path.includes("..")) { NoSuchFileOrDirectory(path, currentPath, false); return false; }
-        
+    if (path.startsWith("/")) {        
         // Do the thing
         pathAsArray = ["/"].concat(path.split("/").filter(i => i));
         ResetOS();
@@ -438,13 +444,13 @@ function Pathing(path) {
                 }
     
                 // Password protected? (BUGGED IF YOU LEAVE FOLDER TO /home/root (as an example))
-                if (os[folder]["permissions"].hasOwnProperty("password")) {
-                    if (os[folder]["permissions"]["password"] != GetUserInput().split(" ")[2]) {
-                        noPermission = "Wrong password.";
-                        os = undefined;
-                        return;
-                    }
-                }
+                // if (os[folder]["permissions"].hasOwnProperty("password")) {
+                //     if (os[folder]["permissions"]["password"] == GetUserInput().split(" ")[2]) {
+                //         noPermission = "Wrong password.";
+                //         os = undefined;
+                //         return;
+                //     }
+                // }
             }
 
             // Updates path.
