@@ -12,6 +12,9 @@
 .drop-blurry-black {
     filter: drop-shadow(2px 2px 5px black);
 }
+.drop-blurry-white {
+    filter: drop-shadow(2px 2px 5px white);
+}
 * {
     margin: 0px;
     /* border: 1px solid pink; /* Remove after! */
@@ -42,6 +45,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--tertiary); 
 }
+
+/* Animations */
 @keyframes bgcolor {
     0% {
         background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.90)), url("../images/MainBG.jpg");

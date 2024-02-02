@@ -88,8 +88,10 @@ const randMessages = [
     "\"I love blankets\"",
     "\"don't say anything.\"",
     "That there, that's not me.",
-    "There was nothing to fear and nothing to doubt"];
+    "There was nothing to fear and nothing to doubt"
+];
 
+var tooltip = document.getElementById("tooltip");
 function updateRandom(ele) {
     ele.firstElementChild.textContent = randMessages[Math.floor(Math.random() * randMessages.length)];
 }
@@ -153,7 +155,7 @@ function GenProjects(id) {
 function AddImage(toAdd, id, key, keys, i) {
     toAdd.src = projects[id][key][keys[i]];
     if (projects[id][key]["tooltip"]) {
-        toAdd.title = projects[id][key]["tooltip"];
+        AddTooltipEvent(toAdd, projects[id][key]["tooltip"]);
         toAdd.alt = projects[id][key]["tooltip"];
     }
 }
@@ -163,6 +165,20 @@ function AddA(toAdd, id, key, keys, i) {
     toAdd.target = "_blank";
     toAdd.rel = "noreferrer noopener";
     toAdd.href = projects[id][key][keys[i]];
+}
+
+// Adds tooltip events to an element. Any element.
+function AddTooltipEvent(toAdd, tooltipContent) {
+    ["mouseover", "click"].forEach(event => {
+        toAdd.addEventListener(event, () => {
+            tooltip.style.display = "block";
+            toAdd.parentElement.append(tooltip);
+            tooltip.style.top = toAdd.offsetTop + toAdd.style.offsetHeight + "px";
+            tooltip.style.left = toAdd.offsetLeft + toAdd.style.offsetWidth + "px";
+            tooltip.textContent = tooltipContent;
+        })
+    });
+    toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none";  });
 }
 
 function genSocials() {
