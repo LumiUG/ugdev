@@ -83,8 +83,8 @@
         },
         "ostguessr": {
             "name": "OSTguessr",
-            "desc": "An upcoming project (probably) that I've been thinking about. Guess the game ost that's playing!",
-            "image": "./assets/images/UGProfile.jpg",
+            "desc": "An upcoming project (probably, maybe) that I've been thinking about. Guess the game ost that's playing!",
+            "image": "./assets/images/UGDevLogo.png",
             "source": "https://github.com/xUnderGame/ostguessr",
             "website": null
         }
@@ -102,6 +102,13 @@
 
     },
     "art": {
+        "rework": {
+            "name": "This area will be reworked!",
+            "image": "./assets/images/UGDevLogo.png",
+            "timestamp": "02/02/2024",
+            "program": "My puter",
+            "tooltip": "Soon?"
+        },
         "tutle": {
             "name": "Emoji turtle 'recreation'",
             "image": "./assets/images/artwork/Turtle, Turtle Day!.png",

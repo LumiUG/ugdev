@@ -12,7 +12,7 @@
     (omg i love spaghetti code)
 */
 
-// JSON Imports.
+// JSON Imports. (the entire os structure path + permissions, if you're interested)
 var structure = await fetch('/assets/data/terminal/structure.json')
     .then((response) => response.json())
     .then((data) => { return data });
@@ -590,6 +590,7 @@ function CommandCD(forcePath = null) {
 // Change users
 function CommandSU() {
     let changeUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    if (changeUser == "-") changeUser = "root";
     let passwordUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[2];
     let userToLoginAs = users.find(user => { if (changeUser) if (user.username == changeUser.toLowerCase()) return user });
     
