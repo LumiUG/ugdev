@@ -10,6 +10,11 @@
 	--mutedgreen: rgb(95, 160, 81);
 }
 
+@font-face {
+	font-family: "avaliScratch";
+	src: url("/assets/fonts/avali-scratch.ttf");
+}
+
 html,
 body {
 	height: 100%;

@@ -150,6 +150,13 @@ var commands = [
         "helptopic": ":3",
         "hidden": true,
         "run": CommandEOS
+    },
+    {
+        "name": "avali",
+        "description": null,
+        "helptopic": "Toggle avali scratch as the main terminal font.\n\n<span style='font-family: avaliScratch;'>Chirp!</span>",
+        "hidden": true,
+        "run": CommandAvaliScratch
     }
 ];
 var users = [
@@ -198,7 +205,9 @@ var users = [
 ]
 
 // Run on start
+if (/Android|iPhone/i.test(navigator.userAgent)) TypeOutput("[re]Im sososo sorry but this isn't mobile-friendly yet :([/]\nCheck back later! Ty [pi]<3[/]");
 CommandCD("/home/guest");
+
 
 // Anywhere typing
 document.addEventListener("keypress",
@@ -252,7 +261,7 @@ document.addEventListener("keydown",
                 // Check for matching files in CURRENT FOLDER and store them
                 let matching = Object.keys(os).filter(
                     entry => {
-                        return entry.startsWith(auto[auto.length - 1]) && !(currentUser != "root" && entry.startsWith("!"));
+                        return entry.startsWith(auto[auto.length - 1]) && !(currentUser != "root" && entry.startsWith("!") && entry != "permissions");
                     }
                 );
                     
@@ -518,6 +527,7 @@ function CommandHelp() {
     }
 
     // Regular help command
+    TypeOutput(">> [lb]This is unfinished!!!![/] [pi]<3[/] <<\n\n");
     commands.forEach(
         command => {
             if (!command.hidden)
@@ -732,4 +742,10 @@ function CommandEOS() {
 function CommandRainbow() {
     if (document.body.style.animation != "") { TypeOutput("EOS: No more partying? :("); document.body.style.animation = ""; }
     else { TypeOutput("EOS: Let the party begin."); document.body.style.animation = "rainbow 2.5s linear infinite"; }
+}
+
+// EOS
+function CommandAvaliScratch() {
+    if (document.body.style.fontFamily == "Ubuntu Mono" || document.body.style.fontFamily == "") { document.body.style.fontFamily = "avaliScratch"; TypeOutput("Enjoy!\n\nCredit to <a href='https://fontstruct.com/fontstructions/show/1108804/avali_scratch'>SomeGuyNamedDavid</a>"); }
+    else { document.body.style.fontFamily = "Ubuntu Mono"; TypeOutput("Alright, alright.");}
 }
