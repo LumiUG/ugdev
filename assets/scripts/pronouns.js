@@ -1,5 +1,5 @@
 // JSON Imports.
-var names = await fetch('/assets/data/names.json')
+var names = await fetch('/assets/data/pronouns.json')
     .then((response) => response.json())
     .then((data) => { return data });
 
@@ -30,7 +30,7 @@ var elements = Array.from(document.body.getElementsByTagName("section"));
 elements.forEach(element => ProcessSection(element));
 
 // Extra (words section)
-names = names["words"]
+names = names["words"] // This is a bit hacky, but it works LMAO
 Array.from(document.body.getElementsByClassName("wordsExtra"))
     .forEach(element => ProcessSection(element));
 

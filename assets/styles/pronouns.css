@@ -7,36 +7,51 @@ html {
 body {
     height: inherit;
 }
+header {
+    margin: 40px 0px 15px 0px;
+    text-align: center;
+}
 main {
     display: flex;
-    padding: 0px 10% 0px 10%;
+    padding: 0px 10% 0px 20%;
     flex-wrap: wrap;
 }
-.wordSection,
 section {
+    margin-bottom: 25px;
     flex: 1 0 50%;
 }
 legend {
-    margin-top: 100px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-footer p {
-    margin: 15px 0px 15px 0px;
-    margin-top: -2px;
-    text-align: center;
+hr {
+    width: 75%;
+    margin: 25px 0px 25px 0px;
+    color: white;
 }
 img {
     height: 22px;
     width: 22px;
 }
+h1 {
+    font-size: 25px;
+}
 h2 {
     font-size: 60px;
+}
+h3 {
+    margin-bottom: 10px;
 }
 p {
     font-size: 20px;
     margin-top: -2px;
+}
+footer p {
+    margin: 15px 0px 15px 0px;
+    margin-top: -2px;
+    text-align: center;
 }
 
 /* Classes */
@@ -45,10 +60,27 @@ p {
     margin-bottom: 10px;
     gap: 8px;
 }
+.wordSection {
+    width: 100%;
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .whatis {
     display: flex;
     margin: 0px 10px 0px 10px;
     gap: 5px
+}
+.wordsExtra {
+    flex: 1 0 15%;
+}
+.separator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .list img {
     padding-left: 25px;
@@ -62,7 +94,7 @@ p {
     color: #ffffff;
 }
 .no {
-    color: #adadad;
+    color: #888888;
 }
 .joke {
     color: #ffed4f;

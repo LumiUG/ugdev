@@ -160,6 +160,10 @@ main div h2 {
     padding: 20px 20px 20px 20px;
     border-radius: 5px;
 }
+.temporary {
+    display: flex;
+    justify-content: center;
+}
 .projContainer:hover {
     transform: scale(1.05);
 }
@@ -192,6 +196,10 @@ main div h2 {
 #misc,
 .misc {
     background-color: var(--primary-75);
+}
+#pronouns {
+    background-color: #fe4fff;
+    text-decoration: none;
 }
 
 .selectedDiscord {
