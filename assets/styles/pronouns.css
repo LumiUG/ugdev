@@ -1,0 +1,75 @@
+
+/* Elements */
+html {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    height: inherit;
+}
+main {
+    display: flex;
+    padding: 0px 10% 0px 10%;
+    flex-wrap: wrap;
+}
+.wordSection,
+section {
+    flex: 1 0 50%;
+}
+legend {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer p {
+    margin: 15px 0px 15px 0px;
+    margin-top: -2px;
+    text-align: center;
+}
+img {
+    height: 22px;
+    width: 22px;
+}
+h2 {
+    font-size: 60px;
+}
+p {
+    font-size: 20px;
+    margin-top: -2px;
+}
+
+/* Classes */
+.entry {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 8px;
+}
+.whatis {
+    display: flex;
+    margin: 0px 10px 0px 10px;
+    gap: 5px
+}
+.list img {
+    padding-left: 25px;
+}
+
+/* Types */
+.yes {
+    color: #fe4fff;
+}
+.okay {
+    color: #ffffff;
+}
+.no {
+    color: #adadad;
+}
+.joke {
+    color: #ffed4f;
+}
+.close {
+    color: #ff4f4f;
+}
+.sona {
+    color: #4f9eff;
+}

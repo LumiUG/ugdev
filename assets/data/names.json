@@ -1,0 +1,21 @@
+{
+    "names": {
+        "bird": { "type": "sona" },
+        "ug": { "type": "yes" },
+        "uggy": { "type": "close" },
+        "undergame": { "type": "no" },
+        "test4": { "type": "joke" },
+        "test5": { "type": "close" },
+        "test6": { "type": "sona" }
+    },
+    "pronouns": {
+        "he/him": { "type": "yes" },
+        "he/him*": { "type": "sona" },
+        "it/its": { "type": "sona" }
+    },
+    "words": {
+        "honorifics": {
+            "test": { "type": "yes" }
+        }
+    }
+}

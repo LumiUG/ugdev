@@ -83,12 +83,20 @@ const randMessages = [
     "\"Is this it, is it?\"",
     "His name is Meem.",
     "Oh, and the cat, it's Ploof.",
-    "And this just feels like spinning plates",
+    "And this just feels like spinning plates.",
     "\"How much dressing can you put in a salad before it becomes a soup?\"",
     "\"I love blankets\"",
     "\"don't say anything.\"",
     "That there, that's not me.",
-    "There was nothing to fear and nothing to doubt"
+    "There was nothing to fear and nothing to doubt.",
+    "commence the mass stoning.",
+    "\"snit now im hungry\"",
+    "\"SHUAH\"",
+    "\"i want to kill rabbits now\"",
+    "Poli my beloved.",
+    "<3",
+    "Encore! Encore! Encore!",
+    "Chirp."
 ];
 
 var tooltip = document.getElementById("tooltip");

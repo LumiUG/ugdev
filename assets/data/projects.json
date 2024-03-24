@@ -3,28 +3,28 @@
         "UG": {
             "name": "UG Epic Bot",
             "desc": "UG Epic Bot is a multipurpose utility bot to help you manage your server while having fun!",
-            "image": "./assets/images/bots/UGEpicBot.png",
+            "image": "/assets/images/bots/UGEpicBot.png",
             "source": null,
             "website": "https://discord.com/oauth2/authorize?client_id=979298958461521930&permissions=1634628660950&scope=bot"
         },
         "PSoP": {
             "name": "PSoP",
             "desc": "PSoP, a simple, fun game about Smashing or Passing. What could go wrong?",
-            "image": "./assets/images/bots/PSoP.webp",
+            "image": "/assets/images/bots/PSoP.webp",
             "source": "https://github.com/xUnderGame/PSoP",
             "website": null
         },
         "SR": {
             "name": "SwordRush",
             "desc": "An unfinished bot. It was an RPG with intense and fun combat mechanics. Sadly, this was never finished due to lack of motivation.",
-            "image": "./assets/images/bots/SwordRush.webp",
+            "image": "/assets/images/bots/SwordRush.webp",
             "source": null,
             "website": null
         },
         "DM": {
             "name": "Discord Minigames!",
             "desc": "An unfinished bot. Discord Minigames! is a fun bot designed to play with your friends.",
-            "image": "./assets/images/bots/DM.webp",
+            "image": "/assets/images/bots/DM.webp",
             "source": "https://github.com/xUnderGame/DM",
             "website": null
         }
@@ -33,35 +33,35 @@
         "BT": {
             "name": "Turtle Origin",
             "desc": "This was my first Origin ever. It used a different Origin as a base, and I modified it afterwards.",
-            "image": "./assets/images/origins/DefaultOrigin.webp",
+            "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/xUnderGame/BTurtleOrigin",
             "website": null
         },
         "KI": {
             "name": "Kamali Origin",
             "desc": "One of my first Origins aswell. This was completly original and I quite like the final product!",
-            "image": "./assets/images/origins/DefaultOrigin.webp",
+            "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/xUnderGame/KamaliOrigin",
             "website": null
         },
         "BA": {
             "name": "Bat Origin",
             "desc": "My second ever Origin. This was kind of a test, and later on the 'flapping' mechanic was reused on...",
-            "image": "./assets/images/origins/DefaultOrigin.webp",
+            "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/xUnderGame/BatOrigin",
             "website": null
         },
         "SC": {
             "name": "Squidcada Origin",
             "desc": "The Squiddy! This reused the bat's flap. One of my best Origins as of today. (It is that good)",
-            "image": "./assets/images/origins/DefaultOrigin.webp",
+            "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/xUnderGame/SquidcadaOrigin",
             "website": null
         },
         "LZ": {
             "name": "Leapzard Origin",
             "desc": "An Origin indended to be released with the CurseForge Rain World origins pack. It leaps around!",
-            "image": "./assets/images/origins/DefaultOrigin.webp",
+            "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/xUnderGame/LeapzardOrigin",
             "website": null
         }
@@ -70,30 +70,28 @@
         "ugdev": {
             "name": "UGDev",
             "desc": "My own portfolio. You're seeing it right now and it took a while to code, so I hope you're liking it!",
-            "image": "./assets/images/UGDevLogo.png",
+            "image": "/assets/images/UGDevLogo.png",
             "source": "https://github.com/xUnderGame/ugdev",
             "website": "https://ugdev.xyz"
         },
         "etv": {
             "name": "ETV",
             "desc": "Online tierlist maker and visualizer. Share your tierlist with friends and have fun!",
-            "image": "./assets/images/etv-logo.png",
+            "image": "/assets/images/etv-logo.png",
             "source": "https://github.com/xUnderGame/etv",
             "website": "https://ugdev.xyz/etv"
         },
-        "ostguessr": {
-            "name": "OSTguessr",
-            "desc": "An upcoming project (probably, maybe) that I've been thinking about. Guess the game ost that's playing!",
-            "image": "./assets/images/UGDevLogo.png",
-            "source": "https://github.com/xUnderGame/ostguessr",
-            "website": null
+        "secret": {
+            "name": "Secrets...",
+            "desc": "Just FYI, this website has \"hidden\" pages, try to find them all!\n\n(I spent way too much time on this please help)",
+            "image": "/assets/images/terminal/scugcheese.gif"
         }
     },
     "games": {
         "gravix": {
             "name": "Gravix",
             "desc": "A 2D platformer with ~35 single screen levels, an interconnected map and collectibles to find!",
-            "image": "./assets/images/Meem.png",
+            "image": "/assets/images/Meem.png",
             "source": "https://github.com/xUnderGame/Gravix",
             "website": "https://undergame.itch.io/gravix"
         }
@@ -104,105 +102,98 @@
     "art": {
         "rework": {
             "name": "This area will be reworked!",
-            "image": "./assets/images/UGDevLogo.png",
+            "image": "/assets/images/UGDevLogo.png",
             "timestamp": "02/02/2024",
             "program": "My puter",
             "tooltip": "Soon?"
         },
         "tutle": {
             "name": "Emoji turtle 'recreation'",
-            "image": "./assets/images/artwork/Turtle, Turtle Day!.png",
+            "image": "/assets/images/artwork/Turtle, Turtle Day!.png",
             "timestamp": "Turtle Day, 2022",
             "program": "Krita",
             "tooltip": "A turtle made for turtle day! I was learning, alright?"
         },
         "slugTheFirst": {
             "name": "Slugcat the first",
-            "image": "./assets/images/artwork/Slugcat, 20-05-2022.png",
+            "image": "/assets/images/artwork/Slugcat, 20-05-2022.png",
             "timestamp": "20-05-2022",
             "program": "Krita",
             "tooltip": "My first slugcat of the many I've drawn."
         },
-        "starmieBday": {
-            "name": "Starmie",
-            "image": "./assets/images/artwork/Starmie, Dots Bday.png",
-            "timestamp": "22-08-2022",
-            "program": "Krita",
-            "tooltip": "Nobody."
-        },
         "staringContest": {
             "name": "Staring contest",
-            "image": "./assets/images/artwork/Staring Contest.png",
+            "image": "/assets/images/artwork/Staring Contest.png",
             "timestamp": "07-10-2022",
             "program": "ClipStudio",
             "tooltip": "A Rain World (tamed) lizard having a staring contest with a sluggo!"
         },
         "construxion": {
             "name": "Construxion the armadillo",
-            "image": "./assets/images/artwork/Construxion.png",
+            "image": "/assets/images/artwork/Construxion.png",
             "timestamp": "06-12-2022",
             "program": "ClipStudio",
             "tooltip": "A fella I made to practice animations in Unity."
         },
         "fuckingKity": {
             "name": "F**king kity",
-            "image": "./assets/images/artwork/Fucking Kity.png",
+            "image": "/assets/images/artwork/Fucking Kity.png",
             "timestamp": "07-01-2023",
             "program": "ClipStudio",
             "tooltip": "Kity! A kitty drawn on top of a hand, meow."
         },
         "ruinedPebbles": {
             "name": "Ruined Pebbles",
-            "image": "./assets/images/artwork/Ruined Pebbles.png",
+            "image": "/assets/images/artwork/Ruined Pebbles.png",
             "timestamp": "31-01-2023",
             "program": "ClipStudio",
             "tooltip": "Oops, this might be Rain World spoilers."
         },
         "RWAM2023Gour": {
             "name": "RWAM 2023 - Gourmand",
-            "image": "./assets/images/artwork/RWAM2023/Gourmand - Rain World Art Month 2023 D1.png",
+            "image": "/assets/images/artwork/RWAM2023/Gourmand - Rain World Art Month 2023 D1.png",
             "timestamp": "01-03-2023",
             "program": "ClipStudio",
             "tooltip": "Honestly, one of my best. Absolute unit."
         },
         "RWAM2023Memory": {
             "name": "RWAM 2023 - Memory Conflux",
-            "image": "./assets/images/artwork/RWAM2023/Memory Conflux - Rain World Art Month 2023 D2.png",
+            "image": "/assets/images/artwork/RWAM2023/Memory Conflux - Rain World Art Month 2023 D2.png",
             "timestamp": "02-03-2023",
             "program": "ClipStudio",
             "tooltip": "First time doing backgrounds. Not so bad!"
         },
         "RWAM2023Spear": {
             "name": "RWAM 2023 - Spearmaster",
-            "image": "./assets/images/artwork/RWAM2023/Spearmaster - Rain World Art Month 2023 D3.png",
+            "image": "/assets/images/artwork/RWAM2023/Spearmaster - Rain World Art Month 2023 D3.png",
             "timestamp": "03-03-2023",
             "program": "ClipStudio",
             "tooltip": "Spearmaster will be rich in no time."
         },
         "RWAM2023Pole": {
             "name": "RWAM 2023 - Pole Plants",
-            "image": "./assets/images/artwork/RWAM2023/Pole Plant - Rain World Art Month 2023 D4.png",
+            "image": "/assets/images/artwork/RWAM2023/Pole Plant - Rain World Art Month 2023 D4.png",
             "timestamp": "04-03-2023",
             "program": "ClipStudio",
             "tooltip": "A pole plant holding a fruit. One of Rain World greatest bugs imo."
         },
         "blenderPan": {
             "name": "Rendered Pan",
-            "image": "./assets/images/artwork/blender/Rendered Pan.png",
+            "image": "/assets/images/artwork/blender/Rendered Pan.png",
             "timestamp": "12-04-2023",
             "program": "Blender",
             "tooltip": "Well, that's a pan I'd say."
         },
         "blenderCyanLiz": {
             "name": "Cyan Lizard - Rain World",
-            "image": "./assets/images/artwork/blender/(Glowy)Cyan Lizard - Rain World.png",
+            "image": "/assets/images/artwork/blender/(Glowy)Cyan Lizard - Rain World.png",
             "timestamp": "27-03-2023",
             "program": "Blender",
             "tooltip": "A cyan lizard from Rain World! (Rain world brain-rot is real)"
         },
         "lumiHeart": {
             "name": "Lumi Heart",
-            "image": "./assets/images/artwork/LumiHeart.png",
+            "image": "/assets/images/artwork/OldLumiHeart.png",
             "timestamp": "02-06-2023",
             "program": "ClipStudio",
             "tooltip": "An emoji I made for discord of one of my characters!"
@@ -212,28 +203,28 @@
         "wysTranslator": {
             "name": "WYS Catalan Translator",
             "desc": "I'm one of the volunteer Catalan translators for Will You Snail! (Unfinished as of now)",
-            "image": "./assets/images/WYS.png",
+            "image": "/assets/images/WYS.png",
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"
         },
         "rwOrigins": {
             "name": "Rain World Origins",
             "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
-            "image": "./assets/images/origins/RWOrigins.png",
+            "image": "/assets/images/origins/RWOrigins.png",
             "source": null,
             "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
         },
         "vscode-origins-snippets": {
             "name": "VS Code Origins Snippets",
             "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
-            "image": "./assets/images/VSCodeSnippets.webp",
+            "image": "/assets/images/VSCodeSnippets.webp",
             "source": "https://github.com/xUnderGame/vscode-origins-snippets",
             "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
         "bootlegWordle": {
             "name": "Bootleg Wordle",
             "desc": "A bootleg version of wordle that was made in the C# console for fun.",
-            "image": "./assets/images/wordle.png",
+            "image": "/assets/images/wordle.png",
             "source": "https://github.com/xUnderGame/BootlegWordle",
             "website": null
         }
