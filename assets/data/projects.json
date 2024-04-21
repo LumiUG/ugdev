@@ -2,28 +2,28 @@
     "discord": {
         "UG": {
             "name": "UG Epic Bot",
-            "desc": "UG Epic Bot is a multipurpose utility bot to help you manage your server while having fun!",
+            "desc": "UG Epic Bot was a multipurpose utility bot. My first ever project, very dear to my heart. Even if abandoned, the code is privated.",
             "image": "/assets/images/bots/UGEpicBot.png",
             "source": null,
-            "website": "https://discord.com/oauth2/authorize?client_id=979298958461521930&permissions=1634628660950&scope=bot"
+            "website": null
         },
         "PSoP": {
             "name": "PSoP",
-            "desc": "PSoP, a simple, fun game about Smashing or Passing. What could go wrong?",
+            "desc": "PSoP was a simple bot about Smashing or Passing. It is now archived.",
             "image": "/assets/images/bots/PSoP.webp",
             "source": "https://github.com/xUnderGame/PSoP",
             "website": null
         },
         "SR": {
             "name": "SwordRush",
-            "desc": "An unfinished bot. It was an RPG with intense and fun combat mechanics. Sadly, this was never finished due to lack of motivation.",
+            "desc": "An unfinished bot. It was an RPG with \"intense\" and fun combat mechanics. Sadly, this was never finished due to lack of motivation.",
             "image": "/assets/images/bots/SwordRush.webp",
             "source": null,
             "website": null
         },
         "DM": {
             "name": "Discord Minigames!",
-            "desc": "An unfinished bot. Discord Minigames! is a fun bot designed to play with your friends.",
+            "desc": "Another unfinished bot. DM! is a fun bot designed to play with your friends.",
             "image": "/assets/images/bots/DM.webp",
             "source": "https://github.com/xUnderGame/DM",
             "website": null

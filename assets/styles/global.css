@@ -30,6 +30,17 @@ body {
     animation-iteration-count: infinite;
     animation-name: bgcolor; */
 }
+#tooltip {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    color: white !important;
+    background-color: var(--secondary);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 18px;

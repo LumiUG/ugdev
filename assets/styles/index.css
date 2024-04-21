@@ -15,16 +15,6 @@ header img {
     user-select: none;
     animation: 8s bounce infinite;
 }
-#tooltip {
-    display: none;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    padding: 10px 20px 10px 20px;
-    border-radius: 15px;
-    color: white !important;
-    background-color: var(--secondary);
-}
 
 /* Buttons */
 .buttons {

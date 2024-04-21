@@ -1,16 +1,15 @@
 {
     "names": {
         "ug": { "type": "yes" },
-        "uggy": { "type": "okay" },
+        "uggy": { "type": "yes" },
         "IRL name": { "type": "close" },
-        "Pet names": { "type": "close" },
+        "Any pet names": { "type": "close" },
         "UnderGame": { "type": "no" },
         "Eugene": { "type": "joke" },
         "Lumi": { "type": "sona" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },
-        "they/them": { "type": "joke" },
         "she/her": { "type": "no" },
         "he/him*": { "type": "sona" },
         "it/its": { "type": "sona" }
@@ -27,6 +26,7 @@
             "person": { "type": "yes" },
             "dude": { "type": "yes" },
             "bro": { "type": "okay" },
+            "man": { "type": "okay" },
             "buddy": { "type": "joke" },
             "pal": { "type": "joke" },
             "creatura": { "type": "sona" },

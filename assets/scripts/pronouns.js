@@ -6,26 +6,33 @@ var names = await fetch('/assets/data/pronouns.json')
 // Defines types and its data
 var types = {
     "yes": {
-        "image": "/assets/images/pronouns/heart.svg"
+        "image": "/assets/images/pronouns/heart.svg",
+        "hover": "Perfect <3"
     },
     "okay": {
-        "image": "/assets/images/pronouns/thumbsup.svg"
+        "image": "/assets/images/pronouns/thumbsup.svg",
+        "hover": "This is alright!"
     },
     "no": {
-        "image": "/assets/images/pronouns/thumbsdown.svg"
+        "image": "/assets/images/pronouns/thumbsdown.svg",
+        "hover": "Try not to, okay anyways!"
     },
     "joke": {
-        "image": "/assets/images/pronouns/joke.svg"
+        "image": "/assets/images/pronouns/joke.svg",
+        "hover": "If said jokingly"
     },
     "close": {
-        "image": "/assets/images/pronouns/close.svg"
+        "image": "/assets/images/pronouns/close.svg",
+        "hover": "IYKYK, nuh uh if you don't."
     },
     "sona": {
-        "image": "/assets/images/pronouns/paw.svg"
+        "image": "/assets/images/pronouns/paw.svg",
+        "hover": "LUMII HII LUMI LUMIIII"
     }
 }
 
 // Creates HTML based on json (why do I always do this...)
+var tooltip = document.getElementById("tooltip");
 var elements = Array.from(document.body.getElementsByTagName("section"));
 elements.forEach(element => ProcessSection(element));
 
@@ -60,7 +67,22 @@ function CreateEntry(entryName, sectionName, list)
     text.textContent = entryName.replace("*", "");
 
     // Append everything to the DOM
+    // AddTooltipEvent(text, types[names[sectionName][entryName]["type"]]["hover"])
     entry.appendChild(image);
     entry.appendChild(text);
     list.appendChild(entry);
+}
+
+// Code from index.html, I am NOT making cross site stuff.
+export function AddTooltipEvent(toAdd, tooltipContent) {
+    ["mouseover", "click"].forEach(event => {
+        toAdd.addEventListener(event, () => {
+            tooltip.style.display = "block";
+            toAdd.parentElement.append(tooltip);
+            tooltip.style.top = toAdd.offsetTop + toAdd.style.offsetHeight + 20 + "px";
+            tooltip.style.left = toAdd.offsetLeft + toAdd.style.offsetWidth + "px";
+            tooltip.textContent = tooltipContent;
+        })
+    });
+    toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none";  });
 }
