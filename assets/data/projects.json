@@ -2,28 +2,28 @@
     "discord": {
         "UG": {
             "name": "UG Epic Bot",
-            "desc": "UG Epic Bot was a multipurpose utility bot. My first ever project, very dear to my heart. Even if abandoned, the code is privated.",
+            "desc": "UG Epic Bot was a multipurpose utility bot. My first ever project, very dear to my heart.\n\nEven if abandoned, the code is privated.",
             "image": "/assets/images/bots/UGEpicBot.png",
             "source": null,
             "website": null
         },
         "PSoP": {
             "name": "PSoP",
-            "desc": "PSoP was a simple bot about Smashing or Passing. It is now archived.",
+            "desc": "PSoP was a simple bot about Smashing or Passing.\n\nIt is now archived. (regret)",
             "image": "/assets/images/bots/PSoP.webp",
             "source": "https://github.com/xUnderGame/PSoP",
-            "website": null
+            "website": "https://github.com/xUnderGame/PSoP/releases/tag/v4.1.0"
         },
         "SR": {
             "name": "SwordRush",
-            "desc": "An unfinished bot. It was an RPG with \"intense\" and fun combat mechanics. Sadly, this was never finished due to lack of motivation.",
+            "desc": "An unfinished bot. It was an RPG with \"intense\" and fun combat mechanics.\n\nSadly, this was never finished due to lack of motivation.",
             "image": "/assets/images/bots/SwordRush.webp",
             "source": null,
             "website": null
         },
         "DM": {
             "name": "Discord Minigames!",
-            "desc": "Another unfinished bot. DM! is a fun bot designed to play with your friends.",
+            "desc": "Another unfinished bot. DM! was a fun bot designed to play with your friends.\nA wario-ware like.",
             "image": "/assets/images/bots/DM.webp",
             "source": "https://github.com/xUnderGame/DM",
             "website": null
@@ -94,6 +94,32 @@
             "image": "/assets/images/Meem.png",
             "source": "https://github.com/xUnderGame/Gravix",
             "website": "https://undergame.itch.io/gravix"
+        },
+        "adc": {
+            "name": "A Directionless Cycle",
+            "desc": "A sokoban puzzle game im working on, more yet to be revealed.\n\nKeep an eye out!! <3",
+            "image": "/assets/images/ADC.png",
+            "source": "https://github.com/xUnderGame/ADirectionlessCycle"
+        },
+        "sps": {
+            "name": "Space Potato Station (Jam)",
+            "desc": "A Game Jam with some friends in around 8 hours.\n\nThe final product is barely playable but the ideas we had were amazing.",
+            "image": "/assets/images/SPS.png",
+            "source": "https://github.com/xUnderGame/SpacePotatoStation"
+        },
+        "boxfight": {
+            "name": "Boxfight",
+            "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
+            "image": "/assets/images/UGDevLogo.png",
+            "source": "https://github.com/xUnderGame/Boxfight",
+            "website": "https://github.com/xUnderGame/Boxfight/releases/tag/v1.0.0"
+        },
+        "rpg": {
+            "name": "RPG Tech Demo",
+            "desc": "Your average generic 3D Unity project!\n\nBasically a project for me to test navmeshes, animations and other stuff like that.",
+            "image": "/assets/images/UGDevLogo.png",
+            "source": "https://github.com/xUnderGame/RPGTechDemo",
+            "website": "https://github.com/xUnderGame/RPGTechDemo/releases/tag/v2.0.0"
         }
     },
     "music": {
@@ -106,13 +132,6 @@
             "timestamp": "02/02/2024",
             "program": "My puter",
             "tooltip": "Soon?"
-        },
-        "tutle": {
-            "name": "Emoji turtle 'recreation'",
-            "image": "/assets/images/artwork/Turtle, Turtle Day!.png",
-            "timestamp": "Turtle Day, 2022",
-            "program": "Krita",
-            "tooltip": "A turtle made for turtle day! I was learning, alright?"
         },
         "slugTheFirst": {
             "name": "Slugcat the first",
@@ -154,7 +173,7 @@
             "image": "/assets/images/artwork/RWAM2023/Gourmand - Rain World Art Month 2023 D1.png",
             "timestamp": "01-03-2023",
             "program": "ClipStudio",
-            "tooltip": "Honestly, one of my best. Absolute unit."
+            "tooltip": "Honestly, one of my best slugs. Absolute unit."
         },
         "RWAM2023Memory": {
             "name": "RWAM 2023 - Memory Conflux",
@@ -169,20 +188,6 @@
             "timestamp": "03-03-2023",
             "program": "ClipStudio",
             "tooltip": "Spearmaster will be rich in no time."
-        },
-        "RWAM2023Pole": {
-            "name": "RWAM 2023 - Pole Plants",
-            "image": "/assets/images/artwork/RWAM2023/Pole Plant - Rain World Art Month 2023 D4.png",
-            "timestamp": "04-03-2023",
-            "program": "ClipStudio",
-            "tooltip": "A pole plant holding a fruit. One of Rain World greatest bugs imo."
-        },
-        "blenderPan": {
-            "name": "Rendered Pan",
-            "image": "/assets/images/artwork/blender/Rendered Pan.png",
-            "timestamp": "12-04-2023",
-            "program": "Blender",
-            "tooltip": "Well, that's a pan I'd say."
         },
         "blenderCyanLiz": {
             "name": "Cyan Lizard - Rain World",
@@ -226,6 +231,13 @@
             "desc": "A bootleg version of wordle that was made in the C# console for fun.",
             "image": "/assets/images/wordle.png",
             "source": "https://github.com/xUnderGame/BootlegWordle",
+            "website": null
+        },
+        "aStar": {
+            "name": "A* Pathfinding",
+            "desc": "A simple pathfinding algorithm in Unity 3D/2D.",
+            "image": "/assets/images/UGDevLogo.png",
+            "source": "https://github.com/xUnderGame/AStar-Pathfinding",
             "website": null
         }
     }

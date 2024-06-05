@@ -96,7 +96,13 @@ const randMessages = [
     "Poli my beloved.",
     "<3",
     "Encore! Encore! Encore!",
-    "Chirp."
+    "Chirp chirp chirp chirp chirp",
+    "Tax time!",
+    "Place your faith and embrace the Void.",
+    "You do remember why you are here, right?",
+    "Or have you lost something?",
+    "Something very important to you.",
+    "i hold on i hold i hold on"
 ];
 
 var tooltip = document.getElementById("tooltip");
