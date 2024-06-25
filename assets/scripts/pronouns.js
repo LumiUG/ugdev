@@ -19,7 +19,7 @@ var types = {
     },
     "joke": {
         "image": "/assets/images/pronouns/joke.svg",
-        "hover": "If said jokingly."
+        "hover": "If said jokingly,,"
     },
     "close": {
         "image": "/assets/images/pronouns/close.svg",
@@ -27,7 +27,7 @@ var types = {
     },
     "sona": {
         "image": "/assets/images/pronouns/paw.svg",
-        "hover": "LUMII HII LUMI LUMIIII"
+        "hover": "LUMII HII LUMI BIRD LUMIIII"
     }
 }
 
@@ -81,7 +81,7 @@ export function AddTooltipEvent(toAdd, tooltipContent) {
             tooltip.style.display = "block";
             toAdd.parentElement.append(tooltip);
             tooltip.textContent = tooltipContent;
-            tooltip.style.top = rect.top + 25 + "px";
+            tooltip.style.top = rect.top - 40 + "px";
             tooltip.style.left = rect.left - tooltip.offsetWidth / 2 + 20 + "px";
         })
     });
