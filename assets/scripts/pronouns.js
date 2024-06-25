@@ -19,7 +19,7 @@ var types = {
     },
     "joke": {
         "image": "/assets/images/pronouns/joke.svg",
-        "hover": "If said jokingly"
+        "hover": "If said jokingly."
     },
     "close": {
         "image": "/assets/images/pronouns/close.svg",
@@ -67,7 +67,7 @@ function CreateEntry(entryName, sectionName, list)
     text.textContent = entryName.replace("*", "");
 
     // Append everything to the DOM
-    // AddTooltipEvent(text, types[names[sectionName][entryName]["type"]]["hover"])
+    AddTooltipEvent(text, types[names[sectionName][entryName]["type"]]["hover"])
     entry.appendChild(image);
     entry.appendChild(text);
     list.appendChild(entry);
@@ -77,11 +77,12 @@ function CreateEntry(entryName, sectionName, list)
 export function AddTooltipEvent(toAdd, tooltipContent) {
     ["mouseover", "click"].forEach(event => {
         toAdd.addEventListener(event, () => {
+            let rect = toAdd.getBoundingClientRect();
             tooltip.style.display = "block";
             toAdd.parentElement.append(tooltip);
-            tooltip.style.top = toAdd.offsetTop + toAdd.style.offsetHeight + 20 + "px";
-            tooltip.style.left = toAdd.offsetLeft + toAdd.style.offsetWidth + "px";
             tooltip.textContent = tooltipContent;
+            tooltip.style.top = rect.top + 25 + "px";
+            tooltip.style.left = rect.left - tooltip.offsetWidth / 2 + 20 + "px";
         })
     });
     toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none";  });
