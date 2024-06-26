@@ -322,6 +322,6 @@ function isMobile() {
 // Run some code a single time when the website loads. To be honest, I should make this into an onload()!
 genSocials();
 loadBlog();
-showProject("misc");
+showProject("games");
 updateRandom(document.getElementById("randMessage"));
 document.getElementById("randMessage").addEventListener("click", function () { updateRandom(this) }, false);

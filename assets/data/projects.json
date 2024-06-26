@@ -198,7 +198,7 @@
         },
         "lumiHeart": {
             "name": "Lumi Heart",
-            "image": "/assets/images/artwork/OldLumiHeart.png",
+            "image": "/assets/images/artwork/lumi/OldLumiHeart.png",
             "timestamp": "02-06-2023",
             "program": "ClipStudio",
             "tooltip": "An emoji I made for discord of one of my characters!"
@@ -207,7 +207,7 @@
     "misc": {
         "wysTranslator": {
             "name": "WYS Catalan Translator",
-            "desc": "I'm one of the volunteer Catalan translators for Will You Snail! (Unfinished as of now)",
+            "desc": "I'm one of the volunteer Catalan translators for Will You Snail!\n\n(Unfinished, forgive me Jonas!!)",
             "image": "/assets/images/WYS.png",
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"

@@ -15,15 +15,15 @@ var types = {
     },
     "no": {
         "image": "/assets/images/pronouns/thumbsdown.svg",
-        "hover": "Try not to, okay anyways!"
+        "hover": "Try not to! (I will bite)"
     },
     "joke": {
         "image": "/assets/images/pronouns/joke.svg",
-        "hover": "If said jokingly,,"
+        "hover": "If said jokingly :>c"
     },
     "close": {
         "image": "/assets/images/pronouns/close.svg",
-        "hover": "IYKYK, nuh uh if you don't."
+        "hover": "Only if you know. Nuh uh if you don't."
     },
     "sona": {
         "image": "/assets/images/pronouns/paw.svg",
@@ -40,6 +40,10 @@ elements.forEach(element => ProcessSection(element));
 names = names["words"] // This is a bit hacky, but it works LMAO
 Array.from(document.body.getElementsByClassName("wordsExtra"))
     .forEach(element => ProcessSection(element));
+
+// Bi flag (important)
+AddTooltipEvent(document.getElementById("bi"), "HELLO MY BI PEOPLE ILY ALL")
+document.body.addEventListener("scroll", () => { tooltip.style.display = "none"; }, {passive: true});
 
 // Populates a section
 function ProcessSection(base)
@@ -74,7 +78,7 @@ function CreateEntry(entryName, sectionName, list)
 }
 
 // Code from index.html, I am NOT making cross site stuff.
-export function AddTooltipEvent(toAdd, tooltipContent) {
+function AddTooltipEvent(toAdd, tooltipContent) {
     ["mouseover", "click"].forEach(event => {
         toAdd.addEventListener(event, () => {
             let rect = toAdd.getBoundingClientRect();
@@ -82,8 +86,8 @@ export function AddTooltipEvent(toAdd, tooltipContent) {
             toAdd.parentElement.append(tooltip);
             tooltip.textContent = tooltipContent;
             tooltip.style.top = rect.top - 40 + "px";
-            tooltip.style.left = rect.left - tooltip.offsetWidth / 2 + 20 + "px";
+            tooltip.style.left = rect.left - 60 + "px";
         })
     });
-    toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none";  });
+    toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none"; });
 }

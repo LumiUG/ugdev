@@ -6,3 +6,7 @@ html {
 body {
     height: inherit;
 }
+
+#main {
+    text-align: center;
+}

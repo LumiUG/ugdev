@@ -48,10 +48,20 @@ p {
     font-size: 20px;
     margin-top: -2px;
 }
+a {
+    color: var(--accent);
+}
 footer p {
     margin: 15px 0px 15px 0px;
     margin-top: -2px;
     text-align: center;
+}
+
+/* By ID */
+#bi {
+    margin-top: 25px;
+    width: 150px;
+    height: auto;
 }
 
 /* Classes */
