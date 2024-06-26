@@ -32,13 +32,22 @@ h2 {
     padding: 10px;
     font-size: 45px;
 }
+p {
+    padding: 8px;
+    font-size: 35px;
+}
 main {
     flex-direction: column;
 }
 
-#counter, #BIRDUP {
+#counter, #BIRDUP, #messageField {
     user-select: none;
     opacity: 0;
+}
+#messageField {
+    position: absolute;
+    z-index: 10;
+    /* opacity: 0; */
 }
 #holder {
     position: relative;
