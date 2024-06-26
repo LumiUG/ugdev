@@ -10,6 +10,8 @@ h1, h2, h3, h4, p {
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 body, main {
     display: flex;
@@ -25,6 +27,7 @@ body {
     background-size: 10%;
 }
 h1 {
+    margin-bottom: 20px;
     padding: 20px;
     font-size: 100px;
 }
@@ -46,7 +49,8 @@ main {
 }
 #messageField {
     position: absolute;
-    z-index: 10;
+    max-width: 500px;
+    z-index: 3;
     /* opacity: 0; */
 }
 #holder {
@@ -58,14 +62,20 @@ main {
 }
 #lumi {
     filter: drop-shadow(2px 2px 5px black) blur(1px) grayscale();
+    position: relative;
     user-select: none;
     width: 400px;
     height: auto;
+    z-index: 2;
+}
+.lumijump {
+    animation: jump 1.12s normal;
 }
 #boopArea {
     /* background-color: black; */
     position: absolute;
     cursor: pointer;
+    z-index: 3;
     width: 50px;
     height: 30px;
     top: 46%;
@@ -75,4 +85,7 @@ main {
 @keyframes rotate { 
     0% { transform: rotate(-180deg); }
     100% { transform: rotate(180deg); }
+}
+@keyframes jump { 
+    25% { transform: translateY(-20px); }
 }

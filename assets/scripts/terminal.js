@@ -157,6 +157,13 @@ var commands = [
         "helptopic": "Toggle avali scratch as the main terminal font.\n\n<span style='font-family: avaliScratch;'>Chirp!</span>",
         "hidden": true,
         "run": CommandAvaliScratch
+    },
+    {
+        "name": "bird",
+        "description": null,
+        "helptopic": "Meet [lb]the bird[/].\n<img src='/assets/images/artwork/lumi/wiggle.gif'>",
+        "hidden": true,
+        "run": CommandBird
     }
 ];
 var users = [
@@ -748,4 +755,9 @@ function CommandRainbow() {
 function CommandAvaliScratch() {
     if (document.body.style.fontFamily == "Ubuntu Mono" || document.body.style.fontFamily == "") { document.body.style.fontFamily = "avaliScratch"; TypeOutput("Enjoy!\n\nCredit to <a href='https://fontstruct.com/fontstructions/show/1108804/avali_scratch'>SomeGuyNamedDavid</a>"); }
     else { document.body.style.fontFamily = "Ubuntu Mono"; TypeOutput("Alright, alright.");}
+}
+
+// bird secret page
+function CommandBird() {
+    window.location.replace("https://ugdev.xyz/bird");
 }
