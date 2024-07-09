@@ -1,12 +1,14 @@
 {
     "names": {
-        "ug": { "type": "yes" },
+        "Lumi": { "type": "yes", "hover": "For my sona, me... More than happy if you use it!"},
         "uggy": { "type": "yes" },
-        "IRL name": { "type": "close" },
+        "ug": { "type": "yes" },
         "Any pet names": { "type": "close" },
-        "UnderGame": { "type": "no" },
+        "IRL name": { "type": "close" },
+        "UnderGame*": { "type": "okay", "hover": "!! Slowly transitioning out of this !!" },
+        "UnderGame": { "type": "no", "hover": "!! Slowly transitioning out of this !!" },
         "Eugene": { "type": "joke" },
-        "Lumi": { "type": "sona" }
+        "Lumi*": { "type": "sona" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },

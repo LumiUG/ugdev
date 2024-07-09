@@ -71,7 +71,9 @@ function CreateEntry(entryName, sectionName, list)
     text.textContent = entryName.replace("*", "");
 
     // Append everything to the DOM
-    AddTooltipEvent(text, types[names[sectionName][entryName]["type"]]["hover"])
+    let tooltipContent = types[names[sectionName][entryName]["type"]]["hover"];
+    if (names[sectionName][entryName].hasOwnProperty("hover")) tooltipContent = names[sectionName][entryName]["hover"]
+    AddTooltipEvent(text, tooltipContent)
     entry.appendChild(image);
     entry.appendChild(text);
     list.appendChild(entry);
