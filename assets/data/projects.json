@@ -195,13 +195,6 @@
             "timestamp": "27-03-2023",
             "program": "Blender",
             "tooltip": "A cyan lizard from Rain World! (Rain world brain-rot is real)"
-        },
-        "lumiHeart": {
-            "name": "Lumi Heart",
-            "image": "/assets/images/artwork/lumi/OldLumiHeart.png",
-            "timestamp": "02-06-2023",
-            "program": "ClipStudio",
-            "tooltip": "An emoji I made for discord of one of my characters!"
         }
     },
     "misc": {
