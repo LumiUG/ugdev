@@ -30,6 +30,20 @@
         }
     },
     "origins": {
+        "rwOrigins": {
+            "name": "Rain World Origins",
+            "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
+            "image": "/assets/images/origins/RWOrigins.png",
+            "source": null,
+            "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
+        },
+        "vscode-origins-snippets": {
+            "name": "VS Code Origins Snippets",
+            "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
+            "image": "/assets/images/VSCodeSnippets.webp",
+            "source": "https://github.com/xUnderGame/vscode-origins-snippets",
+            "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
+        },
         "BT": {
             "name": "Turtle Origin",
             "desc": "This was my first Origin ever. It used a different Origin as a base, and I modified it afterwards.",
@@ -49,20 +63,6 @@
             "desc": "My second ever Origin. This was kind of a test, and later on the 'flapping' mechanic was reused on...",
             "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/xUnderGame/BatOrigin",
-            "website": null
-        },
-        "SC": {
-            "name": "Squidcada Origin",
-            "desc": "The Squiddy! This reused the bat's flap. One of my best Origins as of today. (It is that good)",
-            "image": "/assets/images/origins/DefaultOrigin.webp",
-            "source": "https://github.com/xUnderGame/SquidcadaOrigin",
-            "website": null
-        },
-        "LZ": {
-            "name": "Leapzard Origin",
-            "desc": "An Origin indended to be released with the CurseForge Rain World origins pack. It leaps around!",
-            "image": "/assets/images/origins/DefaultOrigin.webp",
-            "source": "https://github.com/xUnderGame/LeapzardOrigin",
             "website": null
         }
     },
@@ -110,14 +110,14 @@
         "boxfight": {
             "name": "Boxfight",
             "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
-            "image": "/assets/images/UGDevLogo.png",
+            "image": "/assets/images/unity.svg",
             "source": "https://github.com/xUnderGame/Boxfight",
             "website": "https://github.com/xUnderGame/Boxfight/releases/tag/v1.0.0"
         },
         "rpg": {
             "name": "RPG Tech Demo",
             "desc": "Your average generic 3D Unity project!\n\nBasically a project for me to test navmeshes, animations and other stuff like that.",
-            "image": "/assets/images/UGDevLogo.png",
+            "image": "/assets/images/unity.svg",
             "source": "https://github.com/xUnderGame/RPGTechDemo",
             "website": "https://github.com/xUnderGame/RPGTechDemo/releases/tag/v2.0.0"
         }
@@ -195,13 +195,6 @@
             "timestamp": "27-03-2023",
             "program": "Blender",
             "tooltip": "A cyan lizard from Rain World! (Rain world brain-rot is real)"
-        },
-        "lumiHeart": {
-            "name": "Lumi Heart",
-            "image": "/assets/images/artwork/lumi/OldLumiHeart.png",
-            "timestamp": "02-06-2023",
-            "program": "ClipStudio",
-            "tooltip": "An emoji I made for discord of one of my characters!"
         }
     },
     "misc": {
@@ -211,20 +204,6 @@
             "image": "/assets/images/WYS.png",
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"
-        },
-        "rwOrigins": {
-            "name": "Rain World Origins",
-            "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
-            "image": "/assets/images/origins/RWOrigins.png",
-            "source": null,
-            "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
-        },
-        "vscode-origins-snippets": {
-            "name": "VS Code Origins Snippets",
-            "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
-            "image": "/assets/images/VSCodeSnippets.webp",
-            "source": "https://github.com/xUnderGame/vscode-origins-snippets",
-            "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
         "bootlegWordle": {
             "name": "Bootleg Wordle",
@@ -236,7 +215,7 @@
         "aStar": {
             "name": "A* Pathfinding",
             "desc": "A simple pathfinding algorithm in Unity 3D/2D.",
-            "image": "/assets/images/UGDevLogo.png",
+            "image": "/assets/images/unity.svg",
             "source": "https://github.com/xUnderGame/AStar-Pathfinding",
             "website": null
         }
