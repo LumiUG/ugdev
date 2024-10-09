@@ -97,9 +97,10 @@
         },
         "adc": {
             "name": "A Directionless Cycle",
-            "desc": "A sokoban puzzle game im working on, more yet to be revealed.\n\nKeep an eye out!! <3",
+            "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nDemo out now!",
             "image": "/assets/images/ADC.png",
-            "source": "https://github.com/xUnderGame/ADirectionlessCycle"
+            "source": "https://github.com/xUnderGame/ADirectionlessCycle",
+            "website": "https://ugdev.itch.io/a-directionless-cycle"
         },
         "sps": {
             "name": "Space Potato Station (Jam)",
