@@ -280,8 +280,9 @@ main div h2 {
     font-size: 40px;
 }
 #blog div div img {
-    width: 240px;
+    width: auto;
     height: 180px;
+    pointer-events: none;
 }
 
 /* About & Others */

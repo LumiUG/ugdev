@@ -1,21 +1,15 @@
 {
+    "itchio": {
+        "hyperlink": "https://ugdev.itch.io",
+        "username": "Itch.io",
+        "logo": "/assets/images/socials/itchio.svg",
+        "desc": "Solo game dev! Currently developing \"ADC\". Check out my itch page to play some of my games!!!"
+    },
     "github": {
         "hyperlink": "https://github.com/xUnderGame",
         "username": "Github",
         "logo": "/assets/images/socials/github.svg",
-        "desc": "My Github profile, where (almost) all projects are stored. I use it like a 'secondary' portfolio."
-    },
-    "twitter": {
-        "hyperlink": "https://twitter.com/xUnderGame",
-        "username": "Twitter",
-        "logo": "/assets/images/socials/twitter.svg",
-        "desc": "Mainly used for consuming content and talking about some stuff that I find interesting. (You should follow me *wink*)"
-    },
-    "discord": {
-        "hyperlink": "https://discord.com",
-        "username": "Discord",
-        "logo": "/assets/images/socials/discord.svg",
-        "desc": "My discord is \"@undergame\", add me if you'd like to have a chat! (Will try to respond when possible)"
+        "desc": "My Github profile, where most of my projects are stored. I use it like a 'secondary' portfolio."
     },
     "backloggd": {
         "hyperlink": "https://www.backloggd.com/u/UnderGame",
@@ -23,11 +17,23 @@
         "logo": "/assets/images/socials/backloggd.ico",
         "desc": "In here I keep a backlog of the games that I've played: AAA games, indies... Comes with reviews aswell!"
     },
-    "itchio": {
-        "hyperlink": "https://ugdev.itch.io",
-        "username": "Itch.io",
-        "logo": "/assets/images/socials/itchio.svg",
-        "desc": "I make games, shockingly, I'm a game developer! follow me on itch so you don't miss a thing i make!!!!"
+    "bandcamp": {
+        "hyperlink": "https://bandcamp.com/undergame",
+        "username": "Bandcamp",
+        "logo": "/assets/images/socials/bandcamp.svg",
+        "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
+    },
+    "twitter": {
+        "hyperlink": "https://twitter.com/xUnderGame",
+        "username": "Twitter",
+        "logo": "/assets/images/socials/twitter.svg",
+        "desc": "Mainly used for consuming content and talking about some stuff that I find interesting. (You should follow me...)"
+    },
+    "discord": {
+        "hyperlink": "https://discord.com",
+        "username": "Discord",
+        "logo": "/assets/images/socials/discord.svg",
+        "desc": "My discord is \"@undergame\", add me if you'd like to have a chat! (Will try to respond when possible)"
     },
     "youtube": {
         "hyperlink": "https://www.youtube.com/c/UnderGame",
@@ -40,12 +46,6 @@
         "username": "Steam",
         "logo": "/assets/images/socials/steam.svg",
         "desc": "Obsessed with rhythm, puzzles and platformer games. 'Have you heard of that new Indie Game?' Yep, already played it."
-    },
-    "bandcamp": {
-        "hyperlink": "https://bandcamp.com/undergame",
-        "username": "Bandcamp",
-        "logo": "/assets/images/socials/bandcamp.svg",
-        "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
     },
     "fiverr": {
         "hyperlink": "https://www.fiverr.com/undergame",

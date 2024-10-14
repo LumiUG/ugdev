@@ -1,9 +1,9 @@
 {
     "names": {
-        "Lumi": { "type": "yes", "hover": "For my sona, me... More than happy if you use it!"},
+        "Lumi": { "type": "yes", "hover": "For my sona, more than happy if you use it!"},
         "uggy": { "type": "yes" },
         "ug": { "type": "yes" },
-        "Any pet names": { "type": "close" },
+        "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
         "UnderGame*": { "type": "okay", "hover": "!! Slowly transitioning out of this !!" },
         "UnderGame": { "type": "no", "hover": "!! Slowly transitioning out of this !!" },
@@ -20,17 +20,13 @@
         "honorifics": {
             "[no honorific]": { "type": "yes" },
             "sir": { "type": "okay" },
-            "mr.": { "type": "okay" },
-            "miss": { "type": "no" },
-            "ms.": { "type": "no" }
+            "mr.": { "type": "okay" }
         },
         "address": {
-            "person": { "type": "yes" },
             "dude": { "type": "yes" },
             "bro": { "type": "okay" },
             "man": { "type": "okay" },
             "buddy": { "type": "joke" },
-            "pal": { "type": "joke" },
             "creatura": { "type": "sona" },
             "thing": { "type": "sona" },
             "bird": { "type": "sona" }

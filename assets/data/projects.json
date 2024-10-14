@@ -40,7 +40,7 @@
         "vscode-origins-snippets": {
             "name": "VS Code Origins Snippets",
             "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
-            "image": "/assets/images/VSCodeSnippets.webp",
+            "image": "/assets/images/origins/VSCodeSnippets.webp",
             "source": "https://github.com/xUnderGame/vscode-origins-snippets",
             "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
@@ -77,7 +77,7 @@
         "etv": {
             "name": "ETV",
             "desc": "Online tierlist maker and visualizer. Share your tierlist with friends and have fun!",
-            "image": "/assets/images/etv-logo.png",
+            "image": "/assets/images/etc/etv-logo.png",
             "source": "https://github.com/xUnderGame/etv",
             "website": "https://ugdev.xyz/etv"
         },
@@ -91,41 +91,39 @@
         "gravix": {
             "name": "Gravix",
             "desc": "A 2D platformer with ~35 single screen levels, an interconnected map and collectibles to find!",
-            "image": "/assets/images/Meem.png",
+            "image": "/assets/images/games/Meem.png",
             "source": "https://github.com/xUnderGame/Gravix",
             "website": "https://undergame.itch.io/gravix"
         },
         "adc": {
             "name": "A Directionless Cycle",
             "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nDemo out now!",
-            "image": "/assets/images/ADC.png",
+            "image": "/assets/images/games/ADC.png",
             "source": "https://github.com/xUnderGame/ADirectionlessCycle",
             "website": "https://ugdev.itch.io/a-directionless-cycle"
         },
         "sps": {
             "name": "Space Potato Station (Jam)",
             "desc": "A Game Jam with some friends in around 8 hours.\n\nThe final product is barely playable but the ideas we had were amazing.",
-            "image": "/assets/images/SPS.png",
+            "image": "/assets/images/games/SPS.png",
             "source": "https://github.com/xUnderGame/SpacePotatoStation"
         },
         "boxfight": {
             "name": "Boxfight",
             "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
-            "image": "/assets/images/unity.svg",
+            "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/xUnderGame/Boxfight",
             "website": "https://github.com/xUnderGame/Boxfight/releases/tag/v1.0.0"
         },
         "rpg": {
             "name": "RPG Tech Demo",
             "desc": "Your average generic 3D Unity project!\n\nBasically a project for me to test navmeshes, animations and other stuff like that.",
-            "image": "/assets/images/unity.svg",
+            "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/xUnderGame/RPGTechDemo",
             "website": "https://github.com/xUnderGame/RPGTechDemo/releases/tag/v2.0.0"
         }
     },
-    "music": {
-
-    },
+    "music": { },
     "art": {
         "rework": {
             "name": "This area will be reworked!",
@@ -202,21 +200,21 @@
         "wysTranslator": {
             "name": "WYS Catalan Translator",
             "desc": "I'm one of the volunteer Catalan translators for Will You Snail!\n\n(Unfinished, forgive me Jonas!!)",
-            "image": "/assets/images/WYS.png",
+            "image": "/assets/images/etc/WYS.png",
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"
         },
         "bootlegWordle": {
             "name": "Bootleg Wordle",
             "desc": "A bootleg version of wordle that was made in the C# console for fun.",
-            "image": "/assets/images/wordle.png",
+            "image": "/assets/images/etc/wordle.png",
             "source": "https://github.com/xUnderGame/BootlegWordle",
             "website": null
         },
         "aStar": {
             "name": "A* Pathfinding",
             "desc": "A simple pathfinding algorithm in Unity 3D/2D.",
-            "image": "/assets/images/unity.svg",
+            "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/xUnderGame/AStar-Pathfinding",
             "website": null
         }

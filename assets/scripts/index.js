@@ -103,7 +103,7 @@ const randMessages = [
     "Or have you lost something?",
     "Something very important to you.",
     "i hold on i hold i hold on",
-    "the bird command of course"
+    "the \"bird\" command, of course"
 ];
 
 var tooltip = document.getElementById("tooltip");
