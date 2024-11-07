@@ -1,89 +1,86 @@
 <!DOCTYPE html> 
+<html lang="en">
 <!--
 	Yo! Everything that you see in here has been made by me.
 	Line by line, manually and with passion.
 
 	If you'd like to take references, go on ahead. Go wild! <3
 --> 
-<html lang="en">
-	<head>
-		<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-		<link rel="icon" href="/assets/images/favicon.png">
-		<link rel="stylesheet" href="/assets/styles/global.css">
-		<link rel="stylesheet" href="/assets/styles/index.css">
+<head>
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="icon" href="/assets/images/favicon.png">
+	<link rel="stylesheet" href="/assets/styles/global.css">
+	<link rel="stylesheet" href="/assets/styles/index.css">
 
-		<title>Home - ugdev.xyz</title>
-		<meta charset="UTF-8">
-   		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="keywords" content="UnderGame, xUnderGame, ug, ugdev.xyz, ugdev">
-		<meta property="og:title" content="Home - ugdev.xyz">
-		<meta property="og:description" content="Programming is fun!">
-		<meta property="og:image" content="https://ugdev.xyz/assets/images/favicon.png">
-		<meta property="og:type" content="website">
-	</head>
+	<title>Home - ugdev.xyz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="UnderGame, xUnderGame, ug, ugdev.xyz, ugdev">
+	<meta property="og:title" content="Home - ugdev.xyz">
+	<meta property="og:description" content="Programming is fun!">
+	<meta property="og:image" content="https://ugdev.xyz/assets/images/favicon.png">
+	<meta property="og:type" content="website">
+</head>
 	
-	<body>
-		<div id="blurTop" class="blur"></div>
-		<div id="blurBottom" class="blur"></div>
-		<a id="terminal" href="terminal"></a>
+<body>
+	<!-- <div id="blurTop" class="blur"></div>
+	<div id="blurBottom" class="blur"></div> -->
+	<!-- <a id="secret" href="terminal"></a> -->
 
-		<!-- Main buttons and content -->
-		<main>
-			<div class="centerText">
-				<!-- <h2 class="drop-solid-black">Go out and explore...</h2> -->
-			</div>
-			<div id="doors">
-				<div id="separator"></div>
-				<!-- Comments added to remove whitespace... -->
-				<a href="projects" class="door">PROJECTS</a><!--
-				--><a href="pronouns" class="door">PRONOUNS</a><!--
-				--><a href="blog" class="door">BLOG</a>
-			</div>
-		</main>
-
-		<!-- Top -->
-		<div class="coding">
-			<h1 class="drop-solid-black">
-				<p id="websiteTitle">ugdev</p>
-			</h1>
-			<p class="subTitle">Programming is fun!</p>
-			<div id="randMessage" class="about drop-blurry-black">
-				<p>Loading? Loading... Loading!</p>
-			</div>
+	<!-- Nav bar -->
+	<div id="nav">
+		<div id="doors">
+			<div id="separator"></div>
+			<a href="projects" class="door">PROJECTS</a><!--
+			--><a href="about" class="door">ABOUT</a><!--
+			--><a href="pronouns" class="door">PRONOUNS</a><!--
+			--><a href="blog" class="door">BLOG</a>
 		</div>
+	</div>
 
-		<!-- "Logo" on the right -->
-		<section id="logo">
-			<img src="/assets/images/Bird.png" alt="Bird!">
-		</section>
-		
-		<!-- Social medias, generated at runtime! -->
-		<section id="socials">
-			<div class="centerText">
-				<h2 class="drop-solid-black">Connect with me</h2>
-			</div>
-			<p id="adText" class="centerText">
-				Would you like to follow my work, or just have a talk? You can
-				check my social media/connections here!
-			</p>
-			<div id="socialContainer"></div>
-		</section>
-		
-		<!-- Footer with some 88x31 graphics. -->
-		<footer>
-			<div class="centerText">
-				<a href="#top" class="drop-solid-black">...I needed an excuse to add a "marquee" tag.<br>More coming soon!</a><br>
-				<marquee>
-					<a href="https://corru.observer/"><img src="https://corru.observer/8831.gif" alt="corru.observer" title="This game is insane please play it"></a>
-					<a href="https://vscode.dev"><img src="https://cyber.dabamos.de/88x31/vscbutton.gif" alt="cyber.dabamos.de" title="VSCode supremacy."></a>
-					<img src="https://cyber.dabamos.de/88x31/cssdif.gif" alt="cyber.dabamos.de" title="css is hard, okay">
-					<a href="http://www.anybrowser.org/campaign/"><img src="/assets/images/graphics/allbrowser.gif" alt="Viewable With Any Browser" title="any browser! any!!"></a>
-					<img src="/assets/images/graphics/slugcat.png" alt="slugcat" title="sugcat.">
-					<a href="https://www.mozilla.org/en-US/firefox/new/"><img src="/assets/images/graphics/firefox.png" alt="Take back the web!" title="Switch to firefox, like, rn."></a>
-					<a href="https://onborrowedtime.thecomicseries.com/"><img src="/assets/images/graphics/obt.png" alt="On Borrowed Time" title="Pretty good comic, still ongoing! Check it out."></a>
-				</marquee>
-			</div>
-		</footer>
-		<script type="module" src="/assets/scripts/index.js"></script>
-	</body>
+	<!-- Top -->
+	<main class="coding">
+		<h1 class="drop-solid-black">
+			<a id="websiteTitle" href="terminal">ugdev</a>
+		</h1>
+		<p class="subTitle">Programming is fun!</p>
+		<div id="randMessage" class="about drop-blurry-black">
+			<p>Loading? Loading... Loading!</p>
+		</div>
+	</main>
+
+	<!-- "Logo" on the right -->
+	<section id="logo">
+		<img src="/assets/images/Bird.png" alt="Bird!">
+	</section>
+	
+	<!-- Social medias, generated at runtime! -->
+	<section id="socials">
+		<div class="centerText">
+			<h2 class="drop-solid-black">Connect with me</h2>
+		</div>
+		<p id="adText" class="centerText">
+			Would you like to follow my work, or just have a talk? You can
+			check my social media/connections here!
+		</p>
+		<div id="socialContainer"></div>
+	</section>
+	
+	<!-- Footer with some 88x31 graphics. -->
+	<footer>
+		<div class="centerText">
+			<a href="#top" class="drop-solid-black">...I needed an excuse to add a "marquee" tag.<br>More coming soon!</a><br>
+			<marquee>
+				<a href="https://corru.observer/"><img src="https://corru.observer/8831.gif" alt="corru.observer" title="This game is insane please play it"></a>
+				<a href="https://vscode.dev"><img src="https://cyber.dabamos.de/88x31/vscbutton.gif" alt="cyber.dabamos.de" title="VSCode supremacy."></a>
+				<img src="https://cyber.dabamos.de/88x31/cssdif.gif" alt="cyber.dabamos.de" title="css is hard, okay">
+				<a href="http://www.anybrowser.org/campaign/"><img src="/assets/images/graphics/allbrowser.gif" alt="Viewable With Any Browser" title="any browser! any!!"></a>
+				<img src="/assets/images/graphics/slugcat.png" alt="slugcat" title="sugcat.">
+				<a href="https://www.mozilla.org/en-US/firefox/new/"><img src="/assets/images/graphics/firefox.png" alt="Take back the web!" title="Switch to firefox, like, rn."></a>
+				<a href="https://onborrowedtime.thecomicseries.com/"><img src="/assets/images/graphics/obt.png" alt="On Borrowed Time" title="Pretty good comic, still ongoing! Check it out."></a>
+			</marquee>
+		</div>
+	</footer>
+	<script type="module" src="/assets/scripts/index.js"></script>
+</body>
 </html>

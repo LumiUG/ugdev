@@ -1,12 +1,5 @@
 
 /* Elements */
-html {
-    overflow: hidden;
-    height: 100%;
-}
-body {
-    height: inherit;
-}
 header {
     margin: 40px 0px 15px 0px;
     text-align: center;
