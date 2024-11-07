@@ -42,7 +42,8 @@ Array.from(document.body.getElementsByClassName("wordsExtra"))
     .forEach(element => ProcessSection(element));
 
 // Bi flag (important)
-AddTooltipEvent(document.getElementById("bi"), "HELLO MY BI PEOPLE ILY ALL")
+AddTooltipEvent(document.getElementById("bi"), "HELLO MY BI PEOPLE ILY YALL");
+AddTooltipEvent(document.getElementById("pan"), "...The BI flag is cooler.");
 document.body.addEventListener("scroll", () => { tooltip.style.display = "none"; }, {passive: true});
 
 // Populates a section

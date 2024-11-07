@@ -534,7 +534,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]This is unfinished!!!![/] [pi]<3[/] <<\n\n");
+    TypeOutput(">> [re]This is unfinished, for now look around![/] [pi]<3[/] <<\n\n");
     commands.forEach(
         command => {
             if (!command.hidden)

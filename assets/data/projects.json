@@ -70,7 +70,7 @@
         "ugdev": {
             "name": "UGDev",
             "desc": "My own portfolio. You're seeing it right now and it took a while to code, so I hope you're liking it!",
-            "image": "/assets/images/UGDevLogo.png",
+            "image": "/assets/images/favicon.png",
             "source": "https://github.com/xUnderGame/ugdev",
             "website": "https://ugdev.xyz"
         },
@@ -127,7 +127,7 @@
     "art": {
         "rework": {
             "name": "This area will be reworked!",
-            "image": "/assets/images/UGDevLogo.png",
+            "image": "/assets/images/favicon.png",
             "timestamp": "02/02/2024",
             "program": "My puter",
             "tooltip": "Soon?"

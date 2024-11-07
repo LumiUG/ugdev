@@ -31,6 +31,9 @@ body {
     animation-iteration-count: infinite;
     animation-name: bgcolor; */
 }
+.centerText {
+    text-align: center;
+}
 #tooltip {
     display: none;
     position: absolute;
@@ -40,6 +43,20 @@ body {
     border-radius: 15px;
     color: white !important;
     background-color: var(--secondary);
+}
+
+/* Buttons */
+.button {
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: var(--primary-75);
+    transition: transform .1s;
+    color: var(--secondary);
+}
+#randMessage:hover,
+.button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Scrollbar */

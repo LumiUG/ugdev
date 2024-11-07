@@ -18,7 +18,7 @@
                 },
                 "images": {
                     "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]your local admin[/]\n\n<h3>[lg][THREAD LOCKED][/]</h3>",
-                    "ugdev.png" : "/assets/images/UGDevLogo.png",
+                    "ugdev.png" : "/assets/images/favicon.png",
                     "slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
                     "slug.gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(1).gif": "/assets/images/terminal/scugcheese.gif",
