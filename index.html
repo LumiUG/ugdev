@@ -23,9 +23,28 @@
 	</head>
 	
 	<body>
+		<div id="blurTop" class="blur"></div>
+		<div id="blurBottom" class="blur"></div>
+		<a id="terminal" href="terminal"></a>
+
+		<!-- Main buttons and content -->
+		<main>
+			<div class="centerText">
+				<!-- <h2 class="drop-solid-black">Go out and explore...</h2> -->
+			</div>
+			<div id="doors">
+				<div id="separator"></div>
+				<!-- Comments added to remove whitespace... -->
+				<a href="projects" class="door">PROJECTS</a><!--
+				--><a href="pronouns" class="door">PRONOUNS</a><!--
+				--><a href="blog" class="door">BLOG</a>
+			</div>
+		</main>
+
+		<!-- Top -->
 		<div class="coding">
 			<h1 class="drop-solid-black">
-				<a href="terminal" id="websiteTitle" title="EOS Terminal Gateway">ugdev</a>
+				<p id="websiteTitle">ugdev</p>
 			</h1>
 			<p class="subTitle">Programming is fun!</p>
 			<div id="randMessage" class="about drop-blurry-black">
@@ -33,21 +52,12 @@
 			</div>
 		</div>
 
+		<!-- "Logo" on the right -->
 		<section id="logo">
 			<img src="/assets/images/Bird.png" alt="Bird!">
 		</section>
-
-		<main>
-			<div class="centerText">
-				<h2 class="drop-solid-black">Go out and explore...</h2>
-				<div id="doors">
-						<a href="projects"><img src="/assets/images/Bird.png" class="door"></a>
-						<a href="pronouns"><img src="/assets/images/Bird.png" class="door"></a>
-						<a href="blog"><img src="/assets/images/Bird.png" class="door"></a>
-				</div>
-			</div>
-		</main>
 		
+		<!-- Social medias, generated at runtime! -->
 		<section id="socials">
 			<div class="centerText">
 				<h2 class="drop-solid-black">Connect with me</h2>
@@ -59,6 +69,7 @@
 			<div id="socialContainer"></div>
 		</section>
 		
+		<!-- Footer with some 88x31 graphics. -->
 		<footer>
 			<div class="centerText">
 				<a href="#top" class="drop-solid-black">...I needed an excuse to add a "marquee" tag.<br>More coming soon!</a><br>

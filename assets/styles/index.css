@@ -13,15 +13,42 @@ h2 {
     font-size: 50px;
 }
 
+/* Blur */
+#blurTop {
+    position: sticky;
+    top: 0;
+}
+#blurBottom {
+    position: sticky;
+    top: 100%;
+}
+.blur {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(65, 65, 65);
+    filter: blur(20px);
+    border-radius: 10px;
+}
+
+
+/* Secret */
+#terminal {
+    position: absolute;
+    top: -125px;
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    /* filter: blur(20px); */
+    border-radius: 10px;
+}
+
 /* Logo */
 #logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%;
+    position: relative;
+    top: 20px;
+    left: -80px;
 }
 #logo img {
-    margin-top: 50%;
     width: 240px;
     height: 240px;
     pointer-events: none;
@@ -33,7 +60,7 @@ h2 {
 /* Coding */
 .coding {
     width: 70%;
-    padding: 80px 0px 0px 0px;
+    padding: 40px 0px 0px 0px;
 }
 .coding h1 {
     text-transform: uppercase;
@@ -47,18 +74,40 @@ h2 {
 /* Explore */
 main {
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#separator {
+    margin-top: 18px;
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    height: 20px;
+    width: 100%;
+    background-color: var(--tertiary);
 }
 #doors {
-    display: flex;
-    justify-content: space-evenly;
+    margin: 80px 0px 40px 0px;
+    padding: 40px;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
 }
 .door {
-    width: 100px;
-    height: 150px;
-    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 40px 20px 40px;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--secondary);
 }
 
 /* Socials */
+#socials {
+    margin-top: 80px;
+}
 #adText {
     margin: 10px 0px 20px 0px;
 }
@@ -154,9 +203,9 @@ footer div a {
 #randMessage p {
     font-size: 40px;
 }
-#websiteTitle:hover:after {
-    content: "?";
-}
+/* #websiteTitle:hover:after {
+    content: " <3";
+} */
 #pronouns {
     background-color: #fe4fff;
     text-decoration: none;
