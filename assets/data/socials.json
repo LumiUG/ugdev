@@ -17,17 +17,23 @@
         "logo": "/assets/images/socials/backloggd.ico",
         "desc": "In here I keep a backlog of the games that I've played: AAA games, indies... Comes with reviews aswell!"
     },
+    "bluesky": {
+        "hyperlink": "https://bsky.app/profile/ugdev.xyz",
+        "username": "Bluesky",
+        "logo": "/assets/images/socials/bluesky.svg",
+        "desc": "Mainly used for consuming content and talking about some stuff that I find interesting. (You should follow me...)"
+    },
     "bandcamp": {
         "hyperlink": "https://bandcamp.com/undergame",
         "username": "Bandcamp",
         "logo": "/assets/images/socials/bandcamp.svg",
         "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
     },
-    "twitter": {
-        "hyperlink": "https://twitter.com/xUnderGame",
-        "username": "Twitter",
-        "logo": "/assets/images/socials/twitter.svg",
-        "desc": "Mainly used for consuming content and talking about some stuff that I find interesting. (You should follow me...)"
+    "lastfm": {
+        "hyperlink": "https://www.last.fm/user/LumiUG",
+        "username": "Lastfm",
+        "logo": "/assets/images/socials/lastfm.png",
+        "desc": "Also a platform where you can check what I listen to, barely used, as I scrobble on the background usually."
     },
     "discord": {
         "hyperlink": "https://discord.com",
@@ -35,22 +41,28 @@
         "logo": "/assets/images/socials/discord.svg",
         "desc": "My discord is \"@undergame\", add me if you'd like to have a chat! (Will try to respond when possible)"
     },
-    "youtube": {
-        "hyperlink": "https://www.youtube.com/c/UnderGame",
-        "username": "Youtube",
-        "logo": "/assets/images/socials/youtube.svg",
-        "desc": "I used to make videos in the past. Right now this is only for archival purposes until I decide to come back."
-    },
     "steam": {
         "hyperlink": "https://steamcommunity.com/id/undergame",
         "username": "Steam",
         "logo": "/assets/images/socials/steam.svg",
         "desc": "Obsessed with rhythm, puzzles and platformer games. 'Have you heard of that new Indie Game?' Yep, already played it."
     },
+    "youtube": {
+        "hyperlink": "https://www.youtube.com/c/UnderGame",
+        "username": "Youtube",
+        "logo": "/assets/images/socials/youtube.svg",
+        "desc": "I used to make videos in the past. Right now this is only for archival purposes until I decide to come back."
+    },
     "fiverr": {
         "hyperlink": "https://www.fiverr.com/undergame",
         "username": "Fiverr",
         "logo": "/assets/images/socials/fiverr.svg",
         "desc": "I do Origin commissions here! Right now it's paused as I don't have the need to do them again."
+    },
+    "twitter": {
+        "hyperlink": "https://twitter.com/xUnderGame",
+        "username": "Twitter",
+        "logo": "/assets/images/socials/twitter.svg",
+        "desc": "Discontinued account. Follow me on Bluesky instead!"
     }
 }
