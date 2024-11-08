@@ -127,7 +127,7 @@
     "art": {
         "rework": {
             "name": "This area will be reworked!",
-            "image": "/assets/images/favicon.png",
+            "image": "/assets/images/Bird.png",
             "timestamp": "02/02/2024",
             "program": "My puter",
             "tooltip": "Soon?"

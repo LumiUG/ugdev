@@ -76,7 +76,7 @@ const randMessages = [
     "His name is Meem.",
     "Oh, and the cat, it's Ploof.",
     "And this just feels like spinning plates.",
-    "\"How much dressing can you put in a salad before it becomes a soup?\"",
+    // "\"How much dressing can you put in a salad before it becomes a soup?\"",
     "\"I love blankets\"",
     "\"don't say anything.\"",
     "That there, that's not me.",
@@ -95,7 +95,12 @@ const randMessages = [
     "Or have you lost something?",
     "Something very important to you.",
     "i hold on i hold i hold on",
-    "the \"bird\" command, of course"
+    "the \"bird\" command, of course",
+    "I dream in black and white",
+    "\"fart flower light baby\"",
+    "O---- holy shit The Witness",
+    "All of the birds sing to me",
+    "Everything stops, everything falls apart."
 ];
 
 var tooltip = document.getElementById("tooltip");
@@ -114,6 +119,7 @@ function genSocials() {
         let descDiv = document.createElement("div");
         let projContainer = document.createElement("div");
         projContainer.classList += `social drop-solid-black`;
+        if (isMobile()) projContainer.style.width = "250px";
 
         // Iterate through the default values and generate the outcome.
         for (let i = 0; i < elements.length; i++) {
@@ -139,6 +145,11 @@ function genSocials() {
         projContainer.append(descDiv);
         toAppend.appendChild(projContainer);
     }
+}
+
+// Checks for browser mobile useragent
+function isMobile() {
+    return /Android|iPhone/i.test(navigator.userAgent);
 }
 
 // Run some code a single time when the website loads. To be honest, I should make this into an onload()!

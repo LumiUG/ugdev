@@ -88,7 +88,7 @@ function AddTooltipEvent(toAdd, tooltipContent) {
             tooltip.style.display = "block";
             toAdd.parentElement.append(tooltip);
             tooltip.textContent = tooltipContent;
-            tooltip.style.top = rect.top - 40 + "px";
+            tooltip.style.top = rect.top - 60 + window.scrollY + "px";
             tooltip.style.left = rect.left - 60 + "px";
         })
     });
