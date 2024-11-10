@@ -1,6 +1,6 @@
 // Checks for browser mobile useragent
 function isMobile() {
-    return /Android|iPhone/i.test(navigator.userAgent);
+    return /Android|iPhone|iPad/i.test(navigator.userAgent);
 }
 
 if (!isMobile()) throw new Error("Not mobile UA, this is intended!");
