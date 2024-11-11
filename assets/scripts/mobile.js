@@ -3,7 +3,7 @@ function isMobile() {
     return /Android|iPhone|iPad/i.test(navigator.userAgent);
 }
 
-if (!isMobile())
+if (isMobile())
 {
     // Nav bar
     var nav = document.getElementById("doors");
