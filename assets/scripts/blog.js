@@ -13,12 +13,13 @@ function loadBlog() {
     if (isMobile()) {
         toAppend.style.textAlign = "center";
         let sorry = document.createElement("p");
-        sorry.innerText = "Sorry! Viewing the blog in mobile is not supported right now :(";
+        sorry.innerText = "Sorry! Viewing the blog in mobile is not supported right now :<";
         toAppend.appendChild(sorry);
         return;
     };
     
-    for (const key in posts) {
+    const sort = Object.keys(posts).sort(function (a, b) { return a + b; }); // latest first
+    for (const key of sort) {
         // Set the default div(s).
         let blogPost = document.createElement("div");
         blogPost.classList += `blogPost drop-blurry-black`;
@@ -27,38 +28,25 @@ function loadBlog() {
         for (let i = 0; i < elements.length; i++) {
             if (!posts[key][keys[i]]) continue;
             let toAdd = document.createElement(elements[i]);
+            let text = posts[key][keys[i]];
 
-            // Add an <img> if the post has it
-            if (keys[i] != "post") toAdd.innerText = posts[key][keys[i]];
-            else {
-                let textList = posts[key][keys[i]].split(/{.*}/);
-                let imageName = /{.*}/.exec(posts[key][keys[i]]);
-
-                // Yoo images!!!
-                let clickMe;
+            // Custom handling for blog content
+            if (elements[i] == "div") {
+                // Replace {} with image
+                let imageName = /{.*}/.exec(text);
                 if (imageName) {
-                    clickMe = document.createElement("a");
-                    let image = document.createElement("img");
-                    image.src = `/assets/images/blog/${imageName[0].replace("{", "").replace("}", "")}.png`;
-                    clickMe.href = image.src;
-                    clickMe.appendChild(image);
+                    let srcPath = `/assets/images/blog/${imageName[0].replace("{", "").replace("}", "")}`;
+                    text = text.replace(/{.*}/, `<a href="${srcPath}"><img src="${srcPath}"></a><br>`);
                 }
                 
-                // Text one.
-                let textOne = document.createElement("p");
-                textOne.innerText = textList[0];
-
-                // Text two.
-                let textTwo = document.createElement("p");
-                textTwo.innerText = textList[1];
-
-                // Adds everything.
-                toAdd.append(textOne);
-                if (imageName) {
-                    toAdd.append(clickMe);
-                    toAdd.append(textTwo);
-                }
+                // Adds to toAdd
+                let content = document.createElement("p");
+                content.innerHTML = text;
+                toAdd.append(content);
             }
+            else toAdd.innerHTML = text;
+
+            // Adds everything.
             blogPost.append(toAdd);
         }
         toAppend.appendChild(blogPost);

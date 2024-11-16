@@ -2,6 +2,10 @@
 p {
     font-size: 20px;
 }
+a {
+    font-size: 25px;
+    color: var(--secondary-accent);
+}
 h2 {
     margin: 90px 0px 20px 0px;
     font-size: 50px;
@@ -19,7 +23,6 @@ h2 {
 #blog div div img {
     width: auto;
     height: 180px;
-    pointer-events: none;
 }
 .blogPost {
     display: flex;

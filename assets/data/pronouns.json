@@ -1,26 +1,23 @@
 {
     "names": {
-        "Lumi": { "type": "yes", "hover": "For my sona, more than happy if you use it!"},
-        "uggy": { "type": "yes", "hover": "!! Slowly transitioning out of this !!" },
-        "ug": { "type": "yes", "hover": "!! Slowly transitioning out of this !!" },
+        "Lumi": { "type": "yes", "hover": "For my sona, this tickles my brain when someone uses it."},
+        "ug": { "type": "yes", "hover": "I'm fine with \"ug\", but I'll be moving away from it." },
         "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
-        "UnderGame*": { "type": "okay", "hover": "!! Slowly transitioning out of this !!" },
         "UnderGame": { "type": "no", "hover": "!! Slowly transitioning out of this !!" },
         "Eugene": { "type": "joke" },
         "Lumi*": { "type": "sona" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },
-        "she/her": { "type": "no" },
         "he/him*": { "type": "sona" },
         "it/its": { "type": "sona" }
     },
     "words": {
         "honorifics": {
             "[no honorific]": { "type": "yes" },
-            "sir": { "type": "okay" },
-            "mr.": { "type": "okay" }
+            "sir": { "type": "no" },
+            "mr.": { "type": "no" }
         },
         "address": {
             "dude": { "type": "yes" },
@@ -34,8 +31,6 @@
         "adjectives": {
             "cute": { "type": "yes" },
             "pretty": { "type": "yes" },
-            "good": { "type": "close" },
-            "hot": { "type": "close" },
             "sexy": { "type": "no" },
             "beloved": { "type": "joke" },
             "silly": { "type": "joke" }
