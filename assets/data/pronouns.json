@@ -17,7 +17,7 @@
         "honorifics": {
             "[no honorific]": { "type": "yes" },
             "sir": { "type": "no" },
-            "mr.": { "type": "no" }
+            "mr": { "type": "no" }
         },
         "address": {
             "dude": { "type": "yes" },

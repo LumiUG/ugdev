@@ -62,12 +62,14 @@ function CreateEntry(entryName, sectionName, list)
 
     // Create img
     let image = document.createElement("img");
+    image.classList += "prefIcon ";
     image.classList += names[sectionName][entryName]["type"];
     image.src = types[names[sectionName][entryName]["type"]]["image"];
     image.alt = "bleh";
 
     // Create p
     let text = document.createElement("p");
+    text.classList += "prefP ";
     text.classList += names[sectionName][entryName]["type"];
     text.textContent = entryName.replace("*", "");
 

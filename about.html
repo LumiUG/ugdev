@@ -5,6 +5,7 @@
     <link rel="icon" href="/assets/images/favicon.png">
     <link rel="stylesheet" href="/assets/styles/global.css">
     <link rel="stylesheet" href="/assets/styles/about.css">
+    <link rel="stylesheet" href="/assets/styles/preferences.css">
     
     <title>About - ugdev.xyz</title>
     <meta charset="UTF-8">
@@ -14,6 +15,7 @@
     <meta property="og:image" content="https://ugdev.xyz/assets/images/favicon.png">
     <meta property="og:type" content="website">
 </head>
+
 <body>
 	<div id="nav">
 		<div id="doors">
@@ -21,15 +23,69 @@
 			<a href="/" class="door">HOME</a><!--
 			--><a href="projects" class="door">PROJECTS</a><!--
 			--><a href="about" class="door">ABOUT</a><!--
-			--><a href="preferences" class="door">PREFERENCES</a><!--
+			--><a href="characters" class="door">CHARACTERS</a><!--
 			--><a href="blog" class="door">BLOG</a>
 		</div>
 	</div>
-    
+
+    <!-- ABOUT SECTION -->
     <main>
-        <h1>Work in progress!</h1>
+        <p>bleh</p>
     </main>
 
+    <!-- PREFERENCES SECTION -->
+    <header>
+        <h1 style="font-size: 25px !important">Small section about my preferences!<br>You don't have to memorize anything <img class="prefIcon" src="/assets/images/pronouns/heart.svg" alt="A heart"></h1><br>
+        <p class="prefP">Hover/Click over stuff for a small tooltip!</p>
+        <img id="bi" src="/assets/images/flags/BI.png" alt="bi flag !!">
+        <img id="pan" src="/assets/images/flags/Pan.png" alt="pan flag !!">
+    </header>
+    <span class="separator"><hr></span>
+
+    <div id="preferences">
+        <span id="tooltip" class="drop-blurry-black">Placeholder text! And even some more text! Hell yeah!</span>
+        <section class="divider">
+            <h2 class="prefh2">Names</h2>
+            <div class="list"></div>
+        </section>
+
+        <section class="divider">
+            <h2 class="prefh2">Pronouns</h2>
+            <div class="list"></div>
+        </section>
+
+        <span class="wordSection">
+            <h2 class="prefh2">Words</h2>
+            <span class="wrapper">
+                <div class="wordsExtra">
+                    <h3 class="prefh3">Honorifics</h3>
+                    <div class="list"></div>
+                </div>
+                <div class="wordsExtra">
+                    <h3 class="prefh3">Address</h3>
+                    <div class="list"></div>
+                </div>
+                <div class="wordsExtra">
+                    <h3 class="prefh3">Adjectives</h3>
+                    <div class="list"></div>
+                </div>
+            </span>
+        </span>
+    </div>
+    <footer>
+        <span class="separator"><hr></span>
+        <legend>
+            <span class="whatis"><img class="prefIcon" src="/assets/images/pronouns/heart.svg" alt="A heart"><p class="prefP">= Yes</p></span>
+            <span class="whatis"><img class="prefIcon" src="/assets/images/pronouns/thumbsup.svg" alt="Thumbs up"><p class="prefP">= Okay</p></span>
+            <span class="whatis"><img class="prefIcon" src="/assets/images/pronouns/thumbsdown.svg" alt="Thumbs down"><p class="prefP">= No</p></span>
+            <span class="whatis"><img class="prefIcon" src="/assets/images/pronouns/joke.svg" alt="Joking icon"><p class="prefP">= Joking</p></span>
+            <span class="whatis"><img class="prefIcon" src="/assets/images/pronouns/close.svg" alt="Close icon"><p class="prefP">= Only if we're close</p></span>
+            <span class="whatis"><img class="prefIcon" src="/assets/images/pronouns/paw.svg" alt="Paw icon"><p class="prefP">= Sona</p></span>
+        </legend>
+        <p class="prefP">This section was based on <a href="https://pronouns.page">pronouns.page</a>!</p>
+    </footer>
+
+    <script type="module" src="/assets/scripts/pronouns.js"></script>
     <script defer src="/assets/scripts/mobile.js"></script>
 </body>
 </html>

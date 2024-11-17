@@ -737,7 +737,7 @@ function CommandClear() {
 
 // Uname?
 function CommandUname() {
-    TypeOutput("EOS 4 bit system");
+    TypeOutput("Unfinished :)");
 }
 
 // EOS
@@ -751,7 +751,7 @@ function CommandRainbow() {
     else { TypeOutput("EOS: Let the party begin."); document.body.style.animation = "rainbow 2.5s linear infinite"; }
 }
 
-// EOS
+// Avali scratch command
 function CommandAvaliScratch() {
     if (document.body.style.fontFamily == "Ubuntu Mono" || document.body.style.fontFamily == "") { document.body.style.fontFamily = "avaliScratch"; TypeOutput("Enjoy!\n\nCredit to <a href='https://fontstruct.com/fontstructions/show/1108804/avali_scratch'>SomeGuyNamedDavid</a>"); }
     else { document.body.style.fontFamily = "Ubuntu Mono"; TypeOutput("Alright, alright.");}
