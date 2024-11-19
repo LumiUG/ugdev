@@ -11,6 +11,9 @@ main {
     height: fit-content;
     margin-bottom: 30px;
 }
+.aboutBody img {
+    width: 20px;
+}
 
 /* ID's */
 #title {
@@ -27,7 +30,7 @@ main {
 }
 #showcase {
     position: relative;
-    top: -50px;
+    /* top: -50px; */
     left: 25px;
     height: 400px;
     width: auto;

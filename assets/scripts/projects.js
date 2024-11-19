@@ -53,7 +53,7 @@ function GenProjects(id) {
 
         let noProjects = document.createElement("p");
         if (id == "music") noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\nYou can check some cool artists in the meantime:\n\nhttps://soundcloud.com/frums\nhttps://www.youtube.com/@Cametek.CamelliaOfficial\nhttps://soundcloud.com/jazzemu";
-        else noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\n(I hope...)";
+        else noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.";
         projContainer.appendChild(noProjects);
         toAppend.appendChild(projContainer);
     }
