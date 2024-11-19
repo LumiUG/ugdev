@@ -1,1 +1,34 @@
-/* EMPTY */
+main {
+    text-align: center;
+}
+
+/* Classes */
+.aboutBody {
+    line-height: 35px;
+    text-align: left;
+    font-size: 20px;
+    width: 600px;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+
+/* ID's */
+#title {
+    position: relative;
+    left: -15%;
+    font-size: 60px;
+    margin-bottom: 40px
+}
+#together {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+#showcase {
+    position: relative;
+    top: -50px;
+    left: 25px;
+    height: 400px;
+    width: auto;
+}

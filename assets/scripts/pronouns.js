@@ -33,7 +33,7 @@ var types = {
 
 // Creates HTML based on json (why do I always do this...)
 var tooltip = document.getElementById("tooltip");
-var elements = Array.from(document.body.getElementsByTagName("section"));
+var elements = Array.from(document.body.getElementsByClassName("divider"));
 elements.forEach(element => ProcessSection(element));
 
 // Extra (words section)

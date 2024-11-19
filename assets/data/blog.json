@@ -6,7 +6,7 @@
     },
     "2": {
         "title": "ETV and others",
-        "post": "Hey again, been doing some stuff these days. I just experimented with Unity 3d and tried to re-remeber some of Unity's C#.<br>I've also made an online tierlist builder, made from pure js. (why didnt I use jQuery...){frumsTierlistExample.png}I've had some troubles getting the drag&drop to work, but I think it ended up pretty well.<br>...Will probably keep updating it with some very much needed QoL features, so stay tuned for more!<br>Oh yeah, I'm getting better at art :>",
+        "post": "Hey again, been doing some stuff these days. I just experimented with Unity 3d and tried to re-remeber some of Unity's C#.<br>I've also made an online tierlist builder, made from pure js. (why didnt I use jQuery...)<br>{frumsTierlistExample.png}I've had some troubles getting the drag&drop to work, but I think it ended up pretty well.<br>...Will probably keep updating it with some very much needed QoL features, so stay tuned for more!<br>Oh yeah, I'm getting better at art :>",
         "date": "02/06/2023"
     },
     "3": {
@@ -29,7 +29,7 @@
     },
     "6": {
         "title": "Working working working",
-        "post": "I'm working on a 2D \"sokoban\" game!<br>The game right now is open source, and in development. You can find it on my GitHub.{ADC-LevelPreview.png}",
+        "post": "I'm working on a 2D \"sokoban\" game!<br>The game right now is open source, and in development. You can find it on my GitHub.<br>{ADC-LevelPreview.png}",
         "date": "05/06/2024"
     },
     "7": {
