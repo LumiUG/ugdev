@@ -19,7 +19,7 @@ hr {
     flex-wrap: wrap;
     align-content: center; 
     justify-content: center;
-    margin: 40px 0px 60px 0px;
+    margin: 140px 0px 60px 0px;
     font-family: var(--secondaryFont);
     gap: 40px;
 }

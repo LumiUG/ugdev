@@ -105,6 +105,7 @@ const randMessages = [
 
 var tooltip = document.getElementById("tooltip");
 function updateRandom(ele) {
+    if (!ele) return;
     ele.firstElementChild.textContent = randMessages[Math.floor(Math.random() * randMessages.length)];
 }
 
@@ -155,4 +156,4 @@ function isMobile() {
 // Run some code a single time when the website loads. To be honest, I should make this into an onload()!
 genSocials();
 updateRandom(document.getElementById("randMessage"));
-document.getElementById("randMessage").addEventListener("click", function () { updateRandom(this) }, false);
+document.getElementById("randMessage")?.addEventListener("click", function () { updateRandom(this) }, false);

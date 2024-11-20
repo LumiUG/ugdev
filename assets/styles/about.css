@@ -35,3 +35,6 @@ main {
     height: 400px;
     width: auto;
 }
+#showcase:hover {
+    animation: 10s bounce infinite;
+}

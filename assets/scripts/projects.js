@@ -6,6 +6,7 @@ var projects = await fetch('/assets/data/projects.json')
 // Adds the event listenters to the buttons and builds all the projects.
 let projectsList = Object.keys(projects).toString().split(",");
 for (let key of projectsList) {
+    if (key == "art") continue; // temporary
     document.getElementById(key).addEventListener("click", function () { showProject(key) }, false);
     GenProjects(key);
 }

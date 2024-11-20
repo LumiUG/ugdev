@@ -29,7 +29,8 @@ body {
 		rgb(13, 13, 13, 0.9) 140%
 	);
 	/* linear-gradient(rgba(255, 255, 255, 0.3) 6px, transparent 1px) !important; */
-	background-repeat: repeat;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	text-shadow: 0px 0px 6px #9d9999;
 	overflow-x: hidden;
 	animation: startup 0.8s both 0s;

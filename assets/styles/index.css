@@ -58,7 +58,8 @@ h2 {
 
 /* Socials */
 #socials {
-    margin-top: 80px;
+    /* background-color: var(--secondary); */
+    margin-top: 140px;
 }
 #adText {
     margin: 10px 0px 20px 0px;
@@ -139,10 +140,4 @@ h2 {
 #pronouns {
     background-color: #fe4fff;
     text-decoration: none;
-}
-
-@keyframes bounce {
-	0%, 100% { transform: translateY(0); }
-	10%, 30%, 50%, 70%, 90% { transform: translateY(-10px); }
-	20%, 40%, 60%, 80% { transform: translateY(10px); }
 }

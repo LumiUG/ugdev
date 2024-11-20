@@ -24,11 +24,12 @@ if (isMobile())
     }
 
     // index.html's stuff
-    var bird = document.getElementById("logo");
-    if (bird != null) {
+    var socials = document.getElementById("socials");
+    if (socials != null) {
         document.getElementById("randMessage").remove();
         document.getElementById("adText").remove();
-        bird.style.left = "0px";
+        socials.style.marginTop = "10px";
+        // bird.style.left = "0px";
     
         var h2 = document.querySelectorAll("h2");
         for (let i = 0; i < h2.length; i++) {

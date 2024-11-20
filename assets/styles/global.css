@@ -1,12 +1,16 @@
+/* GLOBAL */
 :root {
     --primary: #ffffff;
     --primary-75: #ffffff75;
     --secondary: #000000;
     --tertiary: #9ca3af;
     --accent: #d60270;
+    --accent-underline: #9e0353;
     --secondary-accent: #0288d6;
+    --secondary-accent-underline: #01629a;
     --primaryFont: 'Open Sans', sans-serif;
     --secondaryFont: "JetBrains Mono", monospace;
+    --tertiaryFont: "Bungee", sans-serif;
 }
 .drop-solid-black {
     filter: drop-shadow(2px 2px 0px black);
@@ -17,6 +21,8 @@
 .drop-blurry-white {
     filter: drop-shadow(2px 2px 5px white);
 }
+
+/* DEFAULT TAGS */
 * {
     margin: 0px;
     /* border: 1px solid pink; /* Remove after! */
@@ -27,12 +33,23 @@ body {
     color: white;
     /* background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.25)), url("/assets/images/MainBG.jpg"); */
     background-image: url("/assets/images/MainBG.jpg");
-    background-repeat: repeat;
+    /* background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(51,51,51,1) 100%); */
     overflow-x: hidden;
     /* animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-name: bgcolor; */
 }
+a {
+    color: var(--secondary-accent);
+}
+a:hover {
+    text-decoration-color: var(--secondary-accent-underline) !important;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 10px;
+    text-underline-offset: -2px
+}
+
+/* MISC */
 .centerText {
     text-align: center;
 }
@@ -43,10 +60,28 @@ body {
     height: fit-content;
     padding: 10px 20px 10px 20px;
     border-radius: 15px;
-    /* font-size: 20px; */
+    font-size: 20px;
+    font-style: normal !important;
     color: white !important;
     background-color: var(--secondary);
 }
+
+/* FONTS */
+.candal-regular {
+    font-family: "Candal", serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+.bungee-regular {
+    font-family: "Bungee", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.balsamiq-sans-regular {
+    font-family: "Balsamiq Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+} 
 
 /* Footer */
 footer {
@@ -164,4 +199,9 @@ footer div a {
     100% {
         background-image: linear-gradient(rgba(0, 0, 0, 0.90), rgba(255, 255, 255, 0.05)), url("../images/MainBG.jpg");
     }
+}
+@keyframes bounce {
+	0%, 100% { transform: translateY(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateY(-10px); }
+	20%, 40%, 60%, 80% { transform: translateY(10px); }
 }
