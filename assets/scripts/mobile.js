@@ -1,11 +1,11 @@
 // Checks for browser mobile useragent
 function isMobile() {
-    return /Android|iPhone|iPad/i.test(navigator.userAgent);
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
 }
 
 if (isMobile())
 {
-    // Nav bar
+    // Nav bar (global)
     var nav = document.getElementById("doors");
     if (nav != null) {
         nav.style.display = "flex";
@@ -16,22 +16,21 @@ if (isMobile())
         nav.style.padding = "10px";
         
         document.getElementById("separator").style.height = "50px";
-        var doors = document.querySelectorAll(".door");
+        let doors = document.querySelectorAll(".door");
         for (let i = 0; i < doors.length; i++) {
             doors[i].style.fontSize = "25px";
             doors[i].style.padding = "15px 20px 15px 20px";
         };
     }
 
-    // index.html's stuff
-    var socials = document.getElementById("socials");
-    if (socials != null) {
+    // Page Specific changes (too lazy to do one script for each) //
+    // INDEX.HTML //
+    if (document.title.toLowerCase().includes("home")) {
         document.getElementById("randMessage").remove();
         document.getElementById("adText").remove();
-        socials.style.marginTop = "10px";
-        // bird.style.left = "0px";
+        document.getElementById("socials").style.marginTop = "10px";
     
-        var h2 = document.querySelectorAll("h2");
+        let h2 = document.querySelectorAll("h2");
         for (let i = 0; i < h2.length; i++) {
             h2[i].style.fontSize = "40px";
         };
@@ -40,5 +39,36 @@ if (isMobile())
         // for (let i = 0; i < social.length; i++) {
         //     social[i].style.width = "250px";
         // };
+    }
+
+    // ABOUT.HTML //
+    else if (document.title.toLowerCase().includes("about")) {
+        // About section
+        document.getElementById("title").style.position = "initial";
+        let showcase = document.getElementById("showcase");
+        showcase.style.position = "initial";
+        showcase.style.width = "300px";
+
+        let together = document.getElementById("together");
+        together.style.alignItems = "center";
+        together.style.textAlign = "center";
+        together.style.flexDirection = "column";
+
+        let paragraph = document.querySelectorAll(".aboutBody");
+        for (let i = 0; i < paragraph.length; i++) {
+            console.log(paragraph[i]);
+            paragraph[i].style.marginLeft = "20px";
+            paragraph[i].style.marginRight = "20px";
+            paragraph[i].style.width = "90%";
+        };
+
+        // Preferences section
+        document.getElementById("preferences").style.padding = "0px 10% 0px 10%"; 
+
+        // Characters section
+        let refs = document.querySelectorAll(".refsheet");
+        for (let i = 0; i < refs.length; i++) {
+            refs[i].style.width = "100%";
+        };
     }
 }

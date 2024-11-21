@@ -55,7 +55,7 @@ function loadBlog() {
 
 // Checks for browser mobile useragent
 function isMobile() {
-    return /Android|iPhone/i.test(navigator.userAgent);
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
 }
 
 loadBlog();
