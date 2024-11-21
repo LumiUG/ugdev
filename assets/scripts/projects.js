@@ -81,14 +81,15 @@ function AddA(toAdd, id, key, keys, i) {
 function AddTooltipEvent(toAdd, tooltipContent) {
     ["mouseover", "click"].forEach(event => {
         toAdd.addEventListener(event, () => {
+            let rect = toAdd.getBoundingClientRect();
             tooltip.style.display = "block";
             toAdd.parentElement.append(tooltip);
-            tooltip.style.top = toAdd.offsetTop + toAdd.style.offsetHeight + "px";
-            tooltip.style.left = toAdd.offsetLeft + toAdd.style.offsetWidth + "px";
             tooltip.textContent = tooltipContent;
+            tooltip.style.top = rect.top - 60 + window.scrollY + "px";
+            tooltip.style.left = rect.left - 60 + "px";
         })
     });
-    toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none";  });
+    toAdd.addEventListener("mouseleave", () => { tooltip.style.display = "none"; });
 }
 
 // Turns on/off a project. (called by click events)

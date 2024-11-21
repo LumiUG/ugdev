@@ -82,7 +82,7 @@ function CreateEntry(entryName, sectionName, list)
     list.appendChild(entry);
 }
 
-// Code from index.html, I am NOT making cross site stuff.
+// Code from projects.js, I am NOT making cross site stuff.
 function AddTooltipEvent(toAdd, tooltipContent) {
     ["mouseover", "click"].forEach(event => {
         toAdd.addEventListener(event, () => {

@@ -26,14 +26,14 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 #showcase {
     position: relative;
     /* top: -50px; */
     left: 25px;
-    height: 400px;
-    width: auto;
+    width: 500px;
+    height: fit-content;
 }
 #showcase:hover {
     animation: 10s bounce infinite;
