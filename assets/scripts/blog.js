@@ -23,12 +23,13 @@ function loadBlog() {
         // Set the default div(s).
         let blogPost = document.createElement("div");
         blogPost.classList += `blogPost drop-blurry-black`;
-
+        
         // Iterate through the default values and generate the outcome.
         for (let i = 0; i < elements.length; i++) {
             if (!posts[key][keys[i]]) continue;
             let toAdd = document.createElement(elements[i]);
             let text = posts[key][keys[i]];
+            if (elements[i] == "p") toAdd.classList += "date";
 
             // Custom handling for blog content
             if (elements[i] == "div") {

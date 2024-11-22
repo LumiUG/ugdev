@@ -100,7 +100,9 @@ const randMessages = [
     "\"fart flower light baby\"",
     "O---- holy shit The Witness",
     "All of the birds sing to me",
-    "Everything stops, everything falls apart."
+    "Everything stops, everything falls apart.",
+    "@everyone curse of candlekeep",
+    "katana"
 ];
 
 var tooltip = document.getElementById("tooltip");
