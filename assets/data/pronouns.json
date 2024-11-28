@@ -1,10 +1,10 @@
 {
     "names": {
-        "Lumi": { "type": "yes", "hover": "For my sona, this tickles my brain when someone uses it."},
-        "ug": { "type": "yes", "hover": "I'm fine with \"ug\", but I'll be moving away from it." },
+        "Lumi": { "type": "yes", "hover": "My main nick, use it when referring to me!"},
+        "ug": { "type": "okay", "hover": "I'm fine with \"ug\", all good <3" },
         "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
-        "UnderGame": { "type": "no", "hover": "!! Slowly transitioning out of this !!" },
+        "UnderGame": { "type": "no", "hover": "Don't deadname me, I will break your knees. (lovingly)" },
         "Eugene": { "type": "joke" },
         "Lumi*": { "type": "sona" }
     },

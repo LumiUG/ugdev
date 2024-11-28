@@ -22,13 +22,14 @@
     background-color: var(--tertiary);
     border: 2px solid white;
     border-radius: 10px;
+    text-align: center;
 }
 .character p {
     font-size: 25px;
 }
 .ch2 {
     font-size: 40px;
-    margin: 0px 0px 25px 0px
+    margin: 0px 0px 25px 0px;
 }
 .refsheet {
     margin-bottom: 20px;
