@@ -23,6 +23,9 @@ if (isMobile())
         };
     }
 
+    // Background (global)
+    document.querySelector("body").style.backgroundSize = "100%";
+
     // Page Specific changes (too lazy to do one script for each) //
     // INDEX.HTML //
     if (document.title.toLowerCase().includes("home")) {

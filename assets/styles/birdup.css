@@ -23,9 +23,6 @@ body, main {
 body {
     /* background-image: url("/assets/images/artwork/lumi/wiggle.gif") !important; */
     background-color: var(--accent);
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 10%;
 }
 h1 {
     margin-bottom: 20px;
