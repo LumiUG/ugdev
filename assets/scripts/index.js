@@ -26,25 +26,25 @@ const randMessages = [
     "\"I love digging graves\"",
     "\"Furries!\"",
     "STEEVOOOOOOOOOOOO-",
-    "My brothee, ooh my brotheee.",
+    "My brothee, ooh my brotheee.", // Jazz Emu - My Brothe
     "\"Every pit is a chance for glory.\"",
     "What the cat?",
-    "\"I must be one of the good ones™\"",
+    "\"I must be one of the good ones™\"", // Jazz Emu - One of the good ones
     "More random messages",
-    "Oooh, I want to fall apart again...",
-    "Do not hang up.",
-    "It was... Perfect.",
-    "From my Tower of Dreams, the things I see.",
-    "Concentrate your energy in your heart.",
-    "What awaits you below the bottom of the world?",
-    "I am / Not what / I am",
-    "That is incorrect, try again.",
-    "Ccompu-- uuu- computer is now-- computer is- machine.",
-    "Fu-fu-funding for this program was made possible by by-",
-    "Fun-di-di-di-di-ding fo-o-o-o for the program-",
-    "Funding for the the wa possib-li viewers like you",
-    "like you like you like you like you like you like you",
-    "AT THE ENDDDDDD OF THE UNIVERSEEEEEEEE",
+    "Oooh, I want to fall apart again...", // Frums - Absolute Zero
+    "Do not hang up.",  // Frums - Wavetapper
+    "It was... Perfect.",  // Frums - Pictured as Perfect
+    "From my Tower of Dreams, the things I see.",  // Frums - Tower of Dreams
+    "Concentrate your energy in your heart.",  // Frums - Living Will
+    "What awaits you below the bottom of the world?",  // Frums - Overdead
+    "I am / Not what / I am",  // Frums - My Capacitance
+    "That is incorrect, try again.",  // Frums - Nisemono
+    "Ccompu-- uuu- computer is now-- computer is- machine.",  // Frums - I FORGOT OMG
+    "Fu-fu-funding for this program was made possible by by-",  // Frums - Credits
+    "Fun-di-di-di-di-ding fo-o-o-o for the program-",  // Frums - Credits
+    "Funding for the the wa possib-li viewers like you",  // Frums - Credits
+    "like you like you like you like you like you like you",  // Frums - Credits
+    "AT THE ENDDDDDD OF THE UNIVERSEEEEEEEE",  // Frums - Absolute Zero
     "2, 1, 3, 4, 7, 11, 18...",
     "1, 1, 2, 3, 5, 8, 13...",
     "level by Bean",
@@ -66,21 +66,21 @@ const randMessages = [
     "\"vcf ydrxgedsr\"",
     "Hi, it's me, Ditko, just passing through",
     "meow meow meow mrrow mew",
-    "\"Tried to save myself, but myself keeps slipping away\"",
+    "\"Tried to save myself, but myself keeps slipping away\"", // Nine Inch Nails - Into the Void
     "SPACE BIRDS",
-    "\"A copy of a copy of a\"",
+    "\"A copy of a copy of a\"", // Nine Inch Nails - Copy of a
     "LOOOOOOOOOOOOP",
-    "\"Always breaking, always healing\"",
-    "\"Oyasumi ooooooyasumi...\"",
-    "\"Is this it, is it?\"",
+    "\"Always breaking, always healing\"", // Alexander Panos - always breaking, always healing
+    "\"Oyasumi ooooooyasumi...\"", // Bo en - My Time
+    "\"Is this it, is it?\"", // Garlagan - Is This It Is It
     "His name is Meem.",
     "Oh, and the cat, it's Ploof.",
-    "And this just feels like spinning plates.",
+    "And this just feels like spinning plates.", // Radiohead - Like Spinning Plates
     // "\"How much dressing can you put in a salad before it becomes a soup?\"",
     "\"I love blankets\"",
     "\"don't say anything.\"",
-    "That there, that's not me.",
-    "There was nothing to fear and nothing to doubt.",
+    "That there, that's not me.", // Radiohead - How to dissapear completely
+    "There was nothing to fear and nothing to doubt.", // Radiohead - Pyramid Song 
     "commence the mass stoning.",
     "\"snit now im hungry\"",
     "\"SHUAH\"",
@@ -99,10 +99,19 @@ const randMessages = [
     "I dream in black and white",
     "\"fart flower light baby\"",
     "O---- holy shit The Witness",
-    "All of the birds sing to me",
-    "Everything stops, everything falls apart.",
+    "All of the birds sing to me", // Nest - Everything Falls Apart
+    "Everything stops, everything falls apart.", // Nest - Everything Falls Apart
     "@everyone curse of candlekeep",
-    "katana"
+    "katana",
+    "13 30 32",
+    "RECRUDESCENT",
+    "How dapper of you.",
+    "happy new year",
+    "happy halloween",
+    "Restless", // Carousel - Hush!
+    "Treacherous", // Carousel - Hush!
+    "Your Heart", // Carousel - Hush!
+    "Lies" // Carousel - Hush!
 ];
 
 var tooltip = document.getElementById("tooltip");

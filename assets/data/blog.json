@@ -17,7 +17,7 @@
     },
     "4": {
         "title": "2025 IS MY YEAR",
-        "post": "YOOOOOOOO HAPPY NEW YEAR EVERYONE<br>CHECK OUT MY NEW GAME GRAVIX ON ITCH.IO PLEASE THANK YOUUU<br><a href='https://ugdev.itch.io/gravix'>Click here to check it out!</a>",
+        "post": "YOOOOOOOO HAPPY NEW YEAR EVERYONE<br>CHECK OUT MY NEW GAME GRAVIX ON ITCH.IO PLEASE THANK YOUUU<br><a href='https://ugdev.itch.io/gravix'>[Gravix]</a>",
         "images": [],
         "date": "01/01/2024"
     },
@@ -34,7 +34,12 @@
     },
     "7": {
         "title": "ADC Demo",
-        "post": "{ADCCover.png} Demo is OUT NOW!<br>Well, it was out like a week ago, but I forgot to make a blog post about it.<br><br>Check it out here:<br><a href='https://ugdev.itch.io/a-directionless-cycle'>A Directionless Cycle - Demo</a>",
+        "post": "{ADCCover.png} Demo is OUT NOW!<br>Well, it was out like a week ago, but I forgot to make a blog post about it.<br><br>Check it out here:<br><a href='https://ugdev.itch.io/a-directionless-cycle'>[A Directionless Cycle - Demo]</a>",
         "date": "15/10/2024"
+    },
+    "8": {
+        "title": "Happy new year!",
+        "post": "2024 has been a wild year, between graduating, finding a job, developing a game,<br>learning new stuff, and changing zones of comfort, I'm exhausted.<br>I managed to do at least half the things I set out on doing, which is great!<br><br>Right now, I have quite some stuff cooking with ADC, and also sketching ideas for another game.<br>Life is great, and I'm working towards finding myself (or a sense, of what I am) more closely.<br><br>Lastly, as I've said, a year ago, 2025 is my year.<br>You'll hear from me soon enough.<br><a href='https://discord.gg/fNcyyES9gB'>[Discord Server]</a>",
+        "date": "01/01/2025"
     }
 }
