@@ -19,9 +19,12 @@ hr {
     flex-wrap: wrap;
     align-content: center; 
     justify-content: center;
-    margin: 140px 0px 60px 0px;
+    margin: 40px 0px 60px 0px;
     font-family: var(--secondaryFont);
     gap: 40px;
+}
+#top p {
+    font-size: 20px;
 }
 
 /* Projects */
@@ -91,8 +94,9 @@ main div h2 {
 }
 
 /* Project Classes */
-#discord,
-.discord {
+/* background-color: rgba(189, 0, 240, 0.65); */
+#games,
+.games {
     background-color: rgba(0, 209, 255, 0.65);
 }
 #origins,
@@ -103,24 +107,21 @@ main div h2 {
 .websites {
     background-color: rgba(240, 240, 0, 0.65);
 }
-#games,
-.games {
-    background-color: rgba(219, 142, 0, 0.65);
-}
 #music,
 .music {
-    background-color: rgba(252, 51, 13, 0.65);
+    background-color: rgba(219, 142, 0, 0.65);
 }
 #art,
 .art {
-    background-color: rgba(189, 0, 240, 0.65);
+    background-color: rgba(252, 51, 13, 0.65);
 }
 #misc,
 .misc {
     background-color: var(--primary-75);
 }
 
-.selectedDiscord {
+/* background-color: rgba(189, 0, 240, 1) !important; */
+.selectedGames {
     background-color: rgba(0, 209, 255, 1) !important;
 }
 .selectedOrigins {
@@ -129,14 +130,11 @@ main div h2 {
 .selectedWebsites {
     background-color: rgba(240, 240, 0, 1) !important;
 }
-.selectedGames {
+.selectedMusic {
     background-color: rgba(219, 142, 0, 1) !important;
 }
-.selectedMusic {
-    background-color: rgba(252, 51, 13, 1) !important;
-}
 .selectedArt {
-    background-color: rgba(189, 0, 240, 1) !important;
+    background-color: rgba(252, 51, 13, 1) !important;
 }
 .selectedMisc {
     background-color: var(--primary) !important;

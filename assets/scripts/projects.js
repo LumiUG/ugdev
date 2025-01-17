@@ -71,7 +71,7 @@ function AddImage(toAdd, id, key, keys, i) {
 
 // Adds a href to an <a> tag.
 function AddA(toAdd, id, key, keys, i) {
-    (keys[i] == "source") ? toAdd.innerText = "Click me to view the repository!" : toAdd.innerText = "Check out the website!";
+    (keys[i] == "source") ? toAdd.innerText = "Click to view source code." : toAdd.innerText = "Click to view!";
     toAdd.target = "_blank";
     toAdd.rel = "noreferrer noopener";
     toAdd.href = projects[id][key][keys[i]];

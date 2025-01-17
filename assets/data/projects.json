@@ -1,34 +1,4 @@
 {
-    "discord": {
-        "UG": {
-            "name": "UG Epic Bot",
-            "desc": "UG Epic Bot was a multipurpose utility bot. My first ever project, very dear to my heart.\n\nEven if abandoned, the code is privated.",
-            "image": "/assets/images/bots/UGEpicBot.png",
-            "source": null,
-            "website": null
-        },
-        "PSoP": {
-            "name": "PSoP",
-            "desc": "My simplest bot ever, a joke bot.\n\nIt is now archived.",
-            "image": "/assets/images/bots/PSoP.webp",
-            "source": "https://github.com/xUnderGame/PSoP",
-            "website": null
-        },
-        "SR": {
-            "name": "SwordRush",
-            "desc": "An unfinished bot. It was an RPG with \"intense\" and fun combat mechanics.\n\nSadly, this was never finished due to lack of motivation.",
-            "image": "/assets/images/bots/SwordRush.webp",
-            "source": null,
-            "website": null
-        },
-        "DM": {
-            "name": "Discord Minigames!",
-            "desc": "Another unfinished bot. DM! was a fun bot designed to play with your friends.\nA wario-ware like.",
-            "image": "/assets/images/bots/DM.webp",
-            "source": "https://github.com/xUnderGame/DM",
-            "website": null
-        }
-    },
     "origins": {
         "rwOrigins": {
             "name": "Rain World Origins",
@@ -112,8 +82,7 @@
             "name": "Boxfight",
             "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
             "image": "/assets/images/games/unity.svg",
-            "source": "https://github.com/xUnderGame/Boxfight",
-            "website": "https://github.com/xUnderGame/Boxfight/releases/tag/v1.0.0"
+            "source": "https://github.com/xUnderGame/Boxfight"
         },
         "rpg": {
             "name": "RPG Tech Demo",

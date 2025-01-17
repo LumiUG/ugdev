@@ -1,12 +1,12 @@
 {
     "names": {
-        "Lumi": { "type": "yes", "hover": "My main nick, use it when referring to me!"},
-        "ug": { "type": "okay", "hover": "I'm fine with ug!! All good <3" },
+        "ug": { "type": "yes", "hover": "My main nick, use it when referring to me!" },
+        "uggy": { "type": "okay" },
         "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
-        "UnderGame": { "type": "no", "hover": "Don't. I will break your knees. (lovingly)" },
+        "UnderGame": { "type": "no", "hover": "Don't. This is NOT me. I will break your knees. (lovingly)" },
         "Eugene": { "type": "joke" },
-        "Lumi*": { "type": "sona" }
+        "Lumi*": { "type": "sona", "hover": "Feel free to call me by my sona's name!" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },
