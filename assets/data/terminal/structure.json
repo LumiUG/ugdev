@@ -2,33 +2,39 @@
     "/": {
         "home": {
             "guest": {
-                "readme.txt": "Hiiiiiiiiiiiii, this is [re]unfinished[/]!!!\n\nOf course, you are [gr]allowed[/] to check out stuff that's in here. But [re]don't expect for it to make sense[/]. Like, at all.\n\nI recommend coming back when this is finished, if it ever is!\nYou can find some cool commands to play out with using \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\n<h2>[pi]Have fun!!!!! :3c[/]</h2>\n-[lb]lumi/ug[/]",
+                "readme.txt": "Hi, guest! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], keep in mind your keys!\n\n-[lb]lumi[/]",
                 "folder": {
-                    "test.t": "a"
+                    "test.txt": "ha! made you look.\n-guest"
                 },
                 "documents": {
-                    "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[or]3)[/] Password protected folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-guest\n\nFuck.\n-[or]root[/]",
+                    "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[gr]3)[/] Protected, signed folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-guest\n\nFuck.\n-[or]root[/]",
                     "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
                     "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nWHY DID I FIND THIS FUNNY WHY I HATE YOU WHOEVER WROTE THIS\n-[lb]lumi[/]",
-                    "asdcrtyascdrkatsdca.y6ftgv": "die\n-guest",
-                    "secret": {
-                        "permissions": {"password": "stupid"},
+                    "asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-guest",
+                    "!secret": {
                         "test.txt": "hi :3"
                     }
                 },
                 "images": {
-                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]your local admin[/]\n\n<h3>[lg][THREAD LOCKED][/]</h3>",
-                    "ugdev.png" : "/assets/images/favicon.png",
+                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]your local admin[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                    "halfsun.png" : "/assets/images/favicon.png",
                     "slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
                     "slug.gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(1).gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(2).gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(3).gif": "/assets/images/terminal/scugcheese.gif",
-                    "okie.txt": "okiee sorry ill stop posting slugs i was feeling silly :3c *wink*\n-[mg]ying[/]\n\nKilljoy.\n-[lb]lumi[/]"
+                    "okie.txt": "okiee sorry ill stop posting slugs i was feeling silly\n-[mg]ying[/]"
                 }
             },
             "root": {
                 "permissions": {"allowedUsers": ["root"]},
+                "public": {
+                    "visitors.txt": "If you're reading this, hi. Welcome to my public place.\nI didn't lock this file, feel free to sign your name in here.\n-[or]root[/]",
+                    "laboratory": {
+                        "permissions": {"password": "lab"},
+                        "jumpscare.txt": "<img src=\"/assets/images/favicon.png\" onload=\"alert('BOO');\">"
+                    }
+                },
                 "documents": {
                     "default.txt": "-----"
                 }
@@ -36,15 +42,15 @@
             "lumi": {
                 "permissions": {"allowedUsers": ["lumi"]},
                 "public": {
-                    "testfile.txt": "hii"
+                    "testfile.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                    "secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god.\n-[pi]neoma[/]"
                 },
                 "documents": {
                     "private": {
-                        "permissions": {"allowedUsers": ["lumi"]},
-                        "diary.md": "<h2>[lg]Entry - 11/07/2012:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
+                        "diary.md": "<h2>[lg]Entry - 11/07/20??:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
                     },
                     "studies": {
-                        "run.png": "<img src=\"/assets/images/terminal/scugcheese.gif\" onload=\"alert('test');\">"
+                        "species.txt": "Empty, check later."
                     }
                 }
             },
@@ -71,27 +77,37 @@
             "permissions": {"allowedUsers": ["root"]}
         },
         "tmp": {
-            "scan.log": "Scan ongoing..."
+            "scan.log": "Scan ongoing... ... ..."
         },
         "games": {
             "maze.png": "/assets/images/terminal/supercoolmaze.png",
+            "adc": {
+                "permissions": {"password": "light"},
+                "tbd.txt": "Sorry to dissapoint. I'll update this later. :)"
+            },
             "!coda": {
                 "permissions": {"allowedUsers": ["coda"]},
                 "leap.txt": "<img src=\"/assets/images/terminal/TBG-Lampost.webp\">\n[lg]Take my hand, let's jump together.[/]"
             }
         },
         "groups": {
-            "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]groups admin[/]\n\n<h3>[lg][THREAD LOCKED][/]</h3>",
+            "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]groups admin[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
             "notacult": {
-                "welcome.group": ""
+                "welcome.group": "\"some information\"\n\n<h3>[lg][FILE LOCKED][/]</h3>"
             },
             "mazegang": {
-                "permissions": {"password": "209"}
+                "permissions": {"password": "maze"},
+                "welcome.group": "And so you've made it here, fellow mazer."
+            },
+            "secrethunters": {
+                "welcome.group": "Hello everyone! We're a small group of people dedicated to finding secrets between our worlds, and, well- this terminal in specific.\n\nWe believe that by joining forces, we can do anything.\n\nWe do, however, have some rules in place to mantain anonymity and security:\n\n[gr]1)[/] Do not sign any posts or comments, remain anonymous.\n[ye]2)[/] Document your findings!\n[re]3)[/] Do not grief. Due to this being anonymous, we can't really prevent this. Just don't.\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                "mazes.txt": "suppppp, ive been looking around, and theress like, this whole maze gang thing. and i dont have the signature. has anyone figured that out?????\n-[lg]unsigned user[/]\n\nWell, it does say that you don't have the signature. Maybe check out the \"sign\" command?\nI feel like you might be new here.\n-[lg]unsigned user[/]\n\nomg yeah ur right im stpid\n-[lg]unsigned user[/]\n\nstupid*\n-[lg]unsigned user[/]\n\n...Sadly we can't edit messages while unsigned.\n-[lg]unsigned user[/]",
+                "public.txt": "I'm not sure if y'all know this, but looking at the source code, it looks like you can go into public folders.\n\nIt's simple.\nAny user can create a public folder, and you can go there as a guest.\n\nIt also seems like not everyone has one. Weird.\n-[lg]unsigned user[/]"
             },
             "!slugcatcorner": {
                 "permissions": {"allowedUsers": ["lumi", "neoma", "ying"], "password": "slug"},
-                "welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]ying[/]",
-                "question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[lb]lumi[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]"
+                "welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]ying[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                "question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[mg]ying[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]\n\ni wouldnt worry about that.\n-[lb]lumi[/]"
             }
         }
     }

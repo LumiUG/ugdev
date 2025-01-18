@@ -26,10 +26,14 @@ var blinkLine = document.getElementById("blink");
 var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
+var availableKeys = ["maze", "slug", "light", "lab"];
+var keySolutions = ["209", "cat", "dark", "carlsagan"];
+var createdKeys = [];
 var currentUser = "guest";
 var currentPath = "/home/guest";
 var commandHistory = [];
 var historyIndex = 0;
+var eggCount = 0;
 var os = null;
 var commands = [
     {
@@ -88,20 +92,20 @@ var commands = [
         "hidden": false,
         "run": CommandCD
     },
-    {
-        "name": "rm",
-        "description": "Removes files. (TODO)",
-        "helptopic": "Command usage:\nrm {file} - Removes a file from the filesystem.",
-        "hidden": false,
-        "run": CommandRM
-    },
-    {
-        "name": "touch",
-        "description": "Creates files. (TODO)",
-        "helptopic": "Command usage:\ntouch {file} {content?} - Creates a file with (optionally) content inside of it.",
-        "hidden": false,
-        "run": CommandTouch
-    },
+    // {
+    //     "name": "rm",
+    //     "description": "Removes files. (TODO)",
+    //     "helptopic": "Command usage:\nrm {file} - Removes a file from the filesystem.",
+    //     "hidden": true, // hidden as per TODO's
+    //     "run": CommandRM
+    // },
+    // {
+    //     "name": "touch",
+    //     "description": "Creates files. (TODO)",
+    //     "helptopic": "Command usage:\ntouch {file} {content?} - Creates a file with (optionally) content inside of it.",
+    //     "hidden": true, // hidden as per TODO's
+    //     "run": CommandTouch
+    // },
     {
         "name": "cat",
         "description": "Prints file contents.",
@@ -117,9 +121,16 @@ var commands = [
         "run": CommandIMCat
     },
     {
+        "name": "sign",
+        "description": "Sign a key.",
+        "helptopic": "Command usage:\nsign {key} {value} - \"Creates\" a signed key with the specified value, usually used to access signed folders.\n\nThis might not look too clear, here's an example:\n> \"[or]sign lab carlsagan[/]\".\n\nThe command [re]will fail[/] if the key doesn't exist, or the key's value is incorrect.\nThink of it like a [gr]password[/]!",
+        "hidden": false,
+        "run": CommandSign
+    },
+    {
         "name": "su",
         "description": "Change active user.",
-        "helptopic": "Command usage:\nsu {user} {password?} - Changes the active user. Guest user has no password.\n\n<h4>P.S: Please [re]don't ruin the fun[/] by checking the terminal's source code for the passwords.\n\nIf you do that then um... no [ye]cookies[/] for you!\n\n...And, and you stink. Yeah. Yeah! ([gr]please[/])</h4>",
+        "helptopic": "Command usage:\nsu {user} {password?} - Changes the active user. Guest user has no password.",
         "hidden": false,
         "run": CommandSU
     },
@@ -138,16 +149,9 @@ var commands = [
         "run": CommandRainbow
     },
     {
-        "name": "uname",
-        "description": null,
-        "helptopic": "Wait... You shouldn't be seeing this!\n[re]<h3>You.</h3> <h2>Sneaky.</h2> <h1>Aren't you?</h1>[/]",
-        "hidden": true,
-        "run": CommandUname
-    },
-    {
         "name": "eos",
         "description": null,
-        "helptopic": ":3",
+        "helptopic": "Displays information about the current operating sytem.",
         "hidden": true,
         "run": CommandEOS
     },
@@ -164,6 +168,13 @@ var commands = [
         "helptopic": "Meet [lb]the bird[/].\n<img src='/assets/images/artwork/lumi/wiggle.gif'>",
         "hidden": true,
         "run": CommandBird
+    },
+    {
+        "name": "egg",
+        "description": null,
+        "helptopic": "Where do chickens come from?\nWhat about space chickens?\n\nI wonder if they have space KFC's.\nActually, I'd rather not know.\n\nEggs.",
+        "hidden": true,
+        "run": CommandEgg
     }
 ];
 var users = [
@@ -459,14 +470,16 @@ function Pathing(path) {
                     }
                 }
     
-                // Password protected? (BUGGED IF YOU LEAVE FOLDER TO /home/root (as an example))
-                // if (os[folder]["permissions"].hasOwnProperty("password")) {
-                //     if (os[folder]["permissions"]["password"] == GetUserInput().split(" ")[2]) {
-                //         noPermission = "Wrong password.";
-                //         os = undefined;
-                //         return;
-                //     }
-                // }
+                // Password protected? (Not buggy anymore!)
+                if (os[folder]["permissions"].hasOwnProperty("password"))
+                {
+                    if (!createdKeys.find(key => { return key == os[folder]["permissions"]["password"] }))
+                    {
+                        noPermission = `Unsigned key. Please sign key \"${os[folder]["permissions"]["password"]}\" before connecting.`;
+                        os = undefined;
+                        return;
+                    }
+                }
             }
 
             // Updates path.
@@ -534,10 +547,10 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [re]This is unfinished, for now look around![/] [pi]<3[/] <<\n\n");
+    if (currentUser != "root") TypeOutput(">> [or]Hidden commands not shown, please log in as root.[/] <<\n");
     commands.forEach(
         command => {
-            if (!command.hidden)
+            if (!command.hidden || currentUser == "root")
                 TypeOutput(`${command.name} - ${command.description}\n`, false);
         }
     );
@@ -564,6 +577,19 @@ function CommandExit() {
     window.location.replace("https://ugdev.xyz");
 }
 
+// Sign
+function CommandSign() {
+    let key = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    let value = (GetUserInput() == "") ? null : GetUserInput().split(" ")[2];
+    if (key == null) { TypeOutput("[re]EOS: Please enter a valid key![/]"); return; }
+    if (createdKeys.find(stored => { return stored == key })) { TypeOutput("[re]EOS: Specified key has already been signed.[/]"); return; }
+    if (value == null) { TypeOutput("[re]EOS: Please enter a value![/]"); return; }
+    if (!availableKeys.find(stored => { return stored == key })) { TypeOutput("[re]EOS: Invalid key. No key was found with that name.[/]"); return; }
+    if (!keySolutions.find(stored => { return stored == value })) { TypeOutput("[re]EOS: Incorrect value. Key was not signed.[/]"); return; }
+    TypeOutput(`[gr]EOS: Key \"[/]${key}[gr]\" was created and signed correctly.[/]`);
+    createdKeys.push(key);
+}
+
 // Returns the user
 function CommandWhoAmI() {
     TypeOutput(AddUsernameColor(users.find(user => user.username == currentUser)));
@@ -577,17 +603,18 @@ function CommandLS() {
             // Prepare the file string
             match = SetFileSyntax(match);
             if (!match) return;
-
+            
             // Sends the output
             TypeOutput(`${match}\n`, false)
         }
     );
+    if (lsObjects.length <= 0) TypeOutput("[re]EOS: This folder is empty.[/]");
 }
 
 // Changes directory to desired path
 function CommandCD(forcePath = null) {
     let path = (forcePath) ? forcePath : (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
-    if (!path) return;
+    if (!path) { TypeOutput("[re]EOS: Please specify a folder![/]"); return; }
 
     // Navigate there
     path = path.toLowerCase();
@@ -643,7 +670,7 @@ function CommandSU() {
 // Show the contents of a file.
 function CommandCat() {
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
-    if (!path) return;
+    if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }
 
     // Navigate there
     path = path.toLowerCase();
@@ -663,7 +690,7 @@ function CommandCat() {
 // Shows an image
 function CommandIMCat() {
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
-    if (!path) return;
+    if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }
 
     // Navigate there
     path = path.toLowerCase();
@@ -735,14 +762,21 @@ function CommandClear() {
     output.textContent = "";
 }
 
-// Uname?
-function CommandUname() {
-    TypeOutput("Unfinished :)");
-}
-
-// EOS
+// Egg OS
 function CommandEOS() {
-    TypeOutput("Not yet.");
+    TypeOutput(`&nbsp;&nbsp;,'"\`.&nbsp;&nbsp;&nbsp; ${AddUsernameColor(users.find(user => user.username == currentUser))}@██████
+    &nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp; ---------------
+    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; OS: Egg x16
+    :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; Model: ██████ (Modified)
+    &nbsp;\`.___,'&nbsp;&nbsp; Kernel: A1.Z26-Generic
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uptime: Unknown
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Packages: 12.9_7.8.20 (KEY)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shell: Intact
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resolution: ${window.screen.availHeight}x${window.screen.availWidth}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Terminal: ████ ████
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CPU: Value 4-1███, Model 18-11 ███
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GPU: None
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Memory: 502MiB / 1024MiB`);
 }
 
 // Rainbow!!!!
@@ -753,11 +787,23 @@ function CommandRainbow() {
 
 // Avali scratch command
 function CommandAvaliScratch() {
-    if (document.body.style.fontFamily == "Ubuntu Mono" || document.body.style.fontFamily == "") { document.body.style.fontFamily = "avaliScratch"; TypeOutput("Enjoy!\n\nCredit to <a href='https://fontstruct.com/fontstructions/show/1108804/avali_scratch'>SomeGuyNamedDavid</a>"); }
-    else { document.body.style.fontFamily = "Ubuntu Mono"; TypeOutput("Alright, alright.");}
+    if (document.body.style.fontFamily == "Ubuntu Mono" || document.body.style.fontFamily == "") { document.body.style.fontFamily = "avaliScratch"; TypeOutput("Enjoy!\n\nCredits to <a href='https://fontstruct.com/fontstructions/show/1108804/avali_scratch'>SomeGuyNamedDavid</a>"); }
+    else { document.body.style.fontFamily = "Ubuntu Mono"; TypeOutput("Alright, alright."); }
 }
 
 // bird secret page
 function CommandBird() {
     window.location.replace("https://ugdev.xyz/bird");
+}
+
+// egg command
+function CommandEgg() {
+    eggCount++;
+    TypeOutput(`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp;,'"\`.&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;\`.___,'`);
+    if (document.body.style.animation != "") TypeOutput(`\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The egg dances...`, false)
+    else TypeOutput(`\nYou have witnessed the egg ${eggCount} time(s).`, false)
 }
