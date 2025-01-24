@@ -1,0 +1,81 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    display: inherit;
+    align-items: inherit;
+    flex-direction: column;
+    height: 800px;
+}
+section {
+    margin: 40px;
+}
+h1 {
+    margin-bottom: 15px;
+}
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 30px;
+}
+input {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* #builder {} */
+#dialogs,
+#events {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+}
+#appendHere {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+}
+#misc {
+    display: inherit;
+    align-items: inherit;
+    flex-direction: column;
+    height: fit-content;
+    margin: 25px 0px 0px 0px
+}
+#faq {
+    display: inherit;
+    align-items: inherit;
+    flex-direction: column;
+    width: 1200px;
+    background-color: white;
+    color: black;
+}
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quantity {
+    margin: 20px;
+}
+.event {
+    margin: 20px;
+    padding: 15px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.button {
+    padding: 10px !important;
+    margin: 0px 10px 0px 10px
+}

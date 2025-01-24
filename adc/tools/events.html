@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bungee&family=Candal&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800">
+	<link rel="icon" href="/assets/images/favicon.png">
+	<link rel="stylesheet" href="/assets/styles/global.css">
+	<link rel="stylesheet" href="/assets/styles/adc/events.css">
+
+	<title>ADC Events Tool - ugdev.xyz</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="ug, ugdev.xyz, ugdev">
+	<meta property="og:title" content="ADC Events Tool - ugdev.xyz">
+	<meta property="og:description" content="Programming is fun!">
+	<meta property="og:image" content="https://ugdev.xyz/assets/images/favicon.png">
+	<meta property="og:type" content="website">
+</head>
+
+<body>
+	<main>
+        <h1>A Directionless Cycle - Event Generator</h1>
+
+        <section id="builder">
+            <div id="dialogs">
+                <h2>Dialog</h2>
+                <!-- <input type="text" class="dialog"> -->
+                <div id="dialogQuantity" class="quantity">
+                    <span id="moreDialog" class="button">+</span>
+                    <span id="lessDialog" class="button">-</span>
+                </div>
+            </div>
+
+            <div id="misc">
+                <span class="group">
+                    <h3>Text Speed /s</h3>
+                    <input id="textSpeed" type="number">
+                </span>
+
+                <span class="group">
+                    <h3>Can Be Skipped?</h3>
+                    <input id="canBeSkipped" type="checkbox">
+                </span>
+            </div>
+        </section>
+
+        <div id="events">
+            <h2>Events</h2>
+            <div id="appendHere"></div>
+            <!-- <input type="text" class="dialog"> -->
+            <div id="eventQuantity" class="quantity">
+                <span id="moreEvents" class="button">+</span>
+                <span id="lessEvents" class="button">-</span>
+            </div>
+        </div>
+
+        <span id="export" class="button">EXPORT (Clipboard)</span>
+
+        <section id="faq">
+            <h2>FAQ - Frequently Asked Questions (Tutorial)</h2>
+            <p>blah blah</p>
+        </section>
+    </main>
+	
+	<script src="/assets/scripts/adc/events.js"></script>
+	<script defer src="/assets/scripts/mobile.js"></script>
+</body>
+</html>
