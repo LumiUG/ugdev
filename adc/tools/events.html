@@ -21,6 +21,43 @@
         <h1>A Directionless Cycle - Event Generator</h1>
 
         <section id="builder">
+            <div id="base">
+                <h2>Base</h2>
+                <span class="group">
+                    <h3>Sprite</h3>
+                    <select id="sprite">
+                        <option value="NPC/Gummi">DEFAULT</option>
+                        <option value="Wall">Wall</option>
+                        <option value="Anti Wall">Anti Wall</option>
+                        <option value="Box">Box</option>
+                        <option value="Circle">Circle</option>
+                        <option value="Hexagon">Hexagon</option>
+                        <option value="Mimic">Mimic</option>
+                        <option value="Area">Area</option>
+                        <option value="Inverse Area">Inverse Area</option>
+                        <option value="Outbound Area">Outbound Area</option>
+                        <option value="Hazard">Hazard</option>
+                        <option value="Void">Void</option>
+                        <option value="Invert">Invert</option>
+                        <option value="ColorArrows">Arrow</option>
+                        <option value="BadArrows">Negative Arrow</option>
+                        <option value="Orb">Orb</option>
+                        <option value="Fragment">Fragment</option>
+                        <option value="Level">Level</option>
+                    </select>
+                </span>
+
+                <span class="group">
+                    <h3>Trigger on enter?</h3>
+                    <input id="onEnter" class="checkbox" type="checkbox">
+                </span>
+
+                <span class="group">
+                    <h3>Ignore interacts?</h3>
+                    <input id="onInteract" class="checkbox" type="checkbox">
+                </span>
+            </div>
+
             <div id="dialogs">
                 <h2>Dialog</h2>
                 <div id="dialogQuantity" class="quantity">
@@ -32,30 +69,54 @@
             <div id="misc">
                 <span class="group">
                     <h3>Text Speed /s</h3>
-                    <input id="textSpeed" type="number">
+                    <input id="textSpeed" type="text">
                 </span>
 
                 <span class="group">
                     <h3>Can Be Skipped?</h3>
-                    <input id="canBeSkipped" type="checkbox">
+                    <input id="canBeSkipped" class="checkbox" type="checkbox">
                 </span>
+            </div>
+
+            <div id="events">
+                <h2>Events</h2>
+                <div id="appendHere"></div>
+                <div id="eventQuantity" class="quantity">
+                    <span id="moreEvents" class="button">+</span>
+                    <span id="lessEvents" class="button">-</span>
+                </div>
             </div>
         </section>
 
-        <div id="events">
-            <h2>Events</h2>
-            <div id="appendHere"></div>
-            <div id="eventQuantity" class="quantity">
-                <span id="moreEvents" class="button">+</span>
-                <span id="lessEvents" class="button">-</span>
-            </div>
-        </div>
 
         <span id="export" class="button">EXPORT (Clipboard)</span>
 
         <section id="faq">
             <h2>FAQ - Frequently Asked Questions (Tutorial)</h2>
-            <p>blah blah</p>
+            <div class="separator">
+                <h2>Event "Tile To Create" Legend</h2>
+                <ol>
+                    <li>Wall</li>
+                    <li>AntiWall</li>
+                    <li>Box</li>
+                    <li>Circle</li>
+                    <li>Hexagon</li>
+                    <li>Mimic</li>
+                    <li>Area</li>
+                    <li>InverseArea</li>
+                    <li>OutboundArea</li>
+                    <li>Hazard</li>
+                    <li>Void</li>
+                    <li>Invert</li>
+                    <li>Arrow</li>
+                    <li>NegativeArrow</li>
+                    <li>Orb</li>
+                    <li>Fragment</li>
+                    <li>Level</li>
+                    <li>Hologram</li>
+                    <li>NPC</li>
+                </ol>
+            </div>
         </section>
     </main>
 	

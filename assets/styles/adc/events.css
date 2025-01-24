@@ -11,7 +11,7 @@ main {
     display: inherit;
     align-items: inherit;
     flex-direction: column;
-    height: 800px;
+    height: 100%;
 }
 section {
     margin: 40px;
@@ -32,26 +32,32 @@ input {
     margin: 10px;
     text-align: center;
 }
+select {
+    margin-left: 15px;
+}
 
 /* #builder {} */
 #dialogs,
-#events {
+#events,
+#base {
     display: flex;
     align-items: center;
     flex-direction: column;
     height: fit-content;
+    margin-bottom: 50px;
 }
 #appendHere {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    align-items: center;
+    justify-content: center;
 }
 #misc {
     display: inherit;
     align-items: inherit;
     flex-direction: column;
     height: fit-content;
-    margin: 25px 0px 0px 0px
+    margin-bottom: 50px;
 }
 #faq {
     display: inherit;
@@ -74,8 +80,13 @@ input {
     padding: 15px;
     background-color: gray;
     border-radius: 10px;
+    flex-basis: 25%
 }
 .button {
     padding: 10px !important;
     margin: 0px 10px 0px 10px
+}
+.checkbox {
+    width: 20px;
+    height: 20px;
 }
