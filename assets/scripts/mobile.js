@@ -1,5 +1,6 @@
 // Checks for browser mobile useragent
-function isMobile() {
+function isMobile()
+{
     return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
 }
 
@@ -7,7 +8,8 @@ if (isMobile())
 {
     // Nav bar (global)
     var nav = document.getElementById("doors");
-    if (nav != null) {
+    if (nav != null)
+    {
         nav.style.display = "flex";
         nav.style.flexWrap = "wrap";
         nav.style.flexDirection = "column";
@@ -27,8 +29,10 @@ if (isMobile())
     document.querySelector("body").style.backgroundSize = "100%";
 
     // Page Specific changes (too lazy to do one script for each) //
+
     // INDEX.HTML //
-    if (document.title.toLowerCase().includes("home")) {
+    if (document.title.toLowerCase().includes("home"))
+    {
         document.getElementById("randMessage").remove();
         document.getElementById("adText").remove();
         document.getElementById("socials").style.marginTop = "10px";
@@ -45,7 +49,8 @@ if (isMobile())
     }
 
     // ABOUT.HTML //
-    else if (document.title.toLowerCase().includes("about")) {
+    else if (document.title.toLowerCase().includes("about"))
+    {
         // About section
         document.getElementById("title").style.position = "initial";
         let showcase = document.getElementById("showcase");
@@ -66,12 +71,22 @@ if (isMobile())
         };
 
         // Preferences section
-        document.getElementById("preferences").style.padding = "0px 10% 0px 10%"; 
+        document.getElementById("preferences").style.padding = "0px 10% 0px 10%";
 
         // Characters section
         let refs = document.querySelectorAll(".refsheet");
         for (let i = 0; i < refs.length; i++) {
             refs[i].style.width = "100%";
         };
+    }
+
+    // ABOUT.HTML //
+    else if (document.title.toLowerCase().includes("blog"))
+    {
+        // Modal stuff
+        document.getElementById("postTime").style.marginTop = "25px";
+        let post = document.getElementById("post");
+        post.style.width = "90%";
+        post.style.left = "5%";
     }
 }

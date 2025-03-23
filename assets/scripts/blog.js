@@ -3,6 +3,12 @@ var posts = await fetch('/assets/data/blog.json')
     .then((response) => response.json())
     .then((data) => {return data});
 
+// Checks for browser mobile useragent (copied from mobile.js)
+function isMobile()
+{
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
+}
+
 var postCatcher = document.getElementById("catcher");
 var postModal = document.getElementById("post");
 var postTitle = document.getElementById("postTitle");
@@ -11,17 +17,9 @@ var postDate = document.getElementById("postTime");
 postCatcher.addEventListener("click", function () { postCatcher.style.display = "none"; postModal.style.display = "none"; }, false);
 
 // Builds the blog section.
-function loadBlog() {
+function loadBlog()
+{
     let toAppend = document.getElementById("blog");
-    
-    // Disallow view for mobile.
-    if (isMobile()) {
-        toAppend.style.textAlign = "center";
-        let sorry = document.createElement("p");
-        sorry.innerText = "Sorry! Viewing the blog in mobile is not supported right now. You can check the blog titles, though.";
-        sorry.style.marginBottom = "15px";
-        toAppend.appendChild(sorry);
-    };
     
     // Create all the main divs for blog posts
     const sort = Object.keys(posts).sort(function (a, b) { return a + b; }); // latest first
@@ -39,9 +37,8 @@ function loadBlog() {
 }
 
 // Opens up the modal for reading
-function ReadBlog(post) {
-    if (isMobile()) return;
-    
+function ReadBlog(post)
+{
     // Toggle modal
     postModal.style.display = "flex";
     postCatcher.style.display = "flex";
@@ -50,7 +47,7 @@ function ReadBlog(post) {
     let text = post["post"];
     let imageName = /{.*}/.exec(text);
     if (imageName) {
-        let srcPath = `/assets/images/blog/${imageName[0].replace("{", "").replace("}", "")}`;
+        let srcPath = `/assets/images/blog/${imageName[0].split(";")[0].replace("{", "").replace("}", "")}`;
         text = text.replace(/{.*}/, `<a href="${srcPath}"><img src="${srcPath}"></a><br>`);
     }
     
@@ -58,11 +55,12 @@ function ReadBlog(post) {
     postContent.innerHTML = text;
     postTitle.textContent = post["title"];
     postDate.textContent = `Posted on: ${post["date"]}`;
-}
 
-// Checks for browser mobile useragent
-function isMobile() {
-    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
+    // Mobile blog post
+    if (imageName && isMobile())
+    {
+        document.querySelector("#postDiv a img").style.maxHeight = `${imageName[0].split(";")[1].replace("}", "")}px`;
+    }
 }
 
 // Load everything
@@ -70,7 +68,8 @@ loadBlog();
 
 // Url variable to load a post
 let postPost = new URLSearchParams(window.location.search).getAll("post");
-if (postPost.length == 1) {
+if (postPost.length == 1)
+{
     let requestedPost = posts[postPost];
     if (requestedPost != undefined) ReadBlog(requestedPost);
 }

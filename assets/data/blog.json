@@ -1,12 +1,12 @@
 {
     "1": {
         "title": "Hello World!",
-        "post": "This has like... so many limitations right now, but I will make it better in the future.<br>I'll be sending some updates in here from time to time, don't expect much, though! (I'm very busy, haha...)<br>Like, seriously, what is this? (This is Renoise)<br>{renoiseWhat.png}How am I supposed to understand this? (Honestly this is very fun)",
+        "post": "This has like... so many limitations right now, but I will make it better in the future.<br>I'll be sending some updates in here from time to time, don't expect much, though! (I'm very busy, haha...)<br>Like, seriously, what is this? (This is Renoise)<br>{renoiseWhat.png;150}How am I supposed to understand this? (Honestly this is very fun)",
         "date": "09/05/2023"
     },
     "2": {
         "title": "ETV and others",
-        "post": "Hey again, been doing some stuff these days. I just experimented with Unity 3d and tried to re-remeber some of Unity's C#.<br>I've also made an online tierlist builder, made from pure js. (why didnt I use jQuery...)<br>{frumsTierlistExample.png}I've had some troubles getting the drag&drop to work, but I think it ended up pretty well.<br>...Will probably keep updating it with some very much needed QoL features, so stay tuned for more!<br>Oh yeah, I'm getting better at art :>",
+        "post": "Hey again, been doing some stuff these days. I just experimented with Unity 3d and tried to re-remeber some of Unity's C#.<br>I've also made an online tierlist builder, made from pure js. (why didnt I use jQuery...)<br>{frumsTierlistExample.png;150}I've had some troubles getting the drag&drop to work, but I think it ended up pretty well.<br>...Will probably keep updating it with some very much needed QoL features, so stay tuned for more!<br>Oh yeah, I'm getting better at art :>",
         "date": "02/06/2023"
     },
     "3": {
@@ -29,12 +29,12 @@
     },
     "6": {
         "title": "Working working working",
-        "post": "I'm working on a 2D \"sokoban\" game!<br>The game right now is open source, and in development. You can find it on my GitHub.<br>{ADC-LevelPreview.png}",
+        "post": "I'm working on a 2D \"sokoban\" game!<br>The game right now is open source, and in development. You can find it on my GitHub.<br>{ADC-LevelPreview.png;150}",
         "date": "05/06/2024"
     },
     "7": {
         "title": "ADC Demo",
-        "post": "{ADCCover.png} Demo is OUT NOW!<br>Well, it was out like a week ago, but I forgot to make a blog post about it.<br><br>Check it out here:<br><a href='https://ugdev.itch.io/a-directionless-cycle'>[A Directionless Cycle - Demo]</a>",
+        "post": "{ADCCover.png;75} Demo is OUT NOW!<br>Well, it was out like a week ago, but I forgot to make a blog post about it.<br><br>Check it out here:<br><a href='https://ugdev.itch.io/a-directionless-cycle'>[A Directionless Cycle - Demo]</a>",
         "date": "15/10/2024"
     },
     "8": {
@@ -44,7 +44,7 @@
     },
     "9": {
         "title": "Wishlist ADC on Steam!",
-        "post": "{ADCLibraryLogo.png} We have a Steam page now!<br><br>I'm expecting to release A Directionless Cycle around Q2 this year, <br>so I'd very much appreciate if you could wishlist the game on Steam.<br><br>I've also updated the demo for (hopefully) the last time!<br>It is playable on the Steam page only.<br><br>Check it out here:<br><a href='https://store.steampowered.com/app/3417520/A_Directionless_Cycle/'>[A Directionless Cycle - Steam]</a>",
+        "post": "{ADCLibraryLogo.png;150} We have a Steam page now!<br><br>I'm expecting to release A Directionless Cycle around Q2 this year, <br>so I'd very much appreciate if you could wishlist the game on Steam.<br><br>I've also updated the demo for (hopefully) the last time!<br>It is playable on the Steam page only.<br><br>Check it out here:<br><a href='https://store.steampowered.com/app/3417520/A_Directionless_Cycle/'>[A Directionless Cycle - Steam]</a>",
         "date": "24/01/2025"
     }
 }
