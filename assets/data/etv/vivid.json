@@ -1,0 +1,80 @@
+{
+	"tiers": [
+		{ "id": "S", "container": [], "color": "red" },
+		{ "id": "A", "container": [], "color": "orange" },
+		{ "id": "B", "container": [], "color": "yellow" },
+		{ "id": "C", "container": [], "color": "green" },
+		{ "id": "D", "container": [], "color": "blue" }
+	],
+	"hold": {
+		"id": "holding",
+		"container": [
+			{
+				"name": "B3611V",
+				"image": "https://i1.sndcdn.com/artworks-P9Sw7kb1wcMZyUbb-bPGfVQ-t500x500.jpg",
+				"url": "https://soundcloud.com/trung-nova_727/b3611v"
+			},
+			{
+				"name": "CONVERGENCE",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/2/2a/CONVERGENCE_jacket.png/200px-CONVERGENCE_jacket.png",
+				"url": "https://www.youtube.com/watch?v=FsdnJ-Xby_c"
+			},
+			{
+				"name": "PYROMANIA",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/0/06/PYROMANIA_jacket.png/200px-PYROMANIA_jacket.png",
+				"url": "https://soundcloud.com/kurorak/kurorak-pyromania"
+			},
+			{
+				"name": "Valor",
+				"image": "https://static.wikitide.net/vividstasiswiki/7/72/Valor_starcross_new_jacket.png?20240213012105",
+				"url": "https://lundy.bandcamp.com/track/valor-starcross"
+			},
+			{
+				"name": "Unraveling",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/3/3e/Unraveling_Stasis_jacket.png/200px-Unraveling_Stasis_jacket.png",
+				"url": "https://hajimeli.bandcamp.com/track/unraveling-stasis"
+			},
+			{
+				"name": "SUPERNOVA",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/6/6b/SUPERNOVA_jacket.png/200px-SUPERNOVA_jacket.png",
+				"url": "https://kyotsugyon.bandcamp.com/track/supernova"
+			},
+			{
+				"name": "LastWish",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/c/ca/Last_Wish_%28vivid_stasis_ver.%29.png/200px-Last_Wish_%28vivid_stasis_ver.%29.png",
+				"url": "https://krydotexe.bandcamp.com/track/last-wish-feat-ice"
+			},
+			{
+				"name": "Claudia",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/6/6b/CLAUDIA_-libertia-_jacket.png/200px-CLAUDIA_-libertia-_jacket.png",
+				"url": "https://a-saph.bandcamp.com/track/claudia-libertia"
+			},
+			{
+				"name": "StopMotion",
+				"image": "https://static.wikitide.net/vividstasiswiki/5/5a/Stop-motion_gif.gif",
+				"url": "https://www.youtube.com/watch?v=MH78iBAKgRY"
+			},
+			{
+				"name": "Sentinel",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/6/6c/SENTINEL_jacket.png/200px-SENTINEL_jacket.png",
+				"url": "https://www.youtube.com/watch?v=4WRoaa4LSbM"
+			},
+			{
+				"name": "ASTELLION",
+				"image": "https://static.wikitide.net/vividstasiswiki/6/60/ASTELLION_jacket.png?20240213013314",
+				"url": "https://soundcloud.com/hiimtype_r/astellion"
+			},
+			{
+				"name": "Stargazers",
+				"image": "https://i1.sndcdn.com/artworks-jVZcO2XgWBhs1zYN-tujGig-t500x500.jpg",
+				"url": "https://soundcloud.com/proximeteam/stargazers"
+			},
+			{
+				"name": "ApoCall",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/e/ea/APOCALYPSE_CALL_jacket.png/200px-APOCALYPSE_CALL_jacket.png",
+				"url": "https://www.youtube.com/watch?v=qkydIEUTlv0"
+			}
+		],
+		"color": "transparent"
+	}
+}

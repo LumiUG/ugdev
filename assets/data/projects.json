@@ -39,7 +39,7 @@
     "websites": {
         "ugdev": {
             "name": "UGDev",
-            "desc": "My own portfolio. You're seeing it right now and it took a while to code, so I hope you're liking it!",
+            "desc": "My own portfolio, you're seeing it right now!\nIt's been made with my own hands and much love.",
             "image": "/assets/images/favicon.png",
             "source": "https://github.com/xUnderGame/ugdev",
             "website": "https://ugdev.xyz"

@@ -1,17 +1,19 @@
 {
     "names": {
-        "ug": { "type": "yes", "hover": "My main nick, use it when referring to me!" },
-        "uggy": { "type": "okay" },
+        "ug": { "type": "yes", "hover": "My main nick, \"Lumi\" is also great!" },
+        "ugdev": { "type": "okay", "hover": "Usually you'd only use this formally, but call me \"ug\" instead."  },
         "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
-        "UnderGame": { "type": "no", "hover": "Don't. This is NOT me. I will break your knees. (lovingly)" },
+        "uggy": { "type": "close", "hover": "Only for certain people." },
+        "UnderGame": { "type": "no", "hover": "\"ug\" does not stand for this. Don't use, I will break your knees. (lovingly)" },
         "Eugene": { "type": "joke" },
         "Lumi*": { "type": "sona", "hover": "Feel free to call me by my sona's name!" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },
+        "it/its": { "type": "okay", "hover": "Mostly experimenting for now."  },
         "he/him*": { "type": "sona" },
-        "it/its": { "type": "sona" }
+        "it/its*": { "type": "sona" }
     },
     "words": {
         "honorifics": {
@@ -30,7 +32,7 @@
         },
         "adjectives": {
             "cute": { "type": "yes" },
-            "pretty": { "type": "yes" },
+            "pretty": { "type": "okay" },
             "sexy": { "type": "no" },
             "beloved": { "type": "joke" },
             "silly": { "type": "joke" }

@@ -1,5 +1,10 @@
 import { Tierlist, Tier } from "./exports.js";
+
 var frumsPreset = await fetch('/assets/data/etv/frums.json')
+    .then((response) => response.json())
+    .then((data) => { return data });
+
+var vsPreset = await fetch('/assets/data/etv/vivid.json')
     .then((response) => response.json())
     .then((data) => {return data});
 
@@ -41,6 +46,7 @@ function importTierlist(preset = null) {
     // Presets (currently only frums tierlist).
     else {
         if (preset == "Frums") json = frumsPreset;
+        else if (preset == "Vivid/Stasis") json = vsPreset;
         else return tierlist;
     }
 

@@ -29,16 +29,16 @@ const randMessages = [
     "My brothee, ooh my brotheee.", // Jazz Emu - My Brothe
     "\"Every pit is a chance for glory.\"",
     "What the cat?",
-    "\"I must be one of the good ones™\"", // Jazz Emu - One of the good ones
+    "I must be one of the good ones™", // Jazz Emu - One of the good ones
     "More random messages",
     "Oooh, I want to fall apart again...", // Frums - Absolute Zero
     "Do not hang up.",  // Frums - Wavetapper
-    "It was... Perfect.",  // Frums - Pictured as Perfect
+    "It was... Perfect.", // Frums - Pictured as Perfect
     "From my Tower of Dreams, the things I see.",  // Frums - Tower of Dreams
     "Concentrate your energy in your heart.",  // Frums - Living Will
-    "What awaits you below the bottom of the world?",  // Frums - Overdead
+    "What awaits you below the bottom of the world?", // Frums - Overdead
     "I am / Not what / I am",  // Frums - My Capacitance
-    "That is incorrect, try again.",  // Frums - Nisemono
+    "That is incorrect, try again.", // Frums - Nisemono
     "Ccompu-- uuu- computer is now-- computer is- machine.",  // Frums - I FORGOT OMG
     "Fu-fu-funding for this program was made possible by by-",  // Frums - Credits
     "Fun-di-di-di-di-ding fo-o-o-o for the program-",  // Frums - Credits
@@ -66,13 +66,13 @@ const randMessages = [
     "\"vcf ydrxgedsr\"",
     "Hi, it's me, Ditko, just passing through",
     "meow meow meow mrrow mew",
-    "\"Tried to save myself, but myself keeps slipping away\"", // Nine Inch Nails - Into the Void
+    "Tried to save myself, but myself keeps slipping away", // Nine Inch Nails - Into the Void
     "SPACE BIRDS",
-    "\"A copy of a copy of a\"", // Nine Inch Nails - Copy of a
+    "A copy of a copy of a", // Nine Inch Nails - Copy of a
     "LOOOOOOOOOOOOP",
-    "\"Always breaking, always healing\"", // Alexander Panos - always breaking, always healing
-    "\"Oyasumi ooooooyasumi...\"", // Bo en - My Time
-    "\"Is this it, is it?\"", // Garlagan - Is This It Is It
+    "Always breaking, always healing", // Alexander Panos - always breaking, always healing
+    "Oyasumi ooooooyasumi...", // Bo en - My Time
+    "Is this it, is it?", // Garlagan - Is This It Is It
     "His name is Meem.",
     "Oh, and the cat, it's Ploof.",
     "And this just feels like spinning plates.", // Radiohead - Like Spinning Plates
@@ -91,12 +91,12 @@ const randMessages = [
     "Chirp chirp chirp chirp chirp",
     "Tax time!",
     "Place your faith and embrace the Void.",
-    "You do remember why you are here, right?",
-    "Or have you lost something?",
-    "Something very important to you.",
     "i hold on i hold i hold on",
+    "Our memories... make it... endless.",
+    "Per aspera, ad astra.",
     "the \"bird\" command, of course",
-    "I dream in black and white",
+    "I dream in black and white.",
+    "See it all through laser eyes.",
     "\"fart flower light baby\"",
     "O---- holy shit The Witness",
     "All of the birds sing to me", // Nest - Everything Falls Apart
@@ -108,10 +108,30 @@ const randMessages = [
     "How dapper of you.",
     "happy new year",
     "happy halloween",
-    "Restless", // Carousel - Hush!
-    "Treacherous", // Carousel - Hush!
-    "Your Heart", // Carousel - Hush!
-    "Lies" // Carousel - Hush!
+    "Restless, Treacherous, Your Heart, Lies.", // Carousel - Hush!
+    "You're watching me spread my golden wings.", // Dark Blossom - Fireworks
+    "And I'll light fireworks with their blood.", // Dark Blossom - Fireworks
+    "Let's put your heart back together.", // Dark Blossom - Dark Heart
+    "Dark angels will run with scissors-", // Dark Blossom - Crimson Dance
+    "And I don't want to be someone that you don't know.", // Dark Blossom - &sleep
+    "Why Oh You Are LOVE", // Everhood OST
+    "Hear its roar.",
+    "Hekki grace.",
+    "Hekki allmo.",
+    "There is a star and a star and a dangerous gravity.",
+    "For me and me and me and me?",
+    "And we will help, in any way we can.", // DM Dokuro - the beacon
+    "SO I REJECT YOUR GRIM COLLAPSE", // DM Dokuro - the beacon
+    "THE SIGNAL'S SENT, AND YOU'RE TOO LATE-", // DM Dokuro - the beacon
+    "Have you forgotten that I've done this all before?!", // DM Dokuro - STILL HERE
+    "Growing spineless day by day, Watching as your mind decays-", // DM Dokuro - STILL HERE
+    "Insanity consuming that which I have come to be.", // DM Dokuro - the momentary highs, the unfathomable lows
+    "friday nights, foggy streets and christmas lights.", // Glass Beach - classic j dies and goes to hell part 1
+    "\"we're still here, can you hear me?\"", // Glass Beach - orchids
+    "as the starlight just fades out, there's no tears no celebration.", // Glass Beach - orchids
+    "hold me underwater, in your sweet embrace.", // Glass Beach - commatose
+    "send every message as an SOS, SOS.", // Glass Beach - commatose
+    "Goodnight."
 ];
 
 var tooltip = document.getElementById("tooltip");
