@@ -11,28 +11,28 @@
             "name": "VS Code Origins Snippets",
             "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
             "image": "/assets/images/origins/VSCodeSnippets.webp",
-            "source": "https://github.com/xUnderGame/vscode-origins-snippets",
+            "source": "https://github.com/LumiUG/vscode-origins-snippets",
             "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
         "BT": {
             "name": "Turtle Origin",
             "desc": "This was my first Origin ever. It used a different Origin as a base, and I modified it afterwards.",
             "image": "/assets/images/origins/DefaultOrigin.webp",
-            "source": "https://github.com/xUnderGame/BTurtleOrigin",
+            "source": "https://github.com/LumiUG/BTurtleOrigin",
             "website": null
         },
         "KI": {
             "name": "Kamali Origin",
             "desc": "One of my first Origins aswell. This was completly original and I quite like the final product!",
             "image": "/assets/images/origins/DefaultOrigin.webp",
-            "source": "https://github.com/xUnderGame/KamaliOrigin",
+            "source": "https://github.com/LumiUG/KamaliOrigin",
             "website": null
         },
         "BA": {
             "name": "Bat Origin",
             "desc": "My second ever Origin. This was kind of a test, and later on the 'flapping' mechanic was reused on...",
             "image": "/assets/images/origins/DefaultOrigin.webp",
-            "source": "https://github.com/xUnderGame/BatOrigin",
+            "source": "https://github.com/LumiUG/BatOrigin",
             "website": null
         }
     },
@@ -41,14 +41,14 @@
             "name": "UGDev",
             "desc": "My own portfolio, you're seeing it right now!\nIt's been made with my own hands and much love.",
             "image": "/assets/images/favicon.png",
-            "source": "https://github.com/xUnderGame/ugdev",
+            "source": "https://github.com/LumiUG/ugdev",
             "website": "https://ugdev.xyz"
         },
         "etv": {
             "name": "ETV",
             "desc": "Online tierlist maker and visualizer. Share your tierlist with friends and have fun!",
             "image": "/assets/images/etc/etv-logo.png",
-            "source": "https://github.com/xUnderGame/etv",
+            "source": "https://github.com/LumiUG/etv",
             "website": "https://ugdev.xyz/etv"
         },
         "secret": {
@@ -62,34 +62,34 @@
             "name": "A Directionless Cycle",
             "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nWishlist on steam!",
             "image": "/assets/images/games/ADC.png",
-            "source": "https://github.com/xUnderGame/ADirectionlessCycle",
+            "source": "https://github.com/LumiUG/ADirectionlessCycle",
             "website": "https://store.steampowered.com/app/3417520/A_Directionless_Cycle"
         },
         "gravix": {
             "name": "Gravix",
             "desc": "A 2D platformer with ~35 single screen levels, an interconnected map and collectibles to find!",
             "image": "/assets/images/games/Meem.png",
-            "source": "https://github.com/xUnderGame/Gravix",
+            "source": "https://github.com/LumiUG/Gravix",
             "website": "https://undergame.itch.io/gravix"
         },
         "sps": {
             "name": "Space Potato Station (Jam)",
             "desc": "A Game Jam with some friends in around 8 hours.\n\nThe final product is barely playable but the ideas we had were amazing.",
             "image": "/assets/images/games/SPS.png",
-            "source": "https://github.com/xUnderGame/SpacePotatoStation"
+            "source": "https://github.com/LumiUG/SpacePotatoStation"
         },
         "boxfight": {
             "name": "Boxfight",
             "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
             "image": "/assets/images/games/unity.svg",
-            "source": "https://github.com/xUnderGame/Boxfight"
+            "source": "https://github.com/LumiUG/Boxfight"
         },
         "rpg": {
             "name": "RPG Tech Demo",
             "desc": "Your average generic 3D Unity project!\n\nBasically a project for me to test navmeshes, animations and other stuff like that.",
             "image": "/assets/images/games/unity.svg",
-            "source": "https://github.com/xUnderGame/RPGTechDemo",
-            "website": "https://github.com/xUnderGame/RPGTechDemo/releases/tag/v2.0.0"
+            "source": "https://github.com/LumiUG/RPGTechDemo",
+            "website": "https://github.com/LumiUG/RPGTechDemo/releases/tag/v2.0.0"
         }
     },
     "music": { },
@@ -177,14 +177,14 @@
             "name": "Bootleg Wordle",
             "desc": "A bootleg version of wordle that was made in the C# console for fun.",
             "image": "/assets/images/etc/wordle.png",
-            "source": "https://github.com/xUnderGame/BootlegWordle",
+            "source": "https://github.com/LumiUG/BootlegWordle",
             "website": null
         },
         "aStar": {
             "name": "A* Pathfinding",
             "desc": "A simple pathfinding algorithm in Unity 3D/2D.",
             "image": "/assets/images/games/unity.svg",
-            "source": "https://github.com/xUnderGame/AStar-Pathfinding",
+            "source": "https://github.com/LumiUG/AStar-Pathfinding",
             "website": null
         }
     }
