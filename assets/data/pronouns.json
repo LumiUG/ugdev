@@ -7,11 +7,11 @@
         "uggy": { "type": "close", "hover": "Only for certain people." },
         "UnderGame": { "type": "no", "hover": "\"ug\" does not stand for this. Don't use, I will break your knees. (lovingly)" },
         "Eugene": { "type": "joke" },
-        "Lumi*": { "type": "sona", "hover": "Feel free to call me by my sona's name!" }
+        "Lumi*": { "type": "sona", "hover": "I also use my sona's name as a main nick!!" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },
-        "it/its": { "type": "okay", "hover": "Mostly experimenting for now."  },
+        "it/its": { "type": "yes" },
         "he/him*": { "type": "sona" },
         "it/its*": { "type": "sona" }
     },

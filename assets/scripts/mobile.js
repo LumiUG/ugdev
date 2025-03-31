@@ -74,6 +74,11 @@ if (isMobile())
         document.getElementById("preferences").style.padding = "0px 10% 0px 10%";
 
         // Characters section
+        let chars = document.querySelectorAll(".character");
+        for (let i = 0; i < chars.length; i++) {
+            chars[i].style.width = "80%";
+        };
+        
         let refs = document.querySelectorAll(".refsheet");
         for (let i = 0; i < refs.length; i++) {
             refs[i].style.width = "100%";

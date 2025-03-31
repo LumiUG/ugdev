@@ -131,7 +131,17 @@ const randMessages = [
     "as the starlight just fades out, there's no tears no celebration.", // Glass Beach - orchids
     "hold me underwater, in your sweet embrace.", // Glass Beach - commatose
     "send every message as an SOS, SOS.", // Glass Beach - commatose
-    "Goodnight."
+    "Goodnight.",
+    "soooo... when do you get a job?",
+    "\"double and give it to the next person\"",
+    "AI \"art\" isnt real art.",
+    "You can do anything.",
+    "Love you!",
+    "\"brick this guy\"",
+    "\"Sir, there's been a second Lumi.\"",
+    "wawawawawawawa",
+    "yip yip yip yip",
+    "awawawawawawawa"
 ];
 
 var tooltip = document.getElementById("tooltip");
