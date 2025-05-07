@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bungee&family=Candal&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800">
-	<link rel="icon" href="/assets/images/favicon.png">
+	<link rel="icon" href="/assets/images/games/ADC.png">
 	<link rel="stylesheet" href="/assets/styles/global.css">
 	<link rel="stylesheet" href="/assets/styles/adc/events.css">
 
@@ -18,11 +18,11 @@
 
 <body>
 	<main>
-        <h1>A Directionless Cycle - Event Generator</h1>
+        <h1 class="drop-solid-black">A Directionless Cycle - Event Generator</h1>
 
         <section id="builder">
-            <div id="base">
-                <h2>Base</h2>
+            <div id="base" class="separator">
+                <h2 class="drop-solid-black">Base Values</h2>
                 <span class="group">
                     <h3>Sprite</h3>
                     <select id="sprite">
@@ -44,6 +44,8 @@
                         <option value="Orb">Orb</option>
                         <option value="Fragment">Fragment</option>
                         <option value="Level">Level</option>
+                        <option value="Mask">Mask</option>
+                        <option value="Pull">Pull</option>
                     </select>
                 </span>
 
@@ -53,20 +55,21 @@
                 </span>
 
                 <span class="group">
-                    <h3>Ignore interacts?</h3>
+                    <h3>Ignore outside interacts?</h3>
                     <input id="onInteract" class="checkbox" type="checkbox">
                 </span>
             </div>
 
-            <div id="dialogs">
-                <h2>Dialog</h2>
+            <div id="dialogs" class="separator">
+                <h2 class="drop-solid-black">Dialog Settings</h2>
                 <div id="dialogQuantity" class="quantity">
                     <span id="moreDialog" class="button">+</span>
                     <span id="lessDialog" class="button">-</span>
                 </div>
             </div>
 
-            <div id="misc">
+            <div id="misc" class="separator">
+                <h2 class="drop-solid-black">Misc Settings</h2>
                 <span class="group">
                     <h3>Text Speed /s</h3>
                     <input id="textSpeed" type="text">
@@ -78,8 +81,8 @@
                 </span>
             </div>
 
-            <div id="events">
-                <h2>Events</h2>
+            <div id="events" class="separator">
+                <h2>Events and Triggers</h2>
                 <div id="appendHere"></div>
                 <div id="eventQuantity" class="quantity">
                     <span id="moreEvents" class="button">+</span>
@@ -88,14 +91,13 @@
             </div>
         </section>
 
-
         <span id="export" class="button">EXPORT (Clipboard)</span>
 
-        <section id="faq">
-            <h2>FAQ - Frequently Asked Questions (Tutorial)</h2>
+        <section id="faq" class="separator">
+            <h2 id="exc">FAQ - Frequently Asked Questions (Tutorials)</h2>
             <div class="separator">
-                <h2>Event "Tile To Create" Legend</h2>
-                <ol>
+                <h3>Event "Tile To Create" Legend</h3>
+                <ol start="0">
                     <li>Wall</li>
                     <li>AntiWall</li>
                     <li>Box</li>
@@ -115,7 +117,20 @@
                     <li>Level</li>
                     <li>Hologram</li>
                     <li>NPC</li>
+                    <li>Mask</li>
+                    <li>Pull</li>
                 </ol>
+            </div>
+            <div class="separator">
+                <h3>Dialog Settings</h3>
+                <p>
+                    Dialog indexes start at 0, whenever you want an event to trigger, keep that in mind.<br>
+                    Emptying all dialogs can make a good use for invisible triggers even if there's no dialog, <br>
+                    you can set a trigger to 0, and it'll happen without showing anything to the player.<br><br>
+
+                    Text speed is customizable, but it's recommended to leave it at its default.<br>
+                    CanBeSkipped variable controls whether the player can "spam" through text.
+                </p>
             </div>
         </section>
     </main>

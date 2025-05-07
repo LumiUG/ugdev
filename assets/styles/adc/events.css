@@ -12,16 +12,19 @@ main {
     align-items: inherit;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 section {
     margin: 40px;
 }
 h1 {
+    font-size: 45px;
+    padding: 60px 0px 20px 0px;
     margin-bottom: 15px;
 }
 h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    padding-bottom: 10px;
 }
 h3 {
     font-size: 30px;
@@ -36,7 +39,10 @@ select {
     margin-left: 15px;
 }
 
-/* #builder {} */
+#builder {
+    margin: -20px;
+    width: 100%;
+}
 #dialogs,
 #events,
 #base {
@@ -53,19 +59,21 @@ select {
     justify-content: center;
 }
 #misc {
-    display: inherit;
-    align-items: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: fit-content;
     margin-bottom: 50px;
 }
 #faq {
-    display: inherit;
+    display: flex;
+    width: 1400px;
+    margin-bottom: 25px;
     align-items: inherit;
-    flex-direction: column;
-    width: 1200px;
-    background-color: white;
-    color: black;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .group {
     display: flex;
@@ -89,4 +97,17 @@ select {
 .checkbox {
     width: 20px;
     height: 20px;
+}
+
+.separator {
+    background-color: rgba(0, 0, 0, 0.32);
+    padding: 25px;
+}
+
+#exc {
+    width: 100%;
+    text-align: center;
+}
+#faq div {
+    margin: 15px;
 }

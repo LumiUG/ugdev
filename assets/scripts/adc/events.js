@@ -157,6 +157,7 @@ function EditEvent(toggle)
         let enabledEle = document.createElement("input");
         enabledEle.id = `enabled${enabledElementList.length + 1}`
         enabledEle.type = "checkbox";
+        enabledEle.checked = true;
 
         // Tile type
         let tileEle = document.createElement("input");
@@ -189,10 +190,10 @@ function EditEvent(toggle)
 
         // Put it all together
         eventHolder.appendChild(GroupElements("Event enabled?", enabledEle));
-        eventHolder.appendChild(GroupElements("Tile to create?", tileEle));
-        eventHolder.appendChild(GroupElements("Position", posHolder));
-        eventHolder.appendChild(GroupElements("Delete/Create (T/F)", deleteEle));
-        eventHolder.appendChild(GroupElements("Execute at index", execEle));
+        eventHolder.appendChild(GroupElements("Tile ID", tileEle));
+        eventHolder.appendChild(GroupElements("Position?", posHolder));
+        eventHolder.appendChild(GroupElements("Create(OFF) / Delete(ON)", deleteEle));
+        eventHolder.appendChild(GroupElements("Execution Index", execEle));
 
         // Everything else
         eventHTML.appendChild(eventHolder);
