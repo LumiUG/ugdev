@@ -1,24 +1,34 @@
 {
 	"tiers": [
-		{ "id": "S", "container": [], "color": "red" },
-		{ "id": "A", "container": [], "color": "orange" },
-		{ "id": "B", "container": [], "color": "yellow" },
-		{ "id": "C", "container": [], "color": "green" },
-		{ "id": "D", "container": [], "color": "blue" }
+		{
+			"id": "S",
+			"container": [],
+			"color": "red"
+		},
+		{
+			"id": "A",
+			"container": [],
+			"color": "orange"
+		},
+		{
+			"id": "B",
+			"container": [],
+			"color": "yellow"
+		},
+		{
+			"id": "C",
+			"container": [],
+			"color": "green"
+		},
+		{
+			"id": "D",
+			"container": [],
+			"color": "blue"
+		}
 	],
 	"hold": {
 		"id": "holding",
 		"container": [
-			{
-				"name": "B3611V",
-				"image": "https://i1.sndcdn.com/artworks-P9Sw7kb1wcMZyUbb-bPGfVQ-t500x500.jpg",
-				"url": "https://soundcloud.com/trung-nova_727/b3611v"
-			},
-			{
-				"name": "CONVERGENCE",
-				"image": "https://static.wikitide.net/vividstasiswiki/thumb/2/2a/CONVERGENCE_jacket.png/200px-CONVERGENCE_jacket.png",
-				"url": "https://www.youtube.com/watch?v=FsdnJ-Xby_c"
-			},
 			{
 				"name": "PYROMANIA",
 				"image": "https://static.wikitide.net/vividstasiswiki/thumb/0/06/PYROMANIA_jacket.png/200px-PYROMANIA_jacket.png",
@@ -55,9 +65,34 @@
 				"url": "https://www.youtube.com/watch?v=MH78iBAKgRY"
 			},
 			{
-				"name": "Sentinel",
-				"image": "https://static.wikitide.net/vividstasiswiki/thumb/6/6c/SENTINEL_jacket.png/200px-SENTINEL_jacket.png",
-				"url": "https://www.youtube.com/watch?v=4WRoaa4LSbM"
+				"name": "CONVERGENCE",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/2/2a/CONVERGENCE_jacket.png/200px-CONVERGENCE_jacket.png",
+				"url": "https://www.youtube.com/watch?v=FsdnJ-Xby_c"
+			},
+			{
+				"name": "Thrinos",
+				"image": "https://static.wikitide.net/vividstasiswiki/d/d2/Thrinos_pygmalion_jacket.png?20250405025500",
+				"url": "https://soundcloud.com/baeddelite/thrinos-pygmalion"
+			},
+			{
+				"name": "Bloom",
+				"image": "https://static.wikitide.net/vividstasiswiki/3/3c/Bloom_in_Two_jacket.png?20250405020537",
+				"url": "https://www.youtube.com/watch?v=b6m1-qtDZ04"
+			},
+			{
+				"name": "XO",
+				"image": "https://static.wikitide.net/vividstasiswiki/a/ab/XO_jacket.png?20250405025528",
+				"url": "https://www.youtube.com/watch?v=ju1fVcAji74"
+			},
+			{
+				"name": "Breath",
+				"image": "https://static.wikitide.net/vividstasiswiki/8/8a/First_Breath_jacket.png?20250405022244",
+				"url": "https://www.youtube.com/watch?v=fJu8paff0Xw"
+			},
+			{
+				"name": "Plaudite",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/3/3a/Acta_est_fabula_plaudite_jacket.png/600px-Acta_est_fabula_plaudite_jacket.png?20250405015716",
+				"url": "https://www.youtube.com/watch?v=TPTsSu77MKI"
 			},
 			{
 				"name": "ASTELLION",
@@ -65,14 +100,29 @@
 				"url": "https://soundcloud.com/hiimtype_r/astellion"
 			},
 			{
+				"name": "Sentinel",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/6/6c/SENTINEL_jacket.png/200px-SENTINEL_jacket.png",
+				"url": "https://www.youtube.com/watch?v=4WRoaa4LSbM"
+			},
+			{
 				"name": "Stargazers",
 				"image": "https://i1.sndcdn.com/artworks-jVZcO2XgWBhs1zYN-tujGig-t500x500.jpg",
 				"url": "https://soundcloud.com/proximeteam/stargazers"
 			},
 			{
+				"name": "B3611V",
+				"image": "https://i1.sndcdn.com/artworks-P9Sw7kb1wcMZyUbb-bPGfVQ-t500x500.jpg",
+				"url": "https://soundcloud.com/trung-nova_727/b3611v"
+			},
+			{
 				"name": "ApoCall",
 				"image": "https://static.wikitide.net/vividstasiswiki/thumb/e/ea/APOCALYPSE_CALL_jacket.png/200px-APOCALYPSE_CALL_jacket.png",
 				"url": "https://www.youtube.com/watch?v=qkydIEUTlv0"
+			},
+			{
+				"name": "Lorelei",
+				"image": "https://static.wikitide.net/vividstasiswiki/a/af/LORELEI_jacket.png?20250427040058",
+				"url": "https://www.youtube.com/watch?v=bef23j792eE"
 			}
 		],
 		"color": "transparent"

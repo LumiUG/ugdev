@@ -26,7 +26,7 @@ if (isMobile())
     }
 
     // Background (global)
-    document.querySelector("body").style.backgroundSize = "100%";
+    document.querySelector("body").style.backgroundSize = "35%";
 
     // Page Specific changes (too lazy to do one script for each) //
 
@@ -35,7 +35,7 @@ if (isMobile())
     {
         document.getElementById("randMessage").remove();
         document.getElementById("adText").remove();
-        document.getElementById("socials").style.marginTop = "10px";
+        document.getElementById("fade").style.marginTop = "15px";
     
         let h2 = document.querySelectorAll("h2");
         for (let i = 0; i < h2.length; i++) {
@@ -64,7 +64,6 @@ if (isMobile())
 
         let paragraph = document.querySelectorAll(".aboutBody");
         for (let i = 0; i < paragraph.length; i++) {
-            console.log(paragraph[i]);
             paragraph[i].style.marginLeft = "20px";
             paragraph[i].style.marginRight = "20px";
             paragraph[i].style.width = "90%";
@@ -72,6 +71,7 @@ if (isMobile())
 
         // Preferences section
         document.getElementById("preferences").style.padding = "0px 10% 0px 10%";
+        document.getElementById("fadein").style.display = "none";
 
         // Characters section
         let chars = document.querySelectorAll(".character");

@@ -40,6 +40,10 @@ h2 {
 }
 
 /* Coding */
+#randMessage:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
 #websiteTitle {
     width: fit-content;
 }
@@ -57,9 +61,14 @@ h2 {
 }
 
 /* Socials */
+#fade {
+    width: 100%;
+    height: 100px;
+    margin-top: 160px;
+    background: linear-gradient(185deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.32) 25%);
+}
 #socials {
-    /* background-color: var(--secondary); */
-    margin-top: 140px;
+    background-color: rgba(0, 0, 0, 0.32);
 }
 #adText {
     margin: 10px 0px 20px 0px;
