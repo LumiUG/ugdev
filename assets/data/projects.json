@@ -61,9 +61,9 @@
         "adc": {
             "name": "A Directionless Cycle",
             "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nWishlist on steam!",
-            "image": "/assets/images/games/ADC.png",
+            "image": "/assets/images/adc/ADCLogo.png",
             "source": "https://github.com/LumiUG/ADirectionlessCycle",
-            "website": "https://store.steampowered.com/app/3417520/A_Directionless_Cycle"
+            "website": "https://ugdev.xyz/adc"
         },
         "gravix": {
             "name": "Gravix",

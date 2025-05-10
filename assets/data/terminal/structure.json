@@ -83,6 +83,10 @@
             "maze.png": "/assets/images/terminal/supercoolmaze.png",
             "adc": {
                 "permissions": {"password": "light"},
+                "tools": {
+                    "events.html": "<iframe src=\"https://ugdev.xyz/adc/tools/events\" title=\"Events Generator\"></iframe>"
+                },
+                "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>",
                 "tbd.txt": "Sorry to dissapoint. I'll update this later. :)"
             },
             "!coda": {

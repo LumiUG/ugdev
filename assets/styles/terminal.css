@@ -36,6 +36,10 @@ body {
 	overflow-x: hidden;
 	animation: startup 0.8s both 0s;
 }
+iframe {
+	width: 100%;
+	height: 300%;
+}
 h1 {
 	font-size: 80px;
 }

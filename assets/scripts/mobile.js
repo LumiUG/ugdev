@@ -94,4 +94,31 @@ if (isMobile())
         post.style.width = "90%";
         post.style.left = "5%";
     }
+
+    // ADC.HTML //
+    else if (document.title.toLowerCase().includes("directionless"))
+    {
+        document.body.style.margin = "0px 5% 0px 5%";
+
+        // Title image
+        let logo = document.getElementById("logo");
+        logo.style.margin = "-20px 0px -20px 0px";
+        logo.style.width = "100%";
+    
+        // Buttons
+        let btn = document.querySelectorAll("#wishlist a");
+        for (let i = 0; i < btn.length; i++) btn[i].style.width = "100%";
+        document.getElementById("discord").style.setProperty("width", "80%", "important");
+
+        // Screenshots
+        let ss = document.querySelectorAll("#screenshots img");
+        for (let i = 0; i < ss.length; i++) ss[i].style.width = "100%";
+
+        // Description
+        document.getElementById("description").style.textAlign = "center";
+
+        // Features
+        let feat = document.querySelectorAll("#features ul li");
+        for (let i = 0; i < feat.length; i++) feat[i].style.width = "100%";
+    }
 }
