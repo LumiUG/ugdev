@@ -26,6 +26,9 @@ hr {
 #top p {
     font-size: 20px;
 }
+#top p a img {
+    width: 18px;
+}
 
 /* Projects */
 main div h2 {

@@ -1,18 +1,18 @@
 {
     "origins": {
-        "rwOrigins": {
-            "name": "Rain World Origins",
-            "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
-            "image": "/assets/images/origins/RWOrigins.png",
-            "source": null,
-            "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
-        },
         "vscode-origins-snippets": {
             "name": "VS Code Origins Snippets",
             "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
             "image": "/assets/images/origins/VSCodeSnippets.webp",
             "source": "https://github.com/LumiUG/vscode-origins-snippets",
             "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
+        },
+        "rwOrigins": {
+            "name": "Rain World Origins",
+            "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
+            "image": "/assets/images/origins/RWOrigins.png",
+            "source": null,
+            "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
         },
         "BT": {
             "name": "Turtle Origin",
@@ -39,7 +39,7 @@
     "websites": {
         "ugdev": {
             "name": "UGDev",
-            "desc": "My own portfolio, you're seeing it right now!\nIt's been made with my own hands and much love.",
+            "desc": "My own portfolio, you're seeing it right now!\nMade with my own two paws, and much love.",
             "image": "/assets/images/favicon.png",
             "source": "https://github.com/LumiUG/ugdev",
             "website": "https://ugdev.xyz"
@@ -53,7 +53,7 @@
         },
         "secret": {
             "name": "Secrets...",
-            "desc": "Just FYI, this website has \"hidden\" pages, try to find them all!\n\n(I spent way too much time on this please help)",
+            "desc": "Even if not listed, there's hidden pages around here. Try looking for them!\n\n(I've spent way too much time on this)",
             "image": "/assets/images/terminal/scugcheese.gif"
         }
     },
@@ -83,13 +83,6 @@
             "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
             "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/LumiUG/Boxfight"
-        },
-        "rpg": {
-            "name": "RPG Tech Demo",
-            "desc": "Your average generic 3D Unity project!\n\nBasically a project for me to test navmeshes, animations and other stuff like that.",
-            "image": "/assets/images/games/unity.svg",
-            "source": "https://github.com/LumiUG/RPGTechDemo",
-            "website": "https://github.com/LumiUG/RPGTechDemo/releases/tag/v2.0.0"
         }
     },
     "music": { },
