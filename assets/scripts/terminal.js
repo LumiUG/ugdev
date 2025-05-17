@@ -26,8 +26,8 @@ var blinkLine = document.getElementById("blink");
 var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
-var availableKeys = ["maze", "slug", "light", "lab"];
-var keySolutions = ["209", "cat", "dark", "carlsagan"];
+var availableKeys = ["maze", "slug", "light", "lab", "source"];
+var keySolutions = ["209", "cat", "dark", "carlsagan", "devoid"];
 var createdKeys = [];
 var currentUser = "guest";
 var currentPath = "/home/guest";
@@ -547,7 +547,8 @@ function CommandHelp() {
     }
 
     // Regular help command
-    if (currentUser != "root") TypeOutput(">> [or]Hidden commands not shown, please log in as root.[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 17/05/2025 (Earth)[/] <<\n");
+    if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
             if (!command.hidden || currentUser == "root")

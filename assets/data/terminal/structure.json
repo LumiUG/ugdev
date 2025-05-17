@@ -2,21 +2,21 @@
     "/": {
         "home": {
             "guest": {
-                "readme.txt": "Hi, guest! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], keep in mind your keys!\n\n-[lb]lumi[/]",
+                "readme.txt": "Hi, guest! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], write down your keys!\n\n-[lb]lumi[/]",
                 "folder": {
                     "test.txt": "ha! made you look.\n-guest"
                 },
                 "documents": {
                     "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[gr]3)[/] Protected, signed folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-guest\n\nFuck.\n-[or]root[/]",
                     "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
-                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nWHY DID I FIND THIS FUNNY WHY I HATE YOU WHOEVER WROTE THIS\n-[lb]lumi[/]",
+                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nI'll make an actual recipe someday (if you know what i mean)\n-[lb]lumi[/]",
                     "asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-guest",
                     "!secret": {
                         "test.txt": "hi :3"
                     }
                 },
                 "images": {
-                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]your local admin[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
                     "halfsun.png" : "/assets/images/favicon.png",
                     "slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
                     "slug.gif": "/assets/images/terminal/scugcheese.gif",
@@ -42,22 +42,23 @@
             "lumi": {
                 "permissions": {"allowedUsers": ["lumi"]},
                 "public": {
-                    "testfile.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                    "secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god.\n-[pi]neoma[/]"
+                    "README.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                    "secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god.\n-[pi]neoma[/]",
+                    "games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal anymore.\nAnd I'd rather if you didn't play them. Let's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)"
                 },
                 "documents": {
                     "private": {
                         "diary.md": "<h2>[lg]Entry - 11/07/20??:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
                     },
                     "studies": {
-                        "species.txt": "Empty, check later."
+                        "species.txt": "\"I find it quite interesting, why are there so many of us?\"\n\nI'll use this document to write down any interesting species I find whilst travelling.\nFunny how I'm talking, like I'll ever share this lmao."
                     }
                 }
             },
             "neoma": {
                 "permissions": {"allowedUsers": ["neoma"]},
                 "documents": {
-
+                    "realdocumentthatisntaplaceholder.txt": "uh yea this isnt a placeholder you hear me"
                 }
             },
             "ying": {
@@ -69,7 +70,7 @@
             "gummi": {
                 "permissions": {"allowedUsers": ["gummi"]},
                 "documents": {
-
+                    "attribution.txt": "https://glitchbuddy.newgrounds.com"
                 }
             }
         },
@@ -77,17 +78,34 @@
             "permissions": {"allowedUsers": ["root"]}
         },
         "tmp": {
-            "scan.log": "Scan ongoing... ... ..."
+            "hvad6yjm": {},
+            "87gghas": { "data": {} },
+            "1687jf1": {},
+            "671fvu76yfv": {},
+            "21h30897563": {},
+            "bvliuyvd0": {},
+            "3z15121514": { "autosaves": { "ColonThree.level": "{\"levelName\":\":3\",\"hideUI\":true,\"freeroam\":true,\"difficulty\":9,\"tiles\":{\"customTileInfo\":[],\"solidTiles\":[{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":4,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":5,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":6,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":7,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":9,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":8,\"y\":-6,\"z\":0}}],\"objectTiles\":[],\"overlapTiles\":[],\"hazardTiles\":[],\"effectTiles\":[],\"customTiles\":[]}}" } },
+            "9ojfau8k": {},
+            "scan.log": "Scan ongoing... ...\n22% ... ..."
         },
         "games": {
             "maze.png": "/assets/images/terminal/supercoolmaze.png",
             "adc": {
-                "permissions": {"password": "light"},
                 "tools": {
                     "events.html": "<iframe src=\"https://ugdev.xyz/adc/tools/events\" title=\"Events Generator\"></iframe>"
                 },
-                "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>",
-                "tbd.txt": "Sorry to dissapoint. I'll update this later. :)"
+                "gratitude": {
+                    "permissions": {"password": "light"},
+                    "database": {
+                        "permissions": {"password": "source"},
+                        "versions.db": "Hey, I'll add this later.",
+                        "redeems.db": "Since you've made it here, feel free to grab a freebie.\nStocks last until they're used!\n\n--- CODES ---\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?"
+                    },
+                    "?.txt": "Should [re]you[/] really be thanking me?\nFor all [re]you[/] know, you've just doomed an entire world to oblivion.\nI commend your effort, but there's not much more to see.\n\n[re]You[/] see, I'm sorry. I knew what was happening, yet I decided to release the game to the public.\nIt's... definitely not one of my proudest moments, but [gr]they[/] were very eager to show off.\nSo, I'm sorry. Not to [re]you[/], but to [gr]them[/]. Having to relive [lg]that[/] over and over again... Breaks my heart.\n\nI wish there was a way.\n\n[lg]-?[/]",
+                    "retiring.txt": "That's why I'm retiring from games. I thought this was a good thing, but it didn't go well.\nI also thought that adding them was a good idea, but I realise I've just trapped them.\nHell, I should've scrapped them completely.\n\nI'll still be looking for a solution, but for now there's nothing I, or you can do. Hopefully you understand.\n\n[lg]-?[/]",
+                    "goodbye": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
+                },
+                "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
             },
             "!coda": {
                 "permissions": {"allowedUsers": ["coda"]},
@@ -105,7 +123,7 @@
             },
             "secrethunters": {
                 "welcome.group": "Hello everyone! We're a small group of people dedicated to finding secrets between our worlds, and, well- this terminal in specific.\n\nWe believe that by joining forces, we can do anything.\n\nWe do, however, have some rules in place to mantain anonymity and security:\n\n[gr]1)[/] Do not sign any posts or comments, remain anonymous.\n[ye]2)[/] Document your findings!\n[re]3)[/] Do not grief. Due to this being anonymous, we can't really prevent this. Just don't.\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                "mazes.txt": "suppppp, ive been looking around, and theress like, this whole maze gang thing. and i dont have the signature. has anyone figured that out?????\n-[lg]unsigned user[/]\n\nWell, it does say that you don't have the signature. Maybe check out the \"sign\" command?\nI feel like you might be new here.\n-[lg]unsigned user[/]\n\nomg yeah ur right im stpid\n-[lg]unsigned user[/]\n\nstupid*\n-[lg]unsigned user[/]\n\n...Sadly we can't edit messages while unsigned.\n-[lg]unsigned user[/]",
+                "mazes.txt": "suppppp, ive been looking around, and theress like, this whole maze gang thing. and i dont have the signature. has anyone figured that out?????\n-[lg]unsigned user[/]\n\nWell, it does say that you don't have the signature. Maybe check out the \"sign\" command?\nI feel like you might be new here.\n-[lg]unsigned user[/]\n\nomg yeah ur right im stpid\n-[lg]unsigned user[/]\n\nstupid*\n-[lg]unsigned user[/]\n\n...They really should let us edit posts.\n-[lg]unsigned user[/]",
                 "public.txt": "I'm not sure if y'all know this, but looking at the source code, it looks like you can go into public folders.\n\nIt's simple.\nAny user can create a public folder, and you can go there as a guest.\n\nIt also seems like not everyone has one. Weird.\n-[lg]unsigned user[/]"
             },
             "!slugcatcorner": {
