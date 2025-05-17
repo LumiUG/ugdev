@@ -12,6 +12,7 @@
     "pronouns": {
         "he/him": { "type": "yes" },
         "it/its": { "type": "yes" },
+        "they/them": { "type": "okay" },
         "he/him*": { "type": "sona" },
         "it/its*": { "type": "sona" }
     },
@@ -22,10 +23,10 @@
             "mr": { "type": "no" }
         },
         "address": {
+            "buddy": { "type": "yes" },
             "dude": { "type": "yes" },
-            "bro": { "type": "okay" },
             "man": { "type": "okay" },
-            "buddy": { "type": "joke" },
+            "bro": { "type": "joke" },
             "creatura": { "type": "sona" },
             "thing": { "type": "sona" },
             "bird": { "type": "sona" }
@@ -33,6 +34,7 @@
         "adjectives": {
             "cute": { "type": "yes" },
             "pretty": { "type": "okay" },
+            "hot": { "type": "no" },
             "sexy": { "type": "no" },
             "beloved": { "type": "joke" },
             "silly": { "type": "joke" }

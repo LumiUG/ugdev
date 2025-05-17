@@ -9,10 +9,14 @@
     hidden commands or just the entire .json folder structure.
 
     That being said... Have fun! Enjoy viewing my spaghetti code <3
-    (omg i love spaghetti code)
+    (I love spaghetti code)
 */
 
-// JSON Imports. (the entire os structure path + permissions, if you're interested)
+// JSON Imports:
+//   The entire os structure path + permissions, if you're interested.
+//   I recommend not viewing this, and I would like to ask for you to not talk
+//   about anything, or use whatever you found while investigating.
+//   Thank you! <3
 var structure = await fetch('/assets/data/terminal/structure.json')
     .then((response) => response.json())
     .then((data) => { return data });
@@ -223,7 +227,7 @@ var users = [
 ]
 
 // Run on start
-if (/Android|iPhone/i.test(navigator.userAgent)) TypeOutput("[re]Im sososo sorry but this isn't mobile-friendly yet :([/]\nCheck back later! Ty [pi]<3[/]");
+if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent)) TypeOutput("[re]Im sososo sorry but this isn't mobile-friendly yet :([/]\nCheck back later! Ty [pi]<3[/]");
 CommandCD("/home/guest");
 
 
