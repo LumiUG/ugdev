@@ -17,14 +17,7 @@ function GenProjects(id) {
     let elements = ["h3", "img", "p", "a", "a"];
     let keys = ["name", "image", "desc", "website", "source"];
     let extraClass = "";
-
-    // Art uses different entries.
-    if (id == "art") {
-        keys = ["name", "image", "timestamp", "program"];
-        elements = ["h3", "img", "p", "p"];
-        extraClass = " artContainer";
-    }
-
+    
     // Anything that isnt artwork generates here.
     for (const key in projects[id]) {
         // Set the default div(s).
