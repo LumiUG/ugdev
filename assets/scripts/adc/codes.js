@@ -53,7 +53,7 @@ document.body.addEventListener("keyup",
 
 function ValidateCode()
 {
-    if (window.btoa(window.btoa(code)) == "VlVSTVVreFNWVkk9") { view.innerText = "Hold onto this for a while. It'll make sense."; isInputting = false; }
-    else if (window.btoa(window.btoa(code)) == "VEV4TVVsSlNSRVJFVlZWVg==") { view.innerText = "Perceptive."; isInputting = false; }
+    if (window.btoa(window.btoa(code)) == "VlVSTVVreFNWVkk9") { view.innerText = "There's no bonuses in here."; isInputting = false; }
+    else if (window.btoa(window.btoa(code)) == "VEV4TVVsSlNSRVJFVlZWVg==") { view.innerText = "\"Devoid\" is what you're looking for."; isInputting = false; }
     else if (code == "ULDLULDLURURULURDRULULURULDLURUULURDRDRURDLDRURRDRURDRURRDLDLDRDRDLLDRDLDRURDRURRDDLURULDLULULURRULU") { view.innerText = "No, that's the wrong game."; isInputting = false; }
 }

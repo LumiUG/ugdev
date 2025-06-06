@@ -98,12 +98,11 @@
                     "permissions": {"password": "light"},
                     "database": {
                         "permissions": {"password": "source"},
-                        "versions.db": "Hey, I'll add this later.",
-                        "redeems.db": "Since you've made it here, feel free to grab a freebie.\nStocks last until they're used!\n\n--- CODES ---\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?"
+                        "changelog.md": "Hey, I'll add this later.",
+                        "redeems.db": "Since you've made it here, feel free to grab a freebie.\nStocks last until they're used!\n\n--- CODES ---\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n\n[lg]-?[/]"
                     },
-                    "?.txt": "Should [re]you[/] really be thanking me?\nFor all [re]you[/] know, you've just doomed an entire world to oblivion.\nI commend your effort, but there's not much more to see.\n\n[re]You[/] see, I'm sorry. I knew what was happening, yet I decided to release the game to the public.\nIt's... definitely not one of my proudest moments, but [gr]they[/] were very eager to show off.\nSo, I'm sorry. Not to [re]you[/], but to [gr]them[/]. Having to relive [lg]that[/] over and over again... Breaks my heart.\n\nI wish there was a way.\n\n[lg]-?[/]",
-                    "retiring.txt": "That's why I'm retiring from games. I thought this was a good thing, but it didn't go well.\nI also thought that adding them was a good idea, but I realise I've just trapped them.\nHell, I should've scrapped them completely.\n\nI'll still be looking for a solution, but for now there's nothing I, or you can do. Hopefully you understand.\n\n[lg]-?[/]",
-                    "goodbye": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
+                    "?.txt": "Should you really be thanking me?\nYou don't know what you've done, really.\nI commend your effort, but there's not much more to see.\n\n[re]You[/] see, I'm sorry. I knew what was happening, yet I decided to release the game to the public.\nIt's... definitely not one of my proudest moments, but they were very eager to show off.\nSo, I'm sorry. Not to you, but to them. Having to relive that over and over again... Breaks my heart.\n\nI wish there was a way.\n\n[lg]-?[/]",
+                    "goodbye.txt": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
                 },
                 "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
             },
