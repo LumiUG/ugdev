@@ -30,7 +30,7 @@ var blinkLine = document.getElementById("blink");
 var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
-var availableKeys = ["maze", "slug", "light", "lab", "source"];
+var availableKeys = ["maze", "slug", "light", "lab", "universe"];
 var keySolutions = ["209", "cat", "dark", "carlsagan", "devoid"];
 var createdKeys = [];
 var currentUser = "guest";
@@ -176,7 +176,7 @@ var commands = [
     {
         "name": "egg",
         "description": null,
-        "helptopic": "Where do chickens come from?\nWhat about space chickens?\n\nI wonder if they have space KFC's.\nActually, I'd rather not know.\n\nEggs.",
+        "helptopic": "Where do chickens come from?\n...What about space chickens?\n\nI wonder if they have space KFC's.\nActually, I'd rather not know.",
         "hidden": true,
         "run": CommandEgg
     }
@@ -227,8 +227,16 @@ var users = [
 ]
 
 // Run on start
-if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent)) TypeOutput("[re]Im sososo sorry but this isn't mobile-friendly yet :([/]\nCheck back later! Ty [pi]<3[/]");
+if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent)) TypeOutput("[re]Im so sorry but this isn't mobile-friendly yet :([/]\nCheck back later! Ty [pi]<3[/]");
 CommandCD("/home/guest");
+
+// Post command?
+let postCMD = new URLSearchParams(window.location.search).getAll("cmd");
+if (postCMD.length == 1) {
+    userInput.textContent = postCMD[0];
+    CheckForCommand();
+    userInput.textContent = "";
+}
 
 
 // Anywhere typing
@@ -585,12 +593,14 @@ function CommandExit() {
 // Sign
 function CommandSign() {
     let key = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
-    let value = (GetUserInput() == "") ? null : GetUserInput().split(" ")[2];
+    let value = (GetUserInput() == "") ? null : GetUserInput().toLowerCase().split(" ")[2];
     if (key == null) { TypeOutput("[re]EOS: Please enter a valid key![/]"); return; }
     if (createdKeys.find(stored => { return stored == key })) { TypeOutput("[re]EOS: Specified key has already been signed.[/]"); return; }
     if (value == null) { TypeOutput("[re]EOS: Please enter a value![/]"); return; }
-    if (!availableKeys.find(stored => { return stored == key })) { TypeOutput("[re]EOS: Invalid key. No key was found with that name.[/]"); return; }
-    if (!keySolutions.find(stored => { return stored == value })) { TypeOutput("[re]EOS: Incorrect value. Key was not signed.[/]"); return; }
+
+    let i = availableKeys.findIndex(stored => { return stored == key });
+    if (i == -1) { TypeOutput("[re]EOS: Invalid key. No key was found with that name.[/]"); return; }
+    if (keySolutions[i] != value ) { TypeOutput("[re]EOS: Incorrect value. Key was not signed.[/]"); return; }
     TypeOutput(`[gr]EOS: Key \"[/]${key}[gr]\" was created and signed correctly.[/]`);
     createdKeys.push(key);
 }

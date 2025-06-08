@@ -86,22 +86,23 @@
             "bvliuyvd0": {},
             "3z15121514": { "autosaves": { "colonthree.level": "{\"levelName\":\":3\",\"hideUI\":true,\"freeroam\":true,\"difficulty\":9,\"tiles\":{\"customTileInfo\":[],\"solidTiles\":[{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":4,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":5,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":6,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":7,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":9,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":8,\"y\":-6,\"z\":0}}],\"objectTiles\":[],\"overlapTiles\":[],\"hazardTiles\":[],\"effectTiles\":[],\"customTiles\":[]}}" } },
             "9ojfau8k": {},
-            "scan.log": "Scan ongoing... ...\n22% ... ..."
+            "scan.log": "Scan ongoing... ...\n22% ... ...\n46% ... ..."
         },
         "games": {
             "maze.png": "/assets/images/terminal/supercoolmaze.png",
             "adc": {
                 "tools": {
+                    "readme.md": "<h2>[lb]You[/]! Beware of spoilers!!</h2>\nThese tools are meant for people that have finished the game, and [re]contain spoilers[/]!\n\nYou've been warned...",
                     "events.html": "<iframe src=\"https://ugdev.xyz/adc/tools/events\" title=\"Events Generator\"></iframe>"
                 },
-                "gratitude": {
+                "postgame": {
                     "permissions": {"password": "light"},
                     "database": {
-                        "permissions": {"password": "source"},
+                        "permissions": {"password": "universe"},
                         "changelog.md": "Hey, I'll add this later.",
                         "redeems.db": "Since you've made it here, feel free to grab a freebie.\nStocks last until they're used!\n\n--- CODES ---\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n- ?\n\n[lg]-?[/]"
                     },
-                    "?.txt": "Should you really be thanking me?\nYou don't know what you've done, really.\nI commend your effort, but there's not much more to see.\n\n[re]You[/] see, I'm sorry. I knew what was happening, yet I decided to release the game to the public.\nIt's... definitely not one of my proudest moments, but they were very eager to show off.\nSo, I'm sorry. Not to you, but to them. Having to relive that over and over again... Breaks my heart.\n\nI wish there was a way.\n\n[lg]-?[/]",
+                    "?.txt": "You don't know what you've done, really.\nI commend your effort, but there's not much more to see.\n\nYou see, I'm sorry. I knew what was happening, yet I decided to release the game to the public.\nIt's... definitely not one of my proudest moments, but we were very eager to show off.\nSo, I'm sorry. Not to you, but to them. It breaks my heart.\n\nI wish there was a way.\n\n[lg]-?[/]",
                     "goodbye.txt": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
                 },
                 "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
