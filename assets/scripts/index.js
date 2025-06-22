@@ -126,11 +126,11 @@ const randMessages = [
     "Have you forgotten that I've done this all before?!", // DM Dokuro - STILL HERE
     "Growing spineless day by day, Watching as your mind decays-", // DM Dokuro - STILL HERE
     "Insanity consuming that which I have come to be.", // DM Dokuro - the momentary highs, the unfathomable lows
-    "friday nights, foggy streets and christmas lights.", // Glass Beach - classic j dies and goes to hell part 1
-    "\"we're still here, can you hear me?\"", // Glass Beach - orchids
-    "as the starlight just fades out, there's no tears no celebration.", // Glass Beach - orchids
-    "hold me underwater, in your sweet embrace.", // Glass Beach - commatose
-    "send every message as an SOS, SOS.", // Glass Beach - commatose
+    "Friday nights, foggy streets and christmas lights.", // Glass Beach - classic j dies and goes to hell part 1
+    "\"We're still here, can you hear me?\"", // Glass Beach - orchids
+    "As the starlight just fades out, there's no tears no celebration.", // Glass Beach - orchids
+    "Hold me underwater, in your sweet embrace.", // Glass Beach - commatose
+    "Send every message as an SOS, SOS.", // Glass Beach - commatose
     "Goodnight.",
     "soooo... when do you get a job?",
     "\"double and give it to the next person\"",
