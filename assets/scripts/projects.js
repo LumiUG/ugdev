@@ -40,17 +40,16 @@ function GenProjects(id) {
         toAppend.appendChild(projContainer);
     }
     // If the json is empty, we create a "sorry" message. Aw...
-    if (Object.keys(projects[id]).length === 0) {
-        let projContainer = document.createElement("div");
-        projContainer.classList = `${id} projEmpty`;
-        projContainer.style.display = "none";
+    // if (Object.keys(projects[id]).length === 0) {
+    //     let projContainer = document.createElement("div");
+    //     projContainer.classList = `${id} projEmpty`;
+    //     projContainer.style.display = "none";
 
-        let noProjects = document.createElement("p");
-        if (id == "music") noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.\nYou can check some cool artists in the meantime:\n\nhttps://soundcloud.com/frums\nhttps://www.youtube.com/@Cametek.CamelliaOfficial\nhttps://soundcloud.com/jazzemu";
-        else noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.";
-        projContainer.appendChild(noProjects);
-        toAppend.appendChild(projContainer);
-    }
+    //     let noProjects = document.createElement("p");
+    //     noProjects.innerText = "Sorry! Nothing to see here yet, stay tuned for more.";
+    //     projContainer.appendChild(noProjects);
+    //     toAppend.appendChild(projContainer);
+    // }
 }
 
 // Adds a src tag to an element.

@@ -60,7 +60,7 @@
     "games": {
         "adc": {
             "name": "A Directionless Cycle",
-            "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nWishlist on steam!",
+            "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nGet it on Steam!",
             "image": "/assets/images/adc/ADCLogo.png",
             "source": "https://github.com/LumiUG/ADirectionlessCycle",
             "website": "https://ugdev.xyz/adc"
@@ -85,7 +85,14 @@
             "source": "https://github.com/LumiUG/Boxfight"
         }
     },
-    "music": { },
+    "music": {
+        "rework": {
+            "name": "A Directionless Cycle's OST",
+            "desc": "Soon. Very Soon.",
+            "image": "/assets/images/adc/ADCLogo.png",
+            "website": null
+        }
+    },
     "art": {
         "rework": {
             "name": "This area will be reworked!",

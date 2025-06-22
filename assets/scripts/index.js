@@ -141,7 +141,8 @@ const randMessages = [
     "\"Sir, there's been a second Lumi.\"",
     "wawawawawawawa",
     "yip yip yip yip",
-    "awawawawawawawa"
+    "awawawawawawawa",
+    "\"vcf hg\""
 ];
 
 var tooltip = document.getElementById("tooltip");
