@@ -110,6 +110,11 @@ if (isMobile())
         for (let i = 0; i < btn.length; i++) btn[i].style.width = "100%";
         document.getElementById("discord").style.setProperty("width", "80%", "important");
 
+        // Video
+        let video = document.getElementById("video").children[0];
+        video.style.width = "100%";
+        video.style.height = "100%";
+
         // Screenshots
         let ss = document.querySelectorAll("#screenshots img");
         for (let i = 0; i < ss.length; i++) ss[i].style.width = "100%";
