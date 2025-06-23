@@ -1,3 +1,14 @@
+* {
+    --effect: linear-gradient(0deg, rgb(76, 76, 76) 20%, rgb(255, 255, 255) 100%);
+    --size: 50px;
+}
+.glow {
+    filter: drop-shadow(1px 1px 10px rgb(255, 255, 255, 0.5));
+}
+.glowLink {
+    filter: drop-shadow(2px 2px 15px rgba(0, 68, 255, 0.5)) !important;
+}
+
 /* Scrollbars */
 html {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -7,13 +18,14 @@ html::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
 
-/* Stuff */
+/* Fake main screen */
 html, body {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
 }
 body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 10%, rgba(0, 0, 0, 1) 80%), url("/assets/images/patterns/Main.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,5 +33,65 @@ body {
 }
 main {
     position: absolute;
-    top: 120%;
+    top: 100%;
+    height: 1000px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background: black;
+    /* border: 1px solid pink; */
+}
+#back {
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+/* Other */
+#hs {
+    margin-top: 60px;
+    width: 180px;
+
+    pointer-events: none;
+    user-select: none;
+    animation: logo 5s forwards 0s infinite;
+}
+#page {
+    margin-top: 80px;
+}
+
+/* Custom fonts */
+custom::before {
+    content: attr(text);
+    font-size: var(--size);
+    font-weight: 800;
+    
+    filter: drop-shadow(1px 1px 18px rgba(0, 0, 0, 0.65));
+    background: var(--effect);
+    color: transparent;
+    background-clip: text;
+}
+
+[text="You seem lost."] {
+    --effect: linear-gradient(0deg,rgba(34, 98, 195, 1) 0%, rgba(253, 173, 45, 1) 100%);
+    --size: 100px;
+}
+[text="Perhaps not."] {
+    --effect: linear-gradient(2.8deg,rgba(0, 0, 0, 1) 0%, rgb(11, 11, 11) 19%, rgba(43, 43, 43, 1) 26%, rgba(51, 51, 51, 1) 34%, rgb(13, 13, 13) 40%, rgba(13, 13, 13, 1) 59%, rgba(77, 76, 76, 1) 77%, rgb(29, 28, 28) 86%, rgba(48, 48, 48, 1) 100%);
+    --size: 60px;
+}
+[text="...Come back later, alone."] {
+    --effect: linear-gradient(24deg,rgb(16, 16, 16) 0%, rgb(29, 29, 29) 19%, rgba(43, 43, 43, 1) 26%, rgb(33, 33, 33) 34%, rgba(0, 0, 0, 1) 40%, rgba(13, 13, 13, 1) 59%, rgba(77, 76, 76, 1) 77%, rgba(18, 18, 18, 1) 86%, rgba(48, 48, 48, 1) 100%);
+    --size: 40px;
+}
+
+/* Animations */
+@keyframes logo {
+	0% { opacity: 0.3; }
+	40% { opacity: 0.2; }
+	70% { opacity: 0.25; }
+	100% { opacity: 0.3; }
 }
