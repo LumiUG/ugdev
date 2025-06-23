@@ -126,4 +126,16 @@ if (isMobile())
         let feat = document.querySelectorAll("#features ul li");
         for (let i = 0; i < feat.length; i++) feat[i].style.width = "100%";
     }
+
+    // 404.HTML //
+    else if (document.title.toLowerCase().includes("404"))
+    {
+        // Custom texts
+        let text = document.querySelectorAll("custom");
+        text[0].style.setProperty("--size", "60px");
+        text[1].style.setProperty("--size", "40px");
+
+        // Go back "button"
+        document.getElementById("back").style.fontSize = "30px";
+    }
 }
