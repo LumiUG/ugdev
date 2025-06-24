@@ -107,8 +107,9 @@ if (isMobile())
     
         // Buttons
         let btn = document.querySelectorAll("#wishlist a");
-        for (let i = 0; i < btn.length; i++) btn[i].style.width = "100%";
-        document.getElementById("discord").style.setProperty("width", "80%", "important");
+        for (let i = 0; i < btn.length; i++) { btn[i].style.marginLeft = "2px"; btn[i].style.width = "100%"; }
+        document.getElementById("discord").style.setProperty("width", "100%", "important");
+        document.getElementById("bandcamp").style.setProperty("width", "100%", "important");
 
         // Video
         let video = document.getElementById("video").children[0];

@@ -1,21 +1,27 @@
 {
+    "steamDev": {
+        "hyperlink": "https://store.steampowered.com/developer/halfsun",
+        "username": "Steam Developer",
+        "logo": "/assets/images/socials/steam.svg",
+        "desc": "I'm a game developer! This is the Steam developer page for my main and big projects."
+    },
     "itchio": {
         "hyperlink": "https://ugdev.itch.io",
         "username": "Itch.io",
         "logo": "/assets/images/socials/itchio.svg",
-        "desc": "Game dev! Check out my itch.io or Steam creator page to play some of my games!!!"
+        "desc": "Mini projects, game jams, and prototypes. Used for games that are not on Steam. (Usually)"
     },
     "github": {
         "hyperlink": "https://github.com/LumiUG",
         "username": "Github",
         "logo": "/assets/images/socials/github.svg",
-        "desc": "My Github profile, where most of my projects are stored. I use it like a 'secondary' portfolio."
+        "desc": "My Github profile, where most of my projects are stored. I use it as a \"secondary\" portfolio."
     },
     "backloggd": {
         "hyperlink": "https://www.backloggd.com/u/ugdev",
         "username": "Backloggd",
         "logo": "/assets/images/socials/backloggd.ico",
-        "desc": "In here I keep a backlog of the games that I've played: AAA games, indies... Comes with reviews aswell!"
+        "desc": "In here I keep a backlog of the games that I've played. Comes with reviews aswell!"
     },
     "bluesky": {
         "hyperlink": "https://bsky.app/profile/ugdev.xyz",
@@ -24,16 +30,16 @@
         "desc": "Mainly used for consuming content and talking about some stuff that I find interesting. (You should follow me...)"
     },
     "bandcamp": {
-        "hyperlink": "https://bandcamp.com/ugdev",
+        "hyperlink": "https://ugdev.bandcamp.com",
         "username": "Bandcamp",
         "logo": "/assets/images/socials/bandcamp.svg",
-        "desc": "I'm planning on touching the world of music sometime in the near future! For now, you can check the music I listen to."
+        "desc": "Check out my music! I'm learning as I go, and I'm doing this in my \"off time\", so there isn't much content."
     },
     "lastfm": {
         "hyperlink": "https://www.last.fm/user/LumiUG",
         "username": "LastFM",
         "logo": "/assets/images/socials/lastfm.png",
-        "desc": "Also a platform where you can check what I listen to, barely used, as I scrobble on the background usually."
+        "desc": "A platform where you can check what I listen to, barely used, as I scrobble on the background usually."
     },
     "discord": {
         "hyperlink": "https://discord.com/invite/fNcyyES9gB",
@@ -41,22 +47,16 @@
         "logo": "/assets/images/socials/discord.svg",
         "desc": "My discord is \"@lumiug\", add me if you'd like to have a chat. Click on this to join my dev server."
     },
-    "steam": {
+    "steamPlayer": {
         "hyperlink": "https://steamcommunity.com/id/ugdev",
-        "username": "Steam",
+        "username": "Steam (Personal)",
         "logo": "/assets/images/socials/steam.svg",
-        "desc": "Obsessed with rhythm, puzzles and platformer games. 'Have you heard of that new Indie Game?' Yep, already played it."
+        "desc": "Obsessed with rhythm, puzzles and platformer games. \"Have you heard of that new Indie Game?\" Yep, already played it."
     },
     "youtube": {
         "hyperlink": "https://www.youtube.com/c/UnderGame",
         "username": "Youtube",
         "logo": "/assets/images/socials/youtube.svg",
-        "desc": "I used to make videos in the past. Right now this is only for archival purposes until I decide to come back."
-    },
-    "fiverr": {
-        "hyperlink": "https://www.fiverr.com/undergame",
-        "username": "Fiverr",
-        "logo": "/assets/images/socials/fiverr.svg",
-        "desc": "I did Origin commissions here! All gigs are paused, and won't be coming back to this platform."
+        "desc": "I used to make videos in the past. Right now this is only for archival purposes and small things that I post online."
     }
 }
