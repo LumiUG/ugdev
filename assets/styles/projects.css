@@ -8,20 +8,22 @@ hr {
     color: white;
 }
 .separator {
-    padding-top: 215px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    
+    width: 100%;
+    padding-top: 45px;
 }
 .buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center; 
     justify-content: center;
+    align-content: center; 
+    
+    gap: 40px;
     margin: 40px 0px 60px 0px;
     font-family: var(--secondaryFont);
-    gap: 40px;
 }
 #top p {
     font-size: 20px;
@@ -35,43 +37,99 @@ main div h2 {
     margin: 20px 0px 20px 0px;
     font-size: 50px;
 }
-.projects {
+#projects {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+
+    justify-content: center;
     width: 100%;
     gap: 60px;
 }
 .projContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: left;
+
     padding: 20px 20px 20px 20px;
-    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 80%;
+
     background-color: var(--primary-75);
     color: var(--secondary);
-    width: 300px;
 }
 .projContainer img {
+    position: relative;
+    top: -10%;
+    height: 180px;
+    width: 180px;
     margin: 10px 0px 0px 0px;
-    width: 100px;
-    height: 100px;
+    padding: 0px 50px 0px 25px;
 }
 .projContainer h3 {
     height: fit-content;
     width: 100%;
+    
+    text-align: center;
+    font-size: 40px;
 }
 .projContainer p {
     height: fit-content;
+    max-width: 60%;
     margin: 10px 0px 0px 15px;
-    width: clamp(110px, calc(125px + 5vw), 160px);
+    padding-right: 50px;
+    
+    font-size: 20px;
+    text-align: left;
 }
-.projContainer a {
-    height: fit-content;
-    margin: 10px 0px 0px 0px;
-    color: rgb(0, 0, 170);
-    font-size: large;
-    width: 100%;
+.projContainer p a  {
+    color: rgb(255, 255, 255);
 }
+.links {
+    position: relative;
+    top: -10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+
+    height: 200px;
+    width: fit-content;
+    max-width: 20%;
+}
+.button {
+    user-select: none;
+    background: linear-gradient(0deg,rgba(84, 84, 84, 1) 15%, rgba(138, 138, 138, 1) 95%);
+    /* color: white; */
+}
+
+/* Project Classes */
+/* background-color: rgba(189, 0, 240, 0.65); */
+#games,
+.games {
+    background: linear-gradient(0deg,rgba(43, 79, 97, 1) 15%, rgba(66, 191, 219, 1) 95%);
+}
+#origins,
+.origins {
+    background: linear-gradient(0deg,rgba(43, 97, 46, 1) 15%, rgba(81, 219, 66, 1) 95%);
+}
+#websites,
+.websites {
+    background: linear-gradient(0deg,rgba(97, 90, 43, 1) 15%, rgba(219, 211, 66, 1) 95%);
+}
+#music,
+.music {
+    background: linear-gradient(0deg,rgba(97, 74, 43, 1) 15%, rgba(219, 153, 66, 1) 95%);
+}
+#misc,
+.misc {
+    background: linear-gradient(0deg,rgba(110, 110, 110, 1) 15%, rgba(222, 222, 222, 1) 95%);
+}
+
+/* Art */
 .artContainer {
     width: fit-content;
     height: fit-content;
@@ -87,58 +145,10 @@ main div h2 {
 .artContainer p {
     margin: 10px 0px 0px 0px;
 }
-.projEmpty {
-    text-align: center;
-    padding: 20px 20px 20px 20px;
-    border-radius: 5px;
-}
-.projContainer:hover {
-    transform: scale(1.05);
-}
-
-/* Project Classes */
-/* background-color: rgba(189, 0, 240, 0.65); */
-#games,
-.games {
-    background-color: rgba(0, 209, 255, 0.65);
-}
-#origins,
-.origins {
-    background-color: rgba(0, 219, 143, 0.65);
-}
-#websites,
-.websites {
-    background-color: rgba(240, 240, 0, 0.65);
-}
-#music,
-.music {
-    background-color: rgba(219, 142, 0, 0.65);
+.selectedArt {
+    background-color: rgba(252, 51, 13, 1) !important;
 }
 #art,
 .art {
     background-color: rgba(252, 51, 13, 0.65);
-}
-#misc,
-.misc {
-    background-color: var(--primary-75);
-}
-
-/* background-color: rgba(189, 0, 240, 1) !important; */
-.selectedGames {
-    background-color: rgba(0, 209, 255, 1) !important;
-}
-.selectedOrigins {
-    background-color: rgba(0, 219, 143, 1) !important;
-}
-.selectedWebsites {
-    background-color: rgba(240, 240, 0, 1) !important;
-}
-.selectedMusic {
-    background-color: rgba(219, 142, 0, 1) !important;
-}
-.selectedArt {
-    background-color: rgba(252, 51, 13, 1) !important;
-}
-.selectedMisc {
-    background-color: var(--primary) !important;
 }

@@ -2,85 +2,85 @@
     "origins": {
         "vscode-origins-snippets": {
             "name": "VS Code Origins Snippets",
-            "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!",
+            "desc": "A collection of snippets from the Origins Minecraft mod, made for VS Code!<br><br>Originally made for private use when I was taking comissions, but decided it would be a great idea to make it public for other people.<br><br>A fun project to experiment with web scraping!",
             "image": "/assets/images/origins/VSCodeSnippets.webp",
             "source": "https://github.com/LumiUG/vscode-origins-snippets",
             "website": "https://marketplace.visualstudio.com/items?itemName=UnderGame.vscode-origins-snippets"
         },
         "rwOrigins": {
             "name": "Rain World Origins",
-            "desc": "A side project that uses some of the Origins mentioned before. Probably abandoned, but hey, it happened!",
+            "desc": "A side project made public that implements some Rain World origins I made in my spare time. They're available on curseforge.<br><br>These are by far one of my best origin works outside of private comissions and tests. (BABA IS YOU will never see the light of day...)",
             "image": "/assets/images/origins/RWOrigins.png",
             "source": null,
             "website": "https://www.curseforge.com/minecraft/mc-addons/rain-world-origins"
         },
-        "BT": {
-            "name": "Turtle Origin",
-            "desc": "This was my first Origin ever. It used a different Origin as a base, and I modified it afterwards.",
-            "image": "/assets/images/origins/DefaultOrigin.webp",
-            "source": "https://github.com/LumiUG/BTurtleOrigin",
-            "website": null
-        },
         "KI": {
             "name": "Kamali Origin",
-            "desc": "One of my first Origins aswell. This was completly original and I quite like the final product!",
+            "desc": "One of my first Origins aswell. Its main gimmick is collecting flowers and confuming them, granting buffs for the wearer and those around them.<br>They're also unable to damage entities, but are able to stun and run away easily.<br><br>This was completly original and I quite like the final product!",
             "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/LumiUG/KamaliOrigin",
             "website": null
         },
         "BA": {
             "name": "Bat Origin",
-            "desc": "My second ever Origin. This was kind of a test, and later on the 'flapping' mechanic was reused on...",
+            "desc": "My second ever Origin. This was kind of a test, and later on the 'flapping' mechanic was reused on the squidcada origin, which is part of the \"Rain World\" origins pack.<br><br>I'm actually not sure if I heavily referenced anything, but knowing me, I probably did.",
             "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/LumiUG/BatOrigin",
+            "website": null
+        },
+        "BT": {
+            "name": "Turtle Origin",
+            "desc": "This was my first Origin ever. It used a different Origin as a base and I modified it afterwards, resulting in kind of a weird origin.<br>Very unbalanced!<br><br>But hey, learning happens, and you shouldn't be ashamed of it.",
+            "image": "/assets/images/origins/DefaultOrigin.webp",
+            "source": "https://github.com/LumiUG/BTurtleOrigin",
             "website": null
         }
     },
     "websites": {
         "ugdev": {
-            "name": "UGDev",
-            "desc": "My own portfolio, you're seeing it right now!\nMade with my own two paws, and much love.",
+            "name": "Website / Portfolio",
+            "desc": "My own website! It's been under constant development for a few years now, and its been one of the main things that's allowed me to learn more web development.<br><br>If you're interested, feel free to check the source code for references!<br>It's been made with my own two paws, and much, much love.",
             "image": "/assets/images/favicon.png",
             "source": "https://github.com/LumiUG/ugdev",
             "website": "https://ugdev.xyz"
         },
         "etv": {
-            "name": "ETV",
-            "desc": "Online tierlist maker and visualizer. Share your tierlist with friends and have fun!",
+            "name": "Easy Tierlist Viewer (ETV)",
+            "desc": "You know, one day I wanted to make a tierlist... So I did as any sane person would... And made a tierlist maker and viewer myself!<br><br>You're able to save and share tierlists with json, and I think it looks quite great!<br>Made in some days with base html/css/js.",
             "image": "/assets/images/etc/etv-logo.png",
             "source": "https://github.com/LumiUG/etv",
             "website": "https://ugdev.xyz/etv"
         },
         "secret": {
-            "name": "Secrets...",
-            "desc": "Even if not listed, there's hidden pages around here. Try looking for them!\n\n(I've spent way too much time on this)",
-            "image": "/assets/images/terminal/scugcheese.gif"
+            "name": "Secret... Pages?",
+            "desc": "There's multiple hidden pages in this website, though they're a bit hard to find.<br><br>If you do, check them out! I've spent a long time preparing them and filling them with content or silly things to play around with.",
+            "image": "/assets/images/brokenFav.png"
         }
     },
     "games": {
         "adc": {
             "name": "A Directionless Cycle",
-            "desc": "A Directionless Cycle is a 2D Sokoban game where you control multiple tiles,\n with different directions, at the same time.\n\nGet it on Steam!",
+            "desc": "A Directionless Cycle is a 2D Sokoban game where you explore a game that's slowly degrading, while you control multiple tiles with different directions at the same time.<br><br>My first commercial game ever, ~a year and a half of development, fully by me!<br>[ <a href='https://store.steampowered.com/app/3417520/A_Directionless_Cycle/'>Get it on Steam!</a> ]",
             "image": "/assets/images/adc/ADCLogo.png",
             "source": "https://github.com/LumiUG/ADirectionlessCycle",
             "website": "https://ugdev.xyz/adc"
         },
         "gravix": {
             "name": "Gravix",
-            "desc": "A 2D platformer with ~35 single screen levels, an interconnected map and collectibles to find!",
+            "desc": "A Unity2D platformer with around 35 single screen levels, an interconnected map with collectibles to find and a final challenge waiting for you.<br><br>This game was inspired by \"VVVVVV\" by Terry Cavanagh, uses its soundtrack and shares multiple mechanics.",
             "image": "/assets/images/games/Meem.png",
             "source": "https://github.com/LumiUG/Gravix",
             "website": "https://undergame.itch.io/gravix"
         },
         "sps": {
-            "name": "Space Potato Station (Jam)",
-            "desc": "A Game Jam with some friends in around 8 hours.\n\nThe final product is barely playable but the ideas we had were amazing.",
+            "name": "Space Potato Station (Game Jam)",
+            "desc": "A gardening, puzzle game, resource management \"college\" game jam made with a bunch of friends and a limit of 8 hours to complete.<br><br>We didn't manage to finish the game in time, and so it is barely playable.<br>However, the design decisions we made are very creative and interesting.",
             "image": "/assets/images/games/SPS.png",
             "source": "https://github.com/LumiUG/SpacePotatoStation"
         },
         "boxfight": {
-            "name": "Boxfight",
-            "desc": "A 2D, top-down roguelike, shoot down enemies and buy new weapons.\n\nThis was partially made with a friend in around a month and a half.",
+            "name": "Box-Fight",
+            "desc": "A Unity2D, top-down roguelike, shoot down enemies and buy new weapons as you try to clear every room possible in this procedurally generated world.<br><br>This was partially made with a friend in around a month and a half.<br>All assets used are from itch.io, and the soundtrack is from Ultrakill.",
             "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/LumiUG/Boxfight"
         }
@@ -88,7 +88,7 @@
     "music": {
         "rework": {
             "name": "A Directionless Cycle's OST",
-            "desc": "My first ever release! Even if a little basic...\n\nListen to the original soundtrack on Bandcamp.",
+            "desc": "My first ever \"real\" release! Even if a little basic...<br>This was made with ZERO music knowledge, and intended to be heard when playing my game, A Directionless Cycle.<br><br>[ <a href='https://ugdev.bandcamp.com/album/a-directionless-cycle-ost'>Listen on Bandcamp.</a> ]",
             "image": "/assets/images/adc/ADCLogo.png",
             "website": "https://ugdev.bandcamp.com/album/a-directionless-cycle-ost"
         }
@@ -167,22 +167,22 @@
     },
     "misc": {
         "wysTranslator": {
-            "name": "WYS Catalan Translator",
-            "desc": "I'm one of the volunteer Catalan translators for Will You Snail!\n\n(Unfinished, forgive me Jonas!!)",
+            "name": "Will You Snail Catalan Translator",
+            "desc": "I'm one of the volunteer Catalan translators for the game Will You Snail, by Jonas Tyroller. It's a platformer game where an evil AI tries to kill you.<br><br>I contributed a bit, but never quite finished the translation sheet myself.",
             "image": "/assets/images/etc/WYS.png",
             "source": null,
             "website": "https://store.steampowered.com/app/1115050/Will_You_Snail"
         },
         "bootlegWordle": {
             "name": "Bootleg Wordle",
-            "desc": "A bootleg version of wordle that was made in the C# console for fun.",
+            "desc": "A bootleg version of wordle that was made in the C# console for fun.<br><br>It uses dictionary smaples from github, and is available to play in english and spanish.<br>You're also able to see a list of played games.",
             "image": "/assets/images/etc/wordle.png",
             "source": "https://github.com/LumiUG/BootlegWordle",
             "website": null
         },
         "aStar": {
             "name": "A* Pathfinding",
-            "desc": "A simple pathfinding algorithm in Unity 3D/2D.",
+            "desc": "A simple pathfinding algorithm in Unity 3D/2D, it finds the closest path from one point to another using recursion.",
             "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/LumiUG/AStar-Pathfinding",
             "website": null

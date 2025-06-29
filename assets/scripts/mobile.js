@@ -87,7 +87,7 @@ if (isMobile())
         };
     }
 
-    // ABOUT.HTML //
+    // BLOG.HTML //
     else if (document.title.toLowerCase().includes("blog"))
     {
         // Modal stuff
