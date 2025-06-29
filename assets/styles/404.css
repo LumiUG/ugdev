@@ -62,6 +62,9 @@ main {
 #page {
     margin-top: 80px;
 }
+#empty {
+    height: 200px;
+}
 
 /* Custom fonts */
 custom::before {

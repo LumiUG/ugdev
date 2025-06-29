@@ -48,3 +48,13 @@
     border: 2px solid white;
     height: 250px;
 }
+#fadeinSecond {
+    position: absolute;
+    display: block;
+    z-index: -5;
+    width: 75%;
+    height: 910px;
+    margin-left: 12.5%;
+    margin-top: -25px;
+    background: linear-gradient(180deg, rgb(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.05) 60%, rgba(0, 0, 0, 0) 95%);
+}

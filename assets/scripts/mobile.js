@@ -74,6 +74,8 @@ if (isMobile())
         document.getElementById("fadein").style.display = "none";
 
         // Characters section
+        document.getElementById("fadeinSecond").style.display = "none";
+        
         let chars = document.querySelectorAll(".character");
         for (let i = 0; i < chars.length; i++) {
             chars[i].style.width = "80%";
