@@ -4,6 +4,18 @@ function isMobile()
     return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent);
 }
 
+// Export personal 88x31 bannger
+function eight831()
+{
+    navigator.clipboard.writeText('<a href="https://ugdev.xyz"><img src="https://ugdev.xyz/assets/images/graphics/ugdev.png" alt="ugdev.xyz"></a>')
+    
+    // Effect
+    let banner = document.getElementById("own8831");
+    banner.style.animation = "";
+    banner.offsetHeight; // trigger reflow
+    banner.style.animation = "2s copyBanner normal";
+}
+
 if (isMobile())
 {
     // Nav bar (global)

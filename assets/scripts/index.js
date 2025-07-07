@@ -142,7 +142,10 @@ const randMessages = [
     "wawawawawawawa",
     "yip yip yip yip",
     "awawawawawawawa",
-    "\"vcf hg\""
+    "\"vcf hg\"",
+    "Press F5?",
+    "Half Sun Games.....",
+    "Did you check out my games yet?"
 ];
 
 var tooltip = document.getElementById("tooltip");

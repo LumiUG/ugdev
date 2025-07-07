@@ -67,10 +67,10 @@
         },
         "gravix": {
             "name": "Gravix",
-            "desc": "A Unity2D platformer with around 35 single screen levels, an interconnected map with collectibles to find and a final challenge waiting for you.<br><br>This game was inspired by \"VVVVVV\" by Terry Cavanagh, uses its soundtrack and shares multiple mechanics.",
+            "desc": "A Unity2D platformer with around 35 single screen levels, an interconnected map with collectibles to find and a final challenge waiting for you.<br><br>This game was inspired by \"VVVVVV\" by Terry Cavanagh, uses [ <a href='https://souleyedigitalmusic.bandcamp.com/album/pppppp-the-vvvvvv-soundtrack'>its soundtrack</a> ] and shares multiple mechanics.",
             "image": "/assets/images/games/Meem.png",
             "source": "https://github.com/LumiUG/Gravix",
-            "website": "https://undergame.itch.io/gravix"
+            "website": "https://ugdev.itch.io/gravix"
         },
         "sps": {
             "name": "Space Potato Station (Game Jam)",

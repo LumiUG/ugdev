@@ -1,13 +1,13 @@
 {
     "names": {
-        "ug": { "type": "yes", "hover": "My main nick, \"Lumi\" is also great!" },
+        "ug": { "type": "yes", "hover": "My main nick, \"Lumi\" is also preferred!" },
         "ugdev": { "type": "okay", "hover": "Usually you'd only use this formally, but call me \"ug\" instead."  },
         "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
         "uggy": { "type": "close", "hover": "Only for certain people." },
-        "UnderGame": { "type": "no", "hover": "\"ug\" does not stand for this. Don't use, I will break your knees. (lovingly)" },
+        "UnderGame": { "type": "no", "hover": "\"ug\" does not stand for this, don't use. I will break your knees. (lovingly)" },
         "Eugene": { "type": "joke" },
-        "Lumi*": { "type": "sona", "hover": "I also use my sona's name as a main nick!!" }
+        "Lumi": { "type": "sona", "hover": "I also use my sona's name as a main nick!!" }
     },
     "pronouns": {
         "he/him": { "type": "yes" },

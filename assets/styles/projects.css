@@ -102,7 +102,7 @@ main div h2 {
 }
 .button {
     user-select: none;
-    background: linear-gradient(0deg,rgba(84, 84, 84, 1) 15%, rgba(138, 138, 138, 1) 95%);
+    background: linear-gradient(0deg, rgb(106, 106, 106) 15%, rgba(138, 138, 138, 1) 95%);
     /* color: white; */
 }
 
@@ -110,23 +110,23 @@ main div h2 {
 /* background-color: rgba(189, 0, 240, 0.65); */
 #games,
 .games {
-    background: linear-gradient(0deg,rgba(43, 79, 97, 1) 15%, rgba(66, 191, 219, 1) 95%);
+    background: linear-gradient(0deg, rgb(51, 94, 115) 15%, rgba(66, 191, 219, 1) 95%);
 }
 #origins,
 .origins {
-    background: linear-gradient(0deg,rgba(43, 97, 46, 1) 15%, rgba(81, 219, 66, 1) 95%);
+    background: linear-gradient(0deg, rgb(57, 129, 61) 15%, rgba(81, 219, 66, 1) 95%);
 }
 #websites,
 .websites {
-    background: linear-gradient(0deg,rgba(97, 90, 43, 1) 15%, rgba(219, 211, 66, 1) 95%);
+    background: linear-gradient(0deg, rgb(125, 116, 56) 15%, rgba(219, 211, 66, 1) 95%);
 }
 #music,
 .music {
-    background: linear-gradient(0deg,rgba(97, 74, 43, 1) 15%, rgba(219, 153, 66, 1) 95%);
+    background: linear-gradient(0deg, rgb(132, 100, 59) 15%, rgba(219, 153, 66, 1) 95%);
 }
 #misc,
 .misc {
-    background: linear-gradient(0deg,rgba(110, 110, 110, 1) 15%, rgba(222, 222, 222, 1) 95%);
+    background: linear-gradient(0deg, rgb(135, 135, 135) 15%, rgba(222, 222, 222, 1) 95%);
 }
 
 /* Art */
