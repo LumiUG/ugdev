@@ -150,10 +150,3 @@ h2 {
     background-color: #fe4fff;
     text-decoration: none;
 }
-/* * {
-    animation: hue 10s linear infinite;
-}
-@keyframes hue {
-    0% { filter: hue-rotate(360deg); }
-    100% { filter: hue-rotate(0deg); }
-} */

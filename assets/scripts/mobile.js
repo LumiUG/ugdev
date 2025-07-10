@@ -153,4 +153,24 @@ if (isMobile())
         // Go back "button"
         document.getElementById("back").style.fontSize = "30px";
     }
+        
+    // eugene.HTML //
+    else if (document.title.toLowerCase().includes("eugene"))
+    {
+        document.getElementsByTagName("html")[0].style.fontSize = "4vw";
+
+        // Everything idk
+        let image = document.getElementsByTagName("img")[0];
+        image.style.top = "36%";
+        image.style.left = "38%";
+        image.style.height = "200px";
+
+        document.getElementById("top").style.left = "8%";
+        document.getElementById("bottom").style.left = "30%";
+
+        let link = document.getElementsByTagName("a")[0];
+        link.style.top = "44%";
+        link.style.left = "14%";
+        link.style.fontSize = "8vw"
+    }
 }

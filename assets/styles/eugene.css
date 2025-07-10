@@ -1,0 +1,41 @@
+html { font-size: 1vw; }
+* {
+    user-select: none;
+}
+#top {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+
+    filter: drop-shadow(5px 5px 20px rgba(255, 255, 255, 0.8));
+}
+#bottom {
+    position: absolute;
+    left: 45%;
+    top: 75%;
+    
+    filter: drop-shadow(5px 5px 20px rgba(255, 0, 0, 0.8));
+    color: rgb(255, 0, 0);
+}
+a {
+    position: absolute;
+    left: 33%;
+    top: 42%;
+    
+    font-size: 2vw;
+    filter: drop-shadow(5px 5px 20px rgb(0, 140, 255, 0.8));
+    color: rgb(0, 140, 255);
+}
+a:hover {
+    filter: drop-shadow(10px 10px 80px rgb(0, 140, 255, 1));
+}
+img {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    
+    height: 40%;
+    width: auto;
+
+    animation: hue 20s linear infinite;
+}
