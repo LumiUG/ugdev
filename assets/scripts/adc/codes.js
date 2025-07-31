@@ -12,6 +12,7 @@ document.body.addEventListener("keydown",
 
         switch (event.code) {
             case "Space":
+                document.body.style.boxShadow = "0px 0px 100px 10px rgba(255, 255, 255, 0.28)";
                 window.scrollTo(0, document.body.scrollHeight);
                 isInputting = true;
                 break;
@@ -45,6 +46,7 @@ document.body.addEventListener("keyup",
     (event) => {
         if (event.code != "Space") return;
         
+        document.body.style.boxShadow = "";
         isInputting = false;
         view.innerText = "";
         code = "";

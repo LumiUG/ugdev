@@ -69,12 +69,6 @@
                 "notdocuments": {
                     "wawa.wawa": "Wawacat.\nWawacat lived on a hill.\nWawacat was wawaing around one day\nand found a friend!\n\nThey lived happily ever after :)"
                 }
-            },
-            "gummi": {
-                "permissions": {"allowedUsers": ["gummi"]},
-                "documents": {
-                    "attribution.txt": "<a href='https://glitchbuddy.newgrounds.com'>https://glitchbuddy.newgrounds.com</a>"
-                }
             }
         },
         "etc": {
@@ -90,7 +84,18 @@
             "3z15b12j15r14": { "autosaves": { "colonthree.level": "{\"levelName\":\":3\",\"hideUI\":true,\"freeroam\":true,\"difficulty\":9,\"tiles\":{\"customTileInfo\":[],\"solidTiles\":[{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":4,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":5,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":6,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":7,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":9,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":8,\"y\":-6,\"z\":0}}],\"objectTiles\":[],\"overlapTiles\":[],\"hazardTiles\":[],\"effectTiles\":[],\"customTiles\":[]}}" } },
             "9ojfau8k": {},
             "scan.log": "Scan ongoing... ...\n22% ... ...\n46% ... ...\n81% ... ...\n100% ... ...\n\n<h2>SIGNED FILES FOUND:</h2>\n- [bl]A Directionless Cycle_Data/[/]\n- [bl]MonoBleedingEdge/[/]\n- [re]A Directionless Cycle.exe[/]\n- [re]UnityCrashHandler64.exe[/]\n - [lg]UnityPlayer.dll[/]\n\n>> Successfully recovered into [bl]/games/adc/[/]. <<",
-            "scan(1).log": "Scan ongoing... ..."
+            "scan(1).log": "Scan ongoing... ...\n1% ... ...\n<h3>UNIVERSE FOUND: [lg]Devoid[/]</h3>2% ... ..."
+        },
+        "universe": {
+            "devoid": {
+                "status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current scan for progress logging."
+            },
+            "avalon": {
+                
+            }
+        },
+        "music": {
+            "burdened.wav": "/assets/audio/adc/Burdened Existence.wav"
         },
         "games": {
             "maze.png": "/assets/images/terminal/supercoolmaze.png",
@@ -111,10 +116,6 @@
                     "goodbye.txt": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
                 },
                 "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
-            },
-            "!coda": {
-                "permissions": {"allowedUsers": ["coda"]},
-                "leap.txt": "<img src=\"/assets/images/terminal/TBG-Lampost.webp\">\n[lg]Take my hand, let's jump together.[/]"
             }
         },
         "groups": {

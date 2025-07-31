@@ -1,10 +1,9 @@
 /*
     Hey, I've worked really hard on this.
+    If you're looking to skip content, or datamine keys/files...
+    Don't! There's a lot of things that are better experienced without doing this.
 
-    I'd appreciate if you could check the source code AFTER
-    having experienced a bit of the terminal beforehand.
-
-    There are tons of secrets and little quirks everywhere,
+    That being said, there are tons of secrets and little quirks everywhere
     and I feel like you'd be missing out if you checked for user passwords,
     hidden commands or just the entire .json folder structure.
 
@@ -27,7 +26,7 @@ var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
-var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]"];
+var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]", "\\[rw\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
 var availableKeys = ["maze", "slug", "light", "lab", "universe"];
@@ -38,6 +37,7 @@ var currentPath = "/home/guest";
 var commandHistory = [];
 var historyIndex = 0;
 var eggCount = 0;
+var currentAudio = null;
 var os = null;
 var commands = [
     {
@@ -123,6 +123,12 @@ var commands = [
         "helptopic": "Command usage:\nimcat {path/file} - Shows image on the terminal screen.\n\nRoot user info:\nTo open a [re]hidden[/] file (marked with \"[re]*[/]\"), you must use \"[re]![/]\" before typing the file name.\nThat way, the filesystem knows it's a hidden file.[ye]",
         "hidden": false,
         "run": CommandIMCat
+    },    {
+        "name": "play",
+        "description": "Play a song.",
+        "helptopic": "Command usage:\play {file} - TBD",
+        "hidden": false,
+        "run": CommandPlay
     },
     {
         "name": "sign",
@@ -211,23 +217,11 @@ var users = [
         "color": "mg",
         "password": "*d!!2*^F&&!3^Y!Q^&=**=",
         "home": "/home/ying"
-    },
-    {
-        "username": "gummi",
-        "color": "bl",
-        "password": "^&c!m*!*9^sb&G!!V&yN!z&&M^^y*",
-        "home": "/home/gummi"
-    },
-    {
-        "username": "coda",
-        "color": "lg",
-        "password": "b!^G**F*tc^^G!9!z!!dH&!M=^^&*",
-        "home": "/games/!coda"
     }
 ]
 
 // Run on start
-if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent)) TypeOutput("[re]Im so sorry but this isn't mobile-friendly yet :([/]\nCheck back later! Ty [pi]<3[/]");
+if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent)) document.getElementById("mobile").style.display = "flex";
 CommandCD("/home/guest");
 
 // Post command?
@@ -405,7 +399,7 @@ function ResetOS() { os = structuredClone(structure); }
 function UpdateCurrentPath(newPath) {
     newPath = (newPath.endsWith("/")) ? newPath.slice(0, -1) : newPath;
     newPath = (newPath.startsWith("/")) ? newPath : `/${newPath}`;
-    pathHTML.textContent = newPath;
+    pathHTML.innerHTML = StyleText(CustomFolder(newPath, true));
     currentPath = newPath;
 }
 
@@ -515,9 +509,24 @@ function SetFileSyntax(file) {
     file = (/(\..+)/.test(file)) ?
         (!FileIsImage(file)) ?
             `[gr]${file}[/]` : file
-        : `[bl]${file}/[/]`;
+        : CustomFolder(file);
 
     return file;
+}
+
+function CustomFolder(text, isPath = false) {
+    // Custom handling for paths, make into a for loop with two []'s later?
+    if (isPath)
+    {
+        if (text.includes("universe")) text = text.replace("universe", `[rw]universe[/]`);
+        if (text.includes("devoid")) text = text.replace("devoid", `[lg]devoid[/]`);
+        return text;
+    }
+
+    // Normally print (eg: ls)
+    if (text == "universe") return `[rw]${text}/[/]`;
+    else if (text == "devoid") return `[lg]${text}/[/]`;
+    return `[bl]${text}/[/]`;
 }
 
 // Return the user's input as trimmed to avoid undefined errors.
@@ -603,6 +612,37 @@ function CommandSign() {
     if (keySolutions[i] != value ) { TypeOutput("[re]EOS: Incorrect value. Key was not signed.[/]"); return; }
     TypeOutput(`[gr]EOS: Key \"[/]${key}[gr]\" was created and signed correctly.[/]`);
     createdKeys.push(key);
+}
+
+// Play
+function CommandPlay()
+{
+    let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
+    if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }
+
+    // Navigate there
+    path = path.toLowerCase();
+    path = Pathing(path);
+    if (!path) return;
+    
+    // Get the file to cat later
+    let soundPath = path.split("/");
+    soundPath = soundPath.splice(soundPath.length - 1, 1).toString();
+    if (!/(\..+)/.test(soundPath)) { TypeOutput("[re]EOS: That isn't a file.[/]"); return; };
+    
+    let sound = os[soundPath];
+    
+    // Terminate old sound
+    if (currentAudio != null)
+    {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+    }
+    
+    // Play new sound.
+    currentAudio = new Audio(sound);
+    currentAudio.loop = true;
+    currentAudio.play();
 }
 
 // Returns the user
