@@ -508,7 +508,7 @@ function SetFileSyntax(file) {
     // File or folder?
     file = (/(\..+)/.test(file)) ?
         (!FileIsImage(file)) ?
-            `[gr]${file}[/]` : file
+            `[gr]${file}[/]` : CustomType(file)
         : CustomFolder(file);
 
     return file;
@@ -520,13 +520,21 @@ function CustomFolder(text, isPath = false) {
     {
         if (text.includes("universe")) text = text.replace("universe", `[rw]universe[/]`);
         if (text.includes("devoid")) text = text.replace("devoid", `[lg]devoid[/]`);
+        if (text.includes("avalon")) text = text.replace("avalon", `[lb]avalon[/]`);
         return text;
     }
 
     // Normally print (eg: ls)
     if (text == "universe") return `[rw]${text}/[/]`;
     else if (text == "devoid") return `[lg]${text}/[/]`;
+    else if (text == "avalon") return `[lb]${text}/[/]`;
     return `[bl]${text}/[/]`;
+}
+
+function CustomType(file)
+{
+    if (file.endsWith(".wav")) file = `[gr]${file}[/]`
+    return file
 }
 
 // Return the user's input as trimmed to avoid undefined errors.

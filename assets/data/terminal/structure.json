@@ -7,7 +7,7 @@
                     "test.txt": "ha! made you look.\n-guest"
                 },
                 "documents": {
-                    "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[gr]3)[/] Protected, signed folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-guest\n\nFuck.\n-[or]root[/]",
+                    "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[gr]3)[/] Protected, signed folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-guest\n\nShit.\n-[or]root[/]",
                     "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
                     "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nI'll make an actual recipe someday (if you know what i mean)\n-[lb]lumi[/]",
                     "asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-guest",
@@ -91,10 +91,12 @@
                 "status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current scan for progress logging."
             },
             "avalon": {
-                
+                "worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any ideas.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but It'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
+                "guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-guest\n\nSorry dude like who even are you? Guys PLEASE just create an account, i will go insane :<\n-[lb]lumi[/]"
             }
         },
         "music": {
+            "usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command, dummy.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
             "burdened.wav": "/assets/audio/adc/Burdened Existence.wav"
         },
         "games": {
@@ -119,18 +121,21 @@
             }
         },
         "groups": {
-            "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]groups admin[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+            "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
             "notacult": {
                 "welcome.group": "\"some information\"\n\n<h3>[lg][FILE LOCKED][/]</h3>"
             },
             "mazegang": {
                 "permissions": {"password": "maze"},
-                "welcome.group": "And so you've made it here, fellow mazer."
+                "welcome.group": "And so you've made it here, fellow mazer!\n\nSorry for the lack of maze-related content, but I've been playing this game... \"A Directionless Cycle\"... And it has the worst hidden maze ever!\nIm sorry- like, it's just fully invisible. It's a [re]total dissapointment[/] for us mazers, and we will actively tell people to avoid it."
             },
             "secrethunters": {
                 "welcome.group": "Hello everyone! We're a small group of people dedicated to finding secrets between our worlds, and, well- this terminal in specific.\n\nWe believe that by joining forces, we can do anything.\n\nWe do, however, have some rules in place to mantain anonymity and security:\n\n[gr]1)[/] Do not sign any posts or comments, remain anonymous.\n[ye]2)[/] Document your findings!\n[re]3)[/] Do not grief. Due to this being anonymous, we can't really prevent this. Just don't.\n\n<h3>[lg][FILE LOCKED][/]</h3>",
                 "mazes.txt": "suppppp, ive been looking around, and theress like, this whole maze gang thing. and i dont have the signature. has anyone figured that out?????\n-[lg]unsigned user[/]\n\nWell, it does say that you don't have the signature. Maybe check out the \"sign\" command?\nI feel like you might be new here.\n-[lg]unsigned user[/]\n\nomg yeah ur right im stpid\n-[lg]unsigned user[/]\n\nstupid*\n-[lg]unsigned user[/]\n\n...They really should let us edit posts.\n-[lg]unsigned user[/]",
                 "public.txt": "I'm not sure if y'all know this, but looking at the source code, it looks like you can go into public folders.\n\nIt's simple.\nAny user can create a public folder, and you can go there as a guest.\n\nIt also seems like not everyone has one. Weird.\n-[lg]unsigned user[/]"
+            },
+            "tobedetermined": {
+                "welcome.group": "Hmh... It's too early for a welcome, there's too little of us right now.\nWe'll... think of a name later, and rewrite this aswell.\n\nUhh... and are we supposed to sign? I'll just-\n-Three"
             },
             "!slugcatcorner": {
                 "permissions": {"allowedUsers": ["lumi", "neoma", "ying"], "password": "slug"},
