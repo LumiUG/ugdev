@@ -56,7 +56,7 @@ document.body.addEventListener("keyup",
 function ValidateCode()
 {
     if (window.btoa(window.btoa(code)) == "VlVSTVVreFNWVkk9") { view.innerText = "There's no bonuses in here."; isInputting = false; }
-    else if (window.btoa(window.btoa(code)) == "VEV4TVVsSlNSRVJFVlZWVg==") { view.innerText = "\"Devoid\" is what you're looking for."; isInputting = false; }
+    else if (window.btoa(window.btoa(code)) == "VEV4TVVsSlNSRVJFVlZWVg==") { view.innerText = "\"Ego\" is the password you're looking for."; isInputting = false; }
     else if (code == "DDUR") { view.innerText = "Chess Battle Advanced."; isInputting = false; }
     else if (code == "DUDLRLUDLR") { view.innerHTML = "Come on, <a href='https://docs.google.com/spreadsheets/d/1aBWS_-CLZzMZaXhWAYaLY-1-AB9PVJm2QYKIGADLiUY/edit'>get to it</a>."; isInputting = false; }
     else if (code == "UDLRLDUR") { view.innerText = "Let chaos reign! ...Or something like that?"; isInputting = false; }

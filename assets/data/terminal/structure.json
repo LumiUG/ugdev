@@ -2,28 +2,28 @@
     "/": {
         "home": {
             "guest": {
-                "readme.txt": "Hi, guest! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], write down your keys!\n\n-[lb]lumi[/]",
+                "readme.txt": "Hi, users! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], write down your keys!\n\n-[or]root[/]",
                 "folder": {
-                    "test.txt": "ha! made you look.\n-guest"
+                    "test.txt": "ha! made you look.\n-[lg]guest[/]"
                 },
                 "documents": {
-                    "todo-list.txt": "[re]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords.\n[gr]3)[/] Protected, signed folders/files.\n[gr]4)[/] Finally stop those rootkit scripts that guests are making.\n-[or]me[/]\n\nLmao you forgot to make this file hidden\n-guest\n\nShit.\n-[or]root[/]",
+                    "todo-list.txt": "[ye]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords. The encryption isn't the best, anyways.\n[gr]3)[/] Protected, signed folders/files and user specific folders.\n[gr]4)[/] Better groups? A folder seems lame.\n-[or]root[/]\n\n...You forgot to make this file hidden.\n-[lg]guest[/]\n\nWell, shit. Feel free to look into it.\n-[or]root[/]",
                     "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
-                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-guest\n\nthis is inspirational\n-[pi]neoma[/]\n\nI'll make an actual recipe someday (if you know what i mean)\n-[lb]lumi[/]",
-                    "asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-guest",
+                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-[lg]guest[/]\n\ninspirational\n-[pi]neoma[/]\n\nI'll make an actual recipe someday (if you know what i mean)\n-[lb]lumi[/]",
+                    "asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-[lg]guest[/]\n\ncan you guys not add garbage to this folder?\n-[mg]sickle[/]",
                     "!secret": {
                         "test.txt": "hi :3"
                     }
                 },
                 "images": {
-                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep having problems with the small disk's filesize...\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep getting logs telling me they don't like this... Be respectful!\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
                     "halfsun.png" : "/assets/images/favicon.png",
                     "slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
                     "slug.gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(1).gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(2).gif": "/assets/images/terminal/scugcheese.gif",
                     "slug(3).gif": "/assets/images/terminal/scugcheese.gif",
-                    "okie.txt": "okiee sorry ill stop posting slugs\n-[mg]ying[/]"
+                    "okie.txt": "okiee sorry ill stop posting slugs\n-[mg]sickle[/]"
                 }
             },
             "root": {
@@ -42,8 +42,8 @@
             "lumi": {
                 "permissions": {"allowedUsers": ["lumi"]},
                 "public": {
-                    "README.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                    "secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god.\n-[pi]neoma[/]",
+                    "readme.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                    "secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god\n-[pi]neoma[/]",
                     "games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal anymore.\nAnd I'd rather if you didn't play them. Let's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)"
                 },
                 "documents": {
@@ -61,8 +61,8 @@
                     "realdocumentthatisntaplaceholder.txt": "uh yea this isnt a placeholder you hear me"
                 }
             },
-            "ying": {
-                "permissions": {"allowedUsers": ["ying"]},
+            "sickle": {
+                "permissions": {"allowedUsers": ["sickle"]},
                 "documents": {
                     "attribution.txt": "When finished."
                 },
@@ -91,12 +91,13 @@
                 "status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current scan for progress logging."
             },
             "avalon": {
-                "worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any ideas.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but It'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
-                "guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-guest\n\nSorry dude like who even are you? Guys PLEASE just create an account, i will go insane :<\n-[lb]lumi[/]"
+                "worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any leads.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but it'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
+                "guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-[lg]guest[/]\n\nSorry dude like who even are you? Guys PLEASE just create an account, i will go insane :<\n-[lb]lumi[/]"
             }
         },
         "music": {
             "usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command, dummy.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+            "warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]",
             "burdened.wav": "/assets/audio/adc/Burdened Existence.wav"
         },
         "games": {
@@ -120,6 +121,13 @@
                 "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
             }
         },
+        "temp-chat": {
+            "readme.md": "A chatting software is being built! Please use this very rudimentary implementation meanwhile.\n-[or]root[/]\n\nOh and if you're trying to contact [rw]the original[/], only do it when given permission. They'll contact you directly if they need anything.\nThe group is being worked on, but we should wait for the software first so we can coordinate properly.\n-[or]root[/]",
+            "notice.event": "Currently, visitors from \"[bl]Earth[/]\" and near them have no access to creating accounts or editing files, sorry for the trouble! It'll be a while before we get that back up and running.\n\nShould you see any unsigned users, it's probably from [bl]Earth[/] or any related, close by universes.\nThough, I'm pretty sure we only have terminal access set up there.\n-[or]root[/]",
+            "sickle.chat": "...no\n-[mg]sickle[/]",
+            "lumi.chat": "That sounds awesome! I'll probably pass on using this until the software is finished, though.\n\nIf you need help, do let me know! (What programming language...?)\n-[lb]lumi[/]",
+            "neoma.chat": "Feel free to edit this file for messaging! ^-^\n-[pi]neoma[/]"
+        },
         "groups": {
             "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
             "notacult": {
@@ -135,12 +143,13 @@
                 "public.txt": "I'm not sure if y'all know this, but looking at the source code, it looks like you can go into public folders.\n\nIt's simple.\nAny user can create a public folder, and you can go there as a guest.\n\nIt also seems like not everyone has one. Weird.\n-[lg]unsigned user[/]"
             },
             "tobedetermined": {
-                "welcome.group": "Hmh... It's too early for a welcome, there's too little of us right now.\nWe'll... think of a name later, and rewrite this aswell.\n\nUhh... and are we supposed to sign? I'll just-\n-Three"
+                "welcome.group": "Hmh... It's too early for a welcome, there's too little of us right now.\nWe'll... think of a name later, and rewrite this aswell.\n\nUhh... and are we supposed to sign? I'll just-\n~[rw]Three[/]",
+                "about.txt": "We're a group dedicated to [gh]connecting worlds[/] between [rw]universes[/]. This project is just starting, but there'll be more of us as time goes on.\n\nHopefully we'll get to talk after the \"chat\" software is finished.\n~[rw]Seven[/]"
             },
             "!slugcatcorner": {
-                "permissions": {"allowedUsers": ["lumi", "neoma", "ying"], "password": "slug"},
-                "welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]ying[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                "question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[mg]ying[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]\n\ni wouldnt worry about that.\n-[lb]lumi[/]"
+                "permissions": {"allowedUsers": ["lumi", "neoma", "sickle"], "password": "slug"},
+                "welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]sickle[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                "question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[mg]sickle[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]\n\ni wouldnt worry about that.\n-[lb]lumi[/]"
             }
         }
     }

@@ -26,11 +26,11 @@ var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
-var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]", "\\[rw\\]"];
+var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]", "\\[rw\\]", "\\[gh\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
 var availableKeys = ["maze", "slug", "light", "lab", "universe"];
-var keySolutions = ["209", "cat", "dark", "carlsagan", "devoid"];
+var keySolutions = ["209", "cat", "dark", "carlsagan", "ego"];
 var createdKeys = [];
 var currentUser = "guest";
 var currentPath = "/home/guest";
@@ -213,10 +213,10 @@ var users = [
         "home": "/home/neoma"
     },
     {
-        "username": "ying",
+        "username": "sickle",
         "color": "mg",
         "password": "*d!!2*^F&&!3^Y!Q^&=**=",
-        "home": "/home/ying"
+        "home": "/home/sickle"
     }
 ]
 
@@ -270,11 +270,15 @@ document.addEventListener("keydown",
             // Autocomplete
             case "Tab":
                 event.preventDefault();
+                ClearOutput();
                 
                 // User typed anything yet?
                 let auto = GetUserInput().split(" ");
-                if (!auto[auto.length - 1]) { closestAutocomplete = []; return; }
-                ClearOutput();
+                if (!auto[auto.length - 1]) {
+                    closestAutocomplete = [];
+                    CommandLS();
+                    return;
+                }
                 
                 // Autocomplete?!
                 if (auto[auto.length - 1] == closestAutocomplete[0]) {
@@ -519,13 +523,14 @@ function CustomFolder(text, isPath = false) {
     if (isPath)
     {
         if (text.includes("universe")) text = text.replace("universe", `[rw]universe[/]`);
+        if (text.includes("tobedetermined")) text = text.replace("tobedetermined", `[rw]tobedetermined[/]`);
         if (text.includes("devoid")) text = text.replace("devoid", `[lg]devoid[/]`);
         if (text.includes("avalon")) text = text.replace("avalon", `[lb]avalon[/]`);
         return text;
     }
 
     // Normally print (eg: ls)
-    if (text == "universe") return `[rw]${text}/[/]`;
+    if (text == "universe" || text == "tobedetermined") return `[rw]${text}/[/]`;
     else if (text == "devoid") return `[lg]${text}/[/]`;
     else if (text == "avalon") return `[lb]${text}/[/]`;
     return `[bl]${text}/[/]`;
@@ -534,6 +539,7 @@ function CustomFolder(text, isPath = false) {
 function CustomType(file)
 {
     if (file.endsWith(".wav")) file = `[gr]${file}[/]`
+    if (file.endsWith(".chat")) file = `[lg]${file}[/]`
     return file
 }
 
@@ -576,7 +582,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 27/06/2025 (Earth)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 03/08/2025 (Earth TimeScale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
@@ -625,6 +631,9 @@ function CommandSign() {
 // Play
 function CommandPlay()
 {
+    TypeOutput("[re]EOS: Out of service![/]");
+    return;
+
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }
 

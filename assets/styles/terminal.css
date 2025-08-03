@@ -116,7 +116,7 @@ a:visited {
 }
 .ye {
 	color: var(--yellow);
-	text-shadow: 0px 0px 6px #9d9836;
+	text-shadow: 0px 0px 6px #9d9136;
 }
 .or {
 	color: var(--orange);
@@ -140,6 +140,11 @@ a:visited {
 }
 .rw {
 	animation: rainbow 8s linear infinite;
+}
+.gh {
+	color: transparent;
+	text-shadow: 0px 0px 12px #ffffffcd;
+	user-select: none;
 }
 
 /* Animations */
