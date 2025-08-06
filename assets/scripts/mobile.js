@@ -120,10 +120,10 @@ if (isMobile())
         logo.style.width = "100%";
     
         // Buttons
-        let btn = document.querySelectorAll("#wishlist a");
+        let btn = document.querySelectorAll("#buttons a");
         for (let i = 0; i < btn.length; i++) { btn[i].style.marginLeft = "2px"; btn[i].style.width = "100%"; }
-        document.getElementById("discord").style.setProperty("width", "100%", "important");
-        document.getElementById("bandcamp").style.setProperty("width", "100%", "important");
+        // document.getElementById("discord").style.setProperty("width", "100%", "important");
+        // document.getElementById("bandcamp").style.setProperty("width", "100%", "important");
 
         // Video
         let video = document.getElementById("video").children[0];

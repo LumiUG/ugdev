@@ -631,8 +631,8 @@ function CommandSign() {
 // Play
 function CommandPlay()
 {
-    TypeOutput("[re]EOS: Out of service![/]");
-    return;
+    // TypeOutput("[re]EOS: Out of service![/]");
+    // return;
 
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }

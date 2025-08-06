@@ -60,17 +60,21 @@ p {
     font-size: 25px;
     font-weight: bold;
 }
-#wishlist {
+#buttons {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 25px;
     justify-content: center;
     align-items: center;
+    gap: 3%;
 }
-#wishlist a {
+#buttons a {
+    margin-top: 10px;
     width: 35%;
     transition: .2s;
 }
-#wishlist a img {
+#buttons a img {
     width: 100%;
 }
 #bandcamp {
@@ -141,7 +145,7 @@ p {
     overflow-wrap: break-word;
 }
 
-#wishlist a:hover {
+#buttons a:hover {
     transform: scale(1.05);
     filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
 }
