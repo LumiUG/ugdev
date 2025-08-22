@@ -582,7 +582,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 03/08/2025 (Earth TimeScale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 23/08/2025 (Earth Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
@@ -631,8 +631,8 @@ function CommandSign() {
 // Play
 function CommandPlay()
 {
-    // TypeOutput("[re]EOS: Out of service![/]");
-    // return;
+    TypeOutput("[re]EOS: Out of service![/]");
+    return;
 
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }

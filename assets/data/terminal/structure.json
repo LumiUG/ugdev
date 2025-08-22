@@ -30,6 +30,7 @@
                 "permissions": {"allowedUsers": ["root"]},
                 "public": {
                     "visitors.txt": "If you're reading this, hi. Welcome to my public place.\nI didn't lock this file, feel free to sign your name in here.\n-[or]root[/]",
+                    "whoami.txt": "For those who wish to know who I am, you won't find any of that here.\n\nIt is far too dangerous for me to disclose that kind of information publicly yet.\n\nAt least... I can promise you I have no ill intentions. I also did not expect for this to work?\n\nEither way, try to respect my privacy. It's already tiring enough having to manage all of this, and I don't want to deal with y'all snooping around my personal life.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
                     "laboratory": {
                         "permissions": {"password": "lab"},
                         "jumpscare.txt": "<img src=\"/assets/images/favicon.png\" onload=\"alert('BOO');\">"
@@ -64,7 +65,7 @@
             "sickle": {
                 "permissions": {"allowedUsers": ["sickle"]},
                 "documents": {
-                    "attribution.txt": "When finished."
+                    "attribution.txt": "It'll be here upon completion."
                 },
                 "notdocuments": {
                     "wawa.wawa": "Wawacat.\nWawacat lived on a hill.\nWawacat was wawaing around one day\nand found a friend!\n\nThey lived happily ever after :)"
@@ -93,11 +94,12 @@
             "avalon": {
                 "worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any leads.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but it'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
                 "guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-[lg]guest[/]\n\nSorry dude like who even are you? Guys PLEASE just create an account, i will go insane :<\n-[lb]lumi[/]"
-            }
+            },
+            "timescales.md": "\"Sure, this is a neat concept\" you might be thinking.\n\n\"But everyone has a different timescale!\" that's the fun part.\n\nThis terminal syncs up actions through it as if the same amount of time passed between universes.\n\nLets take for example \"[bl]Earth[/]\". A cycle there is 24 hours.\nNow, we'll say that a file is created at 3:00, and then edited at 3:05... Five minutes! (In [bl]Earth[/] time)\nThis change would be reflected in all universes at the same rate as [bl]Earth[/], so for example [lb]Avalon[/] would acquire this edited file in \"5 minutes\" with their in-universe time scale.\n\nHopefully that made sense.\n-[or]root[/]"
         },
         "music": {
-            "usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command, dummy.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-            "warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]",
+            "usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+            "warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]\n\nOn it.\n-[or]root[/]",
             "burdened.wav": "/assets/audio/adc/Burdened Existence.wav"
         },
         "games": {
@@ -124,14 +126,16 @@
         "temp-chat": {
             "readme.md": "A chatting software is being built! Please use this very rudimentary implementation meanwhile.\n-[or]root[/]\n\nOh and if you're trying to contact [rw]the original[/], only do it when given permission. They'll contact you directly if they need anything.\nThe group is being worked on, but we should wait for the software first so we can coordinate properly.\n-[or]root[/]",
             "notice.event": "Currently, visitors from \"[bl]Earth[/]\" and near them have no access to creating accounts or editing files, sorry for the trouble! It'll be a while before we get that back up and running.\n\nShould you see any unsigned users, it's probably from [bl]Earth[/] or any related, close by universes.\nThough, I'm pretty sure we only have terminal access set up there.\n-[or]root[/]",
+            "progress.event": "For transparency: Progress on the initial connection to the EOS servers seems to work, I've added Lumi in hopes that it can... Uh. Yeah.\n-[or]root[/]\n\nHey!! I'm working too!\n-[lb]lumi[/]",
             "sickle.chat": "...no\n-[mg]sickle[/]",
-            "lumi.chat": "That sounds awesome! I'll probably pass on using this until the software is finished, though.\n\nIf you need help, do let me know! (What programming language...?)\n-[lb]lumi[/]",
-            "neoma.chat": "Feel free to edit this file for messaging! ^-^\n-[pi]neoma[/]"
+            "lumi.chat": "That sounds awesome! I'll probably pass on using this until the software is finished, though.\n\nIf you need help, do let me know! (What programming language...?)\n-[lb]lumi[/]\n\nYeah, I'll send you the in-progress source.\n-[or]root[/]",
+            "neoma.chat": "Feel free to edit this file for messaging! ^-^\n-[pi]neoma[/]\n\nYou smell :>\n-[lb]lumi[/]"
         },
         "groups": {
             "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
             "notacult": {
-                "welcome.group": "\"some information\"\n\n<h3>[lg][FILE LOCKED][/]</h3>"
+                "welcome.group": "\"some information\"\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+                "really.txt": "god fucking damnit...\n-[or]root[/]"
             },
             "mazegang": {
                 "permissions": {"password": "maze"},
