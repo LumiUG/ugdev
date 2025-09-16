@@ -39,3 +39,8 @@ img {
 
     animation: hue 20s linear infinite;
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    
+}

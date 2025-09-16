@@ -38,3 +38,22 @@ main {
 #showcase:hover {
     animation: 10s bounce infinite;
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    #title { position: initial; }
+    #showcase {
+        position: initial;
+        width: 300px;
+    }
+    #together {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .aboutBody {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 90%;
+    }
+}

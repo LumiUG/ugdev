@@ -58,3 +58,10 @@
     margin-top: -25px;
     background: linear-gradient(180deg, rgb(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.05) 60%, rgba(0, 0, 0, 0) 95%);
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    #fadeinSecond { display: none; }
+    .character { width: 80%; }
+    .refsheet { width: 100%; }
+}

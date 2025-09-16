@@ -101,3 +101,19 @@ main {
     margin-bottom: 15px;
     color: rgb(30, 30, 30);
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    #postTitle {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    #postContent {
+        height: fit-content;
+        margin-bottom: 50px;
+    }
+    #post {
+        width: 90%;
+        left: 5%;
+    }
+}

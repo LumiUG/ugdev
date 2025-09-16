@@ -150,3 +150,10 @@ h2 {
     background-color: #fe4fff;
     text-decoration: none;
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    h2 { font-size: 40px; }
+    #fade { margin-top: 15px; }
+}
+@media (max-width: 1150px) {}

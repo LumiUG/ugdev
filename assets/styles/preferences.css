@@ -117,3 +117,9 @@ hr {
 .sona {
     color: #4f9eff;
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    #preferences { padding: 0px 10% 0px 10%; }
+    #fadein { display: none; }
+}

@@ -218,3 +218,25 @@ footer div a {
     0% { filter: hue-rotate(360deg); }
     100% { filter: hue-rotate(0deg); }
 }
+
+/* Mobile */
+@media (max-width: 960px) {
+    body {
+        background-size: 35%;
+    }
+    #separator {
+        height: 50px;
+    }
+    #doors {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .door {
+        font-size: 25px;
+        padding: 15px 20px 15px 20px;
+    }
+}
