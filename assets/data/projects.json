@@ -65,12 +65,24 @@
             "source": "https://github.com/LumiUG/ADirectionlessCycle",
             "website": "https://ugdev.xyz/adc"
         },
+        "gravix-eos": {
+            "name": "Gravix: EOS (WIP!)",
+            "desc": "A new experience using the basic mechanics from <b>VVVVVV</b>, and giving them clever twists as you progress along the way.<br><br>This is a complete rework of \"Gravix\", with completely new content and mechanics.",
+            "image": "/assets/images/games/MeemFuture.png",
+            "website": "https://ugdev.itch.io/gravix-eos"
+        },
         "gravix": {
             "name": "Gravix",
-            "desc": "A Unity2D platformer with around 35 single screen levels, an interconnected map with collectibles to find and a final challenge waiting for you.<br><br>This game was inspired by \"VVVVVV\" by Terry Cavanagh, uses [ <a href='https://souleyedigitalmusic.bandcamp.com/album/pppppp-the-vvvvvv-soundtrack'>its soundtrack</a> ] and shares multiple mechanics.",
+            "desc": "A Unity2D platformer with around 35 single screen levels, an interconnected map with collectibles to find and a final challenge waiting for you.<br><br>This game was inspired by \"<b>VVVVVV</b>\" by Terry Cavanagh, uses [ <a href='https://souleyedigitalmusic.bandcamp.com/album/pppppp-the-vvvvvv-soundtrack'>its soundtrack</a> ] and shares multiple mechanics.",
             "image": "/assets/images/games/Meem.png",
             "source": "https://github.com/LumiUG/Gravix",
             "website": "https://ugdev.itch.io/gravix"
+        },
+        "eos-cli": {
+            "name": "EOS Client (WIP!)",
+            "desc": "In development for... Specific reasons.<br><br>The <b>EOS Client</b> has ties with multiple games and other certain works of mine. If you're wondering, try looking around! You'll probably find more information about it.",
+            "image": "/assets/images/games/EOSCli.png",
+            "website": "https://ugdev.itch.io/eos-cli"
         },
         "sps": {
             "name": "Space Potato Station (Game Jam)",
@@ -80,7 +92,7 @@
         },
         "boxfight": {
             "name": "Box-Fight",
-            "desc": "A Unity2D, top-down roguelike, shoot down enemies and buy new weapons as you try to clear every room possible in this procedurally generated world.<br><br>This was partially made with a friend in around a month and a half.<br>All assets used are from itch.io, and the soundtrack is from Ultrakill.",
+            "desc": "A <b>Unity2D</b>, top-down roguelike, shoot down enemies and buy new weapons as you try to clear every room possible in this procedurally generated world.<br><br>This was partially made with a friend in around a month and a half.<br>All assets used are from itch.io, and the soundtrack is from <b>Ultrakill</b>.",
             "image": "/assets/images/games/unity.svg",
             "source": "https://github.com/LumiUG/Boxfight"
         }

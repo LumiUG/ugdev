@@ -836,7 +836,7 @@ function CommandClear() {
 
 // Egg OS
 function CommandEOS() {
-    TypeOutput(`&nbsp;&nbsp;,'"\`.&nbsp;&nbsp;&nbsp; ${AddUsernameColor(users.find(user => user.username == currentUser))}@██████
+    TypeOutput(`&nbsp;&nbsp;,'"\`.&nbsp;&nbsp;&nbsp; ${AddUsernameColor(users.find(user => user.username == currentUser))}@ugdev.xyz
     &nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp; ---------------
     :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; OS: Egg x16
     :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; Model: ██████ (Modified)
