@@ -145,13 +145,22 @@ const randMessages = [
     "\"vcf hg\"",
     "Press F5?",
     "Half Sun Games.....",
-    "Did you check out my games yet?"
+    "Did you check out my games yet?",
+    ":3",
+    ":3c",
+    ">:3c",
+    "CSS is <span style='position: relative; top: -20px;'>hard</span>",
+    "<marquee>weeeeeeee</marquee>",
+    "<img src='/assets/images/favicon.png'/>",
+    "<img src='/assets/images/artwork/lumi/wiggle.gif' style='height: auto'/>",
+    "Like a firebird, just burn it all away",
+    "Strong enough to forge my destiny"
 ];
 
 var tooltip = document.getElementById("tooltip");
 function updateRandom(ele) {
     if (!ele) return;
-    ele.firstElementChild.textContent = randMessages[Math.floor(Math.random() * randMessages.length)];
+    ele.firstElementChild.innerHTML = randMessages[Math.floor(Math.random() * randMessages.length)];
 }
 
 function genSocials() {

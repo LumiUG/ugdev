@@ -1,0 +1,104 @@
+/* Tags */
+/* body { } */
+h2 {
+    font-size: 50px;
+}
+h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+a {
+    font-size: 20px;
+}
+
+#bsGradient {
+    position: absolute;
+    height: 400px;
+    width: 200%;
+    
+    background: linear-gradient(rgb(59, 26, 92) 0%, rebeccapurple 50%);
+    
+    transform: rotate(5deg);
+    left: -250px;
+    top: 250px;
+}
+
+/* Classes */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 140px 0px 40px 0px;
+}
+.instance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 400px;
+
+    background-color: rgb(71, 71, 71);
+    border: 2px solid rgb(40, 40, 40);
+    border-radius: 50px;
+
+    padding: 40px;
+    margin-top: 40px;
+    gap: 20px;
+}
+.instance a img {
+    user-select: none;
+}
+
+/* Rating bullshit! */
+.rate {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+
+    user-select: none;
+    /* pointer-events: none; */
+}
+.rate img {
+    width: 60px;
+    height: auto;
+}
+.off {
+    filter: drop-shadow(0px 0px 10px rgb(20, 20, 20, 0.6))
+}
+.on {
+    filter: drop-shadow(0px 0px 10px rgb(236, 212, 95, 0.4))
+}
+
+/* Podium stuff */
+.podium {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 60px;
+}
+.podium .instance {
+    background-color: rgb(31, 31, 31);
+}
+.n1 {
+    border: 2px dashed rgb(255, 217, 0);
+    filter: drop-shadow(0px 0px 10px rgb(255, 217, 0, 0.8));
+    box-shadow: inset 8px 8px 10px rgb(61, 56, 27), inset -8px -8px 10px rgb(61, 56, 27);
+    
+    position: relative;
+    top: -100px;
+}
+.n2 {
+    border: 2px dashed rgb(205, 200, 200);
+    filter: drop-shadow(0px 0px 10px rgb(205, 200, 200, 0.8));
+    box-shadow: inset 8px 8px 10px rgb(63, 63, 63), inset -8px -8px 10px rgb(63, 63, 63);
+    
+    position: relative;
+    top: -50px;
+}
+.n3 {
+    border: 2px dashed rgb(165, 75, 42);
+    filter: drop-shadow(0px 0px 10px rgb(165, 75, 42, 0.8));
+    box-shadow: inset 8px 8px 10px rgb(33, 17, 12, 0.8), inset -8px -8px 10px rgb(33, 17, 12, 0.8);
+}
