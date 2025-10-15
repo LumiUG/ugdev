@@ -2,10 +2,12 @@
 /* body { } */
 h2 {
     font-size: 50px;
+    margin-bottom: 100px;
 }
 h3 {
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 30px;
+    margin-top: -10px;
+    text-align: center;
 }
 a {
     font-size: 20px;
@@ -21,6 +23,7 @@ a {
     transform: rotate(5deg);
     left: -250px;
     top: 250px;
+    z-index: -1;
 }
 
 /* Classes */
@@ -28,7 +31,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 140px 0px 40px 0px;
+    margin: 40px 0px 40px 0px;
 }
 .instance {
     display: flex;
@@ -36,17 +39,49 @@ a {
     align-items: center;
 
     width: 400px;
+    height: fit-content;
 
-    background-color: rgb(71, 71, 71);
-    border: 2px solid rgb(40, 40, 40);
+    background-color: rgb(41, 41, 41);
+    border: 2px solid rgb(70, 70, 70);
     border-radius: 50px;
 
     padding: 40px;
     margin-top: 40px;
     gap: 20px;
+    transition: all 0.5s;
+}
+.others {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
 }
 .instance a img {
+    width: 300px;
+    height: auto;
+
+    border: 2px solid transparent;
+    border-radius: 80px;
+    
     user-select: none;
+    transition: border-radius 0.5s;
+}
+/* .instance:hover {
+    border-style: solid;
+} */
+.instance a img:hover {
+    border-radius: 120px;
+    border: 2px dotted rgb(100, 100, 100);
+}
+
+/* Others override */
+.others .instance {
+    width: 250px;
+}
+.others .instance a img {
+    width: 150px;
 }
 
 /* Rating bullshit! */
@@ -60,7 +95,7 @@ a {
     /* pointer-events: none; */
 }
 .rate img {
-    width: 60px;
+    width: 40px;
     height: auto;
 }
 .off {
