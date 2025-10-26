@@ -185,6 +185,7 @@ function genSocials() {
             if (elements[i] == "img") {
                 let innerLink = document.createElement("a");
                 toAdd.src = socials[key][keys[i]];
+                toAdd.alt = key;
                 innerLink.href = socials[key]["hyperlink"];
                 innerLink.rel = "noreferrer noopener";
                 innerLink.target = "_blank";

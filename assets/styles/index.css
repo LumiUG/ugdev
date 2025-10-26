@@ -68,6 +68,7 @@ h2 {
     background: linear-gradient(185deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.32) 25%);
 }
 #socials {
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.32);
 }
 #adText {
@@ -90,6 +91,10 @@ h2 {
     padding: 10px 10px 10px 10px;
 }
 .social div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 .social img {
@@ -104,7 +109,9 @@ h2 {
     filter: drop-shadow(2px 2px 0px black);
 }   
 .social div p {
-    padding : 5px 0px 0px 0px;
+    width: 90%;
+    text-align: center;
+    padding-top: 5px;
 }
 .social:hover {
     scale: 1.05;

@@ -16,7 +16,7 @@
         },
         "KI": {
             "name": "Kamali Origin",
-            "desc": "One of my first Origins aswell. Its main gimmick is collecting flowers and confuming them, granting buffs for the wearer and those around them.<br>They're also unable to damage entities, but are able to stun and run away easily.<br><br>This was completly original and I quite like the final product!",
+            "desc": "One of my first Origins aswell. Its main gimmick is collecting flowers and consuming them, granting buffs for the wearer and those around them.<br>They're also unable to damage entities, but are able to stun and run away easily.<br><br>This was completly original and I quite like the final product!",
             "image": "/assets/images/origins/DefaultOrigin.webp",
             "source": "https://github.com/LumiUG/KamaliOrigin",
             "website": null
