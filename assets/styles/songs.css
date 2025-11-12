@@ -137,3 +137,28 @@ a {
     filter: drop-shadow(0px 0px 10px rgb(165, 75, 42, 0.8));
     box-shadow: inset 8px 8px 10px rgb(33, 17, 12, 0.8), inset -8px -8px 10px rgb(33, 17, 12, 0.8);
 }
+
+/* Mobile */
+@media (max-width: 1570px) {
+    .n1, .n2, .n3 { width: 230px; }
+    .instance a img { width: 240px; }
+    .podium { gap: 10px; }
+}
+@media (max-width: 960px) {
+    .n1, .n2, .n3 { width: 140px; }
+    .instance a img { width: 140px; }
+}
+@media (max-width: 710px) {
+    .podium { flex-direction: column; }
+    .instance a img { width: 320px; }
+    .n1, .n2, .n3 {
+        width: 320px;
+        top: 0;
+    }
+    .n1 { order: -1; }
+    h2 { margin-bottom: 10px; }
+}
+@media (max-width: 400px) {
+    .n1, .n2, .n3 { width: 240px; }
+    .instance a img { width: 240px; }
+}
