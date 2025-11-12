@@ -1,9 +1,8 @@
-<div style="text-align: center"><img src="assets/images/favicon.png" style="width: 80px; border-radius: 25px"></div>
+<div align="center"><img src="assets/images/favicon.png" style="width: 80px; border-radius: 25px"></div>
 
-# ugdev.xyz
-My own portfolio! Check it out on [ugdev.xyz](https://lumiug.github.io/ugdev) <3
+<h1 style="text-align: center">ugdev.xyz</h1>
 
-I'd write a really long explanation about my portfolio, but I don't really think it's necessary.
+My own portfolio-website-thing!<br>
+This is pretty much a website where I store and share stuff that I do and like.
 
-Feel free to use for references!
-
+Check it out on [ugdev.xyz](https://lumiug.github.io/ugdev), and feel free to use for references if needed!
