@@ -26,18 +26,15 @@
             "buddy": { "type": "yes" },
             "dude": { "type": "yes" },
             "man": { "type": "okay" },
-            "bro": { "type": "joke" },
-            "creatura": { "type": "sona" },
+            "critter": { "type": "sona" },
             "thing": { "type": "sona" },
             "bird": { "type": "sona" }
         },
         "adjectives": {
             "cute": { "type": "yes" },
             "pretty": { "type": "okay" },
-            "hot": { "type": "no" },
-            "sexy": { "type": "no" },
-            "beloved": { "type": "joke" },
-            "silly": { "type": "joke" }
+            "hot": { "type": "close" },
+            "beloved": { "type": "joke" }
         }
     }
 }
