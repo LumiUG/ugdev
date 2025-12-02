@@ -2,7 +2,7 @@
 /* body { } */
 h2 {
     font-size: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
 h3 {
     font-size: 30px;
@@ -13,25 +13,16 @@ a {
     font-size: 20px;
 }
 
-#bsGradient {
-    position: absolute;
-    height: 400px;
-    width: 200%;
-    
-    background: linear-gradient(rgb(59, 26, 92) 0%, rebeccapurple 50%);
-    
-    transform: rotate(5deg);
-    left: -250px;
-    top: 250px;
-    z-index: -1;
-}
-
 /* Classes */
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 40px 0px 40px 0px;
+}
+.explain {
+    margin-bottom: 100px;
+    text-align: center;
 }
 .instance {
     display: flex;
@@ -83,6 +74,30 @@ a {
 .others .instance a img {
     width: 150px;
 }
+
+/* Gradients */
+.bsGradient {
+    position: absolute;
+    height: 400px;
+    width: 200%;
+
+    z-index: -1;
+}
+#grad1 {
+    background: linear-gradient(rgb(59, 26, 92) 0%, rebeccapurple 50%);
+    
+    transform: rotate(5deg);
+    left: -250px;
+    top: 250px;
+}
+#grad2 {
+    background: linear-gradient(rgb(37, 92, 26) 0%, rgb(92, 158, 92) 50%);
+    
+    transform: rotate(-2deg);
+    left: -250px;
+    top: 915px;
+}
+
 
 /* Rating bullshit! */
 .rate {
@@ -156,7 +171,7 @@ a {
         top: 0;
     }
     .n1 { order: -1; }
-    h2 { margin-bottom: 10px; }
+    .explain { margin-bottom: 10px; }
 }
 @media (max-width: 400px) {
     .n1, .n2, .n3 { width: 240px; }
