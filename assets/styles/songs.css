@@ -76,6 +76,10 @@ a {
 }
 
 /* Gradients */
+#gradients {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .bsGradient {
     position: absolute;
     height: 400px;

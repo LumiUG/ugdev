@@ -12,19 +12,16 @@
     "3": {
         "title": "I uhh um...",
         "post": "Yep, that's right! I've done nothing for the past two months!<br>...<br>I mainly blame the Steam Summer Sale.<br>Okay! Okay! I DID join a studio for internships and updated the Origins Snippets extension, so that's that.<br>Happy now? ...yes?",
-        "images": [],
         "date": "10/07/2023, 27/08/2023"
     },
     "4": {
         "title": "2025 IS MY YEAR",
         "post": "YOOOOOOOO HAPPY NEW YEAR EVERYONE<br>CHECK OUT MY NEW GAME GRAVIX ON ITCH.IO PLEASE THANK YOUUU<br><a href='https://ugdev.itch.io/gravix'>[Gravix]</a>",
-        "images": [],
         "date": "01/01/2024"
     },
     "5": {
         "title": "Small update,,",
         "post": "I've been cooking... Games mostly. That's all!",
-        "images": [],
         "date": "24/03/2024"
     },
     "6": {
@@ -56,5 +53,10 @@
         "title": "Bird Update",
         "post": "Hey y'all. I've wanted to make a birthday post for a while now, but I had some \"personal issues\" at that time.<br><br>I'll start with the good! <b>Thank you SO, SO MUCH for everyone that's played A Directionless Cycle</b> and shared their journey through the game.<br>It's made me so happy to see everyone enjoying their time.<br><br>Currently I'm working on multiple small projects, with no release deadline. They'll both be free aswell.<br><br>As for the bad... I'm very burnt out at the moment, solo dev/indie dev doesn't pay the bills. It's been hell to find a job in the game development industry, and it doesn't help that more than half of your applications are rejected without reply, or after a gauntlet.<br><br>That's mostly it, just going through some stuff. Thank you for being there <3",
         "date": "14/09/2025"
+    },
+    "12": {
+        "title": "New year, same me.",
+        "post": "Happy new year! This'll be a brief post.<br><br>In short, 2025 was my year! I've accomplished most of the stuff I've set out to do, despite hardships and roadblocks.<br>These last few months have been rough, but we'll get there <3<br><br>As far as <a target='_blank' href='https://ugdev.xyz/terminal?cmd=cd%20/universe'>projects</a> go... It's been slow! Though, I do have some stuff to show off: {EOSCliTease.png;850}...I'd rather keep everything \"secret\" as of now, as most of it is just <a target='_blank' href='/assets/images/blog/GravixEOSTease.png'>development textures</a>.<br>I'll make sure to show off any dev related stuff afterwards!<br><br>And again, happy new year! I'm looking forward to this one.<br><b>With love, Lumi!</b>",
+        "date": "01/01/2026"
     }
 }
