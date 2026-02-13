@@ -41,6 +41,9 @@ a {
     gap: 20px;
     transition: all 0.5s;
 }
+.instance p {
+    text-align: center;
+}
 .others {
     display: flex;
     flex-direction: row;
@@ -54,17 +57,17 @@ a {
     height: auto;
 
     border: 2px solid transparent;
-    border-radius: 80px;
+    border-radius: 60px;
     
     user-select: none;
-    transition: border-radius 0.5s;
+    transition: border-radius 0.2s;
 }
 /* .instance:hover {
     border-style: solid;
 } */
 .instance a img:hover {
     border-radius: 120px;
-    border: 2px dotted rgb(100, 100, 100);
+    /* border: 1px dotted rgb(100, 100, 100); */
 }
 
 /* Others override */
