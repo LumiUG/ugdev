@@ -35,7 +35,6 @@ body,
 	background-size: 100%;
 	text-shadow: 0px 0px 6px #9d9999;
 	overflow-x: hidden;
-	animation: startup 0.8s both 0s;
 }
 iframe {
 	width: 100%;
@@ -77,7 +76,7 @@ a:visited {
 	text-align: center;
 }
 #terminal {
-	width: 60%;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	word-wrap: break-word;
@@ -99,6 +98,10 @@ a:visited {
 #blink {
 	margin-left: -10px;
 	animation: blinkanim 1s step-start 0s infinite;
+}
+.startup,
+#mobile {
+	animation: startup 0.8s both 0s;
 }
 
 /* Terminal colors */

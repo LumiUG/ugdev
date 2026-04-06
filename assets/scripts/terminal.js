@@ -38,6 +38,7 @@ var commandHistory = [];
 var historyIndex = 0;
 var eggCount = 0;
 var currentAudio = null;
+var bypassHyperlinkFolder = false;
 var os = null;
 var commands = [
     {
@@ -232,6 +233,21 @@ if (postCMD.length == 1) {
     userInput.textContent = "";
 }
 
+// Hyperlinks as modules
+document.addEventListener("click",
+    function (event) {
+        event.preventDefault();
+        
+        let attr = event.target.getAttribute("hyper");
+        if (attr == null) {
+            attr = event.target.parentNode.getAttribute("hyper");
+            if (attr == null) return;
+        }
+
+        CatHyperlink(attr);
+    }
+);
+
 
 // Anywhere typing
 document.addEventListener("keypress",
@@ -422,6 +438,25 @@ function ClearPassword(p) {
     return p;
 }
 
+// "Hyperlinks" for files
+function CatHyperlink(file) {
+    window.scrollTo(0, document.body.scrollTop);
+    
+    // Visual flavor
+    document.body.classList.remove("startup");
+    document.body.offsetHeight; // reflow
+    document.body.classList.add("startup");
+
+    // Everything important and nice
+    userInput.textContent = `cat ${file}`;
+    bypassHyperlinkFolder = true;
+    CommandCat();
+    
+    userInput.textContent = null;
+    bypassHyperlinkFolder = false;
+    Pathing(currentPath); // OS path gets gets overriden when calling CommandCat(); (but not current path.)
+}
+
 // Navigate and check that a path is valid.
 function Pathing(path) {
     let pathAsArray;
@@ -472,7 +507,7 @@ function Pathing(path) {
             if (os[folder].hasOwnProperty("permissions")) {
                 // Is the current user inside the allowed users list?
                 if (os[folder]["permissions"].hasOwnProperty("allowedUsers")) {
-                    if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser) && !path.includes("/public"))
+                    if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser) && !path.includes("/public") && !bypassHyperlinkFolder)
                     {
                         noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
                         os = undefined;
@@ -481,7 +516,7 @@ function Pathing(path) {
                 }
     
                 // Password protected? (Not buggy anymore!)
-                if (os[folder]["permissions"].hasOwnProperty("password"))
+                if (os[folder]["permissions"].hasOwnProperty("password") && !bypassHyperlinkFolder)
                 {
                     if (!createdKeys.find(key => { return key == os[folder]["permissions"]["password"] }))
                     {
@@ -572,7 +607,7 @@ function CommandHelp() {
         // No help topic was found.
         let topic = commands.find(command => { return command.name == extensiveHelp; });
         if (!topic) {
-            TypeOutput(`[re]EOS: No help topics match[/] '${extensiveHelp}'[re].[/]`)
+            TypeOutput(`[re]EOS: No help topics match[/] '${extensiveHelp}'[re].[/]`);
             return;
         }
 
@@ -582,7 +617,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 02/03/2026 (Earth Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 07/04/2026 (Earth Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
