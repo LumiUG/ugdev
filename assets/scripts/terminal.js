@@ -222,7 +222,7 @@ var users = [
 ]
 
 // Run on start
-if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent)) document.getElementById("mobile").style.display = "flex";
+TestErrorModal();
 CommandCD("/home/guest");
 
 // Post command?
@@ -248,6 +248,13 @@ document.addEventListener("click",
     }
 );
 
+// Minimum window width
+window.addEventListener("resize", TestErrorModal);
+function TestErrorModal() {
+    console.log("hi")
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) || window.innerWidth < 1404) { output.style.display = "none"; document.getElementById("errorDisplay").style.display = "flex" };
+    if (!/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) && window.innerWidth >= 1404) { output.style.display = "inline"; document.getElementById("errorDisplay").style.display = "none"; }
+}
 
 // Anywhere typing
 document.addEventListener("keypress",

@@ -34,8 +34,6 @@ main {
     left: 25px;
     width: 500px;
     height: fit-content;
-}
-#showcase:hover {
     animation: 10s bounce infinite;
 }
 
