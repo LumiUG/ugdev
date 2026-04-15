@@ -3,7 +3,7 @@
     If you're looking to skip content, or datamine keys/files...
     Don't! There's a lot of things that are better experienced without doing this.
 
-    That being said, there are tons of secrets and little quirks everywhere
+    There are tons of secrets and little quirks everywhere
     and I feel like you'd be missing out if you checked for user passwords,
     hidden commands or just the entire .json folder structure.
 
@@ -26,6 +26,7 @@ var pathHTML = document.getElementById("path");
 var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
+var terminalElement = document.getElementById("terminal");
 var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]", "\\[rw\\]", "\\[gh\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
@@ -44,7 +45,7 @@ var commands = [
     {
         "name": "help",
         "description": "Display information about builtin commands.",
-        "helptopic": "Command usages:\nhelp - Shows a list of all [re]visible[/] commands.\nhelp {command} - Shows in-depth command help.",
+        "helptopic": "Command usages:\nhelp - Shows a list of all [re]visible[/] commands.\nhelp {command} - Shows in-depth command help.\n\n[lg]help.",
         "hidden": false,
         "run": CommandHelp
     },
@@ -251,7 +252,6 @@ document.addEventListener("click",
 // Minimum window width
 window.addEventListener("resize", TestErrorModal);
 function TestErrorModal() {
-    console.log("hi")
     if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) || window.innerWidth < 1404) { output.style.display = "none"; document.getElementById("errorDisplay").style.display = "flex" };
     if (!/Android|iPhone|iPad|iPod|BlackBerry|IEMobile/i.test(navigator.userAgent) && window.innerWidth >= 1404) { output.style.display = "inline"; document.getElementById("errorDisplay").style.display = "none"; }
 }
@@ -450,16 +450,16 @@ function CatHyperlink(file) {
     window.scrollTo(0, document.body.scrollTop);
     
     // Visual flavor
-    document.body.classList.remove("startup");
-    document.body.offsetHeight; // reflow
-    document.body.classList.add("startup");
+    terminalElement.classList.remove("startup");
+    terminalElement.offsetHeight; // reflow
+    terminalElement.classList.add("startup");
 
     // Everything important and nice
     userInput.textContent = `cat ${file}`;
     bypassHyperlinkFolder = true;
     CommandCat();
     
-    userInput.textContent = null;
+    ClearUserInput();
     bypassHyperlinkFolder = false;
     Pathing(currentPath); // OS path gets gets overriden when calling CommandCat(); (but not current path.)
 }
@@ -895,8 +895,8 @@ function CommandEOS() {
 
 // Rainbow!!!!
 function CommandRainbow() {
-    if (document.body.style.animation != "") { TypeOutput("EOS: No more partying? :("); document.body.style.animation = ""; }
-    else { TypeOutput("EOS: Let the party begin."); document.body.style.animation = "rainbow 2.5s linear infinite"; }
+    if (terminalElement.style.animation != "") { TypeOutput("EOS: No more partying? :("); terminalElement.style.animation = ""; }
+    else { TypeOutput("EOS: Let the party begin."); terminalElement.style.animation = "rainbow 2.5s linear infinite"; }
 }
 
 // Avali scratch command
