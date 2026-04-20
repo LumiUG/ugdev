@@ -43,13 +43,12 @@ function importTierlist(preset = null) {
         importDOM.placeholder = "Tierlist imported correctly!";
     }
 
-    // Presets (currently only frums tierlist).
+    // Presets
     else {
         if (preset == "Frums") json = frumsPreset;
         else if (preset == "Vivid/Stasis") json = vsPreset;
         else return tierlist;
     }
-
     
     // Reset all the DOM elements.
     document.getElementById("tl").innerHTML = "";

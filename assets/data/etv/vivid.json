@@ -121,8 +121,53 @@
 			},
 			{
 				"name": "Lorelei",
-				"image": "https://static.wikitide.net/vividstasiswiki/a/af/LORELEI_jacket.png?20250427040058",
+				"image": "https://static.wikitide.net/vividstasiswiki/a/af/LORELEI_jacket.png",
 				"url": "https://www.youtube.com/watch?v=bef23j792eE"
+			},
+			{
+				"name": "Scarlet",
+				"image": "https://static.wikitide.net/vividstasiswiki/0/05/Scarlet_Death_jacket.png",
+				"url": ""
+			},
+			{
+				"name": "Evaniscentia",
+				"image": "https://static.wikitide.net/vividstasiswiki/f/f1/Evaniscentia_jacket.png",
+				"url": "https://ftwo.bandcamp.com/track/vanisce-ntia"
+			},
+			{
+				"name": "ALLIEVERWANTED",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/5/5e/ALLIEVERWANTED_jacket.png/600px-ALLIEVERWANTED_jacket.png",
+				"url": ""
+			},
+			{
+				"name": "Miryark",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/1/1f/Miryarks_Scroll_jacket.png/600px-Miryarks_Scroll_jacket.png",
+				"url": ""
+			},
+			{
+				"name": "Dyauspitr",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/5/58/Dyauspitr%2C_thunder_of_heaven_jacket.png/600px-Dyauspitr%2C_thunder_of_heaven_jacket.png",
+				"url": ""
+			},
+			{
+				"name": "Thaumaturgy",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/9/98/Thaumaturgy_jacket.png/600px-Thaumaturgy_jacket.png",
+				"url": ""
+			},
+			{
+				"name": "Sekaisen",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/9/92/SEKAISEN--OBSERVER_jacket.png/600px-SEKAISEN--OBSERVER_jacket.png",
+				"url": "https://www.youtube.com/watch?v=p-U0FX37MaM"
+			},
+			{
+				"name": "LCOAS",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/a/a8/SUPERNOVA_~Life_Cycle_of_a_Star~_jacket.png/600px-SUPERNOVA_~Life_Cycle_of_a_Star~_jacket.png",
+				"url": ""
+			},
+			{
+				"name": "Eachother",
+				"image": "https://static.wikitide.net/vividstasiswiki/thumb/2/28/Eachother_jacket.png/600px-Eachother_jacket.png",
+				"url": ""
 			}
 		],
 		"color": "transparent"

@@ -34,7 +34,7 @@ export class Tierlist {
         // Creates the element in html.
         let fieldHtml = document.createElement("img");
         fieldHtml.addEventListener("dragstart", function (e) { e.dataTransfer.setData("text", e.target.id); }, false);
-        fieldHtml.addEventListener("click", function () { window.open(field.url, "_blank") }, false);
+        fieldHtml.addEventListener("click", function () { if (field.url) window.open(field.url, "_blank") }, false);
         fieldHtml.classList.add("field");
         fieldHtml.title = field.name;
         fieldHtml.src = field.image;
