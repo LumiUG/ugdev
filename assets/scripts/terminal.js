@@ -678,7 +678,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 07/04/2026 (Earth Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 23/04/2026 (Earth Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
