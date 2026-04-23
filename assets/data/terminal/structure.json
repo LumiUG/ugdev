@@ -100,7 +100,7 @@
         },
         "music": {
             "usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-            "warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]\n\nOn it.\n-[or]root[/]",
+            "warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]\n\nOn it.\n-[or]root[/]\n\nIt's done!\n-[or]root[/]",
             "burdened.wav": "/assets/audio/adc/Burdened Existence.wav"
         },
         "games": {

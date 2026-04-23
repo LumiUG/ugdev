@@ -27,6 +27,12 @@ var userInput = document.getElementById("input");
 var output = document.getElementById("output");
 var blinkLine = document.getElementById("blink");
 var terminalElement = document.getElementById("terminal");
+var musicHolder = document.getElementById("music");
+var musicTitle = document.getElementById("musTitle");
+var musicTimer = document.getElementById("time");
+var musicBall = document.getElementById("ball");
+var musicPlay = document.getElementById("play");
+var musicStop = document.getElementById("stop");
 var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "\\[lb\\]", "\\[or\\]", "\\[lg\\]", "\\[mg\\]", "\\[rw\\]", "\\[gh\\]"];
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
@@ -128,7 +134,7 @@ var commands = [
     },    {
         "name": "play",
         "description": "Play a song.",
-        "helptopic": "Command usage:\play {file} - TBD",
+        "helptopic": "Command usage:\nplay {file} - Plays an audio file (.wav, .mp3, .ogg) using the in-terminal audio player.",
         "hidden": false,
         "run": CommandPlay
     },
@@ -233,6 +239,54 @@ if (postCMD.length == 1) {
     CheckForCommand();
     userInput.textContent = "";
 }
+
+// Music play/pause/stop
+document.getElementById("play").addEventListener("click",
+    function (event) {
+        if (currentAudio == null) return;
+
+        if (currentAudio.paused)
+        {
+            musicPlay.src = "/assets/images/terminal/pause.svg";
+            musicPlay.style.width = "60px";
+            currentAudio.play();
+        } else {
+            musicPlay.src = "/assets/images/terminal/play.svg";
+            musicPlay.style.width = "46px";
+            currentAudio.pause();
+        }
+    }
+);
+document.getElementById("stop").addEventListener("click",
+    function (event) {
+        if (currentAudio == null) return;
+
+        musicHolder.style.animation = "fade 1s forwards"
+        currentAudio.pause();
+        currentAudio = null;
+    }
+);
+
+// Automatically advance music bar
+setInterval(
+    function () {
+        if (currentAudio == null) return;
+        musicBall.style.left = (92 / currentAudio.duration * currentAudio.currentTime) + "%";
+
+        // Timer
+        let curMin = parseInt(currentAudio.currentTime / 60, 10);
+        let curSec = parseInt(currentAudio.currentTime % 60, 10);
+        curMin = curMin < 10 ? "0" + curMin : curMin;
+        curSec = curSec < 10 ? "0" + curSec : curSec;
+
+        let durMin = parseInt(currentAudio.duration / 60, 10);
+        let durSec = parseInt(currentAudio.duration % 60, 10);
+        durMin = durMin < 10 ? "0" + durMin : durMin;
+        durSec = durSec < 10 ? "0" + durSec : durSec;
+
+        musicTimer.textContent = `${curMin + ":" + curSec} / ${durMin + ":" + durSec}`;
+    }, 48
+);
 
 // Hyperlinks as modules
 document.addEventListener("click",
@@ -673,8 +727,8 @@ function CommandSign() {
 // Play
 function CommandPlay()
 {
-    TypeOutput("[re]EOS: Out of service![/]");
-    return;
+    // TypeOutput("[re]EOS: Out of service![/]");
+    // return;
 
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }
@@ -702,6 +756,17 @@ function CommandPlay()
     currentAudio = new Audio(sound);
     currentAudio.loop = true;
     currentAudio.play();
+
+    let audioTitle = /.*\/(.*).wav/.exec(currentAudio.src);
+    musicTitle.textContent = audioTitle[1].replaceAll("%20", " ");
+
+    musicPlay.src = "/assets/images/terminal/pause.svg";
+    musicPlay.style.width = "60px";
+    musicHolder.style.animation = "";
+    musicBall.style.left = "0%";
+    musicHolder.style.display = "inline";
+
+    Pathing(currentPath); // OS path gets gets overriden
 }
 
 // Returns the user

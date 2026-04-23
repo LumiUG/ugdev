@@ -99,6 +99,77 @@ a:visited {
 #output {
 	white-space: pre-line;
 }
+#music {
+	display: none;
+	position: fixed;
+	height: fit-content;
+	left: 20px;
+	bottom: 20px;
+
+	padding: 20px;
+
+	background-color: rgb(40, 40, 40);
+	border: 2px dotted rgb(189, 189, 189);
+	border-radius: 15px;
+	filter: drop-shadow(0px 0px 12px rgba(110, 110, 110, 0.5));
+}
+#music h2 {
+	font-size: 30px;
+}
+#time {
+	text-align: center;
+	font-size: 18px;
+}
+#player {
+	position: relative;
+	height: 2px;
+	width: 100%;
+	
+	margin-top: 4px;
+}
+#bar {
+	width: 100%;
+	height: 10px;
+
+	background-color: rgb(78, 78, 78);
+	border: 1px solid rgb(170, 170, 170);
+	border-radius: 2px;
+}
+#ball {
+	position: absolute;
+	top: -4px;
+	left: 0px;
+
+	width: 30px;
+	height: 20px;
+
+	background-color: white;
+	border-radius: 2px;
+}
+#ball:hover {
+	cursor: not-allowed;
+}
+#buttons {
+	display: flex;
+	justify-content: space-evenly;
+
+	padding-top: 5px;
+	margin: 15px 20px 0px 20px;
+}
+#buttons img {
+	filter: drop-shadow(0px 0px 1px rgb(170, 170, 170));
+	user-select: none;
+}
+#buttons img:hover {
+	filter: drop-shadow(0px 0px 2px rgb(170, 170, 170));
+	cursor: pointer;
+}
+#play {
+	width: 46px;
+}
+#stop {
+	width: 60px;
+}
 #blink {
 	margin-left: -10px;
 	animation: blinkanim 1s step-start 0s infinite;
@@ -245,5 +316,16 @@ a:visited {
 	91% {
 		color: rgb(255, 0, 127);
 		text-shadow: 0px 0px 6px #9d3676;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		display: none;
 	}
 }
