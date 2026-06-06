@@ -45,7 +45,7 @@
         "hyperlink": "https://discord.com/invite/fNcyyES9gB",
         "username": "Discord",
         "logo": "/assets/images/socials/discord.svg",
-        "desc": "My discord is \"@lumiug\", add me if you'd like to have a chat. Click on this to join my dev server."
+        "desc": "My handle is \"lumiug\", add me if you'd like to have a chat. Click on this to join my dev server."
     },
     "steamPlayer": {
         "hyperlink": "https://steamcommunity.com/id/ugdev",
@@ -53,10 +53,16 @@
         "logo": "/assets/images/socials/steam.svg",
         "desc": "Obsessed with rhythm, puzzles and platformer games. \"Have you heard of that new Indie Game?\" Yep, already played it."
     },
-    "youtube": {
-        "hyperlink": "https://www.youtube.com/@lumiug",
-        "username": "Youtube",
-        "logo": "/assets/images/socials/youtube.svg",
-        "desc": "I used to make videos in the past. Right now this is only for archival purposes and small things that I post online."
+    "toyhouse": {
+        "hyperlink": "https://toyhou.se/ugdev",
+        "username": "Toyhouse",
+        "logo": "/assets/images/socials/toyhouse.svg",
+        "desc": "Where all of my (public) art is stored, either drawn by me or others.\nYou may also check out my characters!"
+    },
+    "artFight": {
+        "hyperlink": "https://artfight.net/~ugdev",
+        "username": "Art Fight",
+        "logo": "/assets/images/socials/artfight.png",
+        "desc": "My artfight account, you can check out my attacks here!\n(First time participating...)"
     }
 }

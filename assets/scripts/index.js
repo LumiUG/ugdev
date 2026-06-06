@@ -196,6 +196,8 @@ function genSocials() {
             else {
                 toAdd.href = socials[key]["hyperlink"];
                 toAdd.innerText = socials[key][keys[i]];
+                toAdd.rel = "noreferrer noopener";
+                toAdd.target = "_blank";
                 descDiv.append(toAdd);
             }
         }
