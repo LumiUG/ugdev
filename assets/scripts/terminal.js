@@ -515,7 +515,7 @@ function CatHyperlink(file) {
     
     ClearUserInput();
     bypassHyperlinkFolder = false;
-    Pathing(currentPath); // OS path gets gets overriden when calling CommandCat(); (but not current path.)
+    ResetPath();
 }
 
 // Navigate and check that a path is valid.
@@ -655,6 +655,17 @@ function FileIsImage(file) {
     return !file.endsWith("png") && !file.endsWith("webp") && !file.endsWith("gif") && !file.endsWith("ico");
 }
 
+// Checks if a file ends with an audio extension
+function FileIsAudio(file) {
+    return !file.endsWith("mp3") && !file.endsWith("ogg") && !file.endsWith("wav") && !file.endsWith("flac");
+}
+
+// OS path gets gets overriden, reset it.
+function ResetPath()
+{
+    Pathing(currentPath);
+}
+
 // --------------------- COMMANDS ---------------------
 
 // Help command
@@ -690,9 +701,10 @@ function CommandHelp() {
 
 // Repeats something with user input
 function CommandEcho() {
-    
-    // Echo!! Echo!!!
     let userRepeater = GetUserInput().substring(GetUserInput().indexOf(' ') + 1);
+    if (GetUserInput().indexOf(' ') + 1 < 1) { TypeOutput("[re]EOS: Nothing to echo.[/]"); return; }
+
+    // Echo!! Echo!!!
     switch (userRepeater.toLowerCase().replaceAll("?", "").replaceAll("!", "").replaceAll(".", "").replaceAll(",", "").replaceAll("'", "")) {
         case "echo":
         case "echo echo":
@@ -705,9 +717,15 @@ function CommandEcho() {
             userRepeater = "[re]I'm sure you need help!! But you won't get it here, heehee![/]";
             break;
         case "hi":
+        case "hii":
+        case "hiii":
+        case "hiiii":
             userRepeater = "[re]hiiiii![/]";
             break;
         case "hello":
+        case "helloo":
+        case "hellooo":
+        case "helloooo":
             userRepeater = "[re]hellooooo![/]";
             break;
         case "ego":
@@ -742,6 +760,12 @@ function CommandEcho() {
         case "the unfinished":
         case "unfinished":
             userRepeater = "[re]Huh? W-who...?? We're all finished, stupid![/]";
+            break;
+        case "finality":
+            userRepeater = "[re]The end? The end?? What about it!!![/]";
+            break;
+        case "nothingness":
+            userRepeater = "[re][This space intentionally left blank!][/]";
             break;
         case "lumi":
         case "bird":
@@ -815,11 +839,17 @@ function CommandPlay()
     path = Pathing(path);
     if (!path) return;
     
-    // Get the file to cat later
+    // Get the file to play later
     let soundPath = path.split("/");
     soundPath = soundPath.splice(soundPath.length - 1, 1).toString();
-    if (!/(\..+)/.test(soundPath)) { TypeOutput("[re]EOS: That isn't a file.[/]"); return; };
-    
+    if (!/(\..+)/.test(soundPath)) { TypeOutput("[re]EOS: That isn't a file.[/]"); ResetPath(); return; };
+    if (FileIsAudio(soundPath))
+    {
+        TypeOutput("[re]EOS: Invalid file extension, please select a valid audio file.[/]");
+        ResetPath();
+        return;
+    }
+
     let sound = os[soundPath];
     
     // Terminate old sound
@@ -843,7 +873,7 @@ function CommandPlay()
     musicBall.style.left = "0%";
     musicHolder.style.display = "inline";
 
-    Pathing(currentPath); // OS path gets gets overriden
+    ResetPath();
 }
 
 // Returns the user
@@ -936,7 +966,7 @@ function CommandCat() {
     // Get the file to cat later
     let catFile = path.split("/");
     catFile = catFile.splice(catFile.length - 1, 1).toString();
-    if (!/(\..+)/.test(catFile)) { TypeOutput("[re]EOS: That isn't a file.[/]"); return; };
+    if (!/(\..+)/.test(catFile)) { TypeOutput("[re]EOS: That isn't a file.[/]"); ResetPath(); return; };
 
     // CAT THE FILE!!! MEOWW MRROW MRRPT MEOWWWWWWW
     let contents = os[catFile];
@@ -960,6 +990,7 @@ function CommandIMCat() {
     // Check for a valid file extension
     if (FileIsImage(catFile)) {
         TypeOutput("[re]EOS: Invalid file extension, please select a valid image.[/]");
+        ResetPath();
         return;
     }
 
