@@ -449,8 +449,6 @@ function CheckForCommand() {
 
 // Type something in the output field
 function TypeOutput(content = "", override = true) {
-    // Sanitize text (no html tags)
-    // TODO.
 
     // Apply color codes and send the text.
     if (override) output.innerHTML = StyleText(content);
@@ -521,16 +519,16 @@ function CatHyperlink(file) {
 // Navigate and check that a path is valid.
 function Pathing(path) {
     let pathAsArray;
-
+    
     // Clear multiple "/" in path 
     path = path.replace(/\/{2,}/, "/").toLowerCase();
-    
+
     // Go back a directory
     if (path == "..") {
         if (currentPath == "/") { NoSuchFileOrDirectory(path, currentPath); return false; }
         let backOneDir = currentPath.split("/").slice(0, -1).join("/");
         if (backOneDir == "") backOneDir = "/";
-        Pathing(backOneDir);
+        if (!Pathing(backOneDir)) return currentPath; // Solves recursion issues with public folders when (..-ing)
         return backOneDir;
     }
 
@@ -775,7 +773,7 @@ function CommandEcho() {
         case "admin":
             userRepeater = "[re]Haven't talked much with them! They seem nice!![/]";
             break;
-        case "ying":
+        case "sickle":
             userRepeater = "[re]I see lots of them! All of them are fun!![/]";
             break;
         case "neo":
@@ -905,7 +903,7 @@ function CommandCD(forcePath = null) {
     // Navigate there
     path = path.toLowerCase();
     path = Pathing(path);
-    if (!path) return;
+    if (!path) { ResetPath(); return; }
     
     // Wtf stop dont do that
     if (/(\..+)/.test(path)) {
