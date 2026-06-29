@@ -4,7 +4,7 @@
 		{ "id": "A", "container": [], "color": "orange" },
 		{ "id": "B", "container": [], "color": "yellow" },
 		{ "id": "C", "container": [], "color": "green" },
-		{ "id": "D", "container": [], "color": "blue" }
+		{ "id": "F", "container": [], "color": "blue" }
 	],
 	"hold": {
 		"id": "holding",

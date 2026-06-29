@@ -17,7 +17,7 @@ var tierlist = new Tierlist([
     new Tier("A", "orange"),
     new Tier("B", "yellow"),
     new Tier("C", "green"),
-    new Tier("D", "blue")
+    new Tier("F", "blue")
 ]);
 
 // Add event listeners.

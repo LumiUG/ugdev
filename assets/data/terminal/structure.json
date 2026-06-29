@@ -1,168 +1,177 @@
 {
-    "/": {
-        "home": {
-            "guest": {
-                "readme.txt": "Hi, users! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], write down your keys!\n\n-[or]root[/]",
-                "folder": {
-                    "test.txt": "ha! made you look.\n-[lg]guest[/]"
-                },
-                "documents": {
-                    "todo-list.txt": "[ye]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords. The encryption isn't the best, anyways.\n[gr]3)[/] Protected, signed folders/files and user specific folders.\n[gr]4)[/] Better groups? A folder seems lame.\n-[or]root[/]\n\n...You forgot to make this file hidden.\n-[lg]guest[/]\n\nWell, shit. Feel free to look into it.\n-[or]root[/]",
-                    "!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
-                    "egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-[lg]guest[/]\n\ninspirational\n-[pi]neoma[/]\n\nI'll make an actual recipe someday (if you know what i mean)\n-[lb]lumi[/]",
-                    "asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-[lg]guest[/]\n\ncan you guys not add garbage to this folder?\n-[mg]sickle[/]",
-                    "!secret": {
-                        "test.txt": "hi :3"
-                    }
-                },
-                "images": {
-                    "please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep getting logs telling me they don't like this... Be respectful!\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                    "halfsun.png" : "/assets/images/favicon.png",
-                    "slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
-                    "slug.gif": "/assets/images/terminal/scugcheese.gif",
-                    "slug(1).gif": "/assets/images/terminal/scugcheese.gif",
-                    "slug(2).gif": "/assets/images/terminal/scugcheese.gif",
-                    "slug(3).gif": "/assets/images/terminal/scugcheese.gif",
-                    "okie.txt": "okiee sorry ill stop posting slugs\n-[mg]sickle[/]"
-                }
-            },
-            "root": {
-                "permissions": {"allowedUsers": ["root"]},
-                "public": {
-                    "visitors.txt": "If you're reading this, hi. Welcome to my public place.\nI didn't lock this file, feel free to sign your name in here.\n-[or]root[/]",
-                    "whoami.txt": "For those who wish to know who I am, you won't find any of that here.\n\nIt is far too dangerous for me to disclose that kind of information publicly yet.\n\nAt least... I can promise you I have no ill intentions. I also did not expect for this to work?\n\nEither way, try to respect my privacy. It's already tiring enough having to manage all of this, and I don't want to deal with y'all snooping around my personal life.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                    "laboratory": {
-                        "permissions": {"password": "lab"},
-                        "jumpscare.txt": "<img src=\"/assets/images/favicon.png\" onload=\"alert('BOO');\">"
-                    }
-                },
-                "documents": {
-                    "default.txt": "-----"
-                }
-            },
-            "lumi": {
-                "permissions": {"allowedUsers": ["lumi"]},
-                "public": {
-                    "readme.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                    "secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god\n-[pi]neoma[/]",
-                    "games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal anymore.\nAnd I'd rather if you didn't play them. Let's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)"
-                },
-                "documents": {
-                    "private": {
-                        "diary.md": "<h2>[lg]Entry - 11/07/20??:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
-                    },
-                    "studies": {
-                        "species.txt": "\"I find it quite interesting, why are there so many of us?\"\n\nI'll use this document to write down any interesting species I find whilst travelling.\nFunny how I'm talking, like I'll ever share this lmao."
-                    }
-                }
-            },
-            "neoma": {
-                "permissions": {"allowedUsers": ["neoma"]},
-                "documents": {
-                    "realdocumentthatisntaplaceholder.txt": "uh yea this isnt a placeholder you hear me"
-                }
-            },
-            "sickle": {
-                "permissions": {"allowedUsers": ["sickle"]},
-                "documents": {
-                    "attribution.txt": "It'll be here upon completion."
-                },
-                "notdocuments": {
-                    "wawa.wawa": "Wawacat.\nWawacat lived on a hill.\nWawacat was wawaing around one day\nand found a friend!\n\nThey lived happily ever after :)"
-                }
-            }
-        },
-        "etc": {
-            "permissions": {"allowedUsers": ["root"]}
-        },
-        "tmp": {
-            "hvad6yjm": {},
-            "87gghas": { "data": {} },
-            "1687jf1": {},
-            "671fvu76yfv": {},
-            "21h308947563": {},
-            "bvliuyvd0": {},
-            "3z15b12j15r14": { "autosaves": { "colonthree.level": "{\"levelName\":\":3\",\"hideUI\":true,\"freeroam\":true,\"difficulty\":9,\"tiles\":{\"customTileInfo\":[],\"solidTiles\":[{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":4,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":5,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":6,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":7,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":9,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":8,\"y\":-6,\"z\":0}}],\"objectTiles\":[],\"overlapTiles\":[],\"hazardTiles\":[],\"effectTiles\":[],\"customTiles\":[]}}" } },
-            "9ojfau8k": {},
-            "internal-scan.log": "<h3>Scan Type: Internal</h3><h4>Requested by: [or]Root[/]</h4>\nScan ongoing... ...\n22% ... ...\n46% ... ...\n81% ... ...\n100% ... ...\n\n<h2>SIGNED FILES FOUND:</h2>\n- [bl]A Directionless Cycle_Data/[/]\n- [bl]MonoBleedingEdge/[/]\n- [re]A Directionless Cycle.exe[/]\n- [re]UnityCrashHandler64.exe[/]\n - [lg]UnityPlayer.dll[/]\n\n>> Successfully recovered into [bl]/games/adc/[/]. <<",
-            "global-scan.log": "<h3>Scan Type: Global</h3><h4>Requested by: [rw]Original[/]</h4>\nScan ongoing... ...\n1% ... ...\n<h3>UNIVERSE FOUND: [lg]Devoid[/]</h3>2% ... ...",
-            "self-scan.log": "<h3>Scan Type: [rw]Self[/]</h3><h4>Requested by: [lb]****[/]</h4>\nScan ongoing... ...\n20% ... ...\n<h3>[gh]???? ?? i ??s?[/]</h3>38% ... ...\n<h3>[gh]???? ??y?n? ?a????[/]</h3>64% ... ...\n75% ... ...<h3>[gh]a? ?? ???t ???r ?????[/]</h3><h3>\n[re]Error Scanning![/]</h3><h4>Details are as follow:</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------<br>- Where's the light...? I can't- I can't see anything...\n- Get- get me out! I should've never even tried!\n- I'm just... I just want to...\n - ... There never was something here for me.\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------\n\n<h3>[gr]Resuming Scan...[/]</h3>75%... ...\n76%... ...\n81[lb]%[/] .[lb].[/]. [lb]...[/]\n... <a href='' hyper='/!linked/self.log'>[lb]..[/].</a>"
-        },
-        "universe": {
-            "devoid": {
-                "status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current global scan for progress logging."
-            },
-            "avalon": {
-                "worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any leads.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but it'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
-                "guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-[lg]guest[/]\n\nsorry, who even are you?? please just create an account, i will go insane :<\n-[lb]lumi[/]"
-            },
-            "timescales.md": "\"Sure, this is a neat concept\" you might be thinking.\n\n\"But everyone has a different timescale!\" that's the fun part.\n\nThis terminal syncs up actions through it as if the same amount of time passed between universes.\n\nLets take for example \"[bl]Earth[/]\". A cycle there is 24 hours.\nNow, we'll say that a file is created at 3:00, and then edited at 3:05... Five minutes! (In [bl]Earth[/] time)\nThis change would be reflected in all universes at the same rate as [bl]Earth[/], so for example [lb]Avalon[/] would acquire this edited file in \"5 minutes\" with their in-universe time scale.\n\nHopefully that made sense.\n-[or]root[/]"
-        },
-        "music": {
-            "usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-            "warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]\n\nOn it.\n-[or]root[/]\n\nIt's done!\n-[or]root[/]",
-            "burdened.wav": "/assets/audio/adc/Burdened Existence.wav"
-        },
-        "games": {
-            "maze.png": "/assets/images/terminal/supercoolmaze.png",
-            "adc": {
-                "tools": {
-                    "readme.md": "<h2>[lb]You[/]! Beware of spoilers!!</h2>\nThese tools are meant for people that have finished the game, and [re]contain spoilers[/]!\n\nYou've been warned...",
-                    "events.html": "<iframe src=\"https://ugdev.xyz/adc/tools/events\" title=\"Events Generator\"></iframe>"
-                },
-                "build": {
-                    "permissions": {"password": "light"},
-                    "database": {
-                        "permissions": {"password": "universe"},
-                        "changelog.md": "<h3>[lg][CONTENT MISSING][/]</h3>",
-                        "dismiss.txt": "I'm done. I quit, I abandon this project.\nIt feels like a neverending cave, where the only place to go is everywhere but forward, I don't know if this is the right choice anymore.\nSorry. Feel free to finish it yourself if you will.\nI'm all out of time, I wasn't brave or strong enough.\n\n[??/??/??]\n[lg]-?[/]",
-                        "redeems.db": "Since you've made it here, feel free to grab a freebie. I'm sure you know how to decypher those by now.\nStocks last until they're used!\n\n--- CODES ---\n- 10|12|6|i|-|e|11|18|10 (X)\n- g|3|1|21|-|2|25|8|11\n- 13|8|g|1|-|8|6|13|h\n- i|17|23|18|-|22|16|11|b\n- 26|18|8|e|-|7|b|20|8\n- c|22|3|2|-|21|12|21|22\n- 23|7|10|12|-|5|10|5|i\n- 5|20|2|d|-|21|25|18|20\n- h|14|22|8|-|5|21|8|g\n- 20|23|i|16|-|2|16|17|e\n- b|16|20|18|-|23|6|25|18\n- 22|14|12|c|-|8|26|1|4\n- g|e|16|e|-|22|20|21|3\n- 12|g|i|6|-|f|2|13|24\n- d|13|b|12|-|25|24|i|16\n- d|18|13|10|-|g|22|7|14\n- 5|24|2|h|-|5|i|18|10\n- 2|3|22|b|-|c|h|8|11\n- e|19|2|e|-|8|14|13|h\n- h|17|24|2|-|22|1|11|b\n\nRedeem on <a href='https://ugdev.bandcamp.com/yum'>Bandcamp</a>~\n[lb]-lumi[/] (actual developer)"
-                    },
-                    "routing": {
-                        "ftp.log": "% ftp [gh]#####[/] port [gh]###[/]\nConnecting to [gh]#####[/]:[gh]###[/]...\nConnected to [gh]#####[/].\n\n[gh]#####[/] [S->C]: 220 --- Welcome to [gh]####[/] FTP's. ---\n[gh]#####[/] [S->C]: 332 --- Please provide username. ---\n[gh]#####[/] [C->S]: USER \"U/O\"\n[gh]#####[/] [S->C]: 331 --- Please provide password. ---\n[gh]#####[/] [C->S]: PASS [gh]#´*/=H$·%I/47HJ?YPIU%=Q:&`H[/]\n[gh]#####[/] [S->C]: [re]530[/] --- Incorrect login. ---\n[gh]#####[/] [S->C]: 332 --- Please provide username. ---\n[gh]#####[/] [C->S]: [rw]oh fuck you[/]\n[gh]#####[/] [S->C]: 331 --- Please provide password. ---\n[gh]#####[/] [C->S]: .\n[gh]#####[/] [S->C]: [re]530[/] --- Incorrect login. ---\n[gh]#####[/] [S->C]: 332 --- Please provide username. ---\n[gh]#####[/] [C->S]: USER \"U/O\"\n[gh]#####[/] [S->C]: 331 --- Please provide password. ---\n[gh]#####[/] [C->S]: PASS [gh]#´*/=H$·%/47!H?YIU´#%=Q:`H[/]\n[gh]#####[/] [S->C]: [gr]230[/] --- Successful login. ---\n\n[gh]#####[/] 230 If you're reading this, congrats, you've actually made it in.\n[gh]#####[/] 230 You should probably just get on with it, I made a folder just for, well... you?\n[gh]#####[/] 230 It's already weird enough of a situation, simply create a symlink or something to \"/others/numbered/\".\n[gh]#####[/] 230 Again, good luck! You can exit out anytime, and I'll meet you back.\n[gh]#####[/] 230 ...That is if you catch me home.\n[gh]#####[/] 230 ~????\n\nftp[bl]>[/] pwd\n257 \"/\"\n\nftp[bl]>[/] cd /others\n250 CWD successful.\n\nftp[bl]>[/] ls\n200 PORT successful.\n[rw]UO Test Area/[/]\n[bl]numbered/[/]\n[lg]THESCRIPT.sh[/]\n[lg]comms.txt[/]\n226 ASCII Transfer complete.\n\nftp[bl]>[/] cd /numbered\n250 CWD successful.\n\nftp[bl]>[/] bash ../THESCRIPT.sh /others/numbered/ [gh]########[/]\n...\n...\n...\n...\n...\n...\n...\n...\n..(x81840)\n\nftp[bl]>[/] bye\n221 See you next time!"
-                    },
-                    "?.txt": "Hey!! I hope you enjoyed the last build, I'm aware it isn't exactly finished, but you can give me your thoughts on this (new) early build.\nI was mainly messing up with the hint AI in this one, since I migrated them into a \"level\" for every level, as hints.\n\nI've been also trying to implement carvings, and the ending of the game.\n(which i accidentallyyy deleted while working)\nAs always, let me know if you think its a good idea. I'm running out of time to develop this before i leave, lmao.\n\n[27/06/??]\n[lg]-?[/]",
-                    "goodbye.txt": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
-                },
-                "adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
-            }
-        },
-        "temp-chat": {
-            "readme.md": "A chatting software is being built! Please use this very rudimentary implementation meanwhile.\n-[or]root[/]\n\nOh and if you're trying to contact [rw]the original[/], only do it when given permission. They'll contact you directly if they need anything.\nThe group is being worked on, but we should wait for the software first so we can coordinate properly.\n-[or]root[/]",
-            "notice.event": "Currently, visitors from \"[bl]Earth[/]\" and near them have no access to creating accounts or editing files, sorry for the trouble! It'll be a while before we get that back up and running.\n\nShould you see any unsigned users, it's probably from [bl]Earth[/] or any related, close by universes.\nThough, I'm pretty sure we only have terminal access set up there.\n-[or]root[/]",
-            "progress.event": "For transparency: Progress on the initial connection to the EOS servers seems to work, I've added Lumi in hopes that it can... Uh. Yeah.\n-[or]root[/]\n\nHey!! I'm working too.\n-[lb]lumi[/]",
-            "sickle.chat": "...no\n-[mg]sickle[/]",
-            "lumi.chat": "That sounds awesome! I'll probably pass on using this until the software is finished, though.\n\nIf you need help, do let me know! (What programming language...?)\n-[lb]lumi[/]\n\nYeah, I'll send you the in-progress source.\n-[or]root[/]",
-            "neoma.chat": "Feel free to edit this file for messaging! ^-^\n-[pi]neoma[/]\n\nYou smell :>\n-[lb]lumi[/]"
-        },
-        "groups": {
-            "rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-            "notacult": {
-                "welcome.group": "\"some information\"\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                "really.txt": "god fucking damnit...\n-[or]root[/]"
-            },
-            "mazegang": {
-                "permissions": {"password": "maze"},
-                "welcome.group": "And so you've made it here, fellow mazer!\n\nSorry for the lack of maze-related content, but I've been playing this game... \"A Directionless Cycle\"... And it has the worst hidden maze ever!\nIm sorry- like, it's just fully invisible. It's a [re]total dissapointment[/] for us mazers, and we will actively tell people to avoid it."
-            },
-            "secrethunters": {
-                "welcome.group": "Hello everyone! We're a small group of people dedicated to finding secrets between our worlds, and, well- this terminal in specific.\n\nWe believe that by joining forces, we can do anything.\n\nWe do, however, have some rules in place to mantain anonymity and security:\n\n[gr]1)[/] Do not sign any posts or comments, remain anonymous.\n[ye]2)[/] Document your findings!\n[re]3)[/] Do not grief. Due to this being anonymous, we can't really prevent this. Just don't.\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                "mazes.txt": "suppppp, ive been looking around, and theress like, this whole maze gang thing. and i dont have the signature. has anyone figured that out?????\n-[lg]unsigned user[/]\n\nWell, it does say that you don't have the signature. Maybe check out the \"sign\" command?\nI feel like you might be new here.\n-[lg]unsigned user[/]\n\nomg yeah ur right im stpid\n-[lg]unsigned user[/]\n\nstupid*\n-[lg]unsigned user[/]\n\n...They really should let us edit posts.\n-[lg]unsigned user[/]",
-                "public.txt": "I'm not sure if y'all know this, but looking at the source code, it looks like you can go into public folders. (inside home folders)\n\nIt's simple.\nAny user can create a public folder, and you can go there as a guest.\n\nIt also seems like not everyone has one. Weird.\n-[lg]unsigned user[/]"
-            },
-            "tobedetermined": {
-                "welcome.group": "Hmh... It's too early for a welcome, there's too little of us right now.\nWe'll... think of a name later, and rewrite this aswell.\n\nUhh... and are we supposed to sign? I'll just-\n~[rw]Three[/]",
-                "about.txt": "We're a group dedicated to [gh]connecting worlds[/] between [rw]universes[/]. This project is just starting, but there'll be more of us as time goes on.\n\nHopefully we'll get to talk after the \"chat\" software is finished.\n~[rw]Seven[/]"
-            },
-            "!slugcatcorner": {
-                "permissions": {"allowedUsers": ["lumi", "neoma", "sickle"], "password": "slug"},
-                "welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]sickle[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-                "question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[mg]sickle[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]\n\ni wouldnt worry about that.\n-[lb]lumi[/]"
-            }
-        },
-        "!linked": {
-            "permissions": {"allowedUsers": ["[rw]Original"]},
-            "self.log": "<h4>[ [rw]*[/] ] [lb]I-i can get out of this.[/]</h4><h4>[ [rw]**[/] ] [lb]You're just lying to yourself.[/]</h4><h4>[ [rw]***[/] ] [lb]I don't think you believe there's an exit.[/]</h4><h4>[ [rw]*[/] ] [lb]No, it's just...[/]</h4><h4>[ [rw]*[/] ] [lb]Can't we just pretend this amounted to something?[/]</h4><h4>[ [rw]***[/] ] [lb]No.[/]</h4><h4>[ [rw]**[/] ] [lb]You should've turned back.[/]</h4><h4>[ [rw]*[/] ] [lb]I'm... Shut up.[/]</h4>\n<h4>[ [rw]**[/] ] [lb]Or what? You'll kill yourself?[/]</h4><h4>[ [rw]**[/] ] [lb]It's not like you're not doing so already.[/]</h4><h4>[ [rw]**[/] ] [lb]HOW. MUCH. LONGER do you want to wait?[/]</h4><h4 style='position: relative; top: -125px; left: 70px;'>[ [lg]*[/] ] [lg]shut up[/]</h4><h3 style='position: relative; top: -130px; left: 450px;'>[ [lg]*[/] ] [lg]shut UPP[/]</h3><h2 style='position: relative; top: -130px; left: -40px;'>[ [lg]*[/] ] [lg]SHUT THE FUCK UP[/]</h2><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]There it is.[/]</h4><h5 style='position: relative; top: -100px;'>[ [lg]*[/] ] [lg]... hnn..[/]</h5><h5 style='position: relative; top: -100px; left: 10px;'>[ [lg]*[/] ] [lg]what other choice do i have?[/]</h5><h5 style='position: relative; top: -100px; left: -15px;'>[ [lg]*[/] ] [lg]why can't i[/]</h5><h5 style='position: relative; top: -100px;'>[ [lg]*[/] ] [lg]just keep[/]</h5><h5 style='position: relative; top: -95px; left: 40px;'>[ [lg]*[/] ] [lg]walking?[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]Haven't you been walking for too long?[/]</h4><h5 style='position: relative; top: -100px; left: 30px;'>[ [lg]*[/] ] [lg]please just let me [gh]ke[/]ep going[/]</h5><h5 style='position: relative; top: -100px; left: 100px;'>[ [lg]*[/] ] [lg][gh]i'[/]ll use[/]</h5><h5 style='position: relative; top: -100px; left: 50px;'>[ [lg]*[/] ] [lg]wh[gh]at l[/]ittle li[gh]gh[/]t i have[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]**[/] ] [lb]But aren't our legs sore?[/]</h4><h5 style='position: relative; top: -100px; left: 15px;'>[ [lg]*[/] ] [lg][gh]ju[/]st a [gh]litt[/]le lo[gh]ng[/]er[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]No, we're stopping.[/]</h4><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]Someone's taking a rest.[/]</h4><h5 style='position: relative; top: -90px; left: -50px;'>[ [ye]*[/] ] [lg]n[gh]o- e[/]ven [ye][gh]if i[/]t tak[/]e[gh]s me-[/][ye]- i'[gh]ll gi[/]v[/]e m-[gh]my l[ye]i[/]f[/]e![/]</h5><h5 style='position: relative; top: -75px; left: -20px;'>[ [ye]*[/] ] [ye][gh]i d[/]o[gh]n't w[/]an[gh]t to go...[/][/]</h5><h4 style='position: relative; top: -30px;'>[ [rw]**[/] ] [lb]... Sleep. We'll take it from here.[/]</h4><h4 style='position: relative;'>[ [rw]**[/] ] [lb]Our way.[/]</h4><h4 style='position: relative; top: -1565px;'>[lg]##### #########</h4>"
-        }
-    }
+	"/": {
+		"home": {
+			"guest": {
+				"readme.txt": "Hi, users! If you are new here, try running \"[or]help[/]\". Using \"[or]help + a command[/]\" will give you extra info on it.\n\nAlso, please note that I don't have any systems for saving progress between terminal sessions, so refreshing the terminal [re]WILL delete all your information[/], write down your keys!\n\n-[or]root[/]",
+				"folder": {
+					"test.txt": "ha! made you look.\n-[lg]guest[/]"
+				},
+				"documents": {
+					"todo-list.txt": "[ye]1)[/] Create a chat command system. (actually... a mailing system would be cooler)\n[re]2)[/] Find a way to view user passwords. The encryption isn't the best, anyways.\n[gr]3)[/] Protected, signed folders/files and user specific folders.\n[gr]4)[/] Better groups? A folder seems lame.\n-[or]root[/]\n\n...You forgot to make this file hidden.\n-[lg]guest[/]\n\nWell, shit. Feel free to look into it.\n-[or]root[/]",
+					"!new-todo-list.txt": "ugh i'll just put everything here later who cares\n-[or]root[/]",
+					"egg-recipe.egg": "ok ok ok ok ok hear me out so first you take an egg and then\n-[lg]guest[/]\n\ninspirational\n-[pi]neoma[/]\n\nI'll make an actual recipe someday (if you know what i mean)\n-[lb]lumi[/]",
+					"asdcrtyascdrkatsdca.y6ftgv": "yhtcdk,cykxftgedrjm\n-[lg]guest[/]\n\ncan you guys not add garbage to this folder?\n-[mg]sickle[/]",
+					"!secret": {
+						"test.txt": "hi :3"
+					}
+				},
+				"images": {
+					"please.txt": "Hey everyone, please, I know you all love using the terminal and all but please don't clutter the guest images folder.\nI keep getting logs telling me they don't like this... Be respectful!\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+					"halfsun.png": "/assets/images/favicon.png",
+					"slugcat-graphic.png": "/assets/images/graphics/slugcat.png",
+					"slug.gif": "/assets/images/terminal/scugcheese.gif",
+					"slug(1).gif": "/assets/images/terminal/scugcheese.gif",
+					"slug(2).gif": "/assets/images/terminal/scugcheese.gif",
+					"slug(3).gif": "/assets/images/terminal/scugcheese.gif",
+					"okie.txt": "okiee sorry i'll stop posting slugs\n-[mg]sickle[/]"
+				}
+			},
+			"root": {
+				"permissions": { "allowedUsers": ["root"] },
+				"public": {
+					"visitors.txt": "If you're reading this, hi. Welcome to my public place.\nI didn't lock this file, feel free to sign your name in here.\n-[or]root[/]",
+					"whoami.txt": "For those who wish to know who I am, you won't find any of that here.\n\nIt is far too dangerous for me to disclose that kind of information publicly yet.\n\nAt least... I can promise you I have no ill intentions. I also did not expect for this to work?\n\nEither way, try to respect my privacy. It's already tiring enough having to manage all of this, and I don't want to deal with y'all snooping around my personal life.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+					"laboratory": {
+						"permissions": { "password": "lab" },
+						"jumpscare.txt": "<img src=\"/assets/images/favicon.png\" onload=\"alert('BOO');\">"
+					}
+				},
+				"documents": {
+					"default.txt": "-----"
+				}
+			},
+			"lumi": {
+				"permissions": { "allowedUsers": ["lumi"] },
+				"public": {
+					"readme.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+					"secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god\n-[pi]neoma[/]",
+					"games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal anymore.\nAnd I'd rather if you didn't play them. Let's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)"
+				},
+				"documents": {
+					"private": {
+						"diary.md": "<h2>[lg]Entry - 11/07/20??:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
+					},
+					"studies": {
+						"species.txt": "\"I find it quite interesting, why are there so many of us?\"\n\nI'll use this document to write down any interesting species I find whilst travelling.\nFunny how I'm talking, like I'll ever share this lmao."
+					}
+				}
+			},
+			"neoma": {
+				"permissions": { "allowedUsers": ["neoma"] },
+				"documents": {
+					"realdocumentthatisntaplaceholder.txt": "uh yea this isnt a placeholder you hear me"
+				}
+			},
+			"sickle": {
+				"permissions": { "allowedUsers": ["sickle"] },
+				"documents": {
+					"attribution.txt": "It'll be here upon completion."
+				},
+				"notdocuments": {
+					"wawa.wawa": "Wawacat.\nWawacat lived on a hill.\nWawacat was wawaing around one day\nand found a friend!\n\nThey lived happily ever after :)"
+				}
+			}
+		},
+		"etc": {
+			"permissions": { "allowedUsers": ["root"] }
+		},
+		"tmp": {
+			"hvad6yjm": {},
+			"87gghas": { "data": {} },
+			"1687jf1": {},
+			"671fvu76yfv": {},
+			"21h308947563": {},
+			"bvliuyvd0": {},
+			"3z15b12j15r14": {
+				"autosaves": {
+					"colonthree.level": "{\"levelName\":\":3\",\"hideUI\":true,\"freeroam\":true,\"difficulty\":9,\"tiles\":{\"customTileInfo\":[],\"solidTiles\":[{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-1,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-2,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":2,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":3,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":4,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":5,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":6,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":7,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-4,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":11,\"y\":-5,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":10,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":9,\"y\":-6,\"z\":0}},{\"type\":\"Wall\",\"directions\":{\"pushable\":true,\"up\":true,\"down\":true,\"left\":true,\"right\":true},\"position\":{\"x\":8,\"y\":-6,\"z\":0}}],\"objectTiles\":[],\"overlapTiles\":[],\"hazardTiles\":[],\"effectTiles\":[],\"customTiles\":[]}}"
+				}
+			},
+			"9ojfau8k": {},
+			"internal-scan.log": "<h3>Scan Type: Internal</h3><h4>Requested by: [or]Root[/]</h4>\nScan ongoing... ...\n22% ... ...\n46% ... ...\n81% ... ...\n100% ... ...\n\n<h2>SIGNED FILES FOUND:</h2>\n- [bl]A Directionless Cycle_Data/[/]\n- [bl]MonoBleedingEdge/[/]\n- [re]A Directionless Cycle.exe[/]\n- [re]UnityCrashHandler64.exe[/]\n - [lg]UnityPlayer.dll[/]\n\n>> Successfully recovered into [bl]/games/adc/[/]. <<",
+			"global-scan.log": "<h3>Scan Type: Global</h3><h4>Requested by: [rw]Original[/]</h4>\nScan ongoing... ...\n1% ... ...\n<h3>UNIVERSE FOUND: [lg]Devoid[/]</h3>2% ... ...",
+			"self-scan.log": "<h3>Scan Type: [rw]Self[/]</h3><h4>Requested by: [lb]****[/]</h4>\nScan ongoing... ...\n20% ... ...\n<h3>[gh]???? ?? i ??s?[/]</h3>38% ... ...\n<h3>[gh]???? ??y?n? ?a????[/]</h3>64% ... ...\n75% ... ...<h3>[gh]a? ?? ???t ???r ?????[/]</h3><h3>\n[re]Error Scanning![/]</h3><h4>Details are as follow:</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------<br>- Where's the light...? I can't- I can't see anything...\n- Get- get me out! I should've never even tried!\n- I'm just... I just want to...\n - ... There never was something here for me.\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----------\n\n<h3>[gr]Resuming Scan...[/]</h3>75%... ...\n76%... ...\n81[lb]%[/] .[lb].[/]. [lb]...[/]\n... <a href='' hyper='/!linked/self.log'>[lb]..[/].</a>"
+		},
+		"universe": {
+			"devoid": {
+				"status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current global scan for progress logging."
+			},
+			"avalon": {
+				"worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any leads.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but it'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
+				"guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-[lg]guest[/]\n\nsorry, who even are you?? please just create an account, i will go insane :<\n-[lb]lumi[/]"
+			},
+			"timescales.md": "\"Sure, this is a neat concept\" you might be thinking.\n\n\"But everyone has a different timescale!\" that's the fun part.\n\nThis terminal syncs up actions through it as if the same amount of time passed between universes.\n\nLets take for example \"[bl]Earth[/]\". A cycle there is 24 hours.\nNow, we'll say that a file is created at 3:00, and then edited at 3:05... Five minutes! (In [bl]Earth[/] time)\nThis change would be reflected in all universes at the same rate as [bl]Earth[/], so for example [lb]Avalon[/] would acquire this edited file in \"5 minutes\" with their in-universe time scale.\n\nHopefully that made sense.\n-[or]root[/]"
+		},
+		"music": {
+			"usage.txt": "<h1>Hey!!</h1>\nWould you like to listen to some tunes? Use the \"play\" command.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+			"warning.txt": "Buddy... the command is \"out of order\".\nYou might want to fix that.\n-[pi]neoma[/]\n\nOn it.\n-[or]root[/]\n\nIt's done!\n-[or]root[/]",
+			"burdened.wav": "/assets/audio/adc/Burdened Existence.wav",
+            "finality.wav": "/assets/audio/adc/Finality - Nothingness.wav"
+		},
+		"games": {
+			"maze.png": "/assets/images/terminal/supercoolmaze.png",
+			"adc": {
+				"tools": {
+					"readme.md": "<h2>[lb]You[/]! Beware of spoilers!!</h2>\nThese tools are meant for people that have finished the game, and [re]contain spoilers[/]!\n\nYou've been warned...",
+					"events.html": "<iframe src=\"https://ugdev.xyz/adc/tools/events\" title=\"Events Generator\"></iframe>"
+				},
+				"build": {
+					"permissions": { "password": "light" },
+					"database": {
+						"permissions": { "password": "universe" },
+						"changelog.md": "<h3>[lg][CONTENT MISSING][/]</h3>",
+						"dismiss.txt": "I'm done. I quit, I abandon this project.\nIt feels like a neverending cave, where the only place to go is everywhere but forward, I don't know if this is the right choice anymore.\nSorry. Feel free to finish it yourself if you will.\nI'm all out of time, I wasn't brave or strong enough.\n\n[??/??/??]\n[lg]-?[/]",
+						"redeems.db": "Since you've made it here, feel free to grab a freebie. I'm sure you know how to decypher those by now.\nStocks last until they're used!\n\n--- CODES ---\n- 10|12|6|i|-|e|11|18|10 (X)\n- g|3|1|21|-|2|25|8|11\n- 13|8|g|1|-|8|6|13|h\n- i|17|23|18|-|22|16|11|b\n- 26|18|8|e|-|7|b|20|8\n- c|22|3|2|-|21|12|21|22\n- 23|7|10|12|-|5|10|5|i\n- 5|20|2|d|-|21|25|18|20\n- h|14|22|8|-|5|21|8|g\n- 20|23|i|16|-|2|16|17|e\n- b|16|20|18|-|23|6|25|18\n- 22|14|12|c|-|8|26|1|4\n- g|e|16|e|-|22|20|21|3\n- 12|g|i|6|-|f|2|13|24\n- d|13|b|12|-|25|24|i|16\n- d|18|13|10|-|g|22|7|14\n- 5|24|2|h|-|5|i|18|10\n- 2|3|22|b|-|c|h|8|11\n- e|19|2|e|-|8|14|13|h\n- h|17|24|2|-|22|1|11|b\n\nRedeem on <a href='https://ugdev.bandcamp.com/yum'>Bandcamp</a>~\n[lb]-lumi[/] (actual developer)"
+					},
+					"routing": {
+						"ftp.log": "% ftp [gh]#####[/] port [gh]###[/]\nConnecting to [gh]#####[/]:[gh]###[/]...\nConnected to [gh]#####[/].\n\n[gh]#####[/] [S->C]: 220 --- Welcome to [gh]####[/] FTP's. ---\n[gh]#####[/] [S->C]: 332 --- Please provide username. ---\n[gh]#####[/] [C->S]: USER \"U/O\"\n[gh]#####[/] [S->C]: 331 --- Please provide password. ---\n[gh]#####[/] [C->S]: PASS [gh]#´*/=H$·%I/47HJ?YPIU%=Q:&`H[/]\n[gh]#####[/] [S->C]: [re]530[/] --- Incorrect login. ---\n[gh]#####[/] [S->C]: 332 --- Please provide username. ---\n[gh]#####[/] [C->S]: [rw]oh fuck you[/]\n[gh]#####[/] [S->C]: 331 --- Please provide password. ---\n[gh]#####[/] [C->S]: .\n[gh]#####[/] [S->C]: [re]530[/] --- Incorrect login. ---\n[gh]#####[/] [S->C]: 332 --- Please provide username. ---\n[gh]#####[/] [C->S]: USER \"U/O\"\n[gh]#####[/] [S->C]: 331 --- Please provide password. ---\n[gh]#####[/] [C->S]: PASS [gh]#´*/=H$·%/47!H?YIU´#%=Q:`H[/]\n[gh]#####[/] [S->C]: [gr]230[/] --- Successful login. ---\n\n[gh]#####[/] 230 If you're reading this, congrats, you've actually made it in.\n[gh]#####[/] 230 You should probably just get on with it, I made a folder just for, well... you?\n[gh]#####[/] 230 It's already weird enough of a situation, simply create a symlink or something to \"/others/numbered/\".\n[gh]#####[/] 230 Again, good luck! You can exit out anytime, and I'll meet you back.\n[gh]#####[/] 230 ...That is if you catch me home.\n[gh]#####[/] 230 ~????\n\nftp[bl]>[/] pwd\n257 \"/\"\n\nftp[bl]>[/] cd /others\n250 CWD successful.\n\nftp[bl]>[/] ls\n200 PORT successful.\n[rw]UO Test Area/[/]\n[bl]numbered/[/]\n[lg]THESCRIPT.sh[/]\n[lg]comms.txt[/]\n226 ASCII Transfer complete.\n\nftp[bl]>[/] cd /numbered\n250 CWD successful.\n\nftp[bl]>[/] bash ../THESCRIPT.sh /others/numbered/ [gh]########[/]\n...\n...\n...\n...\n...\n...\n...\n...\n..(x81840)\n\nftp[bl]>[/] bye\n221 See you next time!"
+					},
+					"?.txt": "Hey!! I hope you enjoyed the last build, I'm aware it isn't exactly finished, but you can give me your thoughts on this (new) early build.\nI was mainly messing up with the hint AI in this one, since I migrated them into a \"level\" for every level, as hints.\n\nI've been also trying to implement carvings, and the ending of the game.\n(which i accidentallyyy deleted while working)\nAs always, let me know if you think its a good idea. I'm running out of time to develop this before i leave, lmao.\n\n[27/06/??]\n[lg]-?[/]",
+					"goodbye.txt": "As a sendoff, I know you might be interested in the game, so I've hid something on it's game page. You should be familiar with it already, something to do with your title screen.\n\n[lg]-?[/]"
+				},
+				"adc.html": "<iframe src=\"https://ugdev.xyz/adc\" title=\"ADC Website\"></iframe>"
+			}
+		},
+		"temp-chat": {
+			"readme.md": "A chatting software is being built! Please use this very rudimentary implementation meanwhile.\n-[or]root[/]\n\nOh and if you're trying to contact [rw]the original[/], only do it when given permission. They'll contact you directly if they need anything.\nThe group is being worked on, but we should wait for the software first so we can coordinate properly.\n-[or]root[/]",
+			"notice.event": "Currently, visitors from \"[bl]Earth[/]\" and near them have no access to creating accounts or editing files, sorry for the trouble! It'll be a while before we get that back up and running.\n\nShould you see any unsigned users, it's probably from [bl]Earth[/] or any related, close by universes.\nThough, I'm pretty sure we only have terminal access set up there.\n-[or]root[/]",
+			"progress.event": "For transparency: Progress on the initial connection to the EOS servers seems to work, I've added Lumi in hopes that it can... Uh. Yeah.\n-[or]root[/]\n\nHey!! I'm working too.\n-[lb]lumi[/]",
+			"sickle.chat": "...no\n-[mg]sickle[/]",
+			"lumi.chat": "That sounds awesome! I'll probably pass on using this until the software is finished, though.\n\nIf you need help, do let me know! (What programming language...?)\n-[lb]lumi[/]\n\nYeah, I'll send you the in-progress source.\n-[or]root[/]",
+			"neoma.chat": "Feel free to edit this file for messaging! ^-^\n-[pi]neoma[/]\n\nYou smell :>\n-[lb]lumi[/]"
+		},
+		"groups": {
+			"rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+			"notacult": {
+				"welcome.group": "\"some information\"\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+				"really.txt": "god fucking damnit...\n-[or]root[/]"
+			},
+			"mazegang": {
+				"permissions": { "password": "maze" },
+				"welcome.group": "And so you've made it here, fellow mazer!\n\nSorry for the lack of maze-related content, but I've been playing this game... \"A Directionless Cycle\"... And it has the worst hidden maze ever!\nIm sorry- like, it's just fully invisible. It's a [re]total dissapointment[/] for us mazers, and we will actively tell people to avoid it."
+			},
+			"secrethunters": {
+				"welcome.group": "Hello everyone! We're a small group of people dedicated to finding secrets between our worlds, and, well- this terminal in specific.\n\nWe believe that by joining forces, we can do anything.\n\nWe do, however, have some rules in place to mantain anonymity and security:\n\n[gr]1)[/] Do not sign any posts or comments, remain anonymous.\n[ye]2)[/] Document your findings!\n[re]3)[/] Do not grief. Due to this being anonymous, we can't really prevent this. Just don't.\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+				"mazes.txt": "suppppp, ive been looking around, and theress like, this whole maze gang thing. and i dont have the signature. has anyone figured that out?????\n-[lg]unsigned user[/]\n\nWell, it does say that you don't have the signature. Maybe check out the \"sign\" command?\nI feel like you might be new here.\n-[lg]unsigned user[/]\n\nomg yeah ur right im stpid\n-[lg]unsigned user[/]\n\nstupid*\n-[lg]unsigned user[/]\n\n...They really should let us edit posts.\n-[lg]unsigned user[/]",
+				"public.txt": "I'm not sure if y'all know this, but looking at the source code, it looks like you can go into public folders. (inside home folders)\n\nIt's simple.\nAny user can create a public folder, and you can go there as a guest.\n\nIt also seems like not everyone has one. Weird.\n-[lg]unsigned user[/]"
+			},
+			"tobedetermined": {
+				"welcome.group": "Hmh... It's too early for a welcome, there's too little of us right now.\nWe'll... think of a name later, and rewrite this aswell.\n\nUhh... and are we supposed to sign? I'll just-\n~[rw]Three[/]",
+				"about.txt": "We're a group dedicated to [gh]connecting worlds[/] between [rw]universes[/]. This project is just starting, but there'll be more of us as time goes on.\n\nHopefully we'll get to talk after the \"chat\" software is finished.\n~[rw]Seven[/]"
+			},
+			"!slugcatcorner": {
+				"permissions": {
+					"allowedUsers": ["lumi", "neoma", "sickle"],
+					"password": "slug"
+				},
+				"welcome.group": "They'll never find us here.\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n<img src=\"/assets/images/terminal/scugcheese.gif\">\n-[mg]sickle[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+				"question.txt": "Okay so how do we invite more people here?? i dont want the admin to know\n-[mg]sickle[/]\n\ndude just tell them irl, not everything is inside the terminal.\n-[pi]neoma[/]\n\ni wouldnt worry about that.\n-[lb]lumi[/]"
+			}
+		},
+		"!linked": {
+			"permissions": { "allowedUsers": ["[rw]Original"] },
+			"self.log": "<h4>[ [rw]*[/] ] [lb]I-i can get out of this.[/]</h4><h4>[ [rw]**[/] ] [lb]You're just lying to yourself.[/]</h4><h4>[ [rw]***[/] ] [lb]I don't think you believe there's an exit.[/]</h4><h4>[ [rw]*[/] ] [lb]No, it's just...[/]</h4><h4>[ [rw]*[/] ] [lb]Can't we just pretend this amounted to something?[/]</h4><h4>[ [rw]***[/] ] [lb]No.[/]</h4><h4>[ [rw]**[/] ] [lb]You should've turned back.[/]</h4><h4>[ [rw]*[/] ] [lb]I'm... Shut up.[/]</h4>\n<h4>[ [rw]**[/] ] [lb]Or what? You'll kill yourself?[/]</h4><h4>[ [rw]**[/] ] [lb]It's not like you're not doing so already.[/]</h4><h4>[ [rw]**[/] ] [lb]HOW. MUCH. LONGER do you want to wait?[/]</h4><h4 style='position: relative; top: -125px; left: 70px;'>[ [lg]*[/] ] [lg]shut up[/]</h4><h3 style='position: relative; top: -130px; left: 450px;'>[ [lg]*[/] ] [lg]shut UPP[/]</h3><h2 style='position: relative; top: -130px; left: -40px;'>[ [lg]*[/] ] [lg]SHUT THE FUCK UP[/]</h2><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]There it is.[/]</h4><h5 style='position: relative; top: -100px;'>[ [lg]*[/] ] [lg]... hnn..[/]</h5><h5 style='position: relative; top: -100px; left: 10px;'>[ [lg]*[/] ] [lg]what other choice do i have?[/]</h5><h5 style='position: relative; top: -100px; left: -15px;'>[ [lg]*[/] ] [lg]why can't i[/]</h5><h5 style='position: relative; top: -100px;'>[ [lg]*[/] ] [lg]just keep[/]</h5><h5 style='position: relative; top: -95px; left: 40px;'>[ [lg]*[/] ] [lg]walking?[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]Haven't you been walking for too long?[/]</h4><h5 style='position: relative; top: -100px; left: 30px;'>[ [lg]*[/] ] [lg]please just let me [gh]ke[/]ep going[/]</h5><h5 style='position: relative; top: -100px; left: 100px;'>[ [lg]*[/] ] [lg][gh]i'[/]ll use[/]</h5><h5 style='position: relative; top: -100px; left: 50px;'>[ [lg]*[/] ] [lg]wh[gh]at l[/]ittle li[gh]gh[/]t i have[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]**[/] ] [lb]But aren't our legs sore?[/]</h4><h5 style='position: relative; top: -100px; left: 15px;'>[ [lg]*[/] ] [lg][gh]ju[/]st a [gh]litt[/]le lo[gh]ng[/]er[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]No, we're stopping.[/]</h4><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]Someone's taking a rest.[/]</h4><h5 style='position: relative; top: -90px; left: -50px;'>[ [ye]*[/] ] [lg]n[gh]o- e[/]ven [ye][gh]if i[/]t tak[/]e[gh]s me-[/][ye]- i'[gh]ll gi[/]v[/]e m-[gh]my l[ye]i[/]f[/]e![/]</h5><h5 style='position: relative; top: -75px; left: -20px;'>[ [ye]*[/] ] [ye][gh]i d[/]o[gh]n't w[/]an[gh]t to go...[/][/]</h5><h4 style='position: relative; top: -30px;'>[ [rw]**[/] ] [lb]... Sleep. We'll take it from here.[/]</h4><h4 style='position: relative;'>[ [rw]**[/] ] [lb]Our way.[/]</h4><h4 style='position: relative; top: -1565px;'>[lg]##### #########</h4>",
+			"egos.list": "<h3>TBD Members (By [re]Four[/]!)</h3>\n[lg]*[/] [rw]Original[/]: The big guy!! Or girl!!! I don't care, hehee.\n[lg]*[/] [re]Four[/]: Best!!!!\n[lg]*[/] w&nbsp;&nbsp;: I don't lik&nbsp;&nbsp;&nbsp; but t&nbsp;&nbsp;y chill :3\n[lg]*[/] [rw]Three[/]: Stupid!!!!! always trying to make everything \"right\", boringg.\n\n[lg]*[/] [rw]seven[/]: Seven we love you <3 ty for t&nbsp;&nbsp; help\n[lg]*[/] [rw]8[/]: haha infinity. Should talk more to you, they're new...\n\n<hr>\nDumbass. Stop, we don't need another list. Original already told us.\nJust stop messing things up, or they'll remove your perms, got it?\nI'd rather not report this to them.\n\nAnd stop overriding your write color.\n~[rw]stupid[/]\n\n[re]fuck you!!!!!! find your own file[/]"
+		}
+	}
 }

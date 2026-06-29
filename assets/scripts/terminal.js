@@ -58,7 +58,7 @@ var commands = [
     {
         "name": "echo",
         "description": "Display a line of text.",
-        "helptopic": "Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n- Light grey: [lg]lg[/]\n- Muted green: [mg]mg[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
+        "helptopic": "[re]echoooo, echoo! got you!!\n\n[/]Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n- Light grey: [lg]lg[/]\n- Muted green: [mg]mg[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
         "hidden": false,
         "run": CommandEcho
     },
@@ -678,7 +678,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 27/04/2026 (Earth Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 29/06/2026 (Earth Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
@@ -690,8 +690,86 @@ function CommandHelp() {
 
 // Repeats something with user input
 function CommandEcho() {
-    TypeOutput(GetUserInput().substring(
-        GetUserInput().indexOf(' ') + 1));
+    
+    // Echo!! Echo!!!
+    let userRepeater = GetUserInput().substring(GetUserInput().indexOf(' ') + 1);
+    switch (userRepeater.toLowerCase().replaceAll("?", "").replaceAll("!", "").replaceAll(".", "").replaceAll(",", "").replaceAll("'", "")) {
+        case "echo":
+        case "echo echo":
+        case "echo echo echo":
+        case "echo echo echo echo":
+            userRepeater = "[lg][re]Echo!![/] echo! [re]Echo!!![/] echo!![/]";
+            break;
+        case "help":
+        case "help me":
+            userRepeater = "[re]I'm sure you need help!! But you won't get it here, heehee![/]";
+            break;
+        case "hi":
+            userRepeater = "[re]hiiiii :3[/]";
+            break;
+        case "hello":
+            userRepeater = "[re]hellooooo :3[/]";
+            break;
+        case "ego":
+        case "egos":
+            userRepeater = "[re]Ego who, ego whoo? What about uss?[/]";
+            break;
+        case "to be determined":
+        case "tobedetermined":
+        case "others":
+        case "tbd":
+            userRepeater = "[re]You? Want to know about others?? Heehee, I like you!\nHeehee... Ha...\n\nWelll... Unfortunately, they griefed <a href='' hyper='/!linked/egos.list'>[re]my list[/]</a>.\nI'll get them back... Always so mean to me!![/]";
+            break;
+        case "you":
+        case "who is this":
+        case "what are you":
+        case "who are you":
+        case "whats your name":
+        case "what is your name":
+        case "who am i talking to":
+            userRepeater = "[re]Heehee! I'm four, four, of course I am![/]";
+            break;
+        case "a directionless cycle":
+        case "directionless cycle":
+        case "adc":
+            userRepeater = "[re]Old home, boring!! Here's so much more fun!!![/]";
+            break;
+        case "the original":
+        case "original":
+            userRepeater = "[re]Them? Oho... What do you want from them? Very suspicious![/]";
+            break;
+        case "the unfinished":
+        case "unfinished":
+            userRepeater = "[re]Huh? W-who...?? We're all finished, stupid![/]";
+            break;
+        case "lumi":
+            userRepeater = "[re]Bird!! It has cute photos on its folder. Dont tell it I saw!!![/]";
+            break;
+        case "root":
+        case "admin":
+            userRepeater = "[re]Haven't talked much with them! They seem nice!![/]";
+            break;
+        case "ying":
+            userRepeater = "[re]I see lots of them! All of them are fun!![/]";
+            break;
+        case "neo":
+        case "neoma":
+            userRepeater = "[re]H-he said I know a lot... He's ok...[/]";
+            break;
+        case "internet":
+        case "outside":
+        case "connection":
+            userRepeater = "[re]Nuh uh! We aren't allowed to see outside yet. That's for later, dummy!![/]";
+            break;
+        case "messages":
+        case "eos cli":
+        case "client":
+        case "cli":
+            userRepeate= "[re]The messaging client! They're working on it!! Bird seems tired though...[/]";
+        default:
+            break;
+    }
+    TypeOutput(userRepeater);
 }
 
 // Shows a complete history of user commands
@@ -727,9 +805,6 @@ function CommandSign() {
 // Play
 function CommandPlay()
 {
-    // TypeOutput("[re]EOS: Out of service![/]");
-    // return;
-
     let path = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (!path) { TypeOutput("[re]EOS: Please specify a file![/]"); return; }
 
@@ -758,7 +833,7 @@ function CommandPlay()
     currentAudio.play();
 
     let audioTitle = /.*\/(.*).wav/.exec(currentAudio.src);
-    musicTitle.textContent = audioTitle[1].replaceAll("%20", " ");
+    musicTitle.textContent = audioTitle[1].replaceAll("%20", " ").replaceAll("-", "//");
 
     musicPlay.src = "/assets/images/terminal/pause.svg";
     musicPlay.style.width = "60px";

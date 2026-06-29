@@ -50,6 +50,9 @@ p {
 img {
 	width: 40%;
 }
+hr {
+	max-width: 90%;
+}
 a:visited {
 	color: white !important;
 }
