@@ -705,10 +705,10 @@ function CommandEcho() {
             userRepeater = "[re]I'm sure you need help!! But you won't get it here, heehee![/]";
             break;
         case "hi":
-            userRepeater = "[re]hiiiii :3[/]";
+            userRepeater = "[re]hiiiii![/]";
             break;
         case "hello":
-            userRepeater = "[re]hellooooo :3[/]";
+            userRepeater = "[re]hellooooo![/]";
             break;
         case "ego":
         case "egos":
@@ -721,6 +721,7 @@ function CommandEcho() {
             userRepeater = "[re]You? Want to know about others?? Heehee, I like you!\nHeehee... Ha...\n\nWelll... Unfortunately, they griefed <a href='' hyper='/!linked/egos.list'>[re]my list[/]</a>.\nI'll get them back... Always so mean to me!![/]";
             break;
         case "you":
+        case "four":
         case "who is this":
         case "what are you":
         case "who are you":
@@ -743,6 +744,7 @@ function CommandEcho() {
             userRepeater = "[re]Huh? W-who...?? We're all finished, stupid![/]";
             break;
         case "lumi":
+        case "bird":
             userRepeater = "[re]Bird!! It has cute photos on its folder. Dont tell it I saw!!![/]";
             break;
         case "root":
@@ -765,7 +767,7 @@ function CommandEcho() {
         case "eos cli":
         case "client":
         case "cli":
-            userRepeate= "[re]The messaging client! They're working on it!! Bird seems tired though...[/]";
+            userRepeater = "[re]The messaging client! They're working on it!! Bird seems tired though...[/]";
         default:
             break;
     }
