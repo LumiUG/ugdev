@@ -687,7 +687,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 29/06/2026 (Earth Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 30/06/2026 (Earth Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
@@ -734,7 +734,7 @@ function CommandEcho() {
         case "tobedetermined":
         case "others":
         case "tbd":
-            userRepeater = "[re]You? Want to know about others?? Heehee, I like you!\nHeehee... Ha...\n\nWelll... Unfortunately, they griefed <a href='' hyper='/!linked/egos.list'>[re]my list[/]</a>.\nI'll get them back... Always so mean to me!![/]";
+            userRepeater = "[re]You? Want to know about others?? Heehee, I like you!\nHeehee... Ha...\n\nWelll... Unfortunately, THREE griefed <a href='' hyper='/!linked/egos.list'>[re]my list[/]</a>.\nI'll get them back... Always so mean to me!![/]";
             break;
         case "you":
         case "four":
@@ -753,6 +753,7 @@ function CommandEcho() {
             break;
         case "the original":
         case "original":
+        case "u/o":
             userRepeater = "[re]Them? Oho... What do you want from them? Very suspicious![/]";
             break;
         case "the unfinished":
@@ -790,6 +791,15 @@ function CommandEcho() {
         case "client":
         case "cli":
             userRepeater = "[re]The messaging client! They're working on it!! Bird seems tired though...[/]";
+            break;
+        case "eos":
+        case "egg os":
+            userRepeater = "[re]Here![/]";
+            break;
+        case "transfer":
+        case "ftp":
+            userRepeater = "[re]Yes... How do you think we got here, dummy?[/]";
+            break;
         default:
             break;
     }
@@ -999,7 +1009,7 @@ function CommandIMCat() {
 
 // Prints current path
 function CommandPWD() {
-    TypeOutput(currentPath);
+    TypeOutput(`EOS: You are currently experiencing \"${currentPath}\".`);
 }
 
 // Removes a file (not a folder!)
@@ -1089,6 +1099,6 @@ function CommandEgg() {
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;\`.___,'`);
-    if (document.body.style.animation != "") TypeOutput(`\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The egg dances...`, false)
+    if (terminalElement.style.animation != "") TypeOutput(`\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The egg dances...`, false)
     else TypeOutput(`\nYou have witnessed the egg ${eggCount} time(s).`, false)
 }
