@@ -48,7 +48,7 @@
 				"public": {
 					"readme.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
 					"secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god\n-[pi]neoma[/]",
-					"games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal anymore.\nAnd I'd rather if you didn't play them. Let's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)"
+					"games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal.\n\nI'd rather if you didn't play them.\nLet's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)\n-[lb]lumi[/]"
 				},
 				"documents": {
 					"private": {
@@ -73,7 +73,7 @@
 				}
 			}
 		},
-		"etc": {
+		"core": {
 			"permissions": { "allowedUsers": ["root"] },
 			"placeholder.txt": "PLACEHOLDER"
 		},
@@ -96,11 +96,12 @@
 		},
 		"universe": {
 			"devoid": {
-				"status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current global scan for progress logging."
+				"status.eos": "[lg]Connecting to world...[/]\n\n>> Please check your current global scan for progress logging.",
+				"?.txt": "What's up with this btw?\nI think it's been stuck on a low % for a while now.\n--[lb]lumi[/]\n\nIt's normal, I think. It took a long while to fully connect to yours.\nI'll work on refining my methods whenever possible, sorry.\n-[or]root[/]"
 			},
 			"avalon": {
-				"worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any leads.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but it'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]",
-				"guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-[lg]guest[/]\n\nsorry, who even are you?? please just create an account, i will go insane :<\n-[lb]lumi[/]"
+				"worlds.log": "I've been thinking about installing this terminal somewhere on other worlds that I visit, and they seem to like the idea!\nI'm unsure as to how I'd contact the creator? Do they even have access to this terminal...?\nEh, doesn't matter. I'll ask [or]root[/] if they have any leads.\n\nSo uh, I'll probably make a 3D copy of my own terminal and try to do a recreation, but it'll take time.\nIf someone has any tips or can help me with gathering materials, do let me know! I'll treat this as a small side thing meanwhile.\n-[lb]lumi[/]\n\ndude that's me.\n-[or]root[/]\n\noh!\n-[lb]lumi[/]",
+				"guys!!.txt": "It feels a bit lonely being the only one in avalon with this thing. I'm debating if I should share it with my pack... But I don't want to freak them out!\nOh, but they might think this is so cool.\n\nThoughts?\n-[lb]lumi[/]\n\nOh yeah totally go for it\n-[lg]guest[/]\n\nwho even are you?? please just create an account, i will go insane :<\n-[lb]lumi[/]"
 			},
 			"timescales.md": "\"Sure, this is a neat concept\" you might be thinking.\n\n\"But everyone has a different timescale!\" that's the fun part.\n\nThis terminal syncs up actions through it as if the same amount of time passed between universes.\n\nLets take for example \"[bl]Earth[/]\". A cycle there is 24 hours.\nNow, we'll say that a file is created at 3:00, and then edited at 3:05... Five minutes! (In [bl]Earth[/] time)\nThis change would be reflected in all universes at the same rate as [bl]Earth[/], so for example [lb]Avalon[/] would acquire this edited file in \"5 minutes\" with their in-universe time scale.\n\nHopefully that made sense.\n-[or]root[/]"
 		},
@@ -142,6 +143,16 @@
 			"lumi.chat": "That sounds awesome! I'll probably pass on using this until the software is finished, though.\n\nIf you need help, do let me know! (What programming language...?)\n-[lb]lumi[/]\n\nYeah, I'll send you the in-progress source.\n-[or]root[/]",
 			"neoma.chat": "Feel free to edit this file for messaging! ^-^\n-[pi]neoma[/]\n\nYou smell :>\n-[lb]lumi[/]"
 		},
+		"others": {
+			"permissions": { "allowedUsers": ["original", "root"] },
+			"uo": {
+				"numbered": {
+
+				},
+				"thescript.sh": "PLACEHOLDER",
+				"comms.txt": "PLACEHOLDER"
+			}
+		},
 		"groups": {
 			"rules.md": "1) Use common sense, or I'll delete your group.\n2) Every group must have a \"welcome.group\" file, with some information.\n3) You may password protect groups, and/or hide them.\n-[or]root[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
 			"notacult": {
@@ -176,7 +187,7 @@
 			}
 		},
 		"!linked": {
-			"permissions": { "allowedUsers": ["[rw]Original"] },
+			"permissions": { "allowedUsers": ["original"] },
 			"self.log": "<h4>[ [rw]*[/] ] [lb]I-i can get out of this.[/]</h4><h4>[ [rw]**[/] ] [lb]You're just lying to yourself.[/]</h4><h4>[ [rw]***[/] ] [lb]I don't think you believe there's an exit.[/]</h4><h4>[ [rw]*[/] ] [lb]No, it's just...[/]</h4><h4>[ [rw]*[/] ] [lb]Can't we just pretend this amounted to something?[/]</h4><h4>[ [rw]***[/] ] [lb]No.[/]</h4><h4>[ [rw]**[/] ] [lb]You should've turned back.[/]</h4><h4>[ [rw]*[/] ] [lb]I'm... Shut up.[/]</h4>\n<h4>[ [rw]**[/] ] [lb]Or what? You'll kill yourself?[/]</h4><h4>[ [rw]**[/] ] [lb]It's not like you're not doing so already.[/]</h4><h4>[ [rw]**[/] ] [lb]HOW. MUCH. LONGER do you want to wait?[/]</h4><h4 style='position: relative; top: -125px; left: 70px;'>[ [lg]*[/] ] [lg]shut up[/]</h4><h3 style='position: relative; top: -130px; left: 450px;'>[ [lg]*[/] ] [lg]shut UPP[/]</h3><h2 style='position: relative; top: -130px; left: -40px;'>[ [lg]*[/] ] [lg]SHUT THE FUCK UP[/]</h2><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]There it is.[/]</h4><h5 style='position: relative; top: -100px;'>[ [lg]*[/] ] [lg]... hnn..[/]</h5><h5 style='position: relative; top: -100px; left: 10px;'>[ [lg]*[/] ] [lg]what other choice do i have?[/]</h5><h5 style='position: relative; top: -100px; left: -15px;'>[ [lg]*[/] ] [lg]why can't i[/]</h5><h5 style='position: relative; top: -100px;'>[ [lg]*[/] ] [lg]just keep[/]</h5><h5 style='position: relative; top: -95px; left: 40px;'>[ [lg]*[/] ] [lg]walking?[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]Haven't you been walking for too long?[/]</h4><h5 style='position: relative; top: -100px; left: 30px;'>[ [lg]*[/] ] [lg]please just let me [gh]ke[/]ep going[/]</h5><h5 style='position: relative; top: -100px; left: 100px;'>[ [lg]*[/] ] [lg][gh]i'[/]ll use[/]</h5><h5 style='position: relative; top: -100px; left: 50px;'>[ [lg]*[/] ] [lg]wh[gh]at l[/]ittle li[gh]gh[/]t i have[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]**[/] ] [lb]But aren't our legs sore?[/]</h4><h5 style='position: relative; top: -100px; left: 15px;'>[ [lg]*[/] ] [lg][gh]ju[/]st a [gh]litt[/]le lo[gh]ng[/]er[/]</h5><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]No, we're stopping.[/]</h4><h4 style='position: relative; top: -100px;'>[ [rw]***[/] ] [lb]Someone's taking a rest.[/]</h4><h5 style='position: relative; top: -90px; left: -50px;'>[ [ye]*[/] ] [lg]n[gh]o- e[/]ven [ye][gh]if i[/]t tak[/]e[gh]s me-[/][ye]- i'[gh]ll gi[/]v[/]e m-[gh]my l[ye]i[/]f[/]e![/]</h5><h5 style='position: relative; top: -75px; left: -20px;'>[ [ye]*[/] ] [ye][gh]i d[/]o[gh]n't w[/]an[gh]t to go...[/][/]</h5><h4 style='position: relative; top: -30px;'>[ [rw]**[/] ] [lb]... Sleep. We'll take it from here.[/]</h4><h4 style='position: relative;'>[ [rw]**[/] ] [lb]Our way.[/]</h4><h4 style='position: relative; top: -1565px;'>[lg]##### #########</h4>",
 			"egos.list": "<h3>TBD Members (By [re]Four[/]!)</h3>\n[lg]*[/] [rw]Original[/]: The big guy!! Or girl!!! I don't care, hehee.\n[lg]*[/] [re]Four[/]: Best!!!!\n[lg]*[/] w&nbsp;&nbsp;: I don't lik&nbsp;&nbsp;&nbsp; but t&nbsp;&nbsp;y chill :3\n[lg]*[/] [rw]Three[/]: Stupid!!!!! always trying to make everything \"right\", boringg.\n\n[lg]*[/] [rw]seven[/]: Seven we love you <3 ty for t&nbsp;&nbsp; help\n[lg]*[/] [rw]8[/]: haha infinity. Should talk more to you, they're new...\n\n<hr>\nDumbass. Stop, we don't need another list. Original already told us.\nJust stop messing things up, or they'll remove your perms, got it?\nI'd rather not report this to them.\n\nAnd stop overriding your write color.\n~[rw]stupid[/]\n\n[re]fuck you!!!!!! find your own file[/]"
 		}

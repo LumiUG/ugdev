@@ -203,6 +203,12 @@ var users = [
         "home": "/home/guest"
     },
     {
+        "username": "original",
+        "color": "rw",
+        "password": "IMPOSSIBLE",
+        "home": "/"
+    },
+    {
         "username": "root",
         "color": "or",
         "password": "*cm&9^v^dG&F*kbW!!&lu^",
@@ -436,7 +442,10 @@ function CheckForCommand() {
         command => {
             // Runs command if one of them passes the check, then breaks out
             if (GetUserInput().toLowerCase().startsWith(command.name)) {
-                if (command.run) command.run();
+                if (command.run) {
+                    command.run();
+                    ResetPath(); // no longer fucks up pathing after a command
+                }
                 validCommand = true;
                 return;
             }
@@ -568,7 +577,9 @@ function Pathing(path) {
                 if (os[folder]["permissions"].hasOwnProperty("allowedUsers")) {
                     if (!os[folder]["permissions"]["allowedUsers"].includes(currentUser) && !path.includes("/public") && !bypassHyperlinkFolder)
                     {
-                        noPermission = `Allowed users: ${os[folder]["permissions"]["allowedUsers"].join(", ")}`;
+                        let usersList = [];
+                        for (let i = 0; i < os[folder]["permissions"]["allowedUsers"].length; i++) usersList.push(AddUsernameColor(FindUser(os[folder]["permissions"]["allowedUsers"][i])));
+                        noPermission = `Allowed users: ${usersList.join(", ")}`;
                         os = undefined;
                         return;
                     }
@@ -618,15 +629,21 @@ function CustomFolder(text, isPath = false) {
     {
         if (text.includes("universe")) text = text.replace("universe", `[rw]universe[/]`);
         if (text.includes("tobedetermined")) text = text.replace("tobedetermined", `[rw]tobedetermined[/]`);
+        if (text.includes("others")) text = text.replace("others", `[gh]others[/]`);
         if (text.includes("devoid")) text = text.replace("devoid", `[lg]devoid[/]`);
         if (text.includes("avalon")) text = text.replace("avalon", `[lb]avalon[/]`);
+
+        if (text.includes("uo")) text = text.replace("uo", `[rw]UO Test Area[/]`);
         return text;
     }
 
     // Normally print (eg: ls)
     if (text == "universe" || text == "tobedetermined") return `[rw]${text}/[/]`;
+    else if (text == "others") return `[gh]${text}/[/]`;
     else if (text == "devoid") return `[lg]${text}/[/]`;
     else if (text == "avalon") return `[lb]${text}/[/]`;
+        
+    else if (text == "uo") return `[rw]UO Test Area/[/]`;
     return `[bl]${text}/[/]`;
 }
 
@@ -664,6 +681,11 @@ function ResetPath()
     Pathing(currentPath);
 }
 
+function FindUser(find)
+{
+    return users.find(user => { if (find) if (user.username == find.toLowerCase()) return user });
+}
+
 // --------------------- COMMANDS ---------------------
 
 // Help command
@@ -687,7 +709,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 30/06/2026 (Earth Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 07/07/2026 (Local Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
@@ -850,11 +872,10 @@ function CommandPlay()
     // Get the file to play later
     let soundPath = path.split("/");
     soundPath = soundPath.splice(soundPath.length - 1, 1).toString();
-    if (!/(\..+)/.test(soundPath)) { TypeOutput("[re]EOS: That isn't a file.[/]"); ResetPath(); return; };
+    if (!/(\..+)/.test(soundPath)) { TypeOutput("[re]EOS: That isn't a file.[/]"); return; };
     if (FileIsAudio(soundPath))
     {
         TypeOutput("[re]EOS: Invalid file extension, please select a valid audio file.[/]");
-        ResetPath();
         return;
     }
 
@@ -880,8 +901,6 @@ function CommandPlay()
     musicHolder.style.animation = "";
     musicBall.style.left = "0%";
     musicHolder.style.display = "inline";
-
-    ResetPath();
 }
 
 // Returns the user
@@ -913,7 +932,10 @@ function CommandCD(forcePath = null) {
     // Navigate there
     path = path.toLowerCase();
     path = Pathing(path);
-    if (!path) { ResetPath(); return; }
+    if (!path) {
+        ResetPath();
+        return;
+    }
     
     // Wtf stop dont do that
     if (/(\..+)/.test(path)) {
@@ -930,7 +952,7 @@ function CommandSU() {
     let changeUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[1];
     if (changeUser == "-") changeUser = "root";
     let passwordUser = (GetUserInput() == "") ? null : GetUserInput().split(" ")[2];
-    let userToLoginAs = users.find(user => { if (changeUser) if (user.username == changeUser.toLowerCase()) return user });
+    let userToLoginAs = FindUser(changeUser);
     
     // Invalid user?
     if (!changeUser || !userToLoginAs) {
@@ -938,6 +960,12 @@ function CommandSU() {
         return;
     }
 
+    // Custom cases
+    if (userToLoginAs.username == "original") {
+        TypeOutput(`[re]EOS: You cannot log in as an ego.[/]`);
+        return;
+    }
+    
     // Already logged in!
     if (userToLoginAs.username == currentUser) {
         TypeOutput(`[re]EOS: You are already logged in as ${currentUser}![/]`);
@@ -974,7 +1002,10 @@ function CommandCat() {
     // Get the file to cat later
     let catFile = path.split("/");
     catFile = catFile.splice(catFile.length - 1, 1).toString();
-    if (!/(\..+)/.test(catFile)) { TypeOutput("[re]EOS: That isn't a file.[/]"); ResetPath(); return; };
+    if (!/(\..+)/.test(catFile)) {
+        TypeOutput("[re]EOS: That isn't a file.[/]");
+        return;
+    };
 
     // CAT THE FILE!!! MEOWW MRROW MRRPT MEOWWWWWWW
     let contents = os[catFile];
@@ -998,7 +1029,6 @@ function CommandIMCat() {
     // Check for a valid file extension
     if (FileIsImage(catFile)) {
         TypeOutput("[re]EOS: Invalid file extension, please select a valid image.[/]");
-        ResetPath();
         return;
     }
 
