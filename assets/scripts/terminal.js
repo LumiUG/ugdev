@@ -651,6 +651,7 @@ function CustomType(file)
 {
     if (file.endsWith(".wav")) file = `[gr]${file}[/]`
     if (file.endsWith(".chat")) file = `[lg]${file}[/]`
+    if (file.endsWith(".os")) file = `[ye]${file}[/]`
     return file
 }
 
