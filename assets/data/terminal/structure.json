@@ -46,16 +46,21 @@
 			"lumi": {
 				"permissions": { "allowedUsers": ["lumi"] },
 				"public": {
-					"readme.txt": "Hii visitors!! I will be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
-					"secret.txt": "I added a [ye]secret command[/] to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god\n-[pi]neoma[/]",
+					"readme.txt": "Hii critters!! I'll be posting more stuff here later!\n-[lb]lumi[/]\n\n<h3>[lg][FILE LOCKED][/]</h3>",
+					"secret.txt": "I added a \"secret command\" to the terminal...\nSo far no one has found it.\n\nBUT! Since you're here... Try out... \"[lb]bird[/]\"\nYou won't regret it!\n-[lb]lumi[/]\n\noh my god\n-[pi]neoma[/]\n\nAlright, well, someone has found it now.\n-[lb]lumi[/]",
 					"games.info": "By the way, if you're looking for any of mine, or my collab games, they aren't hosted in this terminal.\n\nI'd rather if you didn't play them.\nLet's just say I like it better this way!\n\n(Mostly grown tired of showing off my stupid 2D tests...)\n-[lb]lumi[/]"
 				},
 				"documents": {
 					"private": {
-						"diary.md": "<h2>[lg]Entry - 11/07/20??:</h2>\nOmg I wish [pi]neoma[/] would stop with the [re]r[/][or]a[/][ye]i[/][gr]n[/][lb]b[/][bl]o[/][pi]w[/] command, he leaves it on [re]EVERY SINGLE TIME[/] he uses the terminal and it gets so annoying."
+						"pics": {
+							"wiggle.gif": "/assets/images/artwork/lumi/wiggle.gif",
+							"float.png": "/assets/images/artwork/lumi/MilkiiFloat.png"
+						},
+						"diary.md": "<h2>[lg]Entry - 11/07/20??</h2>Placeholder!",
+						"sun.txt": "[lg]*[/] Able to glow some of my feathers and fur.\n[lg]*[/] Glow is dependent on how I feel?\n[lg]*[/] My eyes glow too? I'm surprised it doesn't affect my sight.\n[lg]*[/] Masses of light recharge it, <s>must be potent enough?</s> yeah.\n[lg]*[/] It's warm, warm enough to be uncomfortable to others.\n[lg]*[/] Tail seems to be my brightest point.\n[lg]*[/] I can regenerate tissue?? I can heal stuff?? Needs testing.\n[lg]*[/] <s>What about a moon?</s> let's not get stupid.\n[lg]*[/] Different sources seem to take longer to recharge it.\n[lg]*[/] Seems I can withstand heat better than others?\n[lg]*[/] I feel like shit if I'm fully out, not testing this again. I don't feel like passing out, again.\n\n<h2>TODO</h2>How did I get this? When did I get it?\nWhy is it that I pass out if I'm empty? Would it kill me??\nTalk to ex-exploration teams.\nThere's probably examples of this happening somewhere, find them."
 					},
 					"studies": {
-						"species.txt": "\"I find it quite interesting, why are there so many of us?\"\n\nI'll use this document to write down any interesting species I find whilst travelling.\nFunny how I'm talking, like I'll ever share this lmao."
+						"species.txt": "[lb]<h5>\"Why are there so many of us?\"</h5>[/]\nI'll use this document to write down any interesting species I find whilst travelling.\n\n<h2>[lg]Protogen</h2>Critters mainly from \"Zenith\".\nThough, I've seen them around pretty much everywhere.\n\nI've had quite my share of encounters with them, and they seem... complex!\n\nProtogen seem to have augments similar to us, but not quite!\nThey're somewhat standarized, too, which is cool.\n\nThey're a lovely lot, I've grown to like the space \"toasters\".\nNow that I think about it, why toasters?"
 					}
 				}
 			},
