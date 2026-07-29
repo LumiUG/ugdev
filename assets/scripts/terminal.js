@@ -710,7 +710,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 26/07/2026 (Local Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 29/07/2026 (Local Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {

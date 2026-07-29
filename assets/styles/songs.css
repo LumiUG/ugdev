@@ -12,8 +12,15 @@ h3 {
 a {
     font-size: 20px;
 }
+hr {
+    width: 90%;
+}
 
 /* Classes */
+.divider {
+    display: flex;
+    justify-content: center;
+}
 .content {
     display: flex;
     flex-direction: column;

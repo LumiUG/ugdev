@@ -39,7 +39,7 @@ const randMessages = [
     "What awaits you below the bottom of the world?", // Frums - Overdead
     "I am / Not what / I am",  // Frums - My Capacitance
     "That is incorrect, try again.", // Frums - Nisemono
-    "Ccompu-- uuu- computer is now-- computer is- machine.",  // Frums - I FORGOT OMG
+    "Ccompu-- uuu- computer is now-- computer is- machine.",  // Frums - I FORGOT
     "Fu-fu-funding for this program was made possible by by-",  // Frums - Credits
     "Fun-di-di-di-di-ding fo-o-o-o for the program-",  // Frums - Credits
     "Funding for the the wa possib-li viewers like you",  // Frums - Credits
@@ -127,7 +127,7 @@ const randMessages = [
     "Growing spineless day by day, Watching as your mind decays-", // DM Dokuro - STILL HERE
     "Insanity consuming that which I have come to be.", // DM Dokuro - the momentary highs, the unfathomable lows
     "Friday nights, foggy streets and christmas lights.", // Glass Beach - classic j dies and goes to hell part 1
-    "\"We're still here, can you hear me?\"", // Glass Beach - orchids
+    "We're still here, can you hear me?", // Glass Beach - orchids
     "As the starlight just fades out, there's no tears no celebration.", // Glass Beach - orchids
     "Hold me underwater, in your sweet embrace.", // Glass Beach - commatose
     "Send every message as an SOS, SOS.", // Glass Beach - commatose
@@ -155,7 +155,34 @@ const randMessages = [
     "<img src='/assets/images/artwork/lumi/wiggle.gif' style='height: auto'/>",
     "Like a firebird, just burn it all away",
     "Strong enough to forge my destiny",
-    "Gone caving."
+    "Gone caving.", // CAVES
+    "I wonder what's outside my box?", // CAVES
+    "Bold of you to think you'll collect all of you!", // CAVES
+    "Dance, dance the pain away~", // CAVES
+    "Can you feel it? No, you don't.", // CAVES
+    "Only time will tell. And you've got a lot of that.", // CAVES
+    "Isn't it a beautiful dance?", // CAVES
+    "I guess it is, until your legs give out.", // CAVES
+    "Turn back? Aren't I too deep in?", // CAVES
+    "Pull me out until I can feel again.", // CAVES
+    "What if you were nothing?", // CAVES
+    "Is your light strong enough?", // CAVES
+    "[You dream of purpose.]", // CAVES
+    "Turn into a tempest, violent, silent in the eye.", // FLAVOR FOLEY - weathergirl
+    "\"And the idea changes you in turn.\"",
+    "There's something fundamental I can't bear", // Jamie Paige - Little Secret
+    "Tell me quietly so I can't hear you", // Jamie Paige - Little Secret
+    "So believe me when I say that you are a new heart", // postergirlxoxo - <3
+    "All of this turbulence wasn't forecasted", // Bury Me At Makeout Creek - Last Words of a Shooting Star
+    "Nothing ever happens, oh", // Jamie Paige - Nothing Ever
+    "I wish that I could fall, but only truly backwards", // Constant Companions - I Wish That I Could Fall
+    "Can you hear me softly singing?", // Constant Companions - Breeze Blows
+    "Cuz you're not a real musician", // can opener's notebook: fish whisperer - you're not a real musician
+    "Won't you make a wish, my dear? There's a shooting star out tonight.", // can opener's notebook: fish whisperer - ANGELFISH
+    "And all my friends could see it, and all my friends knew", // 867 - January
+    "Driving through Houston, we have a problem", // Sings: The Inimitable Sound of Archie Henderson - Driving Through Houston
+    "Heart attacks, yeah every single day now!", // Silly Love Songs For Unfortunate Breakups - Power Walker
+    "Blurring out the dreams we had and all the time with you" // UNBEATABLE (ALBUM) - NO SIGNAL
 ];
 
 var tooltip = document.getElementById("tooltip");
