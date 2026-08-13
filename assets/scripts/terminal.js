@@ -203,7 +203,7 @@ var users = [
         "home": "/home/guest"
     },
     {
-        "username": "uo",
+        "username": "original",
         "color": "rw",
         "password": "IMPOSSIBLE",
         "home": "/"
@@ -757,7 +757,7 @@ function CommandEcho() {
         case "tobedetermined":
         case "others":
         case "tbd":
-            userRepeater = "[re]You? Want to know about others?? Heehee, I like you!\nHeehee... Ha...\n\nWelll... Unfortunately, THREE griefed <a href='' hyper='/!linked/egos.list'>[re]my list[/]</a>.\nI'll get them back... Always so mean to me!![/]";
+            userRepeater = "[re]You? Want to know about others?? Heehee, I like you!\nHeehee...\n\nUnfortunately.... THREE griefed <a href='' hyper='/!linked/egos.list'>[re]my list[/]</a>.\nI'll get them back... Always so mean to me!![/]";
             break;
         case "you":
         case "four":
@@ -767,7 +767,7 @@ function CommandEcho() {
         case "whats your name":
         case "what is your name":
         case "who am i talking to":
-            userRepeater = "[re]Heehee! I'm four, four, of course I am![/]";
+            userRepeater = "[re]Heehee! I'm four, four, that I am!!\nI'm still thinking of a cool name!!![/]";
             break;
         case "a directionless cycle":
         case "directionless cycle":
@@ -777,7 +777,8 @@ function CommandEcho() {
         case "the original":
         case "original":
         case "u/o":
-            userRepeater = "[re]Them? Oho... What do you want from them? Very suspicious![/]";
+        case "uo":
+            userRepeater = "[re]Them? Oho... What do you want from them?? Very suspicious![/]";
             break;
         case "the unfinished":
         case "unfinished":
@@ -791,7 +792,8 @@ function CommandEcho() {
             break;
         case "lumi":
         case "bird":
-            userRepeater = "[re]Bird!! It has cute photos on its folder. Dont tell it I saw!!![/]";
+            if (currentUser == "lumi") userRepeater = "[re]Um... h-hi! Bird?[/]"
+            else userRepeater = "[re]Bird!! It has cute photos on its folder. Dont tell it I saw!!![/]";
             break;
         case "root":
         case "admin":
@@ -822,6 +824,17 @@ function CommandEcho() {
         case "transfer":
         case "ftp":
             userRepeater = "[re]Yes... How do you think we got here, dummy?[/]";
+            break;
+        case "talk":
+        case "speak":
+            userRepeater = "[re]Lalala[/]";
+            break;
+        case "gender":
+            userRepeater = "[re]?? What? is that![/]";
+            break;
+        case "pronouns":
+        case "pronoun":
+            userRepeater = "[re]Oh! I know this one!! I know!!![/]\n\n[re]**[/] [rw]it/its[/] [re]**[/]";
             break;
         default:
             if (userRepeater.toLowerCase().includes("[re]")) userRepeater = "[re]That's my trick! No fair!![/]";
@@ -963,7 +976,7 @@ function CommandSU() {
     }
 
     // Custom cases
-    if (userToLoginAs.username == "uo") {
+    if (userToLoginAs.username == "original") {
         TypeOutput(`[re]EOS: You cannot log in as an ego.[/]`);
         return;
     }
