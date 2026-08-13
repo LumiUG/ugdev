@@ -203,7 +203,7 @@ var users = [
         "home": "/home/guest"
     },
     {
-        "username": "original",
+        "username": "uo",
         "color": "rw",
         "password": "IMPOSSIBLE",
         "home": "/"
@@ -710,7 +710,7 @@ function CommandHelp() {
     }
 
     // Regular help command
-    TypeOutput(">> [lb]Last updated: 29/07/2026 (Local Time-Scale)[/] <<\n");
+    TypeOutput(">> [lb]Last updated: 14/08/2026 (Local Time-Scale)[/] <<\n");
     if (currentUser != "root") TypeOutput(">> [or]Log in as root to view full list.[/] <<\n\n", false);
     commands.forEach(
         command => {
@@ -963,7 +963,7 @@ function CommandSU() {
     }
 
     // Custom cases
-    if (userToLoginAs.username == "original") {
+    if (userToLoginAs.username == "uo") {
         TypeOutput(`[re]EOS: You cannot log in as an ego.[/]`);
         return;
     }
