@@ -631,6 +631,7 @@ function CustomFolder(text, isPath = false) {
         if (text.includes("tobedetermined")) text = text.replace("tobedetermined", `[rw]tobedetermined[/]`);
         if (text.includes("others")) text = text.replace("others", `[gh]others[/]`);
         if (text.includes("devoid")) text = text.replace("devoid", `[lg]devoid[/]`);
+        if (text.includes("caves")) text = text.replace("caves", `[lg]caves[/]`);
         if (text.includes("avalon")) text = text.replace("avalon", `[lb]avalon[/]`);
 
         if (text.includes("uo")) text = text.replace("uo", `[rw]UO Test Area[/]`);
@@ -640,7 +641,7 @@ function CustomFolder(text, isPath = false) {
     // Normally print (eg: ls)
     if (text == "universe" || text == "tobedetermined") return `[rw]${text}/[/]`;
     else if (text == "others") return `[gh]${text}/[/]`;
-    else if (text == "devoid") return `[lg]${text}/[/]`;
+    else if (text == "devoid" || text == "caves") return `[lg]${text}/[/]`;
     else if (text == "avalon") return `[lb]${text}/[/]`;
         
     else if (text == "uo") return `[rw]UO Test Area/[/]`;
