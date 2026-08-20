@@ -37,7 +37,7 @@ var validColors = ["\\[re\\]", "\\[gr\\]", "\\[bl\\]", "\\[ye\\]", "\\[pi\\]", "
 var keypressBlacklist = ["Enter", "Delete"];
 var closestAutocomplete = [];
 var availableKeys = ["maze", "slug", "light", "lab", "universe"];
-var keySolutions = ["209", "cat", "dark", "carlsagan", "ego"];
+var keySolutions = ["203", "cat", "dark", "carlsagan", "ego"];
 var createdKeys = [];
 var currentUser = "guest";
 var currentPath = "/home/guest";
@@ -58,7 +58,7 @@ var commands = [
     {
         "name": "echo",
         "description": "Display a line of text.",
-        "helptopic": "[re]echoooo, echoo! got you!!\n\n[/]Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n- Light grey: [lg]lg[/]\n- Muted green: [mg]mg[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
+        "helptopic": "[re]echoooo, echoo! got you!!\n\n[/]Command usage:\necho <text> - Displays a line of text. HTML and color codes supported!\n\n[re]Color[/] [ye]codes[/] [gr]usage[/]:\nUse [bl][][/] with a valid color to apply it.\nThen, use [bl][>/<][/] to mark the end of the coloring.\nNote: you must remove the \"[bl]><[/]\" in order for color codes to work (it was a showcase!!)\n\nValid colors:\n- Red: [re]re[/]\n- Green: [gr]gr[/]\n- Blue: [bl]bl[/]\n- Yellow: [ye]ye[/]\n- Orange: [or]or[/]\n- Pink: [pi]pi[/]\n- Light blue: [lb]lb[/]\n- Light grey: [lg]lg[/]\n- Muted green: [mg]mg[/]\n- Rainbow: [rw]rw[/]\n\nExample (Removing \"><\"):\n- [>re<]Hey[>/<] [>lb<]there![>/<]\n- [re]Hey[/] [lb]there![/]",
         "hidden": false,
         "run": CommandEcho
     },
@@ -169,7 +169,7 @@ var commands = [
     {
         "name": "eos",
         "description": null,
-        "helptopic": "Displays information about the current operating sytem.",
+        "helptopic": "Displays information about the current operating system.",
         "hidden": true,
         "run": CommandEOS
     },
@@ -297,14 +297,14 @@ setInterval(
 // Hyperlinks as modules
 document.addEventListener("click",
     function (event) {
-        event.preventDefault();
         
         let attr = event.target.getAttribute("hyper");
         if (attr == null) {
             attr = event.target.parentNode.getAttribute("hyper");
             if (attr == null) return;
         }
-
+        
+        event.preventDefault();
         CatHyperlink(attr);
     }
 );
