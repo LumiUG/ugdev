@@ -492,7 +492,7 @@ function UpdateCurrentPath(newPath) {
 }
 
 function NoSuchFileOrDirectory(path, currPath, doPermissions = false) {
-    (doPermissions) ? TypeOutput(`[re]EOS: ${path}: Permission denied.[/] ${doPermissions}`) : TypeOutput(`[re]EOS: ${path}: No such file or directory.[/]`)
+    (doPermissions) ? TypeOutput(`[re]EOS: ${path}: Permission denied.[/]\n${doPermissions}`) : TypeOutput(`[re]EOS: ${path}: No such file or directory.[/]`)
     CommandCD(currPath);
 }
 
