@@ -38,7 +38,7 @@ main {
 #blog div h3 {
     pointer-events: none;
     user-select: none;
-    font-size: 40px;
+    font-size: 38px;
 }
 
 .blogPost {
@@ -48,9 +48,9 @@ main {
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
-    flex-direction: row;
+    flex-direction: column;
     margin: 10px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
+    padding: 15px 15px 15px 15px;
     background-color: rgba(124, 124, 124, 0.65);
     overflow: hidden;
 }
@@ -58,6 +58,9 @@ main {
     background-color: rgba(100, 100, 100, 0.65);
     scale: 1.05;
     cursor: pointer;
+}
+.blogPost p {
+    color: var(--tertiary);
 }
 
 /* Blog popup */
@@ -76,8 +79,7 @@ main {
     margin: 15px;
 }
 #postDiv {
-    display: inherit;
-    height: 100%;
+    display: flex;
     width: 80%;
     justify-content: center;
     align-items: center;
@@ -114,6 +116,14 @@ main {
     }
     #post {
         width: 90%;
-        left: 5%;
+        left: 6%;
+    }
+    #blog div h3 {
+        pointer-events: none;
+        user-select: none;
+        font-size: 34px;
+    }
+    .blogPost {
+        margin: 10px 0px 10px 0px;
     }
 }

@@ -26,11 +26,14 @@ function loadBlog()
     for (const key of sort) {
         let blogPost = document.createElement("div");
         let title = document.createElement("h3");
+        let date = document.createElement("p");
         blogPost.classList += `blogPost drop-blurry-black`;
         title.textContent = posts[key]["title"];
+        date.textContent = posts[key]["date"];
         
         // Add it
         blogPost.append(title);
+        blogPost.append(date);
         blogPost.addEventListener("click", function () { ReadBlog(posts[key]) }, false);
         toAppend.appendChild(blogPost);
     }
