@@ -17,11 +17,11 @@
         "logo": "/assets/images/socials/github.svg",
         "desc": "My Github profile, where most of my projects are stored. I use it as a \"secondary\" portfolio."
     },
-    "backloggd": {
-        "hyperlink": "https://www.backloggd.com/u/ugdev",
-        "username": "Backloggd",
-        "logo": "/assets/images/socials/backloggd.ico",
-        "desc": "In here I keep a backlog of the games that I've played. Comes with reviews aswell!"
+    "kofi": {
+        "hyperlink": "https://ko-fi.com/ugdev",
+        "username": "Ko-Fi",
+        "logo": "/assets/images/socials/kofi.png",
+        "desc": "The main way to support Half Sun Game's development and living costs! <3"
     },
     "bluesky": {
         "hyperlink": "https://bsky.app/profile/ugdev.xyz",
@@ -35,17 +35,17 @@
         "logo": "/assets/images/socials/bandcamp.svg",
         "desc": "Check out my music! I'm learning as I go, and I'm doing this in my \"off time\", so there isn't much content."
     },
+    "backloggd": {
+        "hyperlink": "https://www.backloggd.com/u/ugdev",
+        "username": "Backloggd",
+        "logo": "/assets/images/socials/backloggd.ico",
+        "desc": "In here I keep a backlog of the games that I've played. Comes with reviews aswell!"
+    },
     "lastfm": {
         "hyperlink": "https://www.last.fm/user/LumiUG",
         "username": "LastFM",
         "logo": "/assets/images/socials/lastfm.png",
         "desc": "A platform where you can check what I listen to, barely used, as I scrobble on the background usually."
-    },
-    "discord": {
-        "hyperlink": "https://discord.com/invite/fNcyyES9gB",
-        "username": "Discord",
-        "logo": "/assets/images/socials/discord.svg",
-        "desc": "My handle is \"lumiug\", add me if you'd like to have a chat. Click on this to join my dev server."
     },
     "steamPlayer": {
         "hyperlink": "https://steamcommunity.com/id/ugdev",
@@ -63,6 +63,6 @@
         "hyperlink": "https://artfight.net/~ugdev",
         "username": "Art Fight",
         "logo": "/assets/images/socials/artfight.png",
-        "desc": "My artfight account, you can check out my attacks here!\n(First time participating...)"
+        "desc": "My artfight account, you can check out my attacks (and defenses) here!"
     }
 }
