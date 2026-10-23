@@ -2,7 +2,7 @@
     "names": {
         "ug": { "type": "yes", "hover": "My main nick, \"Lumi\" is also preferred!" },
         "ugdev": { "type": "yes", "hover": "Usually you'd only use this formally, use \"ug\" or \"Lumi\" instead."  },
-        "Half Sun": { "type": "okay", "hover": "A bit weird, but alright."  },
+        "Half Sun": { "type": "okay", "hover": "A bit weird atm, but alright." },
         "Any pet names": { "type": "close", "hover": "Please, stop DMing me weird things." },
         "IRL name": { "type": "close" },
         "uggy": { "type": "close", "hover": "Only for certain people." },

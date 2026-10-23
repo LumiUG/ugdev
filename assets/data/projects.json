@@ -46,7 +46,7 @@
         },
         "etv": {
             "name": "Easy Tierlist Viewer (ETV)",
-            "desc": "You know, one day I wanted to make a tierlist... So I did as any sane person would... And made a tierlist maker and viewer myself!<br><br>You're able to save and share tierlists with json, and I think it looks quite great!<br>Made in some days with base html/css/js.",
+            "desc": "You know, one day I wanted to make a tierlist... So I did as any sane person would... And made a tierlist maker and viewer myself!<br><br>You're able to save and share tierlists with json, and I think it looks quite great!<br>Made in some days with base HTML/CSS/JS.",
             "image": "/assets/images/etc/etv-logo.png",
             "source": "https://github.com/LumiUG/etv",
             "website": "https://ugdev.xyz/etv"
@@ -65,12 +65,6 @@
             "source": "https://github.com/LumiUG/ADirectionlessCycle",
             "website": "https://ugdev.xyz/adc"
         },
-        "gravix-eos": {
-            "name": "Gravix: EOS (WIP!)",
-            "desc": "A new experience using the basic mechanics from <b>VVVVVV</b>, and giving them clever twists as you progress along the way.<br><br>This is a complete rework of \"Gravix\", with completely new content and mechanics.",
-            "image": "/assets/images/games/MeemFuture.png",
-            "website": "https://ugdev.itch.io/gravix-eos"
-        },
         "gravix": {
             "name": "Gravix",
             "desc": "A Unity2D platformer with around 35 single screen levels, an interconnected map with collectibles to find and a final challenge waiting for you.<br><br>This game was inspired by \"<b>VVVVVV</b>\" by Terry Cavanagh, uses [ <a href='https://magnusstorm.bandcamp.com/album/pppppp-the-vvvvvv-soundtrack'>its soundtrack</a> ] and shares multiple mechanics.",
@@ -78,14 +72,20 @@
             "source": "https://github.com/LumiUG/Gravix",
             "website": "https://ugdev.itch.io/gravix"
         },
+        "gravix-eos": {
+            "name": "Gravix: EOS <b><i>(WIP!)</i></b>",
+            "desc": "A new experience using the basic mechanics from <b>VVVVVV</b>, and giving them clever twists as you progress along the way.<br><br>This is a complete rework of \"Gravix\", with completely new content and mechanics.",
+            "image": "/assets/images/games/MeemFuture.png",
+            "website": "https://ugdev.itch.io/gravix-eos"
+        },
         "eos-cli": {
-            "name": "EOS Client (WIP!)",
+            "name": "EOS Client <b><i>(WIP!)</i></b>",
             "desc": "In development for... Specific reasons.<br><br>The <b>EOS Client</b> has ties with multiple games and other certain works of mine. If you're wondering, try looking around! You'll probably find more information about it.",
             "image": "/assets/images/games/EOSCli.png",
             "website": "https://ugdev.itch.io/eos-cli"
         },
         "sps": {
-            "name": "Space Potato Station (Game Jam)",
+            "name": "Space Potato Station <b><i>(Game Jam)</i></b>",
             "desc": "A gardening, puzzle game, resource management \"college\" game jam made with a bunch of friends and a limit of 8 hours to complete.<br><br>We didn't manage to finish the game in time, and so it is barely playable.<br>However, the design decisions we made are very creative and interesting.",
             "image": "/assets/images/games/SPS.png",
             "source": "https://github.com/LumiUG/SpacePotatoStation"
@@ -99,7 +99,7 @@
     },
     "music": {
         "rework": {
-            "name": "A Directionless Cycle's OST",
+            "name": "A Directionless Cycle's Soundtrack",
             "desc": "My first ever \"real\" release! Even if a little basic...<br>This was made with ZERO music knowledge, and intended to be heard when playing my game, A Directionless Cycle.<br><br>[ <a href='https://ugdev.bandcamp.com/album/a-directionless-cycle-ost'>Listen on Bandcamp.</a> ]",
             "image": "/assets/images/adc/ADCLogo.png",
             "website": "https://ugdev.bandcamp.com/album/a-directionless-cycle-ost"

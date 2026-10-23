@@ -26,6 +26,7 @@ hr {
     font-family: var(--secondaryFont);
 }
 #top p {
+    padding: 15px; /* should only affect mobile */
     font-size: 20px;
 }
 #top p a img {
